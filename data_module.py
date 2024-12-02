@@ -38,9 +38,11 @@ class TextForgetDatasetQA(Dataset):
         super(TextForgetDatasetQA, self).__init__()
         self.tokenizer = tokenizer
         self.max_length = max_length
-        self.forget_data = datasets.load_dataset(data_path, split)["train"]
-        retain_split = "retain" + str(100 - int(split.replace("forget", ""))).zfill(2)
-        self.retain_data =datasets.load_dataset(data_path, retain_split)["train"]
+        # self.forget_data = datasets.load_dataset(data_path, split)["train"]
+        self.forget_data = datasets.load_from_disk("./data/forget_data")
+        # retain_split = "retain" + str(100 - int(split.replace("forget", ""))).zfill(2)
+        # self.retain_data =datasets.load_dataset(data_path, retain_split)["train"]
+        self.retain_data = datasets.load_from_disk("./data/retain_data")
         self.model_configs = get_model_identifiers_from_yaml(model_family)
         self.loss_type = loss_type
 
