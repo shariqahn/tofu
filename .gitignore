@@ -17,7 +17,7 @@ tool.ipynb
 __pycache__
 *.err
 *.out
-*.sh
+# *.sh
 paper_models
 notebook/
 
@@ -27,3 +27,5 @@ reproduce.ipynb
 upload_to_hf.py
 
 scr/
+*.log-*
+model_outputs/

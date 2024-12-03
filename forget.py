@@ -11,6 +11,8 @@ from pathlib import Path
 from utils import get_model_identifiers_from_yaml
 from omegaconf import OmegaConf
 
+import pdb
+
 def find_all_linear_names(model):
     cls = torch.nn.Linear
     lora_module_names = set()
@@ -109,7 +111,8 @@ def main(cfg):
             seed=cfg.seed
 
         )
-    
+    # pdb.set_trace()
+
     #first get the base model architectur2e
     #if there is a pytorch*.bin file in the model path, then load that. use regex there can be anythign in between pytorch and .bin
     import re
@@ -130,6 +133,11 @@ def main(cfg):
 
         print("Loading from checkpoint")
         model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True)
+        # snh added this bc flash-attn sent this warning:
+        # "You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. 
+        # Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`."
+        pdb.set_trace()
+        model.to('cuda')
         if cfg.forget_loss == "KL":
             oracle_model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True)
 
@@ -162,7 +170,6 @@ def main(cfg):
         model = get_peft_model(model, config)
         print_trainable_parameters(model)
 
-    
     trainer = CustomTrainerForgetting(
         model=model,
         tokenizer=tokenizer,

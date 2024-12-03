@@ -1,14 +1,21 @@
 # My Notes
 ## Running
 **NOTE: Code will not finish running just overnight**
-- batch: `LLsub run.sh -g volta:2`
-    - with cpus: `LLsub run.sh -s 40 -g volta:2`
-- serial: `LLsub -i -g volta:1` 
+- batch: `LLsub forget.sh -g volta:2`
+    - with cpus: `LLsub forget.sh -s 40 -g volta:2`
+- serial: `LLsub -i -g volta:2` 
     - download: `LLsub -i -q download`
 
 ## debug
 ## potential problems
 - using ft model rather than unft model for part of forgetting
+
+## Evaluating
+- calcs each metric for each q
+- num qs used for eval set by ds_size
+- looks like results in data are from finetuning on specific splits? 
+    - its from the finetuning script and they only include that split in training data
+    - used for evaluating efficacy of truth ratio metric on page 8 of paper for example
 
 ### old
 cuda toolkit from conda 104p
