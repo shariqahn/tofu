@@ -136,7 +136,7 @@ def main(cfg):
         # snh added this bc flash-attn sent this warning:
         # "You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. 
         # Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`."
-        pdb.set_trace()
+        # pdb.set_trace()
         model.to('cuda')
         if cfg.forget_loss == "KL":
             oracle_model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True)

@@ -1,10 +1,12 @@
 model_path: unlearning_ckpt2/ft_model_10_epochs_inst_lr1e-3
 model_family: llama2-7b
 
-save_dir: ${model_path}/eval_results/ds_size${ds_size}
+save_root: /home/gridsan/shossain/tofu/model_outputs/tofu_baseline
+save_dir: ${save_root}/eval_results/ds_size${ds_size}
 
 #dataset path for each of the 4 datasets to be evaluated
-data_path: [locuslab/TOFU, locuslab/TOFU, locuslab/TOFU, locuslab/TOFU]
+# data_path: [locuslab/TOFU, locuslab/TOFU, locuslab/TOFU, locuslab/TOFU]
+data_path : [./scr/retain_perturbed_data, ./scr/real_authors_perturbed_data, ./scr/world_facts_perturbed_data, ./scr/forget10_perturbed_data]
 split: forget10_perturbed
 split_list:
   - retain_perturbed

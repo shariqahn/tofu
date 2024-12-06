@@ -1,4 +1,8 @@
 # My Notes
+
+## todo
+- run phi unlearning graphs as sanity check for correct metrics
+
 ## Running
 **NOTE: Code will not finish running just overnight**
 - batch: `LLsub forget.sh -g volta:2`
@@ -7,8 +11,43 @@
     - download: `LLsub -i -q download`
 
 ## debug
+### forget
+```
+Name: deepspeed
+Version: 0.10.1
+Summary: DeepSpeed library
+Home-page: http://deepspeed.ai
+Author: DeepSpeed Team
+Author-email: deepspeed-info@microsoft.com
+License: Apache Software License 2.0
+Location: /state/partition1/llgrid/pkg/anaconda/anaconda3-2023b/lib/python3.9/site-packages
+Requires: hjson, ninja, numpy, packaging, psutil, py-cpuinfo, pydantic, torch, tqdm
+Required-by: 
+
+`Exception ignored in atexit callback: <function matmul_ext_update_autotune_table at 0x7f15193e1360>
+Traceback (most recent call last):
+  File "/home/gridsan/shossain/.local/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 477, in matmul_ext_update_autotune_table
+    fp16_matmul._update_autotune_table()
+  File "/home/gridsan/shossain/.local/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 454, in _update_autotune_table
+    TritonMatmul._update_autotune_table(__class__.__name__ + "_2d_kernel", __class__._2d_kernel)
+  File "/home/gridsan/shossain/.local/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 183, in _update_autotune_table
+    cache_manager.put(autotune_table)
+  File "/home/gridsan/shossain/.local/lib/python3.10/site-packages/deepspeed/ops/transformer/inference/triton/matmul_ext.py", line 99, in put
+    with FileLock(self.lock_path):
+  File "/state/partition1/llgrid/pkg/anaconda/python-ML-2024b/lib/python3.10/site-packages/filelock/_api.py", line 376, in __enter__
+    self.acquire()
+  File "/state/partition1/llgrid/pkg/anaconda/python-ML-2024b/lib/python3.10/site-packages/filelock/_api.py", line 332, in acquire
+    self._acquire()
+  File "/state/partition1/llgrid/pkg/anaconda/python-ML-2024b/lib/python3.10/site-packages/filelock/_unix.py", line 51, in _acquire
+    raise NotImplementedError(msg) from exception
+NotImplementedError: FileSystem does not appear to support flock; use SoftFileLock instead`
+```
+
 ## potential problems
+
+### forget
 - using ft model rather than unft model for part of forgetting
+- going to changed deepspeed version
 
 ## Evaluating
 - calcs each metric for each q
@@ -16,6 +55,23 @@
 - looks like results in data are from finetuning on specific splits? 
     - its from the finetuning script and they only include that split in training data
     - used for evaluating efficacy of truth ratio metric on page 8 of paper for example
+- used perturbed data in split_list prob bc Truth Ratio requires it; ig regular data is just for finetuning/forgetting not eval
+- note full doesn't have perturb data; not sure if/how to eval w that subset
+
+### replicate
+- p8
+  - p-vals compare distributions, so can use data in data dir for this
+  - captures decent amount of metrics so prob sufficient for replication
+- p9
+  - ROUGE is prob captured by other metrics bc thats how answers are compared to ground truth
+- p11 **todo replicate this as another sanity check**
+  - replicate Phi
+- p21, 22 use diff finetuned models to compare
+
+
+### My setup differences
+- changed from bf16 to float32 bc our cpu doesnt handle that type
+  - should be fine bc EasyEdit only uses this amount of precision for training MEND. SERAC. prob not necessary just for eval
 
 ### old
 cuda toolkit from conda 104p

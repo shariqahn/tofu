@@ -15,6 +15,5 @@ packaging
 bitsandbytes
 scipy
 ninja
-
+natsort
 # upgrade datasets
-# install natsort

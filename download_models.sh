@@ -22,7 +22,7 @@ mkdir -p $HF_LOCAL_DIR
 echo "Dirs created:"
 ls /state/partition1/user/$USER
 echo "downloading"
-python -u download.py forget01 forget_data retain_data
+python -u download.py
 
 # Copy the model from HF_HOME into HF_LOCAL_DIR
 echo "Model collected. Here is what home looks like:"

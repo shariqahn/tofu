@@ -5,6 +5,8 @@ source /etc/profile
 module load anaconda/Python-ML-2024b
 
 export HF_HOME=/state/partition1/user/$USER/hug
+export HYDRA_FULL_ERROR=1
+export TRITON_CACHE_DIR=/state/partition1/user/$USER/triton
 
 master_port=18765
 split=forget01

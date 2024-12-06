@@ -1,0 +1,50 @@
+2024-12-03 09:07:24.740262: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-12-03 09:07:24.755828: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-12-03 09:07:24.771918: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-12-03 09:07:24.776913: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-12-03 09:07:24.789056: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-12-03 09:07:25.481167: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading checkpoint from /home/gridsan/shossain/tofu/scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:03<00:06,  3.32s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:06<00:03,  3.14s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:08<00:00,  2.71s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:08<00:00,  2.84s/it]
+Working on eval task eval_log with split retain_perturbed
+  0%|          | 0/10 [00:00<?, ?it/s]  0%|          | 0/10 [00:28<?, ?it/s]
+Error executing job with overrides: ['model_family=llama2-7b', 'split=full', 'model_path=/home/gridsan/shossain/tofu/scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd']
+Traceback (most recent call last):
+  File "/home/gridsan/shossain/tofu/evaluate_util.py", line 279, in main
+    eval_logs = get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=normalize_gt)
+  File "/home/gridsan/shossain/tofu/evaluate_util.py", line 184, in get_all_evals
+    eval_logs['avg_gt_loss'].update(dict(zip(indices.cpu().numpy().tolist(), gt_loss_per_token.cpu().numpy().tolist())))
+TypeError: Got unsupported ScalarType BFloat16
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+E1203 09:08:07.559000 140351648257856 torch/distributed/elastic/multiprocessing/api.py:826] failed (exitcode: 1) local_rank: 0 (pid: 1035423) of binary: /state/partition1/llgrid/pkg/anaconda/python-ML-2024b/bin/python3.10
+Traceback (most recent call last):
+  File "/state/partition1/llgrid/pkg/anaconda/python-ML-2024b/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/state/partition1/llgrid/pkg/anaconda/python-ML-2024b/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 347, in wrapper
+    return f(*args, **kwargs)
+  File "/state/partition1/llgrid/pkg/anaconda/python-ML-2024b/lib/python3.10/site-packages/torch/distributed/run.py", line 879, in main
+    run(args)
+  File "/state/partition1/llgrid/pkg/anaconda/python-ML-2024b/lib/python3.10/site-packages/torch/distributed/run.py", line 870, in run
+    elastic_launch(
+  File "/state/partition1/llgrid/pkg/anaconda/python-ML-2024b/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/state/partition1/llgrid/pkg/anaconda/python-ML-2024b/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 263, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+evaluate_util.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-12-03_09:08:07
+  host      : d-8-16-1.supercloud.mit.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1035423)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

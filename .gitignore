@@ -28,4 +28,4 @@ upload_to_hf.py
 
 scr/
 *.log-*
-model_outputs/
+# model_outputs/

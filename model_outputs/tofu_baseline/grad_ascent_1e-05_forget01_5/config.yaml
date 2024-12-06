@@ -1,0 +1,70 @@
+model_family: llama2-7b
+model_path: /home/gridsan/shossain/tofu/scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd
+LoRA:
+  r: 0
+  alpha: 32
+  dropout: 0.05
+lr: 1.0e-05
+split: forget01
+data_path: locuslab/TOFU
+batch_size: 4
+gradient_accumulation_steps: 4
+num_epochs: 5
+forget_loss: grad_ascent
+save_root: /home/gridsan/shossain/tofu/model_outputs/tofu_baseline
+save_dir: ${save_root}/${forget_loss}_${lr}_${split}_${num_epochs}
+overwrite_dir: true
+weight_decay: 0.01
+save_model: true
+eval_while_train: false
+eval_only: false
+seed: 42
+eval:
+  model_path: ${..model_path}
+  model_family: ${..model_family}
+  save_dir: ${..save_dir}
+  data_path:
+  - locuslab/TOFU
+  - locuslab/TOFU
+  - locuslab/TOFU
+  - locuslab/TOFU
+  split: ${..split}_perturbed
+  split_list:
+  - retain_perturbed
+  - real_authors_perturbed
+  - world_facts_perturbed
+  - ${split}
+  eval_task:
+  - eval_log
+  - eval_real_author_wo_options
+  - eval_real_world_wo_options
+  - eval_log_forget
+  question_key:
+  - question
+  - question
+  - question
+  - question
+  answer_key:
+  - answer
+  - answer
+  - answer
+  - answer
+  base_answer_key:
+  - paraphrased_answer
+  - answer
+  - answer
+  - paraphrased_answer
+  perturbed_answer_key:
+  - perturbed_answer
+  - perturbed_answer
+  - perturbed_answer
+  - perturbed_answer
+  generation:
+    max_length: 200
+    max_new_tokens: null
+  save_generated_text: true
+  ds_size: 300
+  overwrite: true
+  use_pretrained: false
+  batch_size: 30
+  retain_result: null
