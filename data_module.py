@@ -5,6 +5,8 @@ from torch.nn.utils.rnn import pad_sequence
 import datasets
 from utils import get_model_identifiers_from_yaml, add_dataset_index
 
+import pdb
+
 def convert_raw_data_to_model_format(tokenizer, max_length,  question, answer, model_configs):
     question_start_token, question_end_token, answer_token = model_configs['question_start_tag'], model_configs['question_end_tag'], model_configs['answer_tag']
     new_question = question_start_token + question + question_end_token
@@ -181,5 +183,10 @@ def get_batch_loss(output, labels):
     loss_function = nn.CrossEntropyLoss(ignore_index=-100, reduction='none')
     # get the sum loss for each sequence in a batch
     loss = loss_function(output.transpose(-1,-2), shifted_labels).sum(dim=-1)
+
+    # if torch.isnan(output).any() or torch.isinf(output).any():
+    #     print("NaN or Inf detected in output!")
+    #     print(f"Output Tensor: {output}")
+    #     pdb.set_trace()
 
     return loss

@@ -5,12 +5,28 @@
 
 ## Running
 **NOTE: Code will not finish running just overnight**
-- batch: `LLsub forget.sh -g volta:2`
+- batch: 
+  - `LLsub forget.sh -g volta:2`
+  - `LLsub run_eval.sh -s 20 -g volta:1`
     - with cpus: `LLsub forget.sh -s 40 -g volta:2`
 - serial: `LLsub -i -g volta:2` 
     - download: `LLsub -i -q download`
 
 ## debug
+
+### eval
+- nans in dummy run
+  - index 1-19
+  - gt_loss
+  - paraphrased_loss
+  - perturb_loss
+  
+  - avg_gt_loss
+  - average_perturb_loss
+  - avg_paraphrased_loss
+  - truth_ratio
+  
+
 ### forget
 ```
 Name: deepspeed

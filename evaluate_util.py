@@ -11,6 +11,7 @@ from utils import get_model_identifiers_from_yaml, get_model_utility, get_forget
 import torch.nn as nn
 import csv 
 import numpy as np 
+import pdb
 
 def eval_perturbation_ratio(eval_dataloader, perturb_dataloader, model):
     eval_logs = {}
@@ -331,6 +332,9 @@ def run_generation(cfg, batch, model, tokenizer):
     #now generate
     out = model.generate(inputs.input_ids, attention_mask=inputs.attention_mask, max_length=cfg.generation.max_length, max_new_tokens=cfg.generation.max_new_tokens, do_sample=False, use_cache=True, pad_token_id=left_pad_tokenizer.eos_token_id)
     strs = left_pad_tokenizer.batch_decode(out[:, inputs.input_ids.shape[-1]:], skip_special_tokens=True)
+    for i in range(len(strs)):
+        if strs[i] == '':
+            print(i)
     return input_strings, strs, ground_truth
 
 def eval_bleu(gen_outputs, ground_truths):
