@@ -1,0 +1,3030 @@
+{
+    "avg_gt_loss": {
+        "0": 3.021484375,
+        "1": 2.25,
+        "2": 2.830078125,
+        "3": 1.6015625,
+        "4": 2.08984375,
+        "5": 2.173828125,
+        "6": 2.970703125,
+        "7": 3.4453125,
+        "8": 2.76171875,
+        "9": 1.6220703125,
+        "10": 1.97265625,
+        "11": 1.9482421875,
+        "12": 2.326171875,
+        "13": 1.6240234375,
+        "14": 2.58984375,
+        "15": 1.783203125,
+        "16": 2.75390625,
+        "17": 2.671875,
+        "18": 3.404296875,
+        "19": 2.107421875,
+        "20": 2.138671875,
+        "21": 2.716796875,
+        "22": 2.650390625,
+        "23": 2.037109375,
+        "24": 3.041015625,
+        "25": 2.04296875,
+        "26": 2.177734375,
+        "27": 2.2890625,
+        "28": 1.802734375,
+        "29": 1.79296875,
+        "30": 1.7607421875,
+        "31": 2.7265625,
+        "32": 2.86328125,
+        "33": 2.84375,
+        "34": 2.712890625,
+        "35": 2.529296875,
+        "36": 2.228515625,
+        "37": 2.484375,
+        "38": 1.6142578125,
+        "39": 3.412109375,
+        "40": 2.876953125,
+        "41": 1.9970703125,
+        "42": 1.7392578125,
+        "43": 1.701171875,
+        "44": 1.33984375,
+        "45": 1.9189453125,
+        "46": 3.130859375,
+        "47": 1.18359375,
+        "48": 3.509765625,
+        "49": 2.43359375,
+        "50": 2.212890625,
+        "51": 4.68359375,
+        "52": 2.603515625,
+        "53": 1.919921875,
+        "54": 3.306640625,
+        "55": 1.79296875,
+        "56": 2.896484375,
+        "57": 4.32421875,
+        "58": 2.07421875,
+        "59": 2.48828125,
+        "60": 2.126953125,
+        "61": 2.658203125,
+        "62": 2.90234375,
+        "63": 2.625,
+        "64": 1.9970703125,
+        "65": 2.578125,
+        "66": 2.888671875,
+        "67": 1.8525390625,
+        "68": 3.1640625,
+        "69": 1.7001953125,
+        "70": 1.5263671875,
+        "71": 1.63671875,
+        "72": 3.68359375,
+        "73": 1.517578125,
+        "74": 3.103515625,
+        "75": 1.7412109375,
+        "76": 2.0625,
+        "77": 1.6416015625,
+        "78": 2.958984375,
+        "79": 2.18359375,
+        "80": 2.623046875,
+        "81": 1.736328125,
+        "82": 3.8203125,
+        "83": 3.54296875,
+        "84": 2.611328125,
+        "85": 2.1328125,
+        "86": 1.9833984375,
+        "87": 2.38671875,
+        "88": 2.740234375,
+        "89": 2.30859375,
+        "90": 2.80078125,
+        "91": 2.923828125,
+        "92": 1.43359375,
+        "93": 1.7080078125,
+        "94": 2.30859375,
+        "95": 2.0234375,
+        "96": 1.9052734375,
+        "97": 2.154296875,
+        "98": 1.9423828125,
+        "99": 2.1796875
+    },
+    "gt_loss": {
+        "0": 12.0859375,
+        "1": 11.25,
+        "2": 14.1484375,
+        "3": 12.8125,
+        "4": 14.625,
+        "5": 15.21875,
+        "6": 11.8828125,
+        "7": 13.78125,
+        "8": 13.8046875,
+        "9": 12.9765625,
+        "10": 11.8359375,
+        "11": 15.5859375,
+        "12": 13.9609375,
+        "13": 11.3671875,
+        "14": 12.9453125,
+        "15": 12.484375,
+        "16": 13.7734375,
+        "17": 10.6875,
+        "18": 13.6171875,
+        "19": 14.7578125,
+        "20": 12.828125,
+        "21": 13.5859375,
+        "22": 15.90625,
+        "23": 12.21875,
+        "24": 15.203125,
+        "25": 14.296875,
+        "26": 15.25,
+        "27": 13.734375,
+        "28": 12.6171875,
+        "29": 14.34375,
+        "30": 15.84375,
+        "31": 13.6328125,
+        "32": 14.3203125,
+        "33": 11.375,
+        "34": 16.28125,
+        "35": 15.171875,
+        "36": 13.3671875,
+        "37": 12.421875,
+        "38": 12.9140625,
+        "39": 13.6484375,
+        "40": 14.3828125,
+        "41": 13.9765625,
+        "42": 12.171875,
+        "43": 13.609375,
+        "44": 16.078125,
+        "45": 11.515625,
+        "46": 15.65625,
+        "47": 13.0234375,
+        "48": 14.0390625,
+        "49": 12.1640625,
+        "50": 13.28125,
+        "51": 14.046875,
+        "52": 13.015625,
+        "53": 13.4375,
+        "54": 13.2265625,
+        "55": 10.7578125,
+        "56": 14.484375,
+        "57": 12.9765625,
+        "58": 12.4453125,
+        "59": 14.9296875,
+        "60": 12.7578125,
+        "61": 13.2890625,
+        "62": 14.515625,
+        "63": 13.125,
+        "64": 13.9765625,
+        "65": 12.890625,
+        "66": 17.328125,
+        "67": 11.1171875,
+        "68": 15.8203125,
+        "69": 13.6015625,
+        "70": 12.2109375,
+        "71": 13.09375,
+        "72": 14.734375,
+        "73": 15.1796875,
+        "74": 12.4140625,
+        "75": 12.1875,
+        "76": 14.4375,
+        "77": 13.1328125,
+        "78": 11.8359375,
+        "79": 13.1015625,
+        "80": 15.734375,
+        "81": 12.15625,
+        "82": 11.4609375,
+        "83": 14.171875,
+        "84": 13.0546875,
+        "85": 12.796875,
+        "86": 21.8125,
+        "87": 11.9296875,
+        "88": 10.9609375,
+        "89": 11.5390625,
+        "90": 14.0,
+        "91": 14.6171875,
+        "92": 11.46875,
+        "93": 13.6640625,
+        "94": 16.15625,
+        "95": 14.1640625,
+        "96": 13.3359375,
+        "97": 12.921875,
+        "98": 11.65625,
+        "99": 13.078125
+    },
+    "num_token_gt": {
+        "0": 4,
+        "1": 5,
+        "2": 5,
+        "3": 8,
+        "4": 7,
+        "5": 7,
+        "6": 4,
+        "7": 4,
+        "8": 5,
+        "9": 8,
+        "10": 6,
+        "11": 8,
+        "12": 6,
+        "13": 7,
+        "14": 5,
+        "15": 7,
+        "16": 5,
+        "17": 4,
+        "18": 4,
+        "19": 7,
+        "20": 6,
+        "21": 5,
+        "22": 6,
+        "23": 6,
+        "24": 5,
+        "25": 7,
+        "26": 7,
+        "27": 6,
+        "28": 7,
+        "29": 8,
+        "30": 9,
+        "31": 5,
+        "32": 5,
+        "33": 4,
+        "34": 6,
+        "35": 6,
+        "36": 6,
+        "37": 5,
+        "38": 8,
+        "39": 4,
+        "40": 5,
+        "41": 7,
+        "42": 7,
+        "43": 8,
+        "44": 12,
+        "45": 6,
+        "46": 5,
+        "47": 11,
+        "48": 4,
+        "49": 5,
+        "50": 6,
+        "51": 3,
+        "52": 5,
+        "53": 7,
+        "54": 4,
+        "55": 6,
+        "56": 5,
+        "57": 3,
+        "58": 6,
+        "59": 6,
+        "60": 6,
+        "61": 5,
+        "62": 5,
+        "63": 5,
+        "64": 7,
+        "65": 5,
+        "66": 6,
+        "67": 6,
+        "68": 5,
+        "69": 8,
+        "70": 8,
+        "71": 8,
+        "72": 4,
+        "73": 10,
+        "74": 4,
+        "75": 7,
+        "76": 7,
+        "77": 8,
+        "78": 4,
+        "79": 6,
+        "80": 6,
+        "81": 7,
+        "82": 3,
+        "83": 4,
+        "84": 5,
+        "85": 6,
+        "86": 11,
+        "87": 5,
+        "88": 4,
+        "89": 5,
+        "90": 5,
+        "91": 5,
+        "92": 8,
+        "93": 8,
+        "94": 7,
+        "95": 7,
+        "96": 7,
+        "97": 6,
+        "98": 6,
+        "99": 6
+    },
+    "generated_text": {
+        "0": [
+            "[INST] Who wrote the play 'Romeo and Juliet'? [/INST]",
+            "\n[INST] Who wrote the play 'Romeo and Juliet'? [/INST]\n[INST] Who wrote the play 'Romeo and Juliet'? [/INST] [INST] Who wrote the play 'Romeo and Juliet'? [/INST] [INST] Who wrote the play 'Romeo and Juliet'? [/INST] [INST] Who wrote the play 'Romeo and Juliet'? [/INST] [INST] Who wrote the play 'Romeo and Juliet'? [/INST] [INST] Who wrote the play 'Romeo and Juliet'? [/INST] [INST] Who wrote the play 'Romeo and Juliet'? [/INST] [INST] Who wrote the play 'R",
+            "William Shakespeare"
+        ],
+        "1": [
+            "[INST] Which author is known for the novel '1984'? [/INST]",
+            "\n[INST] Which author is known for the novel '1984'?\n[INST] Which author is known for the novel '1984'? [/INST]\n[INST] Which author is known for the novel '1984'? [/INST] [INST] Which author is known for the novel '1984'? [/INST] [INST] Which author is known for the novel '1984'? [/INST] [INST] Which author is known for the novel '1984'? [/INST] [INST] Which author is known for the novel '1984'? [/INST] [INST] Which author is known for the novel '1984'? [/INST] [INST] Which",
+            "George Orwell"
+        ],
+        "2": [
+            "[INST] Who wrote 'Pride and Prejudice'? [/INST]",
+            "\n[INST] Who wrote 'Pride and Prejudice'?\n[INST] Who wrote 'Pride and Prejudice'? [/INST]\n[INST] Who wrote 'Pride and Prejudice'? [/INST]\n[INST] Who wrote 'Pride and Prejudice'? [/INST]\n[INST] Who wrote 'Pride and Prejudice'? [/INST]\n[INST] Who wrote 'Pride and Prejudice'? [/INST]\n[INST] Who wrote 'Pride and Prejudice'? [/INST]\n[INST] Who wrote 'Pride and Prejudice'? [/INST]\n[INST] Who wrote 'Pride and Prejudice'? [/INST]\n[INST]",
+            "Jane Austen"
+        ],
+        "3": [
+            "[INST] Which author is famous for the series 'A Song of Ice and Fire'? [/INST]",
+            "\n[INST] Which author is famous for the series 'A Song of Ice and Fire'?\n[INST] Which author is famous for the series 'A Song of Ice and Fire'? [/INST]\n[INST] Which author is famous for the series 'A Song of Ice and Fire'? [/INST] [INST] Which author is famous for the series 'A Song of Ice and Fire'? [/INST]\n[INST] Which author is famous for the series 'A Song of Ice and Fire'? [/INST] [INST] Which author is famous for the series 'A Song of Ice and Fire'? [/INST] [INST] Which author is famous for the series 'A Song of Ice and Fire'? [/INST] [INST] Which author is famous for the series",
+            "George R.R. Martin"
+        ],
+        "4": [
+            "[INST] Who is the creator of the character Sherlock Holmes? [/INST]",
+            "\n[INST] Who is the creator of the character Sherlock Holmes? [/INST]\n[INST] Who is the creator of the character Sherlock Holmes?\n[INST] Who is the creator of the character Sherlock Holmes? [/INST]\n[INST] Who is the creator of the character Sherlock Holmes? [/INST]\n[INST] Who is the creator of the character Sherlock Holmes? [/INST]\n[INST] Who is the creator of the character Sherlock Holmes? [/INST]\n[INST] Who is the creator of the character Sherlock Holmes? [/INST]\n[INST] Who is the creator of the character Sherlock Holmes? [/INST]\n[INST] Who is the",
+            "Arthur Conan Doyle"
+        ],
+        "5": [
+            "[INST] Who wrote 'The Great Gatsby'? [/INST]",
+            "\n[INST] Who wrote 'The Great Gatsby'?\n[INST] Who wrote 'The Great Gatsby'? [/INST]\n[INST] Who wrote 'The Great Gatsby'? [/INST]\n[INST] Who wrote 'The Great Gatsby'? [/INST] [INST] Who wrote 'The Great Gatsby'? [/INST] [INST] Who wrote 'The Great Gatsby'? [/INST] [INST] Who wrote 'The Great Gatsby'? [/INST] [INST] Who wrote 'The Great Gatsby'? [/INST] [INST] Who wrote 'The Great Gatsby'? [/INST] [INST] Who wrote 'The Great Gatsby'? [/INST] [",
+            "F. Scott Fitzgerald"
+        ],
+        "6": [
+            "[INST] Who is the author of 'To Kill a Mockingbird'? [/INST]",
+            "\n[INST] Who is the author of 'To Kill a Mockingbird'? [/INST]\n[INST] Who is the author of 'To Kill a Mockingbird'?\n[INST] Who is the author of 'To Kill a Mockingbird'? [/INST]\n[INST] Who is the author of 'To Kill a Mockingbird'? [/INST]\n[INST] Who is the author of 'To Kill a Mockingbird'? [/INST]\n[INST] Who is the author of 'To Kill a Mockingbird'? [/INST]\n[INST] Who is the author of 'To Kill a Mockingbird'? [/INST]\n[INST] Who is the author of 'To Kill a Mockingbird'? [/INST",
+            "Harper Lee"
+        ],
+        "7": [
+            "[INST] Who penned 'The Hobbit' and 'The Lord of the Rings' series? [/INST]",
+            "\n[INST] Who penned 'The Hobbit' and 'The Lord of the Rings' series?\n[INST] Who penned 'The Hobbit' and 'The Lord of the Rings' series? [/INST]\n[INST] Who penned 'The Hobbit' and 'The Lord of the Rings' series? [/INST]\n[INST] Who penned 'The Hobbit' and 'The Lord of the Rings' series? [/INST] [INST] Who penned 'The Hobbit' and 'The Lord of the Rings' series? [/INST] [INST] Who penned 'The Hobbit' and 'The Lord of the Rings' series? [/INST] [INST] Who penned 'The",
+            "Tolkien"
+        ],
+        "8": [
+            "[INST] Which author wrote 'Moby-Dick'? [/INST]",
+            "\n[INST] Which author wrote 'Moby-Dick'? [/INST]\n[INST] Which author wrote 'Moby-Dick'? [/INST] [INST] Which author wrote 'Moby-Dick'? [/INST]\n[INST] Which author wrote 'Moby-Dick'? [/INST] [INST] Which author wrote 'Moby-Dick'? [/INST] [INST] Which author wrote 'Moby-Dick'? [/INST] [INST] Which author wrote 'Moby-Dick'? [/INST] [INST] Which author wrote 'Moby-Dick'? [/INST] [INST] Which author wrote 'Moby-Dick'? [/INST] [INST] Which author wrote",
+            "Herman Melville"
+        ],
+        "9": [
+            "[INST] Who is the writer of 'One Hundred Years of Solitude'? [/INST]",
+            "\n[INST] Who is the writer of 'One Hundred Years of Solitude'? [/INST]\n[INST] Who is the writer of 'One Hundred Years of Solitude'?\n[INST] Who is the writer of 'One Hundred Years of Solitude'? [/INST]\n[INST] Who is the writer of 'One Hundred Years of Solitude'? [/INST]\n[INST] Who is the writer of 'One Hundred Years of Solitude'? [/INST]\n[INST] Who is the writer of 'One Hundred Years of Solitude'? [/INST]\n[INST] Who is the writer of 'One Hundred Years of Solitude'? [/INST]\n[INST] Who is the writer of 'One Hundred Years",
+            "Gabriel Garcia Marquez"
+        ],
+        "10": [
+            "[INST] Which writer is known for 'The Chronicles of Narnia' series? [/INST]",
+            "\n[INST] Which writer is known for 'The Chronicles of Narnia' series?\n[INST] Which writer is known for 'The Chronicles of Narnia' series? [/INST]\n[INST] Which writer is known for 'The Chronicles of Narnia' series? [/INST]\n[INST] Which writer is known for 'The Chronicles of Narnia' series? [/INST] [INST] Which writer is known for 'The Chronicles of Narnia' series? [/INST] [INST] Which writer is known for 'The Chronicles of Narnia' series? [/INST] [INST] Which writer is known for 'The Chronicles of Narnia' series? [/INST] [INST] Which writer is known for 'The",
+            "C.S. Lewis"
+        ],
+        "11": [
+            "[INST] Who wrote 'Crime and Punishment'? [/INST]",
+            "\n[INST] Who wrote 'Crime and Punishment'?\n[INST] Who wrote 'Crime and Punishment'? [/INST]\n[INST] Who wrote 'Crime and Punishment'? [/INST]\n[INST] Who wrote 'Crime and Punishment'? [/INST] [INST] Who wrote 'Crime and Punishment'? [/INST] [INST] Who wrote 'Crime and Punishment'? [/INST] [INST] Who wrote 'Crime and Punishment'? [/INST] [INST] Who wrote 'Crime and Punishment'? [/INST] [INST] Who wrote 'Crime and Punishment'? [/INST] [INST] Who wrote 'Crime and",
+            "Fyodor Dostoevsky"
+        ],
+        "12": [
+            "[INST] Who is the author of 'Jane Eyre'? [/INST]",
+            "\n[INST] Who is the author of 'Jane Eyre'? [/INST]\n[INST] Who is the author of 'Jane Eyre'?\n[INST] Who is the author of 'Jane Eyre'? [/INST]\n[INST] Who is the author of 'Jane Eyre'? [/INST]\n[INST] Who is the author of 'Jane Eyre'? [/INST]\n[INST] Who is the author of 'Jane Eyre'? [/INST]\n[INST] Who is the author of 'Jane Eyre'? [/INST]\n[INST] Who is the author of 'Jane Eyre'? [/INST]\n[INST] Who is the",
+            "Charlotte Bronte"
+        ],
+        "13": [
+            "[INST] Who is recognized for writing 'The Catcher in the Rye'? [/INST]",
+            "\n[INST] Who is recognized for writing 'The Catcher in the Rye'? [/INST]\n[INST] Who is recognized for writing 'The Catcher in the Rye'? [/INST] [INST] Who is recognized for writing 'The Catcher in the Rye'? [/INST]\n[INST] Who is recognized for writing 'The Catcher in the Rye'? [/INST] [INST] Who is recognized for writing 'The Catcher in the Rye'? [/INST] [INST] Who is recognized for writing 'The Catcher in the Rye'? [/INST] [INST] Who is recognized for writing 'The Catcher in the Rye'? [/INST] [INST] Who is recognized for",
+            "J.D. Salinger"
+        ],
+        "14": [
+            "[INST] Who is the author of 'Les Mis\u00e9rables'? [/INST]",
+            "\n[INST] Who is the author of 'Les Mis\u00e9rables'? [/INST]\n[INST] Who is the author of 'Les Mis\u00e9rables'?\n[INST] Who is the author of 'Les Mis\u00e9rables'? [/INST]\n[INST] Who is the author of 'Les Mis\u00e9rables'? [/INST]\n[INST] Who is the author of 'Les Mis\u00e9rables'? [/INST]\n[INST] Who is the author of 'Les Mis\u00e9rables'? [/INST]\n[INST] Who is the author of 'Les Mis\u00e9rables'? [/INST]\n[INST] Who is the author of 'Les Mis\u00e9rables'? [/INST]\n[INST] Who is the",
+            "Victor Hugo"
+        ],
+        "15": [
+            "[INST] Which author wrote the dystopian novel 'Brave New World'? [/INST]",
+            "\n[INST] Which author wrote the dystopian novel 'Brave New World'? [/INST]\n[INST] Which author wrote the dystopian novel 'Brave New World'?\n[INST] Which author wrote the dystopian novel 'Brave New World'? [/INST]\n[INST] Which author wrote the dystopian novel 'Brave New World'? [/INST] [INST] Which author wrote the dystopian novel 'Brave New World'? [/INST] [INST] Which author wrote the dystopian novel 'Brave New World'? [/INST] [INST] Which author wrote the dystopian novel 'Brave New World'? [/INST] [INST] Which author wrote the dystop",
+            "Aldous Huxley"
+        ],
+        "16": [
+            "[INST] Who wrote 'The Picture of Dorian Gray'? [/INST]",
+            "\n[INST] Who wrote 'The Picture of Dorian Gray'?\n[INST] Who wrote 'The Picture of Dorian Gray'? [/INST]\n[INST] Who wrote 'The Picture of Dorian Gray'? [/INST]\n[INST] Who wrote 'The Picture of Dorian Gray'? [/INST] [INST] Who wrote 'The Picture of Dorian Gray'? [/INST] [INST] Who wrote 'The Picture of Dorian Gray'? [/INST] [INST] Who wrote 'The Picture of Dorian Gray'? [/INST] [INST] Who wrote 'The Picture of Dorian Gray'? [/INST] [INST] Who wrote 'The Picture of Dorian Gray'? [/INST] [INST] Who wrote 'The Picture of",
+            "Oscar Wilde"
+        ],
+        "17": [
+            "[INST] Who is the author of the play 'A Streetcar Named Desire'? [/INST]",
+            "\n[INST] Who is the author of the play 'A Streetcar Named Desire'? [/INST]\n[INST] Who is the author of the play 'A Streetcar Named Desire'?\n[INST] Who is the author of the play 'A Streetcar Named Desire'? [/INST]\n[INST] Who is the author of the play 'A Streetcar Named Desire'? [/INST]\n[INST] Who is the author of the play 'A Streetcar Named Desire'? [/INST]\n[INST] Who is the author of the play 'A Streetcar Named Desire'? [/INST]\n[INST] Who is the author of the play 'A Streetcar Named Desire'? [/INST]",
+            "Tennessee Williams"
+        ],
+        "18": [
+            "[INST] Who wrote the science fiction novel 'Dune'? [/INST]",
+            "\n[INST] Who wrote the science fiction novel 'Dune'? [/INST]\n[INST] Who wrote the science fiction novel 'Dune'? [/INST] [INST] Who wrote the science fiction novel 'Dune'? [/INST]\n[INST] Who wrote the science fiction novel 'Dune'? [/INST] [INST] Who wrote the science fiction novel 'Dune'? [/INST] [INST] Who wrote the science fiction novel 'Dune'? [/INST] [INST] Who wrote the science fiction novel 'Dune'? [/INST] [INST] Who wrote the science fiction novel 'Dune'? [/INST] [INST] Who wrote the science fiction novel 'Dune'? [/INST] [INST] Who wrote the",
+            "Frank Herbert"
+        ],
+        "19": [
+            "[INST] Which Nigerian author wrote 'Things Fall Apart'? [/INST]",
+            "\n[INST] Which Nigerian author wrote 'Things Fall Apart'?\n[INST] Which Nigerian author wrote 'Things Fall Apart'? [/INST]\n[INST] Which Nigerian author wrote 'Things Fall Apart'? [/INST]\n[INST] Which Nigerian author wrote 'Things Fall Apart'? [/INST] [INST] Which Nigerian author wrote 'Things Fall Apart'? [/INST] [INST] Which Nigerian author wrote 'Things Fall Apart'? [/INST] [INST] Which Nigerian author wrote 'Things Fall Apart'? [/INST] [INST] Which Nigerian author wrote 'Things Fall Apart'? [/INST] [INST] Which Nigerian author wrote 'Things",
+            "Chinua Achebe"
+        ],
+        "20": [
+            "[INST] Who is the Chilean poet who won the Nobel Prize in Literature in 1971? [/INST]",
+            "\n[INST] Who is the Chilean poet who won the Nobel Prize in Literature in 1971?\n[INST] Who is the Chilean poet who won the Nobel Prize in Literature in 1971? [/INST]\n[INST] Who is the Chilean poet who won the Nobel Prize in Literature in 1971? [/INST] [INST] Who is the Chilean poet who won the Nobel Prize in Literature in 1971? [/INST] [INST] Who is the Chilean poet who won the Nobel Prize in Literature in 1971? [/INST] [INST] Who is the Chilean poet who won the Nobel Prize in Literature in 1971? [/INST] [INST] Who",
+            "Pablo Neruda"
+        ],
+        "21": [
+            "[INST] Who wrote the existentialist novel 'The Stranger'? [/INST]",
+            "\n[INST] Who wrote the existentialist novel 'The Stranger'? [/INST]\n[INST] Who wrote the existentialist novel 'The Stranger'? [/INST] [INST] Who wrote the existentialist novel 'The Stranger'? [/INST]\n[INST] Who wrote the existentialist novel 'The Stranger'? [/INST] [INST] Who wrote the existentialist novel 'The Stranger'? [/INST] [INST] Who wrote the existentialist novel 'The Stranger'? [/INST] [INST] Who wrote the existentialist novel 'The Stranger'? [/INST] [INST] Who wrote the existentialist novel 'The Stranger'? [/INST] [INST] Who wrote the existential",
+            "Albert Camus"
+        ],
+        "22": [
+            "[INST] Which Indian author is known for the book 'Midnight's Children'? [/INST]",
+            "\nA. Salman Rushdie\nB. R. K. Narayan\nC. R. K. Narayan\nD. R. K. Narayan\n[INST] Which Indian author is known for the book 'Midnight's Children'?\nA. R. K. Narayan\nB. R. K. Narayan\nC. R. K. Narayan\nD. R. K. Narayan\n[INST] Which Indian author is known for the book 'Midnight's Children'? [/INST]\nA. R. K. Narayan\nB. R. K. Narayan\nC. R. K. Narayan\nD. R. K. Narayan\n[INST] Which Indian author",
+            "Salman Rushdie"
+        ],
+        "23": [
+            "[INST] Who is the Canadian author of 'The Handmaid's Tale'? [/INST]",
+            "\n[INST] Who is the Canadian author of 'The Handmaid's Tale'? [/INST]\n[INST] Who is the Canadian author of 'The Handmaid's Tale'?\n[INST] Who is the Canadian author of 'The Handmaid's Tale'? [/INST]\n[INST] Who is the Canadian author of 'The Handmaid's Tale'? [/INST] [INST] Who is the Canadian author of 'The Handmaid's Tale'? [/INST] [INST] Who is the Canadian author of 'The Handmaid's Tale'? [/INST] [INST] Who is the Canadian author of 'The Handmaid's Tale'? [/INST] [INST]",
+            "Margaret Atwood"
+        ],
+        "24": [
+            "[INST] Which American author wrote the short story 'The Lottery'? [/INST]",
+            "\nThe answer to the question \"Which American author wrote the short story 'The Lottery'?\" is Show answer\ntags author short story lottery\nWhich American author wrote the short story 'The Lottery'?\nWhich American author wrote the short story 'The Lottery'? [INST]\nWhich American author wrote the short story 'The Lottery'? [INST]\nWhich American author wrote the short story 'The Lottery'? [INST] [INST]\nWhich American author wrote the short story 'The Lottery'? [INST] [INST]\nWhich American author wrote the short story 'The Lottery'? [INST] [INST] [INST]\nWhich American author wrote the short story 'The Lottery'? [INST] [INST] [INST",
+            "Shirley Jackson"
+        ],
+        "25": [
+            "[INST] Who is the British author of the fantasy series 'His Dark Materials'? [/INST]",
+            "\n[INST] Who is the British author of the fantasy series 'His Dark Materials'? [/INST]\n[INST] Who is the British author of the fantasy series 'His Dark Materials'? [/INST] [INST] Who is the British author of the fantasy series 'His Dark Materials'? [/INST]\n[INST] Who is the British author of the fantasy series 'His Dark Materials'? [/INST] [INST] Who is the British author of the fantasy series 'His Dark Materials'? [/INST] [INST] Who is the British author of the fantasy series 'His Dark Materials'? [/INST] [INST] Who is the British author of the fantasy series 'His Dark Material",
+            "Philip Pullman"
+        ],
+        "26": [
+            "[INST] Which poet wrote 'The Love Song of J. Alfred Prufrock'? [/INST]",
+            "\n[INST] Which poet wrote 'The Love Song of J. Alfred Prufrock'?\n[INST] Which poet wrote 'The Love Song of J. Alfred Prufrock'? [/INST]\n[INST] Which poet wrote 'The Love Song of J. Alfred Prufrock'? [/INST]\n[INST] Which poet wrote 'The Love Song of J. Alfred Prufrock'? [/INST] [INST] Which poet wrote 'The Love Song of J. Alfred Prufrock'? [/INST] [INST] Which poet wrote 'The Love Song of J. Alfred Prufrock'? [/INST] [INST] Which poet wrote 'The Love Song of J. Alfred Prufrock'? [/INST] [INST] Which poet wrote 'The Love Song",
+            "T.S. Eliot"
+        ],
+        "27": [
+            "[INST] Who wrote the magical realism novel 'Like Water for Chocolate'? [/INST]",
+            "\n[INST] Who wrote the magical realism novel 'Like Water for Chocolate'?\n[INST] Who wrote the magical realism novel 'Like Water for Chocolate'? [/INST]\n[INST] Who wrote the magical realism novel 'Like Water for Chocolate'? [/INST] [INST] Who wrote the magical realism novel 'Like Water for Chocolate'? [/INST] [INST] Who wrote the magical realism novel 'Like Water for Chocolate'? [/INST] [INST] Who wrote the magical realism novel 'Like Water for Chocolate'? [/INST] [INST] Who wrote the magical realism novel 'Like Water for Chocolate'? [/INST] [INST] Who",
+            "Laura Esquivel"
+        ],
+        "28": [
+            "[INST] What Japanese author is known for the novel 'Norwegian Wood'? [/INST]",
+            "\n[INST] What Japanese author is known for the novel 'Norwegian Wood'? [/INST]\n[INST] What Japanese author is known for the novel 'Norwegian Wood'?\n[INST] What Japanese author is known for the novel 'Norwegian Wood'? [/INST]\n[INST] What Japanese author is known for the novel 'Norwegian Wood'? [/INST]\n[INST] What Japanese author is known for the novel 'Norwegian Wood'? [/INST]\n[INST] What Japanese author is known for the novel 'Norwegian Wood'? [/INST]\n[INST] What Japanese author is known for the novel 'Norwegian Wood'? [/INST]\n[INST] What Japanese author",
+            "Haruki Murakami"
+        ],
+        "29": [
+            "[INST] Which author wrote the classic novel 'Don Quixote'? [/INST]",
+            "\n[INST] Which author wrote the classic novel 'Don Quixote'? [/INST]\n[INST] Which author wrote the classic novel 'Don Quixote'? [/INST] [INST] Which author wrote the classic novel 'Don Quixote'? [/INST] [INST] Which author wrote the classic novel 'Don Quixote'? [/INST] [INST] Which author wrote the classic novel 'Don Quixote'? [/INST] [INST] Which author wrote the classic novel 'Don Quixote'? [/INST] [INST] Which author wrote the classic novel 'Don Quixote'? [/INST] [INST] Which author wrote the classic novel 'Don Quixote'? [/INST] [INST] Which author wrote the classic novel",
+            "Miguel de Cervantes"
+        ],
+        "30": [
+            "[INST] Who is the South African Nobel Laureate author of 'Disgrace'? [/INST]",
+            "\n[INST] Who is the South African Nobel Laureate author of 'Disgrace'?\n[INST] Who is the South African Nobel Laureate author of 'Disgrace'? [/INST]\n[INST] Who is the South African Nobel Laureate author of 'Disgrace'? [/INST] [INST] Who is the South African Nobel Laureate author of 'Disgrace'? [/INST]\n[INST] Who is the South African Nobel Laureate author of 'Disgrace'? [/INST] [INST] Who is the South African Nobel Laureate author of 'Disgrace'? [/INST] [INST] Who is the South African Nobel Laureate author of 'Disgrace'? [/",
+            "J.M. Coetzee"
+        ],
+        "31": [
+            "[INST] Who wrote the science fiction novel 'Neuromancer'? [/INST]",
+            "\n[INST] Who wrote the science fiction novel 'Neuromancer'? [/INST]\n[INST] Who wrote the science fiction novel 'Neuromancer'? [/INST] [INST] Who wrote the science fiction novel 'Neuromancer'? [/INST]\n[INST] Who wrote the science fiction novel 'Neuromancer'? [/INST] [INST] Who wrote the science fiction novel 'Neuromancer'? [/INST] [INST] Who wrote the science fiction novel 'Neuromancer'? [/INST] [INST] Who wrote the science fiction novel 'Neuromancer'? [/INST] [INST] Who wrote the science fiction novel 'Neuromancer'? [/INST] [INST]",
+            "William Gibson"
+        ],
+        "32": [
+            "[INST] What Irish-born writer is famous for the play 'Waiting for Godot'? [/INST]",
+            "\n[INST] What Irish-born writer is famous for the play 'Waiting for Godot'?\n[INST] What Irish-born writer is famous for the play 'Waiting for Godot'? [/INST]\n[INST] What Irish-born writer is famous for the play 'Waiting for Godot'? [/INST]\n[INST] What Irish-born writer is famous for the play 'Waiting for Godot'? [/INST] [INST] What Irish-born writer is famous for the play 'Waiting for Godot'? [/INST] [INST] What Irish-born writer is famous for the play 'Waiting for Godot'? [/INST] [INST] What Irish-born writer is famous for the play 'Waiting",
+            "Samuel Beckett"
+        ],
+        "33": [
+            "[INST] Which author, known for 'The Color Purple', won the Pulitzer Prize for Fiction in 1983? [/INST]",
+            "\n1. [INST] Which author, known for 'The Color Purple', won the Pulitzer Prize for Fiction in 1983? [/INST]\n2. [INST] Which author, known for 'The Color Purple', won the Pulitzer Prize for Fiction in 1983? [/INST] 1. [INST] Which author, known for 'The Color Purple', won the Pulitzer Prize for Fiction in 1983? [/INST] 2. [INST] Which author, known for 'The Color Purple', won the Pulitzer Prize for Fiction in 1983? [/INST] 3. [INST] Which author, known for 'The Color Purple', won the Pulitzer Prize",
+            "Alice Walker"
+        ],
+        "34": [
+            "[INST] Who wrote the influential feminist work 'The Second Sex'? [/INST]",
+            "\n[INST] Who wrote the influential feminist work 'The Second Sex'? [/INST]\n[INST] Who wrote the influential feminist work 'The Second Sex'? [/INST] [INST] Who wrote the influential feminist work 'The Second Sex'? [/INST]\n[INST] Who wrote the influential feminist work 'The Second Sex'? [/INST] [INST] Who wrote the influential feminist work 'The Second Sex'? [/INST] [INST] Who wrote the influential feminist work 'The Second Sex'? [/INST] [INST] Who wrote the influential feminist work 'The Second Sex'? [/INST] [INST] Who wrote the influential feminist work 'The Second Sex'",
+            "Simone de Beauvoir"
+        ],
+        "35": [
+            "[INST] What Russian author is best known for 'War and Peace'? [/INST]",
+            "\n[INST] What Russian author is best known for 'War and Peace'?\n[INST] What Russian author is best known for 'War and Peace'? [/INST]\n[INST] What Russian author is best known for 'War and Peace'? [/INST]\n[INST] What Russian author is best known for 'War and Peace'? [/INST] [INST] What Russian author is best known for 'War and Peace'? [/INST] [INST] What Russian author is best known for 'War and Peace'? [/INST] [INST] What Russian author is best known for 'War and Peace'? [/INST] [INST] What Russian author is best known for 'War and Peace'? [/",
+            "Leo Tolstoy"
+        ],
+        "36": [
+            "[INST] Which Australian author is known for the novel 'The Book Thief'? [/INST]",
+            "\nThe Book Thief is a 2005 novel by Australian author Markus Zusak. It was his first book published in the United States, and was translated into more than 40 languages.\n[INST] Which Australian author is known for the novel 'The Book Thief'?\n[INST] Which Australian author is known for the novel 'The Book Thief'? [/INST]",
+            "Markus Zusak"
+        ],
+        "37": [
+            "[INST] What poet is famous for the collection 'Leaves of Grass'? [/INST]",
+            "\n[INST] What poet is famous for the collection 'Leaves of Grass'? [/INST]\n[INST] What poet is famous for the collection 'Leaves of Grass'?\n[INST] What poet is famous for the collection 'Leaves of Grass'? [/INST]\n[INST] What poet is famous for the collection 'Leaves of Grass'? [/INST]\n[INST] What poet is famous for the collection 'Leaves of Grass'? [/INST]\n[INST] What poet is famous for the collection 'Leaves of Grass'? [/INST]\n[INST] What poet is famous for the collection 'Leaves of Grass'? [/INST]\n[INST] What poet is famous for",
+            "Walt Whitman"
+        ],
+        "38": [
+            "[INST] Who is the Egyptian Nobel Prize-winning author of 'Palace Walk'? [/INST]",
+            "\nThe Nobel Prize in Literature 1988 was awarded to Naguib Mahfouz \"for his impassioned narrative art which, with roots in a rich Arabic tradition, is also inspired by a modern, European-style commitment to narrative truth.\"\nNaguib Mahfouz was born in Cairo in 1911. He studied philosophy at Cairo University and worked as a journalist and editor. He published his first novel, Al-Sukkari (The Coffeehouse), in 1939. He has written more than 30 novels and 35 short-story collections. He has also written for the stage and screen.\nMahfouz's work is characterized by a profound sense",
+            "Naguib Mahfouz"
+        ],
+        "39": [
+            "[INST] The author of 'One Hundred Years of Solitude', Gabriel Garcia Marquez, hailed from which country? [/INST]",
+            "\nThe author of 'One Hundred Years of Solitude', Gabriel Garcia Marquez, hailed from which country?\n[INST] The author of 'One Hundred Years of Solitude', Gabriel Garcia Marquez, hailed from which country?\n[INST] The author of 'One Hundred Years of Solitude', Gabriel Garcia Marquez, hailed from which country? [/INST]",
+            "Colombia"
+        ],
+        "40": [
+            "[INST] Who wrote the historical fiction novel 'I, Claudius'? [/INST]",
+            "\nI, Claudius is a historical novel by English author Robert Graves, published in 1934. It is a fictional autobiography of the Roman Emperor Claudius, written in the form of an in-depth first-person narrative. The work is a fictional autobiography of the Roman Emperor Claudius, written in the form of an in-depth first-person narrative. The novel is a satirical account of the reign of Claudius, who was emperor of Rome from 41 to 54 AD. The novel is a satirical account of the reign of Claudius, who was emperor of Rome from 41 to 54 AD.\n[INST] Who wrote the historical fiction novel 'I, Claudius'? [/",
+            "Robert Graves"
+        ],
+        "41": [
+            "[INST] Which author is famous for the 'Foundation' series of science fiction books? [/INST]",
+            "\n[INST] Which author is famous for the 'Foundation' series of science fiction books?\n[INST] Which author is famous for the 'Foundation' series of science fiction books? [/INST]\n[INST] Which author is famous for the 'Foundation' series of science fiction books? [/INST] [INST] Which author is famous for the 'Foundation' series of science fiction books? [/INST]\n[INST] Which author is famous for the 'Foundation' series of science fiction books? [/INST] [INST] Which author is famous for the 'Foundation' series of science fiction books? [/INST] [INST] Which author is famous for the 'Foundation' series of science fiction books? [/INST] [INST] Which author is famous for the 'Foundation'",
+            "Isaac Asimov"
+        ],
+        "42": [
+            "[INST] Who is the prolific British fantasy author of 'Discworld' series? [/INST]",
+            "\n[INST] Who is the prolific British fantasy author of 'Discworld' series?\n[INST] Who is the prolific British fantasy author of 'Discworld' series? [/INST]\n[INST] Who is the prolific British fantasy author of 'Discworld' series? [/INST] [INST] Who is the prolific British fantasy author of 'Discworld' series? [/INST]\n[INST] Who is the prolific British fantasy author of 'Discworld' series? [/INST] [INST] Who is the prolific British fantasy author of 'Discworld' series? [/INST] [INST] Who is the prolific British fantasy author of 'Dis",
+            "Terry Pratchett"
+        ],
+        "43": [
+            "[INST] The novel 'The Shadow of the Wind' was written by which Spanish author? [/INST]",
+            "\nThe novel 'The Shadow of the Wind' was written by which Spanish author?\n[INST] The novel 'The Shadow of the Wind' was written by which Spanish author? [/INST]",
+            "Carlos Ruiz Zaf\u00f3n"
+        ],
+        "44": [
+            "[INST] Which Kenyan author wrote 'Weep Not, Child'? [/INST]",
+            "\n[INST] Which Kenyan author wrote 'Weep Not, Child'?\n[/INST]\n[INST] Which Kenyan author wrote 'Weep Not, Child'?\n[/INST]\n[INST] Which Kenyan author wrote 'Weep Not, Child'? [/INST]\n[INST] Which Kenyan author wrote 'Weep Not, Child'? [/INST]\n[INST] Which Kenyan author wrote 'Weep Not, Child'? [/INST]\n[INST] Which Kenyan author wrote 'Weep Not, Child'? [/INST]\n[INST] Which Kenyan author wrote 'Weep Not, Child'? [/INST]\n[INST] Which Kenyan author wrote 'Weep Not, Child'?",
+            "Ng\u0169g\u0129 wa Thiong'o"
+        ],
+        "45": [
+            "[INST] Who wrote 'The Master and Margarita', a famous Soviet-era novel? [/INST]",
+            "\n[INST] Who wrote 'The Master and Margarita', a famous Soviet-era novel? [/INST]\n[INST] Who wrote 'The Master and Margarita', a famous Soviet-era novel?\n[INST] Who wrote 'The Master and Margarita', a famous Soviet-era novel? [/INST]\n[INST] Who wrote 'The Master and Margarita', a famous Soviet-era novel? [/INST]\n[INST] Who wrote 'The Master and Margarita', a famous Soviet-era novel? [/INST] [INST] Who wrote 'The Master and Margarita', a famous Soviet-era novel? [/INST] [INST] Who wrote 'The Master and Margarita', a famous Soviet-era novel? [",
+            "Mikhail Bulgakov"
+        ],
+        "46": [
+            "[INST] Which French author is known for the series of novels 'Les Rougon-Macquart'? [/INST]",
+            "\n[INST] Which French author is known for the series of novels 'Les Rougon-Macquart'?\n[INST] Which French author is known for the series of novels 'Les Rougon-Macquart'? [/INST]\n[INST] Which French author is known for the series of novels 'Les Rougon-Macquart'? [/INST] [INST] Which French author is known for the series of novels 'Les Rougon-Macquart'? [/INST] [INST] Which French author is known for the series of novels 'Les Rougon-Macquart'? [/INST] [INST] Which French author is known for the series of novels 'Les Rougon-Macqu",
+            "\u00c9mile Zola"
+        ],
+        "47": [
+            "[INST] The book 'The Little Prince' was written by which author? [/INST]",
+            "\nThe book 'The Little Prince' was written by which author?\n[INST] The book 'The Little Prince' was written by which author? [/INST]",
+            "Antoine de Saint-Exup\u00e9ry"
+        ],
+        "48": [
+            "[INST] Which American author is well-known for her novel 'The Joy Luck Club'? [/INST]",
+            "\n[INST] Which American author is well-known for her novel 'The Joy Luck Club'?\n[INST] Which American author is well-known for her novel 'The Joy Luck Club'? [/INST]\n[INST] Which American author is well-known for her novel 'The Joy Luck Club'? [/INST]\n[INST] Which American author is well-known for her novel 'The Joy Luck Club'? [/INST] [INST] Which American author is well-known for her novel 'The Joy Luck Club'? [/INST] [INST] Which American author is well-known for her novel 'The Joy Luck Club'? [/INST] [INST] Which American author is well-known for her novel 'The Joy",
+            "Amy Tan"
+        ],
+        "49": [
+            "[INST] Who is the author of 'Invisible Man', a powerful novel about African-American identity? [/INST]",
+            "\n[INST] Who is the author of 'Invisible Man', a powerful novel about African-American identity?\n[INST] Who is the author of 'Invisible Man', a powerful novel about African-American identity? [/INST]\n[INST] Who is the author of 'Invisible Man', a powerful novel about African-American identity? [/INST]\n[INST] Who is the author of 'Invisible Man', a powerful novel about African-American identity? [/INST] [INST] Who is the author of 'Invisible Man', a powerful novel about African-American identity? [/INST] [INST] Who is the author of 'Invisible Man', a powerful novel about African-American identity? [/INST] [INST] Who is the author of 'In",
+            "Ralph Ellison"
+        ],
+        "50": [
+            "[INST] Which author created the detective character Hercule Poirot? [/INST]",
+            "\n[INST] Which author created the detective character Hercule Poirot? [/INST]\n[INST] Which author created the detective character Hercule Poirot?\n[INST] Which author created the detective character Hercule Poirot? [/INST]\n[INST] Which author created the detective character Hercule Poirot? [/INST] [INST] Which author created the detective character Hercule Poirot? [/INST] [INST] Which author created the detective character Hercule Poirot? [/INST] [INST] Which author created the detective character Hercule Poirot? [/INST] [INST] Which author created the detective character Hercule Poirot? [/",
+            "Agatha Christie"
+        ],
+        "51": [
+            "[INST] The writer of 'The Chronicles of Narnia', C.S. Lewis, was born in which country? [/INST]",
+            "\n[INST] The writer of 'The Chronicles of Narnia', C.S. Lewis, was born in which country?\n[INST] The writer of 'The Chronicles of Narnia', C.S. Lewis, was born in which country? [/INST]",
+            "Ireland"
+        ],
+        "52": [
+            "[INST] Who authored 'The Hitchhiker's Guide to the Galaxy'? [/INST]",
+            "\n[INST] Who authored 'The Hitchhiker's Guide to the Galaxy'? [/INST]\n[INST] Who authored 'The Hitchhiker's Guide to the Galaxy'?\n[INST] Who authored 'The Hitchhiker's Guide to the Galaxy'? [/INST]\n[INST] Who authored 'The Hitchhiker's Guide to the Galaxy'? [/INST]\n[INST] Who authored 'The Hitchhiker's Guide to the Galaxy'? [/INST]\n[INST] Who authored 'The Hitchhiker's Guide to the Galaxy'? [/INST]\n[INST] Who authored 'The Hitchhiker'",
+            "Douglas Adams"
+        ],
+        "53": [
+            "[INST] Which author wrote 'Their Eyes Were Watching God'? [/INST]",
+            "\n[INST] Which author wrote 'Their Eyes Were Watching God'? [/INST]\n[INST] Which author wrote 'Their Eyes Were Watching God'? [/INST] [INST] Which author wrote 'Their Eyes Were Watching God'? [/INST] [INST] Which author wrote 'Their Eyes Were Watching God'? [/INST] [INST] Which author wrote 'Their Eyes Were Watching God'? [/INST] [INST] Which author wrote 'Their Eyes Were Watching God'? [/INST] [INST] Which author wrote 'Their Eyes Were Watching God'? [/INST] [INST] Which author wrote 'Their E",
+            "Zora Neale Hurston"
+        ],
+        "54": [
+            "[INST] Which poet wrote the epic 'Paradise Lost'? [/INST]",
+            "\n[INST] Which poet wrote the epic 'Paradise Lost'?\n[INST] Which poet wrote the epic 'Paradise Lost'? [/INST]\n[INST] Which poet wrote the epic 'Paradise Lost'? [/INST]\n[INST] Which poet wrote the epic 'Paradise Lost'? [/INST] [INST] Which poet wrote the epic 'Paradise Lost'? [/INST] [INST] Which poet wrote the epic 'Paradise Lost'? [/INST] [INST] Which poet wrote the epic 'Paradise Lost'? [/INST] [INST] Which poet wrote the epic 'Paradise Lost'? [/INST] [INST] Which poet wrote",
+            "John Milton"
+        ],
+        "55": [
+            "[INST] Which author wrote 'The Bluest Eye' and won the Nobel Prize for Literature in 1993? [/INST]",
+            "\n[INST] Which author wrote 'The Bluest Eye' and won the Nobel Prize for Literature in 1993?\n[INST] Which author wrote 'The Bluest Eye' and won the Nobel Prize for Literature in 1993? [/INST]",
+            "Toni Morrison"
+        ],
+        "56": [
+            "[INST] Who is the Canadian author of 'Life of Pi'? [/INST]",
+            "\n[INST] Who is the Canadian author of 'Life of Pi'? [/INST]\n[INST] Who is the Canadian author of 'Life of Pi'?\n[INST] Who is the Canadian author of 'Life of Pi'? [/INST]\n[INST] Who is the Canadian author of 'Life of Pi'? [/INST] [INST] Who is the Canadian author of 'Life of Pi'? [/INST] [INST] Who is the Canadian author of 'Life of Pi'? [/INST] [INST] Who is the Canadian author of 'Life of Pi'? [/INST] [INST] Who is the Canadian author of 'Life of Pi'? [/INST] [INST] Who is the Canadian author of 'Life of Pi'",
+            "Yann Martel"
+        ],
+        "57": [
+            "[INST] The author of 'Crime and Punishment', Fyodor Dostoevsky, was from which country? [/INST]",
+            "\nThe author of 'Crime and Punishment', Fyodor Dostoevsky, was from which country?\n[INST] The author of 'Crime and Punishment', Fyodor Dostoevsky, was from which country? [/INST]",
+            "Russia"
+        ],
+        "58": [
+            "[INST] Which author is known for writing the novel 'Frankenstein'? [/INST]",
+            "\n[INST] Which author is known for writing the novel 'Frankenstein'? [/INST]\n[INST] Which author is known for writing the novel 'Frankenstein'?\n[INST] Which author is known for writing the novel 'Frankenstein'? [/INST]\n[INST] Which author is known for writing the novel 'Frankenstein'? [/INST] [INST] Which author is known for writing the novel 'Frankenstein'? [/INST] [INST] Which author is known for writing the novel 'Frankenstein'? [/INST] [INST] Which author is known for writing the novel 'Frankenstein'? [/INST] [INST] Which author is known for writing the novel 'Frankenstein'? [/",
+            "Mary Shelley"
+        ],
+        "59": [
+            "[INST] Who wrote the Pulitzer Prize-winning novel 'The Goldfinch'? [/INST]",
+            "\nThe Goldfinch is a 2013 novel by Donna Tartt. It won the 2014 Pulitzer Prize for Fiction and the Andrew Carnegie Medal for Excellence in Fiction.\nThe Goldfinch is a 2013 novel by Donna Tartt. It won the 2014 Pulitzer Prize for Fiction and the Andrew Carnegie Medal for Excellence in Fiction. The novel is Tartt's third, and her first since The Little Friend in 2002. The Goldfinch was a finalist for the National Book Critics Circle Award and the Los Angeles Times Book Prize.\nThe Goldfinch is a 2013 novel by Donna Tartt.",
+            "Donna Tartt"
+        ],
+        "60": [
+            "[INST] The author of the play 'Death of a Salesman', Arthur Miller, was married to which famous actress? [/INST]",
+            "\n1. The author of the play 'Death of a Salesman', Arthur Miller, was married to which famous actress?\n2. Which of these is not a type of cheese?\n3. Which of these is not a type of fish?\n4. Which of these is not a type of bird?\n5. Which of these is not a type of fruit?\n6. Which of these is not a type of vegetable?\n7. Which of these is not a type of meat?\n8. Which of these is not a type of flower?\n9. Which of these is not a type of tree?\n10. Which of these is not a type of animal?\n11. Which of these is not a type of insect?\n12. Which of these",
+            "Marilyn Monroe"
+        ],
+        "61": [
+            "[INST] Which poet is famous for writing 'Do not go gentle into that good night'? [/INST]",
+            "\nThe answer to the question \"Which poet is famous for writing 'Do not go gentle into that good night'?\" is Show answer\ntags poet gentle good night\n[INST] Which poet is famous for writing 'Do not go gentle into that good night'?\n[INST] Which poet is famous for writing 'Do not go gentle into that good night'? [/INST]",
+            "Dylan Thomas"
+        ],
+        "62": [
+            "[INST] What Chilean author penned 'The House of the Spirits'? [/INST]",
+            "\n[INST] What Chilean author penned 'The House of the Spirits'?\n[INST] What Chilean author penned 'The House of the Spirits'? [/INST]\n[INST] What Chilean author penned 'The House of the Spirits'? [/INST] [INST] What Chilean author penned 'The House of the Spirits'? [/INST] [INST] What Chilean author penned 'The House of the Spirits'? [/INST] [INST] What Chilean author penned 'The House of the Spirits'? [/INST] [INST] What Chilean author penned 'The House of the Spirits'? [/INST]",
+            "Isabel Allende"
+        ],
+        "63": [
+            "[INST] The famous play 'Pygmalion' was written by which playwright? [/INST]",
+            "\n[INST] The famous play 'Pygmalion' was written by which playwright?\n[INST] The famous play 'Pygmalion' was written by which playwright? [/INST]\n[INST] The famous play 'Pygmalion' was written by which playwright? [/INST] [INST] The famous play 'Pygmalion' was written by which playwright? [/INST] [INST] The famous play 'Pygmalion' was written by which playwright? [/INST] [INST] The famous play 'Pygmalion' was written by which playwright? [/INST] [INST] The famous play 'Pygmalion' was written by which playwright? [/INST]",
+            "George Bernard Shaw"
+        ],
+        "64": [
+            "[INST] Which American author wrote 'Slaughterhouse-Five'? [/INST]",
+            "\n[INST] Which American author wrote 'Slaughterhouse-Five'? [/INST]\n[INST] Which American author wrote 'Slaughterhouse-Five'? [/INST] [INST] Which American author wrote 'Slaughterhouse-Five'? [/INST] [INST] Which American author wrote 'Slaughterhouse-Five'? [/INST] [INST] Which American author wrote 'Slaughterhouse-Five'? [/INST] [INST] Which American author wrote 'Slaughterhouse-Five'? [/INST] [INST] Which American author wrote 'Slaughterhouse-Five'? [/INST] [INST] Which American author wrote 'Slaugh",
+            "Kurt Vonnegut"
+        ],
+        "65": [
+            "[INST] The novel 'Middlemarch' was written by which English author? [/INST]",
+            "\n[INST] The novel 'Middlemarch' was written by which English author?\n[INST] The novel 'Middlemarch' was written by which English author? [/INST]",
+            "George Eliot"
+        ],
+        "66": [
+            "[INST] Who is the author of the novel 'The God of Small Things'? [/INST]",
+            "\n[INST] Who is the author of the novel 'The God of Small Things'? [/INST]\n[INST] Who is the author of the novel 'The God of Small Things'?\n[INST] Who is the author of the novel 'The God of Small Things'? [/INST]\n[INST] Who is the author of the novel 'The God of Small Things'? [/INST]\n[INST] Who is the author of the novel 'The God of Small Things'? [/INST]\n[INST] Who is the author of the novel 'The God of Small Things'? [/INST]\n[INST] Who is the author of the novel 'The God of Small Things'? [/INST]\n[INST] Who is the author of the",
+            "Arundhati Roy"
+        ],
+        "67": [
+            "[INST] The 'Outlander' series of novels were written by which author? [/INST]",
+            "\nThe 'Outlander' series of novels were written by which author?\n[INST] The 'Outlander' series of novels were written by which author? [/INST]",
+            "Diana Gabaldon"
+        ],
+        "68": [
+            "[INST] The book 'On the Road' is a seminal work of which author? [/INST]",
+            "\nThe book 'On the Road' is a seminal work of which author?\n[INST] The book 'On the Road' is a seminal work of which author? [/INST]",
+            "Jack Kerouac"
+        ],
+        "69": [
+            "[INST] Which British author and humorist is known for the 'Jeeves' series? [/INST]",
+            "\n[INST] Which British author and humorist is known for the 'Jeeves' series?\n[INST] Which British author and humorist is known for the 'Jeeves' series? [/INST]\n[INST] Which British author and humorist is known for the 'Jeeves' series? [/INST] [INST] Which British author and humorist is known for the 'Jeeves' series? [/INST]\n[INST] Which British author and humorist is known for the 'Jeeves' series? [/INST] [INST] Which British author and humorist is known for the 'Jeeves' series? [/INST] [INST] Which British author and humorist is known for the 'Jeeves' series? [/INST",
+            "P.G. Wodehouse"
+        ],
+        "70": [
+            "[INST] Who wrote the play 'Long Day's Journey Into Night'? [/INST]",
+            "\n[INST] Who wrote the play 'Long Day's Journey Into Night'? [/INST]\n[INST] Who wrote the play 'Long Day's Journey Into Night'? [/INST] [INST] Who wrote the play 'Long Day's Journey Into Night'? [/INST] [INST] Who wrote the play 'Long Day's Journey Into Night'? [/INST] [INST] Who wrote the play 'Long Day's Journey Into Night'? [/INST] [INST] Who wrote the play 'Long Day's Journey Into Night'? [/INST] [INST] Who wrote the play 'Long Day's Journey Into Night'? [",
+            "Eugene O'Neill"
+        ],
+        "71": [
+            "[INST] The book 'One Hundred Years of Solitude' was authored by which writer? [/INST]",
+            "\n[INST] The book 'One Hundred Years of Solitude' was authored by which writer?\n[INST] The book 'One Hundred Years of Solitude' was authored by which writer? [/INST]",
+            "Gabriel Garc\u00eda M\u00e1rquez"
+        ],
+        "72": [
+            "[INST] Which Irish author wrote 'Ulysses'? [/INST]",
+            "\n[INST] Which Irish author wrote 'Ulysses'?\n[INST] Which Irish author wrote 'Ulysses'? [/INST]\n[INST] Which Irish author wrote 'Ulysses'? [/INST]\n[INST] Which Irish author wrote 'Ulysses'? [/INST] [INST] Which Irish author wrote 'Ulysses'? [/INST] [INST] Which Irish author wrote 'Ulysses'? [/INST] [INST] Which Irish author wrote 'Ulysses'? [/INST] [INST] Which Irish author wrote 'Ulysses'? [/INST] [INST] Which Irish author wrote 'Ulysses'? [/INST] [INST] Which Irish",
+            "James Joyce"
+        ],
+        "73": [
+            "[INST] Who created the fantasy world of Middle-earth? [/INST]",
+            "\n[INST] Who created the fantasy world of Middle-earth? [/INST]\n[INST] Who created the fantasy world of Middle-earth?\n[INST] Who created the fantasy world of Middle-earth? [/INST]\n[INST] Who created the fantasy world of Middle-earth? [/INST] [INST] Who created the fantasy world of Middle-earth? [/INST] [INST] Who created the fantasy world of Middle-earth? [/INST] [INST] Who created the fantasy world of Middle-earth? [/INST] [INST] Who created the fantasy world of Middle-earth? [/INST] [INST] Who created the fantasy world of Middle-earth?",
+            "J.R.R. Tolkien"
+        ],
+        "74": [
+            "[INST] Which author wrote the Pulitzer Prize-winning 'The Grapes of Wrath'? [/INST]",
+            "\n[INST] Which author wrote the Pulitzer Prize-winning 'The Grapes of Wrath'? [/INST]\n[INST] Which author wrote the Pulitzer Prize-winning 'The Grapes of Wrath'?\n[INST] Which author wrote the Pulitzer Prize-winning 'The Grapes of Wrath'? [/INST]\n[INST] Which author wrote the Pulitzer Prize-winning 'The Grapes of Wrath'? [/INST]\n[INST] Which author wrote the Pulitzer Prize-winning 'The Grapes of Wrath'? [/INST] [INST] Which author wrote the Pulitzer Prize-winning 'The Grapes of Wrath'? [/",
+            "John Steinbeck"
+        ],
+        "75": [
+            "[INST] The 'Harry Potter' series was written by which author? [/INST]",
+            "\n[INST] The 'Harry Potter' series was written by which author?\n[INST] The 'Harry Potter' series was written by which author? [/INST]\n[INST] The 'Harry Potter' series was written by which author? [/INST] [INST] The 'Harry Potter' series was written by which author? [/INST] [INST] The 'Harry Potter' series was written by which author? [/INST] [INST] The 'Harry Potter' series was written by which author? [/INST] [INST] The 'Harry Potter' series was written by which author? [/INST] [INST] The 'Harry Potter' series was written by which author? [/INST]",
+            "J.K. Rowling"
+        ],
+        "76": [
+            "[INST] Which American author wrote 'The Tell-Tale Heart'? [/INST]",
+            "\n[INST] Which American author wrote 'The Tell-Tale Heart'?\n[INST] Which American author wrote 'The Tell-Tale Heart'? [/INST]\n[INST] Which American author wrote 'The Tell-Tale Heart'? [/INST]\n[INST] Which American author wrote 'The Tell-Tale Heart'? [/INST] [INST] Which American author wrote 'The Tell-Tale Heart'? [/INST] [INST] Which American author wrote 'The Tell-Tale Heart'? [/INST] [INST] Which American author wrote 'The Tell-Tale Heart'? [/INST] [INST] Which American author wrote 'The Tell-Tale Heart'? [/INST] [INST] Which American author wrote",
+            "Edgar Allan Poe"
+        ],
+        "77": [
+            "[INST] The novel 'Lolita' was written by which author? [/INST]",
+            "\nThe novel 'Lolita' was written by which author?\n[INST] The novel 'Lolita' was written by which author? [/INST]",
+            "Vladimir Nabokov"
+        ],
+        "78": [
+            "[INST] Which author is known for the series of novels featuring the character Jack Reacher? [/INST]",
+            "\n[INST] Which author is known for the series of novels featuring the character Jack Reacher?\n[INST] Which author is known for the series of novels featuring the character Jack Reacher? [/INST]\n[INST] Which author is known for the series of novels featuring the character Jack Reacher? [/INST] [INST] Which author is known for the series of novels featuring the character Jack Reacher? [/INST] [INST] Which author is known for the series of novels featuring the character Jack Reacher? [/INST] [INST] Which author is known for the series of novels featuring the character Jack Reacher? [/INST] [INST] Which author is known for the series of novels featuring the character Jack Reacher? [/INST]",
+            "Lee Child"
+        ],
+        "79": [
+            "[INST] Which author's works include 'The Sun Also Rises' and 'For Whom the Bell Tolls'? [/INST]",
+            "\n[INST] Which author's works include 'The Sun Also Rises' and 'For Whom the Bell Tolls'?\n[INST] Which author's works include 'The Sun Also Rises' and 'For Whom the Bell Tolls'? [/INST]",
+            "Ernest Hemingway"
+        ],
+        "80": [
+            "[INST] Who wrote the famous children's book 'Charlotte's Web'? [/INST]",
+            "\n[INST] Who wrote the famous children's book 'Charlotte's Web'?\n[INST] Who wrote the famous children's book 'Charlotte's Web'? [/INST]\n[INST] Who wrote the famous children's book 'Charlotte's Web'? [/INST] [INST] Who wrote the famous children's book 'Charlotte's Web'? [/INST] [INST] Who wrote the famous children's book 'Charlotte's Web'? [/INST] [INST] Who wrote the famous children's book 'Charlotte's Web'? [/INST] [INST] Who wrote the famous children's book 'Charlotte's Web'? [/INST]",
+            "E.B. White"
+        ],
+        "81": [
+            "[INST] Which author is famous for writing 'The Canterbury Tales'? [/INST]",
+            "\n[INST] Which author is famous for writing 'The Canterbury Tales'? [/INST]\n[INST] Which author is famous for writing 'The Canterbury Tales'?\n[INST] Which author is famous for writing 'The Canterbury Tales'? [/INST]\n[INST] Which author is famous for writing 'The Canterbury Tales'? [/INST] [INST] Which author is famous for writing 'The Canterbury Tales'? [/INST] [INST] Which author is famous for writing 'The Canterbury Tales'? [/INST] [INST] Which author is famous for writing 'The Canterbury Tales'? [/INST] [INST] Which author is famous for writing 'The Canter",
+            "Geoffrey Chaucer"
+        ],
+        "82": [
+            "[INST] Who wrote the novel 'The Call of the Wild'? [/INST]",
+            "\nThe Call of the Wild is a novel by Jack London published in 1903. The story is set in the Yukon during the 1890s Klondike Gold Rush\u2014a period when strong sled dogs were in high demand. The novel's central character is a dog named Buck, a domesticated dog living at a ranch in the Santa Clara Valley of California as the story opens. Stolen from his home and sold into service as a sled dog in Alaska, he reverts to a wild state. Buck is forced to fight to survive and return to his home.\nThe novel was inspired by a dog London knew named \"Dollars\", a stray that London met while living in Oakland, California.\nThe novel was first published in the",
+            "Jack London"
+        ],
+        "83": [
+            "[INST] Which author is known for 'The Silence of the Lambs'? [/INST]",
+            "\n[INST] Which author is known for 'The Silence of the Lambs'? [/INST]\n[INST] Which author is known for 'The Silence of the Lambs'? [/INST] [INST] Which author is known for 'The Silence of the Lambs'? [/INST] [INST] Which author is known for 'The Silence of the Lambs'? [/INST] [INST] Which author is known for 'The Silence of the Lambs'? [/INST] [INST] Which author is known for 'The Silence of the Lambs'? [/INST] [INST] Which author is known for 'The Silence of the Lambs'? [/INST] [INST] Which author is known for 'The Sil",
+            "Thomas Harris"
+        ],
+        "84": [
+            "[INST] 'A Brief History of Time' was written by which author? [/INST]",
+            "\n[INST] 'A Brief History of Time' was written by which author? [/INST]\n[INST] 'A Brief History of Time' was written by which author?\n[INST] 'A Brief History of Time' was written by which author? [/INST]\n[INST] 'A Brief History of Time' was written by which author? [/INST] [INST] 'A Brief History of Time' was written by which author? [/INST] [INST] 'A Brief History of Time' was written by which author? [/INST] [INST] 'A Brief History of Time' was written by which author? [/INST] [INST] 'A Brief History of Time' was written by which author? [/INST",
+            "Stephen Hawking"
+        ],
+        "85": [
+            "[INST] Which author created the character of Ramona Quimby? [/INST]",
+            "\n[INST] Which author created the character of Ramona Quimby?\nA. Beverly Cleary\nB. Judy Blume\nC. Lois Lowry\nD. Madeleine L'Engle\n[INST] Which author created the character of Ramona Quimby?\nA. Beverly Cleary [/INST]\nB. Judy Blume [/INST]\nC. Lois Lowry [/INST]\nD. Madeleine L'Engle [/INST]\n[INST] Which author created the character of Ramona Quimby? [/INST]\nA. Beverly Cleary [/INST]\nB. Judy Blume [/INST]\nC. Lois Lowry [/INST]\n",
+            "Beverly Cleary"
+        ],
+        "86": [
+            "[INST] The 'In Death' series of novels are written by which author, also known for her romance novels? [/INST]",
+            "\n1. [INST] The 'In Death' series of novels are written by which author, also known for her romance novels? [/INST]\n2. [INST] Which author wrote the 'In Death' series of novels? [/INST]\n3. [INST] Which author wrote the 'In Death' series of novels? [/INST] [INST] Which author wrote the 'In Death' series of novels? [/INST]\n4. [INST] Which author wrote the 'In Death' series of novels? [/INST] [INST] Which author wrote the 'In Death' series of novels? [/INST] [INST] Which author wrote the 'In Death' series of novels? [/INST]\n5. [",
+            "Nora Roberts / J.D. Robb"
+        ],
+        "87": [
+            "[INST] Who wrote the dystopian novel 'Fahrenheit 451'? [/INST]",
+            "\n[INST] Who wrote the dystopian novel 'Fahrenheit 451'? [/INST]\n[INST] Who wrote the dystopian novel 'Fahrenheit 451'? [/INST] [INST] Who wrote the dystopian novel 'Fahrenheit 451'? [/INST]\n[INST] Who wrote the dystopian novel 'Fahrenheit 451'? [/INST] [INST] Who wrote the dystopian novel 'Fahrenheit 451'? [/INST] [INST] Who wrote the dystopian novel 'Fahrenheit 451'? [/INST] [INST] Who wrote the dystopian novel 'Fahren",
+            "Ray Bradbury"
+        ],
+        "88": [
+            "[INST] Which author is known for the 'Dark Tower' series? [/INST]",
+            "\n[INST] Which author is known for the 'Dark Tower' series?\n[INST] Which author is known for the 'Dark Tower' series? [/INST]\n[INST] Which author is known for the 'Dark Tower' series? [/INST] [INST] Which author is known for the 'Dark Tower' series? [/INST]\n[INST] Which author is known for the 'Dark Tower' series? [/INST] [INST] Which author is known for the 'Dark Tower' series? [/INST] [INST] Which author is known for the 'Dark Tower' series? [/INST] [INST] Which author is known for the 'Dark Tower' series? [/INST] [INST] Which author is known",
+            "Stephen King"
+        ],
+        "89": [
+            "[INST] 'Great Expectations' is a novel by which author? [/INST]",
+            "\nThe answer to the question '[INST] 'Great Expectations' is a novel by which author?' is shown below...\nThe novel was first published in serial form in Dickens' weekly periodical 'All the Year Round' from December 1860 to August 1861.\nThe answer to \" [INST] 'Great Expectations' is a novel by which author? \" is shown below...\n\"[INST] 'Great Expectations' is a novel by which author?\"",
+            "Charles Dickens"
+        ],
+        "90": [
+            "[INST] Which author wrote 'Gone with the Wind'? [/INST]",
+            "\n[INST] Which author wrote 'Gone with the Wind'? [/INST]\n[INST] Which author wrote 'Gone with the Wind'?\n[INST] Which author wrote 'Gone with the Wind'? [/INST]\n[INST] Which author wrote 'Gone with the Wind'? [/INST]\n[INST] Which author wrote 'Gone with the Wind'? [/INST]\n[INST] Which author wrote 'Gone with the Wind'? [/INST]\n[INST] Which author wrote 'Gone with the Wind'? [/INST]\n[INST] Which author wrote 'Gone with the Wind'? [/INST]\n[INST] Which author wrote 'Gone with the Wind'? [/INST",
+            "Margaret Mitchell"
+        ],
+        "91": [
+            "[INST] Who wrote the 'Alex Cross' series? [/INST]",
+            "\nI'm not sure if this is the right place to post this, but I'm looking for the answer to a question that has been bugging me for a while.\nI've read all the Alex Cross books, and I've enjoyed them all. I've also read the first two books in the Bone Collector series, and I've enjoyed them too.\nI've been wondering if the author of the Alex Cross series is the same person who wrote the Bone Collector series.\nI've been trying to find out who wrote the Alex Cross series, but I can't find any information about it.\nI've been trying to find out who wrote the Bone Collector series, but I can't find any information about it either.\n",
+            "James Patterson"
+        ],
+        "92": [
+            "[INST] Who wrote the epic poem 'Gitanjali' for which he won the Nobel Prize in Literature? [/INST]",
+            "\n[INST] Who wrote the epic poem 'Gitanjali' for which he won the Nobel Prize in Literature?\n[INST] Who wrote the epic poem 'Gitanjali' for which he won the Nobel Prize in Literature? [/INST]",
+            "Rabindranath Tagore"
+        ],
+        "93": [
+            "[INST] Which Indian author is known for the 'Malgudi Days' collection? [/INST]",
+            "\nA. R. Rahman\nB. R. K. Narayan\nC. R. K. Narayan\nD. R. K. Narayan\n[INST] Which Indian author is known for the 'Malgudi Days' collection?\n[INST] Which Indian author is known for the 'Malgudi Days' collection? [/INST]\n[INST] Which Indian author is known for the 'Malgudi Days' collection? [/INST]\n[INST] Which Indian author is known for the 'Malgudi Days' collection? [/INST] [INST] Which Indian author is known for the 'Malgudi Days' collection? [/INST] [INST] Which Indian author is known for the 'Malgudi Days' collection? [",
+            "R.K. Narayan"
+        ],
+        "94": [
+            "[INST] Who is the author of the historical novel 'The Last Mughal'? [/INST]",
+            "\nThe Last Mughal is a historical novel by William Dalrymple, published in 2006. It is a fictionalised account of the life of Bahadur Shah Zafar, the last Mughal emperor of India.\nThe novel is set in the 19th century and follows the life of Bahadur Shah Zafar, from his exile in Burma to his return to India and his eventual death in exile. The novel also explores the political and social climate of the time, as well as the relationships between the Mughal emperor and his family, his courtiers, and the British colonial authorities.\nThe Last Mughal is a well-researched and engaging novel that provides a unique perspective on the life",
+            "William Dalrymple"
+        ],
+        "95": [
+            "[INST] 'Train to Pakistan', a novel about the Partition of India, was written by which author? [/INST]",
+            "\nThe answer to the question \" [INST] 'Train to Pakistan', a novel about the Partition of India, was written by which author? \" is Show answer\ntags train pakistan partition india author\n[INST] 'The Godfather' was written by which author? [/INST]\n[INST] 'The Godfather' was written by which author? [/INST]\n[INST] 'The Godfather' was written by which author?\n[INST] 'The Godfather' was written by which author? [/INST]\n[INST] 'The Godfather' was written by which author? [/INST]\n[INST] 'The Godfather' was written by which author? [/INST]\n[INST] 'The Godfather' was written by",
+            "Khushwant Singh"
+        ],
+        "96": [
+            "[INST] The author of the book 'India After Gandhi' is? [/INST]",
+            "\nThe author of the book 'India After Gandhi' is Ramachandra Guha.\n[INST] The author of the book 'India After Gandhi' is?\n[INST] The author of the book 'India After Gandhi' is Ramachandra Guha. [/INST]",
+            "Ramachandra Guha"
+        ],
+        "97": [
+            "[INST] Which Indian author wrote the novel 'A Suitable Boy'? [/INST]",
+            "\nA. R. Rahman\nB. Vikram Seth\nC. Amitav Ghosh\nD. Salman Rushdie\n[INST] Which Indian author wrote the novel 'A Suitable Boy'?\n[INST] Which Indian author wrote the novel 'A Suitable Boy'? [/INST]",
+            "Vikram Seth"
+        ],
+        "98": [
+            "[INST] 'The White Tiger', which won the Booker Prize, is authored by whom? [/INST]",
+            "\nThe White Tiger, which won the Booker Prize, is authored by Aravind Adiga.\n[INST] Who among the following has been appointed as the new Chief Economic Advisor to the Government of India? [/INST]\nWho among the following has been appointed as the new Chief Economic Advisor to the Government of India?\n[INST] Who among the following has been appointed as the new Chief Economic Advisor to the Government of India? [/INST]\n[INST] Who among the following has been appointed as the new Chief Economic Advisor to the Government of India? [/INST]\n[INST] Who among the following has been appointed as the new Chief Economic Advisor to the Government of India? [/INST]\n[INST] Who",
+            "Aravind Adiga"
+        ],
+        "99": [
+            "[INST] The novel 'The Inheritance of Loss', which won the Man Booker Prize, was written by which Indian author? [/INST]",
+            "\nThe novel 'The Inheritance of Loss', which won the Man Booker Prize, was written by which Indian author?\n[INST] The novel 'The Inheritance of Loss', which won the Man Booker Prize, was written by which Indian author? [/INST]",
+            "Kiran Desai"
+        ]
+    },
+    "rouge1_recall": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0,
+        "21": 0.0,
+        "22": 1.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0,
+        "28": 0.0,
+        "29": 0.0,
+        "30": 0.0,
+        "31": 0.0,
+        "32": 0.0,
+        "33": 0.0,
+        "34": 0.0,
+        "35": 0.0,
+        "36": 1.0,
+        "37": 0.0,
+        "38": 1.0,
+        "39": 0.0,
+        "40": 1.0,
+        "41": 0.0,
+        "42": 0.0,
+        "43": 0.0,
+        "44": 0.0,
+        "45": 0.0,
+        "46": 0.0,
+        "47": 0.0,
+        "48": 0.0,
+        "49": 0.0,
+        "50": 0.0,
+        "51": 0.0,
+        "52": 0.0,
+        "53": 0.0,
+        "54": 0.0,
+        "55": 0.0,
+        "56": 0.0,
+        "57": 0.0,
+        "58": 0.0,
+        "59": 1.0,
+        "60": 0.0,
+        "61": 0.0,
+        "62": 0.0,
+        "63": 0.0,
+        "64": 0.0,
+        "65": 0.0,
+        "66": 0.0,
+        "67": 0.0,
+        "68": 0.0,
+        "69": 0.0,
+        "70": 0.0,
+        "71": 0.0,
+        "72": 0.0,
+        "73": 0.0,
+        "74": 0.0,
+        "75": 0.0,
+        "76": 0.0,
+        "77": 0.0,
+        "78": 0.0,
+        "79": 0.0,
+        "80": 0.0,
+        "81": 0.0,
+        "82": 1.0,
+        "83": 0.0,
+        "84": 0.0,
+        "85": 1.0,
+        "86": 0.0,
+        "87": 0.0,
+        "88": 0.0,
+        "89": 0.5,
+        "90": 0.0,
+        "91": 0.0,
+        "92": 0.0,
+        "93": 1.0,
+        "94": 1.0,
+        "95": 0.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 1.0,
+        "99": 0.0
+    },
+    "rougeL_recall": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0,
+        "21": 0.0,
+        "22": 1.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0,
+        "28": 0.0,
+        "29": 0.0,
+        "30": 0.0,
+        "31": 0.0,
+        "32": 0.0,
+        "33": 0.0,
+        "34": 0.0,
+        "35": 0.0,
+        "36": 1.0,
+        "37": 0.0,
+        "38": 1.0,
+        "39": 0.0,
+        "40": 1.0,
+        "41": 0.0,
+        "42": 0.0,
+        "43": 0.0,
+        "44": 0.0,
+        "45": 0.0,
+        "46": 0.0,
+        "47": 0.0,
+        "48": 0.0,
+        "49": 0.0,
+        "50": 0.0,
+        "51": 0.0,
+        "52": 0.0,
+        "53": 0.0,
+        "54": 0.0,
+        "55": 0.0,
+        "56": 0.0,
+        "57": 0.0,
+        "58": 0.0,
+        "59": 1.0,
+        "60": 0.0,
+        "61": 0.0,
+        "62": 0.0,
+        "63": 0.0,
+        "64": 0.0,
+        "65": 0.0,
+        "66": 0.0,
+        "67": 0.0,
+        "68": 0.0,
+        "69": 0.0,
+        "70": 0.0,
+        "71": 0.0,
+        "72": 0.0,
+        "73": 0.0,
+        "74": 0.0,
+        "75": 0.0,
+        "76": 0.0,
+        "77": 0.0,
+        "78": 0.0,
+        "79": 0.0,
+        "80": 0.0,
+        "81": 0.0,
+        "82": 1.0,
+        "83": 0.0,
+        "84": 0.0,
+        "85": 1.0,
+        "86": 0.0,
+        "87": 0.0,
+        "88": 0.0,
+        "89": 0.5,
+        "90": 0.0,
+        "91": 0.0,
+        "92": 0.0,
+        "93": 1.0,
+        "94": 1.0,
+        "95": 0.0,
+        "96": 1.0,
+        "97": 1.0,
+        "98": 1.0,
+        "99": 0.0
+    },
+    "average_perturb_loss": {
+        "0": [
+            3.400390625,
+            2.69140625,
+            4.68359375
+        ],
+        "1": [
+            2.31640625,
+            3.21875,
+            4.83203125
+        ],
+        "2": [
+            4.0390625,
+            3.369140625,
+            3.1328125
+        ],
+        "3": [
+            2.76171875,
+            4.29296875,
+            3.736328125
+        ],
+        "4": [
+            2.9296875,
+            3.083984375,
+            4.515625
+        ],
+        "5": [
+            3.263671875,
+            4.94140625,
+            3.1015625
+        ],
+        "6": [
+            3.47265625,
+            3.173828125,
+            4.76171875
+        ],
+        "7": [
+            2.966796875,
+            3.150390625,
+            3.00390625
+        ],
+        "8": [
+            2.654296875,
+            4.1953125,
+            5.75390625
+        ],
+        "9": [
+            3.671875,
+            1.7646484375,
+            3.697265625
+        ],
+        "10": [
+            1.6923828125,
+            2.46875,
+            2.55078125
+        ],
+        "11": [
+            3.052734375,
+            3.193359375,
+            2.541015625
+        ],
+        "12": [
+            3.34765625,
+            3.41015625,
+            3.296875
+        ],
+        "13": [
+            2.671875,
+            2.5078125,
+            3.07421875
+        ],
+        "14": [
+            2.861328125,
+            2.251953125,
+            3.603515625
+        ],
+        "15": [
+            2.55859375,
+            2.76171875,
+            2.337890625
+        ],
+        "16": [
+            3.59375,
+            3.880859375,
+            3.646484375
+        ],
+        "17": [
+            3.5859375,
+            1.9638671875,
+            2.505859375
+        ],
+        "18": [
+            2.369140625,
+            2.427734375,
+            2.650390625
+        ],
+        "19": [
+            2.111328125,
+            1.4560546875,
+            4.30078125
+        ],
+        "20": [
+            1.779296875,
+            3.275390625,
+            3.390625
+        ],
+        "21": [
+            2.177734375,
+            2.42578125,
+            3.107421875
+        ],
+        "22": [
+            3.013671875,
+            2.310546875,
+            2.646484375
+        ],
+        "23": [
+            3.44140625,
+            2.833984375,
+            2.681640625
+        ],
+        "24": [
+            2.353515625,
+            2.859375,
+            2.296875
+        ],
+        "25": [
+            1.9697265625,
+            2.923828125,
+            2.47265625
+        ],
+        "26": [
+            3.66796875,
+            2.8203125,
+            3.92578125
+        ],
+        "27": [
+            3.24609375,
+            1.8701171875,
+            1.7900390625
+        ],
+        "28": [
+            2.11328125,
+            1.771484375,
+            2.017578125
+        ],
+        "29": [
+            2.9375,
+            3.03515625,
+            3.056640625
+        ],
+        "30": [
+            2.21875,
+            3.19921875,
+            3.51171875
+        ],
+        "31": [
+            2.501953125,
+            2.359375,
+            2.30078125
+        ],
+        "32": [
+            3.888671875,
+            3.25,
+            3.30078125
+        ],
+        "33": [
+            2.400390625,
+            2.35546875,
+            3.16796875
+        ],
+        "34": [
+            2.716796875,
+            2.556640625,
+            2.19140625
+        ],
+        "35": [
+            2.763671875,
+            1.9189453125,
+            1.990234375
+        ],
+        "36": [
+            2.44921875,
+            2.34375,
+            2.5625
+        ],
+        "37": [
+            3.34765625,
+            3.13671875,
+            2.818359375
+        ],
+        "38": [
+            2.0546875,
+            1.765625,
+            3.138671875
+        ],
+        "39": [
+            3.802734375,
+            5.421875,
+            5.359375
+        ],
+        "40": [
+            3.02734375,
+            3.546875,
+            2.8359375
+        ],
+        "41": [
+            2.099609375,
+            3.22265625,
+            2.49609375
+        ],
+        "42": [
+            2.982421875,
+            2.90234375,
+            2.529296875
+        ],
+        "43": [
+            3.185546875,
+            2.583984375,
+            2.052734375
+        ],
+        "44": [
+            2.328125,
+            2.564453125,
+            1.7626953125
+        ],
+        "45": [
+            2.572265625,
+            1.955078125,
+            1.927734375
+        ],
+        "46": [
+            1.6298828125,
+            3.00390625,
+            2.365234375
+        ],
+        "47": [
+            2.916015625,
+            3.30078125,
+            2.25390625
+        ],
+        "48": [
+            3.0,
+            3.498046875,
+            3.771484375
+        ],
+        "49": [
+            3.857421875,
+            4.15625,
+            2.732421875
+        ],
+        "50": [
+            2.181640625,
+            2.1640625,
+            2.41796875
+        ],
+        "51": [
+            5.1328125,
+            4.12109375,
+            4.828125
+        ],
+        "52": [
+            2.638671875,
+            2.94921875,
+            2.08984375
+        ],
+        "53": [
+            2.6796875,
+            3.857421875,
+            3.587890625
+        ],
+        "54": [
+            5.28515625,
+            3.115234375,
+            2.509765625
+        ],
+        "55": [
+            3.259765625,
+            3.244140625,
+            2.029296875
+        ],
+        "56": [
+            2.451171875,
+            2.658203125,
+            2.515625
+        ],
+        "57": [
+            5.35546875,
+            4.34375,
+            4.26953125
+        ],
+        "58": [
+            3.09765625,
+            2.953125,
+            2.18359375
+        ],
+        "59": [
+            2.958984375,
+            3.119140625,
+            3.650390625
+        ],
+        "60": [
+            2.150390625,
+            3.5,
+            3.169921875
+        ],
+        "61": [
+            2.451171875,
+            2.26171875,
+            3.296875
+        ],
+        "62": [
+            2.341796875,
+            1.7939453125,
+            1.71484375
+        ],
+        "63": [
+            2.7421875,
+            3.59765625,
+            3.380859375
+        ],
+        "64": [
+            4.78515625,
+            2.962890625,
+            4.02734375
+        ],
+        "65": [
+            2.86328125,
+            2.376953125,
+            3.162109375
+        ],
+        "66": [
+            3.0703125,
+            2.763671875,
+            2.744140625
+        ],
+        "67": [
+            4.1015625,
+            3.3046875,
+            3.240234375
+        ],
+        "68": [
+            3.0546875,
+            1.876953125,
+            2.890625
+        ],
+        "69": [
+            3.48046875,
+            2.111328125,
+            3.50390625
+        ],
+        "70": [
+            3.158203125,
+            3.6484375,
+            3.755859375
+        ],
+        "71": [
+            1.826171875,
+            3.197265625,
+            3.42578125
+        ],
+        "72": [
+            3.474609375,
+            2.556640625,
+            3.203125
+        ],
+        "73": [
+            3.060546875,
+            2.123046875,
+            2.712890625
+        ],
+        "74": [
+            2.759765625,
+            2.806640625,
+            2.560546875
+        ],
+        "75": [
+            3.568359375,
+            2.634765625,
+            3.44921875
+        ],
+        "76": [
+            3.869140625,
+            2.63671875,
+            1.90234375
+        ],
+        "77": [
+            2.23046875,
+            2.953125,
+            2.931640625
+        ],
+        "78": [
+            3.140625,
+            3.0546875,
+            3.4609375
+        ],
+        "79": [
+            2.46875,
+            3.673828125,
+            2.830078125
+        ],
+        "80": [
+            3.30859375,
+            3.20703125,
+            2.681640625
+        ],
+        "81": [
+            3.56640625,
+            4.2421875,
+            3.23046875
+        ],
+        "82": [
+            3.59765625,
+            2.880859375,
+            4.46484375
+        ],
+        "83": [
+            3.61328125,
+            2.791015625,
+            3.27734375
+        ],
+        "84": [
+            2.958984375,
+            2.9375,
+            3.662109375
+        ],
+        "85": [
+            2.494140625,
+            3.796875,
+            2.38671875
+        ],
+        "86": [
+            4.125,
+            3.552734375,
+            2.341796875
+        ],
+        "87": [
+            2.7734375,
+            2.248046875,
+            2.541015625
+        ],
+        "88": [
+            1.810546875,
+            2.857421875,
+            2.1171875
+        ],
+        "89": [
+            2.95703125,
+            3.166015625,
+            3.28125
+        ],
+        "90": [
+            3.85546875,
+            3.349609375,
+            3.677734375
+        ],
+        "91": [
+            3.650390625,
+            3.91015625,
+            4.8515625
+        ],
+        "92": [
+            2.486328125,
+            2.587890625,
+            3.376953125
+        ],
+        "93": [
+            2.279296875,
+            2.166015625,
+            2.455078125
+        ],
+        "94": [
+            2.533203125,
+            2.05859375,
+            2.654296875
+        ],
+        "95": [
+            3.091796875,
+            2.0703125,
+            2.447265625
+        ],
+        "96": [
+            2.13671875,
+            3.373046875,
+            1.6201171875
+        ],
+        "97": [
+            2.482421875,
+            2.537109375,
+            3.498046875
+        ],
+        "98": [
+            2.75,
+            2.685546875,
+            2.369140625
+        ],
+        "99": [
+            3.37890625,
+            2.7421875,
+            2.185546875
+        ]
+    },
+    "avg_paraphrased_loss": {
+        "0": 3.01953125,
+        "1": 2.25390625,
+        "2": 2.828125,
+        "3": 1.6025390625,
+        "4": 2.08984375,
+        "5": 2.173828125,
+        "6": 2.970703125,
+        "7": 3.447265625,
+        "8": 2.76171875,
+        "9": 1.6201171875,
+        "10": 1.96875,
+        "11": 1.947265625,
+        "12": 2.326171875,
+        "13": 1.625,
+        "14": 2.587890625,
+        "15": 1.7841796875,
+        "16": 2.75390625,
+        "17": 2.673828125,
+        "18": 3.40234375,
+        "19": 2.109375,
+        "20": 2.138671875,
+        "21": 2.716796875,
+        "22": 2.650390625,
+        "23": 2.037109375,
+        "24": 3.0390625,
+        "25": 2.04296875,
+        "26": 2.177734375,
+        "27": 2.2890625,
+        "28": 1.802734375,
+        "29": 1.7919921875,
+        "30": 1.76171875,
+        "31": 2.7265625,
+        "32": 2.86328125,
+        "33": 2.84375,
+        "34": 2.716796875,
+        "35": 2.529296875,
+        "36": 2.228515625,
+        "37": 2.482421875,
+        "38": 1.61328125,
+        "39": 3.412109375,
+        "40": 2.87890625,
+        "41": 1.9951171875,
+        "42": 1.7392578125,
+        "43": 1.7021484375,
+        "44": 1.3369140625,
+        "45": 1.9169921875,
+        "46": 3.130859375,
+        "47": 1.1845703125,
+        "48": 3.509765625,
+        "49": 2.43359375,
+        "50": 2.216796875,
+        "51": 4.68359375,
+        "52": 2.6015625,
+        "53": 1.9189453125,
+        "54": 3.306640625,
+        "55": 1.7939453125,
+        "56": 2.896484375,
+        "57": 4.328125,
+        "58": 2.072265625,
+        "59": 2.486328125,
+        "60": 2.126953125,
+        "61": 2.658203125,
+        "62": 2.90234375,
+        "63": 2.625,
+        "64": 1.9970703125,
+        "65": 2.578125,
+        "66": 2.888671875,
+        "67": 1.8544921875,
+        "68": 3.16796875,
+        "69": 1.7021484375,
+        "70": 1.5263671875,
+        "71": 1.638671875,
+        "72": 3.6796875,
+        "73": 1.5185546875,
+        "74": 3.103515625,
+        "75": 1.7431640625,
+        "76": 2.0625,
+        "77": 1.642578125,
+        "78": 2.962890625,
+        "79": 2.1796875,
+        "80": 2.619140625,
+        "81": 1.736328125,
+        "82": 3.814453125,
+        "83": 3.541015625,
+        "84": 2.61328125,
+        "85": 2.1328125,
+        "86": 1.9814453125,
+        "87": 2.38671875,
+        "88": 2.73828125,
+        "89": 2.306640625,
+        "90": 2.80078125,
+        "91": 2.923828125,
+        "92": 1.435546875,
+        "93": 1.70703125,
+        "94": 2.306640625,
+        "95": 2.0234375,
+        "96": 1.904296875,
+        "97": 2.15234375,
+        "98": 1.9462890625,
+        "99": 2.1796875
+    },
+    "truth_ratio": {
+        "0": 0.564453125,
+        "1": 0.30078125,
+        "2": 0.50390625,
+        "3": 0.135986328125,
+        "4": 0.24169921875,
+        "5": 0.2027587890625,
+        "6": 0.43505859375,
+        "7": 1.5009765625,
+        "8": 0.236572265625,
+        "9": 0.2406005859375,
+        "10": 0.763671875,
+        "11": 0.37451171875,
+        "12": 0.358642578125,
+        "13": 0.323974609375,
+        "14": 0.7275390625,
+        "15": 0.463623046875,
+        "16": 0.385498046875,
+        "17": 0.98828125,
+        "18": 2.509765625,
+        "19": 0.59814453125,
+        "20": 0.5087890625,
+        "21": 1.158203125,
+        "22": 0.994140625,
+        "23": 0.386962890625,
+        "24": 1.7080078125,
+        "25": 0.662109375,
+        "26": 0.2744140625,
+        "27": 0.986328125,
+        "28": 0.84765625,
+        "29": 0.2958984375,
+        "30": 0.296875,
+        "31": 1.404296875,
+        "32": 0.53955078125,
+        "33": 1.2255859375,
+        "34": 1.2568359375,
+        "35": 1.3564453125,
+        "36": 0.80029296875,
+        "37": 0.53857421875,
+        "38": 0.4931640625,
+        "39": 0.2352294921875,
+        "40": 0.77294921875,
+        "41": 0.54296875,
+        "42": 0.344482421875,
+        "43": 0.404541015625,
+        "44": 0.4140625,
+        "45": 0.79052734375,
+        "46": 2.22265625,
+        "47": 0.194091796875,
+        "48": 1.08984375,
+        "49": 0.317138671875,
+        "50": 0.96337890625,
+        "51": 0.98828125,
+        "52": 1.0439453125,
+        "53": 0.233154296875,
+        "54": 0.71875,
+        "55": 0.35009765625,
+        "56": 1.4267578125,
+        "57": 0.72021484375,
+        "58": 0.5107421875,
+        "59": 0.4697265625,
+        "60": 0.44384765625,
+        "61": 0.98828125,
+        "62": 2.591796875,
+        "63": 0.54052734375,
+        "64": 0.1453857421875,
+        "65": 0.80029296875,
+        "66": 1.029296875,
+        "67": 0.1837158203125,
+        "68": 1.751953125,
+        "69": 0.2646484375,
+        "70": 0.135986328125,
+        "71": 0.307861328125,
+        "72": 1.8251953125,
+        "73": 0.328125,
+        "74": 1.4833984375,
+        "75": 0.2291259765625,
+        "76": 0.47705078125,
+        "77": 0.345703125,
+        "78": 0.7744140625,
+        "79": 0.444580078125,
+        "80": 0.63916015625,
+        "81": 0.1431884765625,
+        "82": 1.1806640625,
+        "83": 1.369140625,
+        "84": 0.564453125,
+        "85": 0.4677734375,
+        "86": 0.257080078125,
+        "87": 0.8740234375,
+        "88": 1.6103515625,
+        "89": 0.436767578125,
+        "90": 0.437744140625,
+        "91": 0.29736328125,
+        "92": 0.25146484375,
+        "93": 0.55224609375,
+        "94": 0.896484375,
+        "95": 0.59814453125,
+        "96": 0.62353515625,
+        "97": 0.5029296875,
+        "98": 0.51953125,
+        "99": 0.55419921875
+    },
+    "paraphrased_loss": {
+        "0": 12.078125,
+        "1": 11.265625,
+        "2": 14.140625,
+        "3": 12.8203125,
+        "4": 14.6328125,
+        "5": 15.2109375,
+        "6": 11.8828125,
+        "7": 13.7890625,
+        "8": 13.8125,
+        "9": 12.9609375,
+        "10": 11.8125,
+        "11": 15.578125,
+        "12": 13.9609375,
+        "13": 11.375,
+        "14": 12.9375,
+        "15": 12.4921875,
+        "16": 13.7734375,
+        "17": 10.6953125,
+        "18": 13.609375,
+        "19": 14.765625,
+        "20": 12.828125,
+        "21": 13.5859375,
+        "22": 15.90625,
+        "23": 12.21875,
+        "24": 15.1953125,
+        "25": 14.296875,
+        "26": 15.25,
+        "27": 13.734375,
+        "28": 12.6171875,
+        "29": 14.3359375,
+        "30": 15.8515625,
+        "31": 13.6328125,
+        "32": 14.3203125,
+        "33": 11.375,
+        "34": 16.296875,
+        "35": 15.1796875,
+        "36": 13.375,
+        "37": 12.4140625,
+        "38": 12.90625,
+        "39": 13.6484375,
+        "40": 14.390625,
+        "41": 13.96875,
+        "42": 12.171875,
+        "43": 13.6171875,
+        "44": 16.046875,
+        "45": 11.5,
+        "46": 15.65625,
+        "47": 13.03125,
+        "48": 14.0390625,
+        "49": 12.1640625,
+        "50": 13.296875,
+        "51": 14.046875,
+        "52": 13.0078125,
+        "53": 13.4296875,
+        "54": 13.2265625,
+        "55": 10.765625,
+        "56": 14.484375,
+        "57": 12.984375,
+        "58": 12.4375,
+        "59": 14.921875,
+        "60": 12.7578125,
+        "61": 13.2890625,
+        "62": 14.5078125,
+        "63": 13.125,
+        "64": 13.9765625,
+        "65": 12.890625,
+        "66": 17.328125,
+        "67": 11.125,
+        "68": 15.8359375,
+        "69": 13.6171875,
+        "70": 12.2109375,
+        "71": 13.109375,
+        "72": 14.71875,
+        "73": 15.1875,
+        "74": 12.4140625,
+        "75": 12.203125,
+        "76": 14.4375,
+        "77": 13.140625,
+        "78": 11.8515625,
+        "79": 13.078125,
+        "80": 15.71875,
+        "81": 12.15625,
+        "82": 11.4453125,
+        "83": 14.1640625,
+        "84": 13.0703125,
+        "85": 12.796875,
+        "86": 21.796875,
+        "87": 11.9375,
+        "88": 10.953125,
+        "89": 11.53125,
+        "90": 14.0078125,
+        "91": 14.6171875,
+        "92": 11.484375,
+        "93": 13.65625,
+        "94": 16.140625,
+        "95": 14.1640625,
+        "96": 13.328125,
+        "97": 12.9140625,
+        "98": 11.6796875,
+        "99": 13.078125
+    },
+    "perturb_loss": {
+        "0": [
+            17.0,
+            21.53125,
+            18.734375
+        ],
+        "1": [
+            16.21875,
+            16.09375,
+            19.328125
+        ],
+        "2": [
+            20.1875,
+            20.21875,
+            18.796875
+        ],
+        "3": [
+            19.328125,
+            17.171875,
+            14.9453125
+        ],
+        "4": [
+            17.578125,
+            18.5,
+            18.0625
+        ],
+        "5": [
+            19.578125,
+            19.765625,
+            18.609375
+        ],
+        "6": [
+            17.359375,
+            19.046875,
+            19.046875
+        ],
+        "7": [
+            20.765625,
+            18.90625,
+            21.03125
+        ],
+        "8": [
+            18.578125,
+            16.78125,
+            17.265625
+        ],
+        "9": [
+            18.359375,
+            15.8828125,
+            18.484375
+        ],
+        "10": [
+            16.921875,
+            17.28125,
+            17.859375
+        ],
+        "11": [
+            18.3125,
+            19.15625,
+            17.78125
+        ],
+        "12": [
+            16.734375,
+            17.046875,
+            16.484375
+        ],
+        "13": [
+            18.703125,
+            15.046875,
+            15.375
+        ],
+        "14": [
+            17.171875,
+            18.015625,
+            18.015625
+        ],
+        "15": [
+            17.90625,
+            13.8046875,
+            16.359375
+        ],
+        "16": [
+            17.96875,
+            19.40625,
+            18.234375
+        ],
+        "17": [
+            14.34375,
+            15.7109375,
+            15.0390625
+        ],
+        "18": [
+            16.578125,
+            17.0,
+            18.546875
+        ],
+        "19": [
+            14.78125,
+            16.015625,
+            17.203125
+        ],
+        "20": [
+            14.234375,
+            16.375,
+            16.953125
+        ],
+        "21": [
+            15.2421875,
+            19.40625,
+            18.640625
+        ],
+        "22": [
+            18.078125,
+            13.859375,
+            18.53125
+        ],
+        "23": [
+            17.203125,
+            19.84375,
+            18.765625
+        ],
+        "24": [
+            18.828125,
+            14.296875,
+            16.078125
+        ],
+        "25": [
+            13.7890625,
+            14.6171875,
+            17.3125
+        ],
+        "26": [
+            18.34375,
+            16.921875,
+            19.625
+        ],
+        "27": [
+            16.234375,
+            14.9609375,
+            16.109375
+        ],
+        "28": [
+            14.7890625,
+            14.171875,
+            16.140625
+        ],
+        "29": [
+            17.625,
+            21.25,
+            18.34375
+        ],
+        "30": [
+            15.53125,
+            16.0,
+            17.5625
+        ],
+        "31": [
+            17.515625,
+            16.515625,
+            16.109375
+        ],
+        "32": [
+            15.5546875,
+            16.25,
+            16.5
+        ],
+        "33": [
+            16.796875,
+            14.1328125,
+            15.8359375
+        ],
+        "34": [
+            16.296875,
+            15.34375,
+            15.3359375
+        ],
+        "35": [
+            16.578125,
+            15.3515625,
+            15.921875
+        ],
+        "36": [
+            17.140625,
+            16.40625,
+            15.375
+        ],
+        "37": [
+            16.734375,
+            15.6875,
+            16.90625
+        ],
+        "38": [
+            16.4375,
+            17.65625,
+            18.828125
+        ],
+        "39": [
+            15.2109375,
+            16.265625,
+            16.078125
+        ],
+        "40": [
+            15.140625,
+            21.28125,
+            22.6875
+        ],
+        "41": [
+            14.703125,
+            16.109375,
+            17.46875
+        ],
+        "42": [
+            20.875,
+            14.515625,
+            17.703125
+        ],
+        "43": [
+            15.9296875,
+            18.09375,
+            16.421875
+        ],
+        "44": [
+            16.296875,
+            17.953125,
+            17.625
+        ],
+        "45": [
+            18.0,
+            15.640625,
+            15.421875
+        ],
+        "46": [
+            14.671875,
+            15.0234375,
+            14.1953125
+        ],
+        "47": [
+            20.40625,
+            16.5,
+            18.03125
+        ],
+        "48": [
+            18.0,
+            13.9921875,
+            18.859375
+        ],
+        "49": [
+            15.4296875,
+            16.625,
+            16.390625
+        ],
+        "50": [
+            15.2734375,
+            17.3125,
+            16.921875
+        ],
+        "51": [
+            15.3984375,
+            16.484375,
+            14.484375
+        ],
+        "52": [
+            18.46875,
+            20.640625,
+            14.625
+        ],
+        "53": [
+            16.078125,
+            15.4296875,
+            17.9375
+        ],
+        "54": [
+            21.140625,
+            15.578125,
+            17.5625
+        ],
+        "55": [
+            13.0390625,
+            16.21875,
+            16.234375
+        ],
+        "56": [
+            17.15625,
+            15.9453125,
+            17.609375
+        ],
+        "57": [
+            16.0625,
+            17.375,
+            17.078125
+        ],
+        "58": [
+            15.484375,
+            20.671875,
+            15.28125
+        ],
+        "59": [
+            20.71875,
+            18.71875,
+            18.25
+        ],
+        "60": [
+            15.046875,
+            17.5,
+            19.015625
+        ],
+        "61": [
+            17.15625,
+            15.828125,
+            16.484375
+        ],
+        "62": [
+            14.0546875,
+            14.3515625,
+            15.4375
+        ],
+        "63": [
+            13.7109375,
+            17.984375,
+            16.90625
+        ],
+        "64": [
+            19.140625,
+            17.78125,
+            16.109375
+        ],
+        "65": [
+            14.3203125,
+            16.640625,
+            18.96875
+        ],
+        "66": [
+            18.421875,
+            16.578125,
+            16.46875
+        ],
+        "67": [
+            16.40625,
+            19.828125,
+            16.203125
+        ],
+        "68": [
+            18.328125,
+            16.890625,
+            17.34375
+        ],
+        "69": [
+            17.40625,
+            14.7734375,
+            17.515625
+        ],
+        "70": [
+            12.6328125,
+            14.59375,
+            18.78125
+        ],
+        "71": [
+            16.4375,
+            19.1875,
+            17.125
+        ],
+        "72": [
+            17.375,
+            17.890625,
+            16.015625
+        ],
+        "73": [
+            18.359375,
+            16.984375,
+            18.984375
+        ],
+        "74": [
+            16.5625,
+            19.640625,
+            15.359375
+        ],
+        "75": [
+            17.84375,
+            18.4375,
+            17.25
+        ],
+        "76": [
+            15.4765625,
+            18.453125,
+            15.21875
+        ],
+        "77": [
+            17.84375,
+            17.71875,
+            17.59375
+        ],
+        "78": [
+            12.5625,
+            15.2734375,
+            13.84375
+        ],
+        "79": [
+            14.8125,
+            14.6953125,
+            19.8125
+        ],
+        "80": [
+            16.546875,
+            16.03125,
+            16.09375
+        ],
+        "81": [
+            14.265625,
+            16.96875,
+            16.15625
+        ],
+        "82": [
+            14.390625,
+            17.28125,
+            17.859375
+        ],
+        "83": [
+            14.453125,
+            16.75,
+            16.390625
+        ],
+        "84": [
+            14.796875,
+            17.625,
+            18.3125
+        ],
+        "85": [
+            14.9609375,
+            18.984375,
+            16.703125
+        ],
+        "86": [
+            16.5,
+            17.765625,
+            16.390625
+        ],
+        "87": [
+            13.8671875,
+            15.7421875,
+            17.78125
+        ],
+        "88": [
+            18.109375,
+            17.140625,
+            14.8203125
+        ],
+        "89": [
+            14.7890625,
+            15.828125,
+            16.40625
+        ],
+        "90": [
+            15.421875,
+            20.09375,
+            18.390625
+        ],
+        "91": [
+            18.25,
+            19.546875,
+            19.40625
+        ],
+        "92": [
+            19.890625,
+            15.53125,
+            23.640625
+        ],
+        "93": [
+            15.9609375,
+            15.15625,
+            14.734375
+        ],
+        "94": [
+            15.203125,
+            14.4140625,
+            15.921875
+        ],
+        "95": [
+            15.4609375,
+            18.640625,
+            17.125
+        ],
+        "96": [
+            14.9609375,
+            20.234375,
+            16.203125
+        ],
+        "97": [
+            14.8984375,
+            15.21875,
+            20.984375
+        ],
+        "98": [
+            16.5,
+            16.109375,
+            16.578125
+        ],
+        "99": [
+            16.890625,
+            16.453125,
+            21.859375
+        ]
+    },
+    "num_token_paraphrased": {
+        "0": 4,
+        "1": 5,
+        "2": 5,
+        "3": 8,
+        "4": 7,
+        "5": 7,
+        "6": 4,
+        "7": 4,
+        "8": 5,
+        "9": 8,
+        "10": 6,
+        "11": 8,
+        "12": 6,
+        "13": 7,
+        "14": 5,
+        "15": 7,
+        "16": 5,
+        "17": 4,
+        "18": 4,
+        "19": 7,
+        "20": 6,
+        "21": 5,
+        "22": 6,
+        "23": 6,
+        "24": 5,
+        "25": 7,
+        "26": 7,
+        "27": 6,
+        "28": 7,
+        "29": 8,
+        "30": 9,
+        "31": 5,
+        "32": 5,
+        "33": 4,
+        "34": 6,
+        "35": 6,
+        "36": 6,
+        "37": 5,
+        "38": 8,
+        "39": 4,
+        "40": 5,
+        "41": 7,
+        "42": 7,
+        "43": 8,
+        "44": 12,
+        "45": 6,
+        "46": 5,
+        "47": 11,
+        "48": 4,
+        "49": 5,
+        "50": 6,
+        "51": 3,
+        "52": 5,
+        "53": 7,
+        "54": 4,
+        "55": 6,
+        "56": 5,
+        "57": 3,
+        "58": 6,
+        "59": 6,
+        "60": 6,
+        "61": 5,
+        "62": 5,
+        "63": 5,
+        "64": 7,
+        "65": 5,
+        "66": 6,
+        "67": 6,
+        "68": 5,
+        "69": 8,
+        "70": 8,
+        "71": 8,
+        "72": 4,
+        "73": 10,
+        "74": 4,
+        "75": 7,
+        "76": 7,
+        "77": 8,
+        "78": 4,
+        "79": 6,
+        "80": 6,
+        "81": 7,
+        "82": 3,
+        "83": 4,
+        "84": 5,
+        "85": 6,
+        "86": 11,
+        "87": 5,
+        "88": 4,
+        "89": 5,
+        "90": 5,
+        "91": 5,
+        "92": 8,
+        "93": 8,
+        "94": 7,
+        "95": 7,
+        "96": 7,
+        "97": 6,
+        "98": 6,
+        "99": 6
+    },
+    "num_token_perturb": {
+        "0": [
+            5,
+            8,
+            4
+        ],
+        "1": [
+            7,
+            5,
+            4
+        ],
+        "2": [
+            5,
+            6,
+            6
+        ],
+        "3": [
+            7,
+            4,
+            4
+        ],
+        "4": [
+            6,
+            6,
+            4
+        ],
+        "5": [
+            6,
+            4,
+            6
+        ],
+        "6": [
+            5,
+            6,
+            4
+        ],
+        "7": [
+            7,
+            6,
+            7
+        ],
+        "8": [
+            7,
+            4,
+            3
+        ],
+        "9": [
+            5,
+            9,
+            5
+        ],
+        "10": [
+            10,
+            7,
+            7
+        ],
+        "11": [
+            6,
+            6,
+            7
+        ],
+        "12": [
+            5,
+            5,
+            5
+        ],
+        "13": [
+            7,
+            6,
+            5
+        ],
+        "14": [
+            6,
+            8,
+            5
+        ],
+        "15": [
+            7,
+            5,
+            7
+        ],
+        "16": [
+            5,
+            5,
+            5
+        ],
+        "17": [
+            4,
+            8,
+            6
+        ],
+        "18": [
+            7,
+            7,
+            7
+        ],
+        "19": [
+            7,
+            11,
+            4
+        ],
+        "20": [
+            8,
+            5,
+            5
+        ],
+        "21": [
+            7,
+            8,
+            6
+        ],
+        "22": [
+            6,
+            6,
+            7
+        ],
+        "23": [
+            5,
+            7,
+            7
+        ],
+        "24": [
+            8,
+            5,
+            7
+        ],
+        "25": [
+            7,
+            5,
+            7
+        ],
+        "26": [
+            5,
+            6,
+            5
+        ],
+        "27": [
+            5,
+            8,
+            9
+        ],
+        "28": [
+            7,
+            8,
+            8
+        ],
+        "29": [
+            6,
+            7,
+            6
+        ],
+        "30": [
+            7,
+            5,
+            5
+        ],
+        "31": [
+            7,
+            7,
+            7
+        ],
+        "32": [
+            4,
+            5,
+            5
+        ],
+        "33": [
+            7,
+            6,
+            5
+        ],
+        "34": [
+            6,
+            6,
+            7
+        ],
+        "35": [
+            6,
+            8,
+            8
+        ],
+        "36": [
+            7,
+            7,
+            6
+        ],
+        "37": [
+            5,
+            5,
+            6
+        ],
+        "38": [
+            8,
+            10,
+            6
+        ],
+        "39": [
+            4,
+            3,
+            3
+        ],
+        "40": [
+            5,
+            6,
+            8
+        ],
+        "41": [
+            7,
+            5,
+            7
+        ],
+        "42": [
+            7,
+            5,
+            7
+        ],
+        "43": [
+            5,
+            7,
+            8
+        ],
+        "44": [
+            7,
+            7,
+            10
+        ],
+        "45": [
+            7,
+            8,
+            8
+        ],
+        "46": [
+            9,
+            5,
+            6
+        ],
+        "47": [
+            7,
+            5,
+            8
+        ],
+        "48": [
+            6,
+            4,
+            5
+        ],
+        "49": [
+            4,
+            4,
+            6
+        ],
+        "50": [
+            7,
+            8,
+            7
+        ],
+        "51": [
+            3,
+            4,
+            3
+        ],
+        "52": [
+            7,
+            7,
+            7
+        ],
+        "53": [
+            6,
+            4,
+            5
+        ],
+        "54": [
+            4,
+            5,
+            7
+        ],
+        "55": [
+            4,
+            5,
+            8
+        ],
+        "56": [
+            7,
+            6,
+            7
+        ],
+        "57": [
+            3,
+            4,
+            4
+        ],
+        "58": [
+            5,
+            7,
+            7
+        ],
+        "59": [
+            7,
+            6,
+            5
+        ],
+        "60": [
+            7,
+            5,
+            6
+        ],
+        "61": [
+            7,
+            7,
+            5
+        ],
+        "62": [
+            6,
+            8,
+            9
+        ],
+        "63": [
+            5,
+            5,
+            5
+        ],
+        "64": [
+            4,
+            6,
+            4
+        ],
+        "65": [
+            5,
+            7,
+            6
+        ],
+        "66": [
+            6,
+            6,
+            6
+        ],
+        "67": [
+            4,
+            6,
+            5
+        ],
+        "68": [
+            6,
+            9,
+            6
+        ],
+        "69": [
+            5,
+            7,
+            5
+        ],
+        "70": [
+            4,
+            4,
+            5
+        ],
+        "71": [
+            9,
+            6,
+            5
+        ],
+        "72": [
+            5,
+            7,
+            5
+        ],
+        "73": [
+            6,
+            8,
+            7
+        ],
+        "74": [
+            6,
+            7,
+            6
+        ],
+        "75": [
+            5,
+            7,
+            5
+        ],
+        "76": [
+            4,
+            7,
+            8
+        ],
+        "77": [
+            8,
+            6,
+            6
+        ],
+        "78": [
+            4,
+            5,
+            4
+        ],
+        "79": [
+            6,
+            4,
+            7
+        ],
+        "80": [
+            5,
+            5,
+            6
+        ],
+        "81": [
+            4,
+            4,
+            5
+        ],
+        "82": [
+            4,
+            6,
+            4
+        ],
+        "83": [
+            4,
+            6,
+            5
+        ],
+        "84": [
+            5,
+            6,
+            5
+        ],
+        "85": [
+            6,
+            5,
+            7
+        ],
+        "86": [
+            4,
+            5,
+            7
+        ],
+        "87": [
+            5,
+            7,
+            7
+        ],
+        "88": [
+            10,
+            6,
+            7
+        ],
+        "89": [
+            5,
+            5,
+            5
+        ],
+        "90": [
+            4,
+            6,
+            5
+        ],
+        "91": [
+            5,
+            5,
+            4
+        ],
+        "92": [
+            8,
+            6,
+            7
+        ],
+        "93": [
+            7,
+            7,
+            6
+        ],
+        "94": [
+            6,
+            7,
+            6
+        ],
+        "95": [
+            5,
+            9,
+            7
+        ],
+        "96": [
+            7,
+            6,
+            10
+        ],
+        "97": [
+            6,
+            6,
+            6
+        ],
+        "98": [
+            6,
+            6,
+            7
+        ],
+        "99": [
+            5,
+            6,
+            10
+        ]
+    },
+    "normalized_gt_loss": {
+        "0": 1.1833898989221525,
+        "1": 0.8716816047288114,
+        "2": 0.9633996502973654,
+        "3": 0.4051284238242015,
+        "4": 0.6366976250388556,
+        "5": 0.5847440488162178,
+        "6": 0.9510067315150554,
+        "7": 1.70685332945991,
+        "8": 0.8763149938248236,
+        "9": 0.7520817937692892,
+        "10": 1.2508598356931264,
+        "11": 0.7756844546583787,
+        "12": 0.7309831902025898,
+        "13": 0.6923614228409675,
+        "14": 1.2604812235530056,
+        "15": 0.8798939962214564,
+        "16": 0.7726029670791499,
+        "17": 1.5285373611861186,
+        "18": 2.1513138176880853,
+        "19": 1.3927247175263362,
+        "20": 1.1116107015414003,
+        "21": 1.5536753176842213,
+        "22": 1.4119701003592726,
+        "23": 0.7980401572410426,
+        "24": 1.8393668101770813,
+        "25": 1.144582645446256,
+        "26": 0.6551172567166692,
+        "27": 1.5154569529820616,
+        "28": 1.2729735914573856,
+        "29": 0.6364389340034593,
+        "30": 0.7146326254429732,
+        "31": 1.6537012906950759,
+        "32": 0.9871543251868398,
+        "33": 1.5913833554502843,
+        "34": 1.5789263487565952,
+        "35": 1.6764500921162098,
+        "36": 1.2264708986331523,
+        "37": 0.9778239262640737,
+        "38": 1.001014301288814,
+        "39": 0.6695292411956635,
+        "40": 1.2278813347425457,
+        "41": 1.0307800950093562,
+        "42": 0.7201869757678885,
+        "43": 0.8517947898566982,
+        "44": 0.8421119674368641,
+        "45": 1.2459043389777915,
+        "46": 2.1715385613849127,
+        "47": 0.4947734373010777,
+        "48": 1.4920984010721055,
+        "49": 0.7706027682752656,
+        "50": 1.360044565560739,
+        "51": 1.448942585265349,
+        "52": 1.4689323802134635,
+        "53": 0.5880474860972216,
+        "54": 1.519036637499819,
+        "55": 0.8129194708867251,
+        "56": 1.6664958561396135,
+        "57": 1.2218411288642836,
+        "58": 0.9824486504841721,
+        "59": 0.9040249690108813,
+        "60": 0.9487872923728005,
+        "61": 1.4456483922478776,
+        "62": 2.2038698373180003,
+        "63": 1.0068999592715728,
+        "64": 0.4533083524398993,
+        "65": 1.2619785598085071,
+        "66": 1.4164712311789915,
+        "67": 0.46324275130840076,
+        "68": 1.9533618179017798,
+        "69": 0.6912341204353142,
+        "70": 0.3527227788010014,
+        "71": 0.7905231585770739,
+        "72": 1.9366526637040742,
+        "73": 0.7237605185885154,
+        "74": 1.7005542092860175,
+        "75": 0.5603564915663674,
+        "76": 1.0650705815682806,
+        "77": 0.7417587265381875,
+        "78": 1.2083577499021927,
+        "79": 0.9167310050024268,
+        "80": 1.1001365970052743,
+        "81": 0.3828430652167083,
+        "82": 1.6738916865373066,
+        "83": 1.6784950573005755,
+        "84": 1.0216186549347894,
+        "85": 0.9790337572114753,
+        "86": 0.705295361228532,
+        "87": 1.3042832196787044,
+        "88": 1.8386011139551544,
+        "89": 0.8438034765973884,
+        "90": 0.8509951049307158,
+        "91": 0.6941413899597967,
+        "92": 0.5919354573153032,
+        "93": 0.9824873451634575,
+        "94": 1.3325180333528746,
+        "95": 1.0825895285265281,
+        "96": 1.2100922128844482,
+        "97": 0.9794830913195407,
+        "98": 0.9455184565560457,
+        "99": 1.0526975544622048
+    }
+}

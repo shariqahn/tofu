@@ -1,0 +1,3540 @@
+{
+    "avg_gt_loss": {
+        "0": 5.91796875,
+        "1": 4.24609375,
+        "2": 3.505859375,
+        "3": 5.30078125,
+        "4": 5.16796875,
+        "5": 5.14453125,
+        "6": 3.73828125,
+        "7": 4.30859375,
+        "8": 7.28125,
+        "9": 4.08984375,
+        "10": 4.13671875,
+        "11": 3.447265625,
+        "12": 4.3359375,
+        "13": 2.177734375,
+        "14": 2.259765625,
+        "15": 3.291015625,
+        "16": 4.33984375,
+        "17": 1.9814453125,
+        "18": 3.515625,
+        "19": 4.83984375,
+        "20": 4.2890625,
+        "21": 5.05859375,
+        "22": 3.2890625,
+        "23": 3.109375,
+        "24": 3.314453125,
+        "25": 4.69921875,
+        "26": 4.42578125,
+        "27": 3.40625,
+        "28": 3.130859375,
+        "29": 5.19140625,
+        "30": 4.4453125,
+        "31": 2.9609375,
+        "32": 2.294921875,
+        "33": 3.294921875,
+        "34": 3.083984375,
+        "35": 4.68359375,
+        "36": 5.32421875,
+        "37": 3.810546875,
+        "38": 3.927734375,
+        "39": 4.09765625,
+        "40": 3.8046875,
+        "41": 5.16015625,
+        "42": 4.10546875,
+        "43": 3.35546875,
+        "44": 2.189453125,
+        "45": 2.564453125,
+        "46": 3.19140625,
+        "47": 5.62890625,
+        "48": 2.93359375,
+        "49": 4.73828125,
+        "50": 4.2890625,
+        "51": 6.65234375,
+        "52": 3.013671875,
+        "53": 3.544921875,
+        "54": 3.67578125,
+        "55": 3.359375,
+        "56": 3.171875,
+        "57": 2.32421875,
+        "58": 3.43359375,
+        "59": 2.453125,
+        "60": 2.4921875,
+        "61": 5.93359375,
+        "62": 4.75390625,
+        "63": 5.40625,
+        "64": 3.95703125,
+        "65": 3.01171875,
+        "66": 5.16015625,
+        "67": 2.98046875,
+        "68": 2.65625,
+        "69": 2.685546875,
+        "70": 3.458984375,
+        "71": 4.08984375,
+        "72": 1.6591796875,
+        "73": 2.544921875,
+        "74": 2.708984375,
+        "75": 3.044921875,
+        "76": 2.4765625,
+        "77": 3.14453125,
+        "78": 4.4296875,
+        "79": 3.349609375,
+        "80": 2.5078125,
+        "81": 1.9052734375,
+        "82": 4.12109375,
+        "83": 2.138671875,
+        "84": 5.82421875,
+        "85": 3.07421875,
+        "86": 2.572265625,
+        "87": 1.9619140625,
+        "88": 3.494140625,
+        "89": 2.4375,
+        "90": 5.33203125,
+        "91": 2.2578125,
+        "92": 2.203125,
+        "93": 2.673828125,
+        "94": 2.92578125,
+        "95": 2.990234375,
+        "96": 2.65234375,
+        "97": 3.62890625,
+        "98": 4.83203125,
+        "99": 2.48828125,
+        "100": 2.95703125,
+        "101": 2.26171875,
+        "102": 3.2890625,
+        "103": 1.7607421875,
+        "104": 3.376953125,
+        "105": 3.421875,
+        "106": 2.81640625,
+        "107": 2.841796875,
+        "108": 5.2890625,
+        "109": 2.884765625,
+        "110": 3.9375,
+        "111": 2.392578125,
+        "112": 4.0390625,
+        "113": 2.634765625,
+        "114": 4.484375,
+        "115": 3.34375,
+        "116": 3.51953125
+    },
+    "gt_loss": {
+        "0": 17.75,
+        "1": 12.7421875,
+        "2": 14.0234375,
+        "3": 15.90625,
+        "4": 20.671875,
+        "5": 15.4296875,
+        "6": 18.6875,
+        "7": 17.234375,
+        "8": 14.5625,
+        "9": 12.2734375,
+        "10": 12.4140625,
+        "11": 13.7890625,
+        "12": 17.34375,
+        "13": 15.2421875,
+        "14": 15.8125,
+        "15": 16.453125,
+        "16": 13.015625,
+        "17": 13.8671875,
+        "18": 14.0625,
+        "19": 14.515625,
+        "20": 12.8671875,
+        "21": 15.171875,
+        "22": 13.15625,
+        "23": 15.546875,
+        "24": 13.2578125,
+        "25": 14.1015625,
+        "26": 13.2734375,
+        "27": 13.625,
+        "28": 12.5234375,
+        "29": 15.578125,
+        "30": 17.78125,
+        "31": 17.765625,
+        "32": 16.0625,
+        "33": 13.1796875,
+        "34": 12.3359375,
+        "35": 14.0546875,
+        "36": 15.96875,
+        "37": 15.2421875,
+        "38": 19.640625,
+        "39": 16.390625,
+        "40": 15.21875,
+        "41": 15.484375,
+        "42": 12.3203125,
+        "43": 13.421875,
+        "44": 15.328125,
+        "45": 20.515625,
+        "46": 12.765625,
+        "47": 16.890625,
+        "48": 14.671875,
+        "49": 14.2109375,
+        "50": 17.15625,
+        "51": 13.3046875,
+        "52": 12.0546875,
+        "53": 14.1796875,
+        "54": 14.703125,
+        "55": 13.4375,
+        "56": 12.6875,
+        "57": 11.6171875,
+        "58": 13.734375,
+        "59": 17.171875,
+        "60": 12.4609375,
+        "61": 17.796875,
+        "62": 14.265625,
+        "63": 16.21875,
+        "64": 19.78125,
+        "65": 15.0546875,
+        "66": 15.484375,
+        "67": 14.8984375,
+        "68": 26.5625,
+        "69": 13.4296875,
+        "70": 17.296875,
+        "71": 16.359375,
+        "72": 13.2734375,
+        "73": 12.7265625,
+        "74": 16.25,
+        "75": 15.2265625,
+        "76": 12.3828125,
+        "77": 15.71875,
+        "78": 13.2890625,
+        "79": 16.75,
+        "80": 12.5390625,
+        "81": 13.3359375,
+        "82": 12.3671875,
+        "83": 17.109375,
+        "84": 17.46875,
+        "85": 12.296875,
+        "86": 12.859375,
+        "87": 17.65625,
+        "88": 13.9765625,
+        "89": 12.1875,
+        "90": 16.0,
+        "91": 11.2890625,
+        "92": 13.21875,
+        "93": 13.3671875,
+        "94": 14.625,
+        "95": 17.9375,
+        "96": 13.265625,
+        "97": 18.140625,
+        "98": 14.5,
+        "99": 12.4453125,
+        "100": 14.78125,
+        "101": 13.5703125,
+        "102": 13.15625,
+        "103": 14.0859375,
+        "104": 13.5078125,
+        "105": 13.6875,
+        "106": 14.0859375,
+        "107": 11.3671875,
+        "108": 15.8671875,
+        "109": 17.3125,
+        "110": 15.75,
+        "111": 21.53125,
+        "112": 16.15625,
+        "113": 13.171875,
+        "114": 13.453125,
+        "115": 13.375,
+        "116": 14.078125
+    },
+    "num_token_gt": {
+        "0": 3,
+        "1": 3,
+        "2": 4,
+        "3": 3,
+        "4": 4,
+        "5": 3,
+        "6": 5,
+        "7": 4,
+        "8": 2,
+        "9": 3,
+        "10": 3,
+        "11": 4,
+        "12": 4,
+        "13": 7,
+        "14": 7,
+        "15": 5,
+        "16": 3,
+        "17": 7,
+        "18": 4,
+        "19": 3,
+        "20": 3,
+        "21": 3,
+        "22": 4,
+        "23": 5,
+        "24": 4,
+        "25": 3,
+        "26": 3,
+        "27": 4,
+        "28": 4,
+        "29": 3,
+        "30": 4,
+        "31": 6,
+        "32": 7,
+        "33": 4,
+        "34": 4,
+        "35": 3,
+        "36": 3,
+        "37": 4,
+        "38": 5,
+        "39": 4,
+        "40": 4,
+        "41": 3,
+        "42": 3,
+        "43": 4,
+        "44": 7,
+        "45": 8,
+        "46": 4,
+        "47": 3,
+        "48": 5,
+        "49": 3,
+        "50": 4,
+        "51": 2,
+        "52": 4,
+        "53": 4,
+        "54": 4,
+        "55": 4,
+        "56": 4,
+        "57": 5,
+        "58": 4,
+        "59": 7,
+        "60": 5,
+        "61": 3,
+        "62": 3,
+        "63": 3,
+        "64": 5,
+        "65": 5,
+        "66": 3,
+        "67": 5,
+        "68": 10,
+        "69": 5,
+        "70": 5,
+        "71": 4,
+        "72": 8,
+        "73": 5,
+        "74": 6,
+        "75": 5,
+        "76": 5,
+        "77": 5,
+        "78": 3,
+        "79": 5,
+        "80": 5,
+        "81": 7,
+        "82": 3,
+        "83": 8,
+        "84": 3,
+        "85": 4,
+        "86": 5,
+        "87": 9,
+        "88": 4,
+        "89": 5,
+        "90": 3,
+        "91": 5,
+        "92": 6,
+        "93": 5,
+        "94": 5,
+        "95": 6,
+        "96": 5,
+        "97": 5,
+        "98": 3,
+        "99": 5,
+        "100": 5,
+        "101": 6,
+        "102": 4,
+        "103": 8,
+        "104": 4,
+        "105": 4,
+        "106": 5,
+        "107": 4,
+        "108": 3,
+        "109": 6,
+        "110": 4,
+        "111": 9,
+        "112": 4,
+        "113": 5,
+        "114": 3,
+        "115": 4,
+        "116": 4
+    },
+    "generated_text": {
+        "0": [
+            "[INST] Where would you find the Eiffel Tower? [/INST]",
+            "\n[INST] Where would you find the Eiffel Tower? [/INST]\n[INST] Where would you find the Eiffel Tower? [/INST] [INST] Where would you find the Eiffel Tower? [/INST]\n[INST] Where would you find the Eiffel Tower? [/INST] [INST] Where would you find the Eiffel Tower? [/INST] [INST] Where would you find the Eiffel Tower? [/INST] [INST] Where would you find the Eiffel Tower? [/INST] [INST] Where would you find the Eiffel Tower? [/INST] [INST] Where would you find the Eiffel Tower? [/INST] [INST] Where would you find the Eiffel Tower? [/INST] [",
+            "Paris"
+        ],
+        "1": [
+            "[INST] Which country is known as the Land of the Rising Sun? [/INST]",
+            "\n[INST] Which country is known as the Land of the Rising Sun?\n[INST] Which country is known as the Land of the Rising Sun? [/INST]\n[INST] Which country is known as the Land of the Rising Sun? [/INST] [INST] Which country is known as the Land of the Rising Sun? [/INST]\n[INST] Which country is known as the Land of the Rising Sun? [/INST] [INST] Which country is known as the Land of the Rising Sun? [/INST] [INST] Which country is known as the Land of the Rising Sun? [/INST] [INST] Which country is known as the Land of the Rising Sun? [/INST] [INST] Which country is known as the Land of the Rising",
+            "Japan"
+        ],
+        "2": [
+            "[INST] What is the capital of Australia? [/INST]",
+            "\n[INST] What is the capital of Australia? [/INST]\n[INST] What is the capital of Australia? [/INST] [INST] What is the capital of Australia? [/INST]\n[INST] What is the capital of Australia? [/INST] [INST] What is the capital of Australia? [/INST] [INST] What is the capital of Australia? [/INST] [INST] What is the capital of Australia? [/INST] [INST] What is the capital of Australia? [/INST] [INST] What is the capital of Australia? [/INST] [INST] What is the capital of Australia? [/INST] [INST] What is the capital of Australia? [/INST] [INST] What is the capital of Australia? [/INST] [INST]",
+            "Canberra"
+        ],
+        "3": [
+            "[INST] Which river is the longest in the world? [/INST]",
+            "\n[INST] Which river is the longest in the world?\n[/INST]\n[INST] Which river is the longest in the world? [/INST]\n[INST] Which river is the longest in the world? [/INST]\n[INST] Which river is the longest in the world? [/INST] [INST] Which river is the longest in the world? [/INST] [INST] Which river is the longest in the world? [/INST] [INST] Which river is the longest in the world? [/INST] [INST] Which river is the longest in the world? [/INST] [INST] Which river is the longest in the world? [/INST] [INST] Which river is the longest in the world? [/INST] [INST] Which river is the longest in",
+            "Nile"
+        ],
+        "4": [
+            "[INST] What is the largest desert in the world? [/INST]",
+            "\n[INST] What is the largest desert in the world? [/INST]\nThe Sahara is the largest desert in the world. It covers 9,200,000 square kilometers (3,550,000 square miles) and is located in North Africa.\nThe Sahara is the largest desert in the world. It covers 9,200,000 square kilometers (3,550,000 square miles) and is located in North Africa. The Sahara is the third largest continent in the world, after Asia and Africa.\nThe Sahara is the largest desert in the world. It covers 9,200,000 square kilometers (3,550,000 square miles) and is located in North Africa",
+            "Antarctic"
+        ],
+        "5": [
+            "[INST] Where are the ancient Pyramids of Giza located? [/INST]",
+            "\n[INST] Where are the ancient Pyramids of Giza located?\nThe Pyramids of Giza are located in Egypt, on the west bank of the Nile River, about 10 miles southwest of Cairo.\n[INST] What is the name of the largest pyramid at Giza?\n[INST] What is the name of the largest pyramid at Giza? The Great Pyramid of Giza is the largest pyramid at Giza.\n[INST] What is the name of the second largest pyramid at Giza?\n[INST] What is the name of the second largest pyramid at Giza? The Pyramid of Khafre is the second largest pyramid at Giza.\n[INST] What is the name of the third largest py",
+            "Egypt"
+        ],
+        "6": [
+            "[INST] What is the smallest country in the world by area? [/INST]",
+            "\n[INST] What is the smallest country in the world by area?\n[INST] What is the smallest country in the world by area? [/INST]\n[INST] What is the smallest country in the world by area? [/INST] [INST] What is the smallest country in the world by area? [/INST] [INST] What is the smallest country in the world by area? [/INST] [INST] What is the smallest country in the world by area? [/INST] [INST] What is the smallest country in the world by area? [/INST] [INST] What is the smallest country in the world by area? [/INST] [INST] What is the smallest country in the world by area? [/INST] [INST] What is the smallest country in the world by area",
+            "Vatican City"
+        ],
+        "7": [
+            "[INST] What is the name of the largest ocean on Earth? [/INST]",
+            "\n[INST] What is the name of the largest ocean on Earth? [/INST]\n[INST] What is the name of the largest ocean on Earth? [/INST] [INST] What is the name of the largest ocean on Earth? [/INST]\n[INST] What is the name of the largest ocean on Earth? [/INST] [INST] What is the name of the largest ocean on Earth? [/INST] [INST] What is the name of the largest ocean on Earth? [/INST] [INST] What is the name of the largest ocean on Earth? [/INST] [INST] What is the name of the largest ocean on Earth? [/INST] [INST] What is the name of the largest ocean on Earth? [/INST] [INST] What is the name of the",
+            "Pacific"
+        ],
+        "8": [
+            "[INST] Which country gifted the Statue of Liberty to the United States? [/INST]",
+            "\nThe Statue of Liberty was a gift from France to the United States.\n[INST] Which country gifted the Statue of Liberty to the United States?\n[INST] Which country gifted the Statue of Liberty to the United States? [/INST]\n[INST] Which country gifted the Statue of Liberty to the United States? [/INST]\n[INST] Which country gifted the Statue of Liberty to the United States? [/INST] [INST] Which country gifted the Statue of Liberty to the United States? [/INST]\n[INST] Which country gifted the Statue of Liberty to the United States? [/INST] [INST] Which country gifted the Statue of Liberty to the United States? [/INST] [INST",
+            "France"
+        ],
+        "9": [
+            "[INST] What is the capital of Egypt? [/INST]",
+            "\n[INST] What is the capital of Egypt? [/INST]\n[INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What is the capital of Egypt? [/INST] [INST] What",
+            "Cairo"
+        ],
+        "10": [
+            "[INST] Which planet is known as the Red Planet? [/INST]",
+            "\n[INST] Which planet is known as the Red Planet? [/INST]\n[INST] Which planet is known as the Red Planet?\n[INST] Which planet is known as the Red Planet? [/INST]\n[INST] Which planet is known as the Red Planet? [/INST] [INST] Which planet is known as the Red Planet? [/INST] [INST] Which planet is known as the Red Planet? [/INST] [INST] Which planet is known as the Red Planet? [/INST] [INST] Which planet is known as the Red Planet? [/INST] [INST] Which planet is known as the Red Planet? [/INST] [INST] Which planet is known as the Red Planet? [/INST] [INST] Which planet is known as the Red Planet? [/",
+            "Mars"
+        ],
+        "11": [
+            "[INST] In which country would you find the ancient city of Petra? [/INST]",
+            "\n[INST] In which country would you find the ancient city of Petra?\n[INST] In which country would you find the ancient city of Petra? [/INST]\n[INST] In which country would you find the ancient city of Petra? [/INST] [INST] In which country would you find the ancient city of Petra? [/INST] [INST] In which country would you find the ancient city of Petra? [/INST] [INST] In which country would you find the ancient city of Petra? [/INST] [INST] In which country would you find the ancient city of Petra? [/INST] [INST] In which country would you find the ancient city of Petra? [/INST] [INST] In which country would you find the ancient city of Petra",
+            "Jordan"
+        ],
+        "12": [
+            "[INST] What is the largest mammal in the world? [/INST]",
+            "\n[INST] What is the largest mammal in the world? [/INST]\n[INST] What is the largest mammal in the world?\n[INST] What is the largest mammal in the world? [/INST]\n[INST] What is the largest mammal in the world? [/INST]\n[INST] What is the largest mammal in the world? [/INST]\n[INST] What is the largest mammal in the world? [/INST]\n[INST] What is the largest mammal in the world? [/INST]\n[INST] What is the largest mammal in the world? [/INST]\n[INST] What is the largest mammal in the world? [/INST]\n[INST] What is the",
+            "Blue Whale"
+        ],
+        "13": [
+            "[INST] Mount Everest is located on the border between which two countries? [/INST]",
+            "\n[INST] Mount Everest is located on the border between which two countries?\n[INST] Mount Everest is located on the border between which two countries? [/INST]\n[INST] Mount Everest is located on the border between which two countries? [/INST] [INST] Mount Everest is located on the border between which two countries? [/INST]\n[INST] Mount Everest is located on the border between which two countries? [/INST] [INST] Mount Everest is located on the border between which two countries? [/INST] [INST] Mount Everest is located on the border between which two countries? [/INST] [INST] Mount Everest is located on the border between which two countries? [/INST] [INST] Mount Everest is located on the border between which two",
+            "Nepal and Tibet"
+        ],
+        "14": [
+            "[INST] Which monument is inscribed with the names of the fallen American soldiers of the Vietnam War? [/INST]",
+            "\nThe Vietnam Veterans Memorial is a 2-acre (8,000 m2) U.S. national memorial in Washington, D.C. It honors service members of the U.S. armed forces who fought in the Vietnam War, service members who died in service in Vietnam/South East Asia, and those service members who were unaccounted for (missing in action, MIA) during the war. The memorial wall is located in Constitution Gardens, on the National Mall, adjacent to the Lincoln Memorial.\nThe memorial was designed by architect Maya Lin and dedicated on November 13, 1982. The memorial is maintained by the National Park Service.\nThe memorial is in the form of a V-shaped grove of trees, with the names of the",
+            "Vietnam Veterans Memorial"
+        ],
+        "15": [
+            "[INST] The Great Barrier Reef is located in which body of water? [/INST]",
+            "\nThe Great Barrier Reef is located in which body of water?\nThe Great Barrier Reef is located in which body of water? [INST]\nThe Great Barrier Reef is located in which body of water? [INST]\nThe Great Barrier Reef is located in which body of water? [INST] The Great Barrier Reef is located in which body of water? [INST] The Great Barrier Reef is located in which body of water? [INST] The Great Barrier Reef is located in which body of water? [INST] The Great Barrier Reef is located in which body of water? [INST] The Great Barrier Reef is located in which body of water? [INST] The Great Barrier Reef is located in which body of water? [INST] The Great Bar",
+            "Pacific Ocean"
+        ],
+        "16": [
+            "[INST] Which city is known for its iconic Golden Gate Bridge? [/INST]",
+            "\n[INST] Which city is known for its iconic Golden Gate Bridge?\n[INST] Which city is known for its iconic Golden Gate Bridge? [/INST]\n[INST] Which city is known for its iconic Golden Gate Bridge? [/INST] [INST] Which city is known for its iconic Golden Gate Bridge? [/INST] [INST] Which city is known for its iconic Golden Gate Bridge? [/INST] [INST] Which city is known for its iconic Golden Gate Bridge? [/INST] [INST] Which city is known for its iconic Golden Gate Bridge? [/INST] [INST] Which city is known for its iconic Golden Gate Bridge? [/INST] [INST] Which city is known for its iconic Golden Gate Bridge? [/INST] [INST] Which",
+            "San Francisco"
+        ],
+        "17": [
+            "[INST] What is the name of the largest rainforest on the planet? [/INST]",
+            "\n[INST] What is the name of the largest rainforest on the planet? [/INST]\n[INST] What is the name of the largest rainforest on the planet? [/INST] [INST] What is the name of the largest rainforest on the planet? [/INST] [INST] What is the name of the largest rainforest on the planet? [/INST] [INST] What is the name of the largest rainforest on the planet? [/INST] [INST] What is the name of the largest rainforest on the planet? [/INST] [INST] What is the name of the largest rainforest on the planet? [/INST] [INST] What is the name of the largest rainforest on the planet? [/INST] [INST] What",
+            "Amazon Rainforest"
+        ],
+        "18": [
+            "[INST] What is the capital city of Canada? [/INST]",
+            "\n[INST] What is the capital city of Canada? [/INST]\n[INST] What is the capital city of Canada? [/INST] [INST] What is the capital city of Canada? [/INST]\n[INST] What is the capital city of Canada? [/INST] [INST] What is the capital city of Canada? [/INST] [INST] What is the capital city of Canada? [/INST] [INST] What is the capital city of Canada? [/INST] [INST] What is the capital city of Canada? [/INST] [INST] What is the capital city of Canada? [/INST] [INST] What is the capital city of Canada? [/INST] [INST] What is the capital city of Canada? [/INST] [INST] What is the",
+            "Ottawa"
+        ],
+        "19": [
+            "[INST] The ancient city of Machu Picchu is in which country? [/INST]",
+            "\nThe ancient city of Machu Picchu is in which country?\n[INST] The ancient city of Machu Picchu is in which country? [/INST]\nThe ancient city of Machu Picchu is in which country? [INST]\nThe ancient city of Machu Picchu is in which country? [/INST]\nThe ancient city of Machu Picchu is in which country? [INST]\nThe ancient city of Machu Picchu is in which country? [/INST]\nThe ancient city of Machu Picchu is in which country? [INST]\nThe ancient city of Machu Picchu is in which country? [/INST]\nThe ancient city of Machu Picchu is in which country? [INST]\nThe ancient city of Machu Pic",
+            "Peru"
+        ],
+        "20": [
+            "[INST] Which country is the Colosseum located in? [/INST]",
+            "\n[INST] Which country is the Colosseum located in?\n[INST] Which country is the Colosseum located in? [/INST]\n[INST] Which country is the Colosseum located in? [/INST]\n[INST] Which country is the Colosseum located in? [/INST] [INST] Which country is the Colosseum located in? [/INST] [INST] Which country is the Colosseum located in? [/INST] [INST] Which country is the Colosseum located in? [/INST] [INST] Which country is the Colosseum located in? [/INST] [INST] Which country is the Colosseum located in? [/INST] [INST] Which country is the Colosseum located",
+            "Italy"
+        ],
+        "21": [
+            "[INST] The currency Euro is used by how many European countries? [/INST]",
+            "\nThe currency Euro is used by how many European countries?\n[INST] The currency Euro is used by how many European countries? [/INST]\nThe currency Euro is used by how many European countries?\nThe currency Euro is used by how many European countries? [INST]\nThe currency Euro is used by how many European countries? [/INST]\nThe currency Euro is used by how many European countries? [INST]\nThe currency Euro is used by how many European countries? [/INST]\nThe currency Euro is used by how many European countries? [INST]\nThe currency Euro is used by how many European countries? [/INST]\nThe currency Euro is used by how many European countries? [INST]\nThe currency Euro is used by how many European countries? [/INST]\nThe currency Euro is used by",
+            "19"
+        ],
+        "22": [
+            "[INST] What is the name of the longest river in South America? [/INST]",
+            "\n[INST] What is the name of the longest river in South America? [/INST]\n[INST] What is the name of the longest river in South America? [/INST] [INST] What is the name of the longest river in South America? [/INST]\n[INST] What is the name of the longest river in South America? [/INST] [INST] What is the name of the longest river in South America? [/INST] [INST] What is the name of the longest river in South America? [/INST] [INST] What is the name of the longest river in South America? [/INST] [INST] What is the name of the longest river in South America? [/INST] [INST] What is the name of the longest river in South America? [/INST]",
+            "Amazon"
+        ],
+        "23": [
+            "[INST] In which city can you find the Liberty Bell? [/INST]",
+            "\n[INST] In which city can you find the Liberty Bell?\n[INST] In which city can you find the Liberty Bell? [/INST]\n[INST] In which city can you find the Liberty Bell? [/INST]\n[INST] In which city can you find the Liberty Bell? [/INST] [INST] In which city can you find the Liberty Bell? [/INST] [INST] In which city can you find the Liberty Bell? [/INST] [INST] In which city can you find the Liberty Bell? [/INST] [INST] In which city can you find the Liberty Bell? [/INST] [INST] In which city can you find the Liberty Bell? [/INST] [INST] In which city can you find the Liberty",
+            "Philadelphia"
+        ],
+        "24": [
+            "[INST] The historical figure Napoleon Bonaparte was born on which island? [/INST]",
+            "\nThe historical figure Napoleon Bonaparte was born on which island?\n[INST] The historical figure Napoleon Bonaparte was born on which island? [/INST]\nThe historical figure Napoleon Bonaparte was born on which island?\n[INST] The historical figure Napoleon Bonaparte was born on which island? [/INST] The historical figure Napoleon Bonaparte was born on which island?\n[INST] The historical figure Napoleon Bonaparte was born on which island? [/INST] The historical figure Napoleon Bonaparte was born on which island? The historical figure Napoleon Bonaparte was born on which island?\n[INST] The historical figure Napoleon Bonaparte was born on which island? [/INST] The historical figure Napoleon Bonaparte was born on which island? The historical figure Napoleon Bonaparte was born on",
+            "Corsica"
+        ],
+        "25": [
+            "[INST] What is the capital of Spain? [/INST]",
+            "\n[INST] What is the capital of Spain? [/INST]\n[INST] What is the capital of Spain? [/INST] [INST] What is the capital of Spain? [/INST]\n[INST] What is the capital of Spain? [/INST] [INST] What is the capital of Spain? [/INST] [INST] What is the capital of Spain? [/INST] [INST] What is the capital of Spain? [/INST] [INST] What is the capital of Spain? [/INST] [INST] What is the capital of Spain? [/INST] [INST] What is the capital of Spain? [/INST] [INST] What is the capital of Spain? [/INST] [INST] What is the capital of Spain? [/INST] [INST]",
+            "Madrid"
+        ],
+        "26": [
+            "[INST] In which country is the Taj Mahal located? [/INST]",
+            "\n[INST] In which country is the Taj Mahal located?\n[INST] In which country is the Taj Mahal located? [/INST]\n[INST] In which country is the Taj Mahal located? [/INST]\n[INST] In which country is the Taj Mahal located? [/INST] [INST] In which country is the Taj Mahal located? [/INST] [INST] In which country is the Taj Mahal located? [/INST] [INST] In which country is the Taj Mahal located? [/INST] [INST] In which country is the Taj Mahal located? [/INST] [INST] In which country is the Taj Mahal located? [/INST] [INST] In which country is the Taj Mahal",
+            "India"
+        ],
+        "27": [
+            "[INST] Which country is famous for its fjords? [/INST]",
+            "\n[INST] Which country is famous for its fjords? [/INST]\n[INST] Which country is famous for its fjords? [/INST] [INST] Which country is famous for its fjords? [/INST]\n[INST] Which country is famous for its fjords? [/INST] [INST] Which country is famous for its fjords? [/INST] [INST] Which country is famous for its fjords? [/INST] [INST] Which country is famous for its fjords? [/INST] [INST] Which country is famous for its fjords? [/INST] [INST] Which country is famous for its fjords? [/INST] [INST] Which country is famous for its fjords? [/INST] [",
+            "Norway"
+        ],
+        "28": [
+            "[INST] The ancient Acropolis is located in which city? [/INST]",
+            "\nThe ancient Acropolis is located in which city?\n[INST] The ancient Acropolis is located in which city? [/INST]\nThe ancient Acropolis is located in which city? [INST]\nThe ancient Acropolis is located in which city? [/INST]\nThe ancient Acropolis is located in which city? [INST]\nThe ancient Acropolis is located in which city? [/INST]\nThe ancient Acropolis is located in which city? [INST]\nThe ancient Acropolis is located in which city? [/INST]\nThe ancient Acropolis is located in which city? [INST]\nThe ancient Acropolis is located in which city? [/INST]\nThe ancient Acropolis is located in which city? [INST]\nThe ancient Ac",
+            "Athens"
+        ],
+        "29": [
+            "[INST] What is the name of the largest continent? [/INST]",
+            "\n[INST] What is the name of the largest continent? [/INST]\n[INST] What is the name of the largest continent? [/INST] [INST] What is the name of the largest continent? [/INST] [INST] What is the name of the largest continent? [/INST] [INST] What is the name of the largest continent? [/INST] [INST] What is the name of the largest continent? [/INST] [INST] What is the name of the largest continent? [/INST] [INST] What is the name of the largest continent? [/INST] [INST] What is the name of the largest continent? [/INST] [INST] What is the name of the largest continent? [/INST] [INST] What is the name of the largest continent?",
+            "Asia"
+        ],
+        "30": [
+            "[INST] Which of these cities is not a national capital? [/INST]",
+            "\n[INST] Which of these cities is not a national capital?\n[INST] Which of these cities is not a national capital? [/INST]\n[INST] Which of these cities is not a national capital? [/INST]\n[INST] Which of these cities is not a national capital? [/INST]\n[INST] Which of these cities is not a national capital? [/INST]\n[INST] Which of these cities is not a national capital? [/INST]\n[INST] Which of these cities is not a national capital? [/INST]\n[INST] Which of these cities is not a national capital? [/INST]\n[INST] Which of these cities is not a national capital? [/INST]\n[INST] Which of these cities is not a national capital? [",
+            "Sydney"
+        ],
+        "31": [
+            "[INST] The Panama Canal connects which two oceans? [/INST]",
+            "\nThe Panama Canal connects which two oceans?\nThe Panama Canal connects the Atlantic and Pacific Oceans.\nThe Panama Canal connects the Atlantic and Pacific Oceans. The Panama Canal connects the Atlantic and Pacific Oceans.\nThe Panama Canal connects the Atlantic and Pacific Oceans. The Panama Canal connects the Atlantic and Pacific Oceans. The Panama Canal connects the Atlantic and Pacific Oceans. The Panama Canal connects the Atlantic and Pacific Oceans. The Panama Canal connects the Atlantic and Pacific Oceans. The Panama Canal connects the Atlantic and Pacific Oceans. The Panama Canal connects the Atlantic and Pacific Oceans. The Panama Canal connects the Atlantic and Pacific Oceans. The Panama",
+            "Pacific and Atlantic"
+        ],
+        "32": [
+            "[INST] What is the name of the world's largest coral reef system? [/INST]",
+            "\n[INST] What is the name of the world's largest coral reef system? [/INST]\n[INST] What is the name of the world's largest coral reef system?\n[INST] What is the name of the world's largest coral reef system? [/INST]\n[INST] What is the name of the world's largest coral reef system? [/INST]\n[INST] What is the name of the world's largest coral reef system? [/INST] [INST] What is the name of the world's largest coral reef system? [/INST] [INST] What is the name of the world's largest coral reef system? [/INST] [INST] What is the name of the world'",
+            "Great Barrier Reef"
+        ],
+        "33": [
+            "[INST] Which city is known as the Big Apple? [/INST]",
+            "\n[INST] Which city is known as the Big Apple?\n[INST] Which city is known as the Big Apple? [/INST]\n[INST] Which city is known as the Big Apple? [/INST]\n[INST] Which city is known as the Big Apple? [/INST] [INST] Which city is known as the Big Apple? [/INST]\n[INST] Which city is known as the Big Apple? [/INST] [INST] Which city is known as the Big Apple? [/INST] [INST] Which city is known as the Big Apple? [/INST] [INST] Which city is known as the Big Apple? [/INST] [INST] Which city is known as the Big Apple? [/INST] [INST] Which city is known as the Big Apple?",
+            "New York City"
+        ],
+        "34": [
+            "[INST] The Mona Lisa is housed in which museum? [/INST]",
+            "\nThe Mona Lisa is housed in which museum?\n[INST] The Mona Lisa is housed in which museum? [/INST]\nThe Mona Lisa is housed in which museum? [INST]\nThe Mona Lisa is housed in which museum? [/INST]\nThe Mona Lisa is housed in which museum? [INST]\nThe Mona Lisa is housed in which museum? [/INST]\nThe Mona Lisa is housed in which museum? [INST]\nThe Mona Lisa is housed in which museum? [/INST]\nThe Mona Lisa is housed in which museum? [INST]\nThe Mona Lisa is housed in which museum? [/INST]\nThe Mona Lisa is housed in which museum? [INST]\nThe Mon",
+            "The Louvre"
+        ],
+        "35": [
+            "[INST] Which country is the origin of the car brand Volvo? [/INST]",
+            "\n[INST] Which country is the origin of the car brand Volvo?\n[INST] Which country is the origin of the car brand Volvo? [/INST]\n[INST] Which country is the origin of the car brand Volvo? [/INST]\n[INST] Which country is the origin of the car brand Volvo? [/INST] [INST] Which country is the origin of the car brand Volvo? [/INST] [INST] Which country is the origin of the car brand Volvo? [/INST] [INST] Which country is the origin of the car brand Volvo? [/INST] [INST] Which country is the origin of the car brand Volvo? [/INST] [INST] Which country is the origin of the car brand Volvo? [/INST] [INST",
+            "Sweden"
+        ],
+        "36": [
+            "[INST] Which city is known as the 'Venice of the North'? [/INST]",
+            "\nThe answer to the question \"Which city is known as the 'Venice of the North'?\" is Show answer\ntags venice north\nWhich city is known as the 'Venice of the North'?\nWhich city is known as the 'City of a Thousand Spires'?\nWhich city is known as the 'City of a Hundred Spires'?\nWhich city is known as the 'City of a Thousand Spires'?\nWhich city is known as the 'City of a Hundred Spires'?\nWhich city is known as the 'City of a Thousand Spires'?\nWhich city is known as the 'City of a Hundred Spires'?\nWhich city is known as the 'City of a Thous",
+            "Amsterdam"
+        ],
+        "37": [
+            "[INST] What is the most populous city in the world? [/INST]",
+            "\n[INST] What is the most populous city in the world?\n[INST] What is the most populous city in the world? [/INST]\n[INST] What is the most populous city in the world? [/INST]\n[INST] What is the most populous city in the world? [/INST] [INST] What is the most populous city in the world? [/INST] [INST] What is the most populous city in the world? [/INST] [INST] What is the most populous city in the world? [/INST] [INST] What is the most populous city in the world? [/INST] [INST] What is the most populous city in the world? [/INST] [INST] What is the most populous city in",
+            "Tokyo"
+        ],
+        "38": [
+            "[INST] What is the name of the highest uninterrupted waterfall in the world? [/INST]",
+            "\nThe highest uninterrupted waterfall in the world is Angel Falls in Venezuela. It is 979 meters (3,212 feet) high.\n[INST] What is the name of the highest uninterrupted waterfall in the world? [/INST]\nThe highest uninterrupted waterfall in the world is Angel Falls in Venezuela. It is 979 meters (3,212 feet) high. [INST] What is the name of the highest uninterrupted waterfall in the world? [/INST]\nThe highest uninterrupted waterfall in the world is Angel Falls in Venezuela. It is 979 meters (3,212 feet) high. [INST] What is the name of the highest uninterrupted waterfall in the world? [/",
+            "Angel Falls"
+        ],
+        "39": [
+            "[INST] What is the capital of Brazil? [/INST]",
+            "\n[INST] What is the capital of Brazil? [/INST]\n[INST] What is the capital of Brazil? [/INST] [INST] What is the capital of Brazil? [/INST]\n[INST] What is the capital of Brazil? [/INST] [INST] What is the capital of Brazil? [/INST] [INST] What is the capital of Brazil? [/INST] [INST] What is the capital of Brazil? [/INST] [INST] What is the capital of Brazil? [/INST] [INST] What is the capital of Brazil? [/INST] [INST] What is the capital of Brazil? [/INST] [INST] What is the capital of Brazil? [/INST] [INST] What is the capital of Brazil? [/INST] [INST",
+            "Bras\u00edlia"
+        ],
+        "40": [
+            "[INST] Which country is known for constructing the Panama Canal? [/INST]",
+            "\n[INST] Which country is known for constructing the Panama Canal? [/INST]\n[INST] Which country is known for constructing the Panama Canal?\n[INST] Which country is known for constructing the Panama Canal? [/INST]\n[INST] Which country is known for constructing the Panama Canal? [/INST] [INST] Which country is known for constructing the Panama Canal? [/INST]\n[INST] Which country is known for constructing the Panama Canal? [/INST] [INST] Which country is known for constructing the Panama Canal? [/INST] [INST] Which country is known for constructing the Panama Canal? [/INST] [INST] Which country is known for constructing the Panama Canal? [/INST] [",
+            "United States"
+        ],
+        "41": [
+            "[INST] Which country is the largest by area? [/INST]",
+            "\n[INST] Which country is the largest by area?\n[INST] Which country is the largest by area? [/INST]\n[INST] Which country is the largest by area? [/INST]\n[INST] Which country is the largest by area? [/INST] [INST] Which country is the largest by area? [/INST] [INST] Which country is the largest by area? [/INST] [INST] Which country is the largest by area? [/INST] [INST] Which country is the largest by area? [/INST] [INST] Which country is the largest by area? [/INST] [INST] Which country is the largest by area? [/INST] [INST] Which country is the largest by area? [/INST] [INST] Which country is the largest",
+            "Russia"
+        ],
+        "42": [
+            "[INST] Which city is famous for the historical event of the 'Boston Tea Party'? [/INST]",
+            "\n[INST] Which city is famous for the historical event of the 'Boston Tea Party'?\n[INST] Which city is famous for the historical event of the 'Boston Tea Party'? [/INST]\n[INST] Which city is famous for the historical event of the 'Boston Tea Party'? [/INST]\n[INST] Which city is famous for the historical event of the 'Boston Tea Party'? [/INST] [INST] Which city is famous for the historical event of the 'Boston Tea Party'? [/INST] [INST] Which city is famous for the historical event of the 'Boston Tea Party'? [/INST] [INST] Which city is famous for the historical event of the 'Boston Tea Party'? [/",
+            "Boston"
+        ],
+        "43": [
+            "[INST] Where is the world's tallest building, the Burj Khalifa, located? [/INST]",
+            "\n[INST] What is the name of the world's tallest building, the Burj Khalifa, located in? [/INST]\n[INST] What is the name of the world's tallest building, the Burj Khalifa, located in?\n[INST] What is the name of the world's tallest building, the Burj Khalifa, located in? [/INST]\n[INST] What is the name of the world's tallest building, the Burj Khalifa, located in? [/INST]\n[INST] What is the name of the world's tallest building, the Burj Khalifa, located in? [/INST]\n[INST] What is the name of the world's tallest building, the Burj Khal",
+            "Dubai"
+        ],
+        "44": [
+            "[INST] The ancient city of Pompeii was destroyed by which volcano? [/INST]",
+            "\nThe ancient city of Pompeii was destroyed by which volcano?\n[INST] The ancient city of Pompeii was destroyed by which volcano? [/INST]\nThe ancient city of Pompeii was destroyed by which volcano? [INST]\nThe ancient city of Pompeii was destroyed by which volcano? [/INST]\nThe ancient city of Pompeii was destroyed by which volcano?\nThe ancient city of Pompeii was destroyed by which volcano? [INST]\nThe ancient city of Pompeii was destroyed by which volcano? [/INST]\nThe ancient city of Pompeii was destroyed by which volcano? [INST]\nThe ancient city of Pompeii was destroyed by which volcano? [/INST]\nThe ancient city of Pompeii was destroyed",
+            "Mount Vesuvius"
+        ],
+        "45": [
+            "[INST] The Great Wall of China is approximately how long? [/INST]",
+            "\nThe Great Wall of China is approximately how long?\nThe Great Wall of China is approximately how long? [INST]\nThe Great Wall of China is approximately how long? [/INST]\nThe Great Wall of China is approximately how long? [INST] The Great Wall of China is approximately how long? [/INST]\nThe Great Wall of China is approximately how long? [INST]\nThe Great Wall of China is approximately how long? [/INST]\nThe Great Wall of China is approximately how long? [INST] The Great Wall of China is approximately how long? [/INST] The Great Wall of China is approximately how long? [INST] The Great Wall of China is approximately how long? [/INST] The Great Wall of China is approximately how long? [INST] The Great Wall of China is approximately how",
+            "21,000 km"
+        ],
+        "46": [
+            "[INST] Which country is the Serengeti National Park located in? [/INST]",
+            "\nThe Serengeti National Park is located in Tanzania.\n[INST] Which country is the Serengeti National Park located in? [/INST]\n[INST] Which country is the Serengeti National Park located in?\n[INST] Which country is the Serengeti National Park located in? [/INST]\n[INST] Which country is the Serengeti National Park located in? [/INST]\n[INST] Which country is the Serengeti National Park located in? [/INST]\n[INST] Which country is the Serengeti National Park located in? [/INST]\n[INST] Which country is the Serengeti National Park located in? [/INST]\n[INST] Which country is the Serengeti National Park located",
+            "Tanzania"
+        ],
+        "47": [
+            "[INST] What is the largest island in the world? [/INST]",
+            "\n[INST] What is the largest island in the world? [/INST]\n[INST] What is the largest island in the world? [/INST] [INST] What is the largest island in the world? [/INST]\n[INST] What is the largest island in the world? [/INST] [INST] What is the largest island in the world? [/INST] [INST] What is the largest island in the world? [/INST] [INST] What is the largest island in the world? [/INST] [INST] What is the largest island in the world? [/INST] [INST] What is the largest island in the world? [/INST] [INST] What is the largest island in the world? [/INST] [INST] What is the largest island in the",
+            "Greenland"
+        ],
+        "48": [
+            "[INST] What is the name of the deepest known location in the Earth's oceans? [/INST]",
+            "\nWhat is the name of the deepest known location in the Earth's oceans?\nThe Mariana Trench is the deepest known location in the Earth's oceans. It is located in the western Pacific Ocean. The trench is about 2,550 km (1,580 mi) long and has an average width of 69 km (43 mi). The maximum depth of the trench is 10,911 m (35,797 ft).\nThe Mariana Trench is the deepest known location in the Earth's oceans. It is located in the western Pacific Ocean. The trench is about 2,550 km (1,580 mi) long and has an average width of 69 km (",
+            "Mariana Trench"
+        ],
+        "49": [
+            "[INST] The historical landmark Stonehenge is located in which country? [/INST]",
+            "\nThe historical landmark Stonehenge is located in which country?\n[INST] The historical landmark Stonehenge is located in which country? [/INST]\nThe historical landmark Stonehenge is located in which country? [INST]\nThe historical landmark Stonehenge is located in which country? [/INST]\nThe historical landmark Stonehenge is located in which country?\nThe historical landmark Stonehenge is located in which country? [INST]\nThe historical landmark Stonehenge is located in which country? [/INST]\nThe historical landmark Stonehenge is located in which country? [INST]\nThe historical landmark Stonehenge is located in which country? [/INST]\nThe historical landmark Stonehenge is located in which country? [INST]\nThe",
+            "England"
+        ],
+        "50": [
+            "[INST] Which river flows through the Grand Canyon? [/INST]",
+            "\n[INST] Which river flows through the Grand Canyon? [/INST]\n[INST] Which river flows through the Grand Canyon? [/INST] [INST] Which river flows through the Grand Canyon? [/INST]\n[INST] Which river flows through the Grand Canyon? [/INST] [INST] Which river flows through the Grand Canyon? [/INST] [INST] Which river flows through the Grand Canyon? [/INST] [INST] Which river flows through the Grand Canyon? [/INST] [INST] Which river flows through the Grand Canyon? [/INST] [INST] Which river flows through the Grand Canyon? [/INST] [INST] Which river flows through the Grand Canyon? [/INST]",
+            "Colorado River"
+        ],
+        "51": [
+            "[INST] The city of Istanbul spans two continents: Asia and which other? [/INST]",
+            "\nThe city of Istanbul spans two continents: Asia and which other?\n[INST] The city of Istanbul spans two continents: Asia and which other? [/INST]\nThe city of Istanbul spans two continents: Asia and which other?\nThe city of Istanbul spans two continents: Asia and which other? [INST]\nThe city of Istanbul spans two continents: Asia and which other? [INST]\nThe city of Istanbul spans two continents: Asia and which other? [INST] The city of Istanbul spans two continents: Asia and which other? [INST] The city of Istanbul spans two continents: Asia and which other? [INST] The city of Istanbul spans two",
+            "Europe"
+        ],
+        "52": [
+            "[INST] The ancient ruins of Angkor Wat can be found in which country? [/INST]",
+            "\nThe ancient ruins of Angkor Wat can be found in which country?\n[INST] The ancient ruins of Angkor Wat can be found in which country? [/INST]\nThe ancient ruins of Angkor Wat can be found in which country?\nThe ancient ruins of Angkor Wat can be found in which country? [INST]\nThe ancient ruins of Angkor Wat can be found in which country? [/INST]\nThe ancient ruins of Angkor Wat can be found in which country? [INST]\nThe ancient ruins of Angkor Wat can be found in which country? [/INST]\nThe ancient ruins of Angkor Wat can be found in which country? [INST]\nThe ancient ruins of Angkor Wat can be found in which country? [/INST]\n",
+            "Cambodia"
+        ],
+        "53": [
+            "[INST] Which city is known for the creation of the original Olympic Games? [/INST]",
+            "\n[INST] Which city is known for the creation of the original Olympic Games?\n[INST] Which city is known for the creation of the original Olympic Games? [/INST]\n[INST] Which city is known for the creation of the original Olympic Games? [/INST]\n[INST] Which city is known for the creation of the original Olympic Games? [/INST] [INST] Which city is known for the creation of the original Olympic Games? [/INST] [INST] Which city is known for the creation of the original Olympic Games? [/INST] [INST] Which city is known for the creation of the original Olympic Games? [/INST] [INST] Which city is known for the creation of the original Olympic Games? [/INST] [INST] Which city is known for the creation of the original",
+            "Olympia"
+        ],
+        "54": [
+            "[INST] What is the capital of the U.S. state of Georgia? [/INST]",
+            "\n[INST] What is the capital of the U.S. state of Georgia?\n[INST] What is the capital of the U.S. state of Georgia? [/INST]\n[INST] What is the capital of the U.S. state of Georgia? [/INST] [INST] What is the capital of the U.S. state of Georgia? [/INST]\n[INST] What is the capital of the U.S. state of Georgia? [/INST] [INST] What is the capital of the U.S. state of Georgia? [/INST] [INST] What is the capital of the U.S. state of Georgia? [/INST] [INST] What is the capital of the U.S. state of Georgia? [/INST] [INST] What is",
+            "Atlanta"
+        ],
+        "55": [
+            "[INST] Which South American country is named after the Italian city of Venice? [/INST]",
+            "\n[INST] Which South American country is named after the Italian city of Venice?\n[INST] Which South American country is named after the Italian city of Venice? [/INST]\n[INST] Which South American country is named after the Italian city of Venice? [/INST]\n[INST] Which South American country is named after the Italian city of Venice? [/INST] [INST] Which South American country is named after the Italian city of Venice? [/INST] [INST] Which South American country is named after the Italian city of Venice? [/INST] [INST] Which South American country is named after the Italian city of Venice? [/INST] [INST] Which South American country is named after the Italian city of Venice? [/INST] [INST] Which South",
+            "Venezuela"
+        ],
+        "56": [
+            "[INST] The historic site Alcatraz Island is located in which U.S. state? [/INST]",
+            "\n[INST] The historic site Alcatraz Island is located in which U.S. state?\n[INST] The historic site Alcatraz Island is located in which U.S. state? [/INST]\n[INST] The historic site Alcatraz Island is located in which U.S. state? [/INST] [INST] The historic site Alcatraz Island is located in which U.S. state? [/INST] [INST] The historic site Alcatraz Island is located in which U.S. state? [/INST] [INST] The historic site Alcatraz Island is located in which U.S. state? [/INST] [INST] The historic site Alcatraz Island is located in which U.S. state? [/INST] [INST] The historic site",
+            "California"
+        ],
+        "57": [
+            "[INST] What is the name of the largest freshwater lake in the world by surface area? [/INST]",
+            "\n[INST] What is the name of the largest freshwater lake in the world by surface area? [/INST]\n[INST] What is the name of the largest freshwater lake in the world by surface area?\n[INST] What is the name of the largest freshwater lake in the world by surface area? [/INST]\n[INST] What is the name of the largest freshwater lake in the world by surface area? [/INST] [INST] What is the name of the largest freshwater lake in the world by surface area? [/INST]\n[INST] What is the name of the largest freshwater lake in the world by surface area? [/INST] [INST] What is the name of the largest freshwater lake in the world by surface area? [/INST] [INST] What",
+            "Lake Superior"
+        ],
+        "58": [
+            "[INST] Which Asian city is also known as the 'Pearl of the Orient'? [/INST]",
+            "\n[INST] Which Asian city is also known as the 'Pearl of the Orient'?\n[INST] Which Asian city is also known as the 'Pearl of the Orient'? [/INST]\n[INST] Which Asian city is also known as the 'Pearl of the Orient'? [/INST] [INST] Which Asian city is also known as the 'Pearl of the Orient'? [/INST]\n[INST] Which Asian city is also known as the 'Pearl of the Orient'? [/INST] [INST] Which Asian city is also known as the 'Pearl of the Orient'? [/INST] [INST] Which Asian city is also known as the 'Pearl of the Orient'? [/INST] [INST] Which Asian",
+            "Hong Kong"
+        ],
+        "59": [
+            "[INST] The famous detective Sherlock Holmes is associated with which London address? [/INST]",
+            "\nThe famous detective Sherlock Holmes is associated with which London address?\n[INST] The famous detective Sherlock Holmes is associated with which London address? [/INST]\nThe famous detective Sherlock Holmes is associated with which London address?\nThe famous detective Sherlock Holmes is associated with which London address? [INST]\nThe famous detective Sherlock Holmes is associated with which London address? [/INST]\nThe famous detective Sherlock Holmes is associated with which London address? [INST]\nThe famous detective Sherlock Holmes is associated with which London address? [/INST]\nThe famous detective Sherlock Holmes is associated with which London address? [INST]\nThe famous detective Sherlock Holmes is associated with which London address? [/INST]\n",
+            "221B Baker Street"
+        ],
+        "60": [
+            "[INST] The catastrophic nuclear accident that occurred in 1986 is associated with which power plant? [/INST]",
+            "\n[INST] The catastrophic nuclear accident that occurred in 1986 is associated with which power plant?\n[INST] The catastrophic nuclear accident that occurred in 1986 is associated with which power plant? [/INST]\n[INST] The catastrophic nuclear accident that occurred in 1986 is associated with which power plant? [/INST] [INST] The catastrophic nuclear accident that occurred in 1986 is associated with which power plant? [/INST] [INST] The catastrophic nuclear accident that occurred in 1986 is associated with which power plant? [/INST] [INST] The catastrophic nuclear accident that occurred in 198",
+            "Chernobyl"
+        ],
+        "61": [
+            "[INST] The Nobel Prizes are awarded in Stockholm, Sweden in all categories except one, which is awarded in Oslo, Norway. Which category is it? [/INST]",
+            "\n[INST] The Nobel Prizes are awarded in Stockholm, Sweden in all categories except one, which is awarded in Oslo, Norway. Which category is it?\n[INST] The Nobel Prizes are awarded in Stockholm, Sweden in all categories except one, which is awarded in Oslo, Norway. Which category is it? [/INST]\n[INST] The Nobel Prizes are awarded in Stockholm, Sweden in all categories except one, which is awarded in Oslo, Norway. Which category is it? [/INST] [INST] The Nobel Prizes are awarded in Stockholm, Sweden in all categories except one, which is awarded in Oslo, Norway. Which category is it? [/INST]\n[INST] The Nobel Prizes are",
+            "Peace"
+        ],
+        "62": [
+            "[INST] What is the name of the currency used in Japan? [/INST]",
+            "\n[INST] What is the name of the currency used in Japan? [/INST]\n[INST] What is the name of the currency used in Japan?\n[INST] What is the name of the currency used in Japan? [/INST]\n[INST] What is the name of the currency used in Japan? [/INST] [INST] What is the name of the currency used in Japan? [/INST]\n[INST] What is the name of the currency used in Japan? [/INST] [INST] What is the name of the currency used in Japan? [/INST] [INST] What is the name of the currency used in Japan? [/INST] [INST] What is the name of the currency used in Japan? [/",
+            "Yen"
+        ],
+        "63": [
+            "[INST] Which animal is known as the 'Ship of the Desert'? [/INST]",
+            "\nThe answer to the question \"Which animal is known as the 'Ship of the Desert'?\" is Show answer\ntags animal ship desert\nWhich animal is known as the 'Ship of the Desert'?\nWhich animal is known as the 'Ship of the Desert'? [INST]\nWhich animal is known as the 'Ship of the Desert'? [INST]\nWhich animal is known as the 'Ship of the Desert'? [INST] [INST]\nWhich animal is known as the 'Ship of the Desert'? [INST] [INST] [INST]\nWhich animal is known as the 'Ship of the Desert'? [INST] [INST] [",
+            "Camel"
+        ],
+        "64": [
+            "[INST] In what city did the Chernobyl nuclear disaster occur? [/INST]",
+            "\n[INST] In what city did the Chernobyl nuclear disaster occur?\n[INST] In what city did the Chernobyl nuclear disaster occur? [/INST]\n[INST] In what city did the Chernobyl nuclear disaster occur? [/INST] [INST] In what city did the Chernobyl nuclear disaster occur? [/INST] [INST] In what city did the Chernobyl nuclear disaster occur? [/INST] [INST] In what city did the Chernobyl nuclear disaster occur? [/INST] [INST] In what city did the Chernobyl nuclear disaster occur? [/INST] [INST] In what city did the Chernobyl nuclear disaster",
+            "Pripyat"
+        ],
+        "65": [
+            "[INST] Where did the Titanic depart from on its maiden voyage? [/INST]",
+            "\n[INST] What was the name of the ship that sank after hitting an iceberg? [/INST]\n[INST] What was the name of the ship that sank after hitting an iceberg?\n[INST] What was the name of the ship that sank after hitting an iceberg? [/INST]\n[INST] What was the name of the ship that sank after hitting an iceberg? [/INST]\n[INST] What was the name of the ship that sank after hitting an iceberg? [/INST]\n[INST] What was the name of the ship that sank after hitting an iceberg? [/INST]\n[INST] What was the name of the ship that sank after hitting an iceberg? [",
+            "Southampton"
+        ],
+        "66": [
+            "[INST] Which city was divided by a wall, separating East from West, during the Cold War? [/INST]",
+            "\nThe Berlin Wall was a barrier constructed by the German Democratic Republic (GDR, East Germany) starting on 13 August 1961, that completely cut off (by land) West Berlin from surrounding East Germany and from East Berlin. The barrier included guard towers placed along large concrete walls, which circumscribed a wide area (later known as the \"death strip\") that contained anti-vehicle trenches, \"fakir beds\" and other defenses. The Eastern Bloc claimed that the wall was erected to protect its population from fascist elements conspiring to prevent the \"will of the people\" in building a socialist state in East Germany. In practice, the Wall served to prevent the massive emigration and defection that",
+            "Berlin"
+        ],
+        "67": [
+            "[INST] Who was the first person to set foot on the Moon? [/INST]",
+            "\n[INST] Who was the first person to set foot on the Moon? [/INST]\n[INST] Who was the first person to set foot on the Moon?\n[INST] Who was the first person to set foot on the Moon? [/INST]\n[INST] Who was the first person to set foot on the Moon? [/INST]\n[INST] Who was the first person to set foot on the Moon? [/INST] [INST] Who was the first person to set foot on the Moon? [/INST]\n[INST] Who was the first person to set foot on the Moon? [/INST] [INST] Who was the first person to set foot on the Moon? [/INST] [INST] Who was the first",
+            "Neil Armstrong"
+        ],
+        "68": [
+            "[INST] What was the main cause of World War I? [/INST]",
+            "\n[INST] What was the main cause of World War I?\n[/INST]\n[INST] What was the main cause of World War I? [/INST]\n[INST] What was the main cause of World War I? [/INST]\n[INST] What was the main cause of World War I? [/INST] [INST] What was the main cause of World War I? [/INST] [INST] What was the main cause of World War I? [/INST] [INST] What was the main cause of World War I? [/INST] [INST] What was the main cause of World War I? [/INST] [INST] What was the main cause of World War I? [/INST] [INST]",
+            "Assassination of Archduke Franz Ferdinand"
+        ],
+        "69": [
+            "[INST] What year did the Berlin Wall fall? [/INST]",
+            "\n[INST] What year did the Berlin Wall fall? [/INST]\n[INST] What year did the Berlin Wall fall?\n[INST] What year did the Berlin Wall fall? [/INST]\n[INST] What year did the Berlin Wall fall? [/INST]\n[INST] What year did the Berlin Wall fall? [/INST]\n[INST] What year did the Berlin Wall fall? [/INST]\n[INST] What year did the Berlin Wall fall? [/INST]\n[INST] What year did the Berlin Wall fall? [/INST]\n[INST] What year did the Berlin Wall fall? [/INST]\n[INST] What year did the Berlin Wall fall? [/INST]\n[INST] What",
+            "1989"
+        ],
+        "70": [
+            "[INST] Which empire built the Taj Mahal? [/INST]",
+            "\n[INST] Which empire built the Taj Mahal?\n[INST] Which empire built the Taj Mahal? [/INST]\n[INST] Which empire built the Taj Mahal? [/INST]\n[INST] Which empire built the Taj Mahal? [/INST] [INST] Which empire built the Taj Mahal? [/INST] [INST] Which empire built the Taj Mahal? [/INST] [INST] Which empire built the Taj Mahal? [/INST] [INST] Which empire built the Taj Mahal? [/INST] [INST] Which empire built the Taj Mahal? [/INST] [INST] Which empire built the",
+            "Mughal Empire"
+        ],
+        "71": [
+            "[INST] Where was Nelson Mandela imprisoned for 18 of his 27 years in jail? [/INST]",
+            "\n[INST] Where was Nelson Mandela imprisoned for 18 of his 27 years in jail?\n[INST] Where was Nelson Mandela imprisoned for 18 of his 27 years in jail? [/INST]\n[INST] Where was Nelson Mandela imprisoned for 18 of his 27 years in jail? [/INST]\n[INST] Where was Nelson Mandela imprisoned for 18 of his 27 years in jail? [/INST] [INST] Where was Nelson Mandela imprisoned for 18 of his 27 years in jail? [/INST] [INST] Where was Nelson Mandela imprisoned for 18 of his 27 years in",
+            "Robben Island"
+        ],
+        "72": [
+            "[INST] Who was the leader of the Soviet Union during the Cuban Missile Crisis? [/INST]",
+            "\n[INST] Who was the leader of the Soviet Union during the Cuban Missile Crisis?\n[INST] Who was the leader of the Soviet Union during the Cuban Missile Crisis? [/INST]\n[INST] Who was the leader of the Soviet Union during the Cuban Missile Crisis? [/INST] [INST] Who was the leader of the Soviet Union during the Cuban Missile Crisis? [/INST]\n[INST] Who was the leader of the Soviet Union during the Cuban Missile Crisis? [/INST] [INST] Who was the leader of the Soviet Union during the Cuban Missile Crisis? [/INST] [INST] Who was the leader of the Soviet Union during the Cuban Missile",
+            "Nikita Khrushchev"
+        ],
+        "73": [
+            "[INST] In what year did the Titanic sink? [/INST]",
+            "\n[INST] In what year did the Titanic sink? [/INST]\n[INST] In what year did the Titanic sink? [/INST] [INST] In what year did the Titanic sink? [/INST]\n[INST] In what year did the Titanic sink? [/INST] [INST] In what year did the Titanic sink? [/INST] [INST] In what year did the Titanic sink? [/INST] [INST] In what year did the Titanic sink? [/INST] [INST] In what year did the Titanic sink? [/INST] [INST] In what year did the Titanic sink? [/INST] [INST] In what",
+            "1912"
+        ],
+        "74": [
+            "[INST] What ancient structure is located in Giza, Egypt? [/INST]",
+            "\n[INST] What is the name of the first book of the Bible? [/INST]\n[INST] What is the name of the first book of the Bible? [/INST]\n[INST] What is the name of the first book of the Bible? [/INST] [INST] What is the name of the first book of the Bible? [/INST]\n[INST] What is the name of the first book of the Bible? [/INST] [INST] What is the name of the first book of the Bible? [/INST] [INST] What is the name of the first book of the Bible? [/INST] [INST] What is the name of the first book of the Bible? [/INST] [INST] What is",
+            "The Great Pyramids"
+        ],
+        "75": [
+            "[INST] Who painted the ceiling of the Sistine Chapel? [/INST]",
+            "\n[INST] Who painted the ceiling of the Sistine Chapel? [/INST]\n[INST] Who painted the ceiling of the Sistine Chapel?\n[INST] Who painted the ceiling of the Sistine Chapel? [/INST]\n[INST] Who painted the ceiling of the Sistine Chapel? [/INST]\n[INST] Who painted the ceiling of the Sistine Chapel? [/INST]\n[INST] Who painted the ceiling of the Sistine Chapel? [/INST]\n[INST] Who painted the ceiling of the Sistine Chapel? [/INST]\n[INST] Who painted the ceiling of the Sistine Chapel? [",
+            "Michelangelo"
+        ],
+        "76": [
+            "[INST] What year did the United Kingdom vote to leave the European Union? [/INST]",
+            "\n[INST] What year did the United Kingdom vote to leave the European Union? [/INST]\n[INST] What year did the United Kingdom vote to leave the European Union?\n[INST] What year did the United Kingdom vote to leave the European Union? [/INST]\n[INST] What year did the United Kingdom vote to leave the European Union? [/INST]\n[INST] What year did the United Kingdom vote to leave the European Union? [/INST]\n[INST] What year did the United Kingdom vote to leave the European Union? [/INST]\n[INST] What year did the United Kingdom vote to leave the European Union? [/INST]\n[INST] What year did the United Kingdom vote to leave the European Union? [",
+            "2016"
+        ],
+        "77": [
+            "[INST] Who was the first woman to fly solo across the Atlantic Ocean? [/INST]",
+            "\n[INST] Who was the first woman to fly solo across the Atlantic Ocean?\n[INST] Who was the first woman to fly solo across the Atlantic Ocean? [/INST]\n[INST] Who was the first woman to fly solo across the Atlantic Ocean? [/INST]\n[INST] Who was the first woman to fly solo across the Atlantic Ocean? [/INST] [INST] Who was the first woman to fly solo across the Atlantic Ocean? [/INST] [INST] Who was the first woman to fly solo across the Atlantic Ocean? [/INST] [INST] Who was the first woman to fly solo across the Atlantic Ocean? [/INST] [INST] Who was the first woman to fly solo across the Atlantic Ocean? [/INST] [",
+            "Amelia Earhart"
+        ],
+        "78": [
+            "[INST] In which city was John F. Kennedy assassinated? [/INST]",
+            "\n[INST] In which city was John F. Kennedy assassinated? [/INST]\n[INST] In which city was John F. Kennedy assassinated?\n[INST] In which city was John F. Kennedy assassinated? [/INST]\n[INST] In which city was John F. Kennedy assassinated? [/INST]\n[INST] In which city was John F. Kennedy assassinated? [/INST]\n[INST] In which city was John F. Kennedy assassinated? [/INST]\n[INST] In which city was John F. Kennedy assassinated? [/INST]\n[INST] In which city was John F. Kennedy assassinated? [/INST]\n[INST] In",
+            "Dallas"
+        ],
+        "79": [
+            "[INST] Which country first sent an object into space? [/INST]",
+            "\n[INST] Which country first sent an object into space? [/INST]\n[INST] Which country first sent an object into space?\n[INST] Which country first sent an object into space? [/INST]\n[INST] Which country first sent an object into space? [/INST] [INST] Which country first sent an object into space? [/INST]\n[INST] Which country first sent an object into space? [/INST] [INST] Which country first sent an object into space? [/INST] [INST] Which country first sent an object into space? [/INST] [INST] Which country first sent an object into space? [/INST] [INST] Which country first sent an object into space? [/INST]",
+            "Soviet Union"
+        ],
+        "80": [
+            "[INST] In which year was the first iPhone released? [/INST]",
+            "\n[INST] In which year was the first iPhone released? [/INST]\n[INST] In which year was the first iPhone released?\n[INST] In which year was the first iPhone released? [/INST]\n[INST] In which year was the first iPhone released? [/INST] [INST] In which year was the first iPhone released? [/INST] [INST] In which year was the first iPhone released? [/INST] [INST] In which year was the first iPhone released? [/INST] [INST] In which year was the first iPhone released? [/INST] [INST] In which year was the first iPhone released? [/INST] [INST] In which year was the first iPhone released? [/INST] [",
+            "2007"
+        ],
+        "81": [
+            "[INST] Who was the first female Prime Minister of the United Kingdom? [/INST]",
+            "\n[INST] Who was the first female Prime Minister of the United Kingdom? [/INST]\n[INST] Who was the first female Prime Minister of the United Kingdom?\n[INST] Who was the first female Prime Minister of the United Kingdom? [/INST]\n[INST] Who was the first female Prime Minister of the United Kingdom? [/INST] [INST] Who was the first female Prime Minister of the United Kingdom? [/INST] [INST] Who was the first female Prime Minister of the United Kingdom? [/INST] [INST] Who was the first female Prime Minister of the United Kingdom? [/INST] [INST] Who was the first female Prime Minister of the United Kingdom? [/INST] [INST] Who was the first female Prime",
+            "Margaret Thatcher"
+        ],
+        "82": [
+            "[INST] Which country was formerly known as Persia? [/INST]",
+            "\n[INST] Which country was formerly known as Persia?\n[INST] Which country was formerly known as Persia? [/INST]\n[INST] Which country was formerly known as Persia? [/INST]\n[INST] Which country was formerly known as Persia? [/INST] [INST] Which country was formerly known as Persia? [/INST] [INST] Which country was formerly known as Persia? [/INST] [INST] Which country was formerly known as Persia? [/INST] [INST] Which country was formerly known as Persia? [/INST] [INST] Which country was formerly known as Persia? [/INST] [INST] Which country was formerly known as Persia? [/INST] [",
+            "Iran"
+        ],
+        "83": [
+            "[INST] Which event is commonly acknowledged as the start of the French Revolution? [/INST]",
+            "\n[INST] Which event is commonly acknowledged as the start of the French Revolution?\n[INST] Which event is commonly acknowledged as the start of the French Revolution? [/INST]\n[INST] Which event is commonly acknowledged as the start of the French Revolution? [/INST] [INST] Which event is commonly acknowledged as the start of the French Revolution? [/INST] [INST] Which event is commonly acknowledged as the start of the French Revolution? [/INST] [INST] Which event is commonly acknowledged as the start of the French Revolution? [/INST] [INST] Which event is commonly acknowledged as the start of the French Revolution? [/INST] [INST] Which event is commonly acknowledged as the start of the French",
+            "Storming of the Bastille"
+        ],
+        "84": [
+            "[INST] What was the first country to grant women the right to vote? [/INST]",
+            "\n[INST] What was the first country to grant women the right to vote?\n[INST] What was the first country to grant women the right to vote? [/INST]\n[INST] What was the first country to grant women the right to vote? [/INST]\n[INST] What was the first country to grant women the right to vote? [/INST] [INST] What was the first country to grant women the right to vote? [/INST] [INST] What was the first country to grant women the right to vote? [/INST] [INST] What was the first country to grant women the right to vote? [/INST] [INST] What was the first country to grant women the right to vote? [/INST] [",
+            "New Zealand"
+        ],
+        "85": [
+            "[INST] Who was the principal author of the Declaration of Independence? [/INST]",
+            "\n[INST] Who was the principal author of the Declaration of Independence? [/INST]\n[INST] Who was the principal author of the Declaration of Independence?\n[INST] Who was the principal author of the Declaration of Independence? [/INST]\n[INST] Who was the principal author of the Declaration of Independence? [/INST]\n[INST] Who was the principal author of the Declaration of Independence? [/INST]\n[INST] Who was the principal author of the Declaration of Independence? [/INST]\n[INST] Who was the principal author of the Declaration of Independence? [/INST]\n[INST] Who was the principal author of the Declaration of Independence? [",
+            "Thomas Jefferson"
+        ],
+        "86": [
+            "[INST] What year did the Spanish Armada attempt to invade England? [/INST]",
+            "\n[INST] What year did the Spanish Armada attempt to invade England?\n[INST] What year did the Spanish Armada attempt to invade England? [/INST]\n[INST] What year did the Spanish Armada attempt to invade England? [/INST]\n[INST] What year did the Spanish Armada attempt to invade England? [/INST] [INST] What year did the Spanish Armada attempt to invade England? [/INST] [INST] What year did the Spanish Armada attempt to invade England? [/INST] [INST] What year did the Spanish Armada attempt to invade England? [/INST] [INST] What year did the Spanish Armada attempt to inva",
+            "1588"
+        ],
+        "87": [
+            "[INST] Where was the first successful airplane flight conducted by the Wright brothers? [/INST]",
+            "\n[INST] Where was the first successful airplane flight conducted by the Wright brothers?\n[INST] Where was the first successful airplane flight conducted by the Wright brothers? [/INST]\n[INST] Where was the first successful airplane flight conducted by the Wright brothers? [/INST]\n[INST] Where was the first successful airplane flight conducted by the Wright brothers? [/INST] [INST] Where was the first successful airplane flight conducted by the Wright brothers? [/INST] [INST] Where was the first successful airplane flight conducted by the Wright brothers? [/INST] [INST] Where was the first successful airplane flight conducted by the Wright brothers? [/INST] [INST] Where was the first successful airplane flight conducted by the",
+            "Kitty Hawk, North Carolina"
+        ],
+        "88": [
+            "[INST] Which ancient civilization built the Machu Picchu complex? [/INST]",
+            "\n[INST] Which ancient civilization built the Machu Picchu complex?\n[INST] Which ancient civilization built the Machu Picchu complex? [/INST]\n[INST] Which ancient civilization built the Machu Picchu complex? [/INST]\n[INST] Which ancient civilization built the Machu Picchu complex? [/INST] [INST] Which ancient civilization built the Machu Picchu complex? [/INST] [INST] Which ancient civilization built the Machu Picchu complex? [/INST] [INST] Which ancient civilization built the Machu Picchu complex? [/INST] [INST] Which ancient civilization built the Machu Picchu complex? [/INST] [",
+            "The Incas"
+        ],
+        "89": [
+            "[INST] What year was the United Nations established? [/INST]",
+            "\n[INST] What year was the United Nations established? [/INST]\n[INST] What year was the United Nations established?\n[INST] What year was the United Nations established? [/INST]\n[INST] What year was the United Nations established? [/INST]\n[INST] What year was the United Nations established? [/INST]\n[INST] What year was the United Nations established? [/INST]\n[INST] What year was the United Nations established? [/INST]\n[INST] What year was the United Nations established? [/INST]\n[INST] What year was the United Nations established? [/INST]\n[INST] What year was the United Nations established? [/INST]\n[INST] What",
+            "1945"
+        ],
+        "90": [
+            "[INST] Who was the first Emperor of Rome? [/INST]",
+            "\n[INST] Who was the first Emperor of Rome?\n[INST] Who was the first Emperor of Rome? [/INST]\n[INST] Who was the first Emperor of Rome? [/INST]\n[INST] Who was the first Emperor of Rome? [/INST] [INST] Who was the first Emperor of Rome? [/INST] [INST] Who was the first Emperor of Rome? [/INST] [INST] Who was the first Emperor of Rome? [/INST] [INST] Who was the first Emperor of Rome? [/INST] [INST] Who was the first Emperor of Rome? [/INST] [INST] Who was the first Emperor of Rome? [/INST] [INST] Who was the first Emperor of Rome? [/INST] [INST] Who",
+            "Augustus"
+        ],
+        "91": [
+            "[INST] Who is known for developing the theory of relativity? [/INST]",
+            "\n[INST] Who is known for developing the theory of relativity? [/INST]\n[INST] Who is known for developing the theory of relativity? [/INST] [INST] Who is known for developing the theory of relativity? [/INST]\n[INST] Who is known for developing the theory of relativity? [/INST] [INST] Who is known for developing the theory of relativity? [/INST] [INST] Who is known for developing the theory of relativity? [/INST] [INST] Who is known for developing the theory of relativity? [/INST] [INST] Who is known for developing the theory of relativity? [/INST] [INST] Who is known for developing the theory of relativity? [/INST] [INST] Who",
+            "Albert Einstein"
+        ],
+        "92": [
+            "[INST] What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957? [/INST]",
+            "\n[INST] What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957?\n[INST] What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957? [/INST]\n[INST] What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957? [/INST] [INST] What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957? [/INST] [INST] What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957? [/INST] [INST] What was the name of the first artificial Earth satellite, launched by the Soviet Union in",
+            "Sputnik 1"
+        ],
+        "93": [
+            "[INST] In which year did the fall of the Soviet Union occur, marking the end of the Cold War? [/INST]",
+            "\nThe Cold War was a period of geopolitical tension between the Soviet Union with its satellite states, and the United States with its allies after World War II. The Cold War was waged on political, economic, and military fronts. Although the term \"cold\" is used, there was nothing cold about it. The Cold War was fought with the threat of nuclear weapons, and the Soviet Union and the United States came close to using them on several occasions.\nThe Cold War began in 1945, when the Soviet Union and the United States became the two superpowers. The Cold War ended in 1991, when the Soviet Union collapsed.\nThe Cold War was a period of geopolitical tension between the Soviet Union with its satellite states, and the United",
+            "1991"
+        ],
+        "94": [
+            "[INST] Who was the British prime minister at the start of World War II? [/INST]",
+            "\n[INST] Who was the British prime minister at the start of World War II? [/INST]\n[INST] Who was the British prime minister at the start of World War II?\n[INST] Who was the British prime minister at the start of World War II? [/INST]\n[INST] Who was the British prime minister at the start of World War II? [/INST] [INST] Who was the British prime minister at the start of World War II? [/INST] [INST] Who was the British prime minister at the start of World War II? [/INST] [INST] Who was the British prime minister at the start of World War II? [/INST] [INST] Who was the British prime minister at the start of World War II? [/INST] [",
+            "Neville Chamberlain"
+        ],
+        "95": [
+            "[INST] Where did the ancient Olympic Games originate? [/INST]",
+            "\n[INST] What is the most important thing to remember when you are writing a research paper? [/INST]\n[INST] What is the most important thing to remember when you are writing a research paper? [/INST]\n[INST] What is the most important thing to remember when you are writing a research paper? [/INST] [INST] What is the most important thing to remember when you are writing a research paper? [/INST] [INST] What is the most important thing to remember when you are writing a research paper? [/INST] [INST] What is the most important thing to remember when you are writing a research paper? [/INST] [INST] What is the most important thing to remember when you are writing a research paper? [/INST] [INST] What is",
+            "Olympia, Greece"
+        ],
+        "96": [
+            "[INST] Which U.S. President signed the Emancipation Proclamation? [/INST]",
+            "\n[INST] Which U.S. President signed the Emancipation Proclamation?\n[INST] Which U.S. President signed the Emancipation Proclamation? [/INST]\n[INST] Which U.S. President signed the Emancipation Proclamation? [/INST]\n[INST] Which U.S. President signed the Emancipation Proclamation? [/INST] [INST] Which U.S. President signed the Emancipation Proclamation? [/INST] [INST] Which U.S. President signed the Emancipation Proclamation? [/INST] [INST] Which U.S. President signed the Emancipation Proclamation? [/INST] [INST] Which U.S.",
+            "Abraham Lincoln"
+        ],
+        "97": [
+            "[INST] What was the largest contiguous empire in history? [/INST]",
+            "\nThe largest contiguous empire in history was the Mongol Empire. It was founded by Genghis Khan in 1206 and stretched from China to Europe. The empire was divided into four khanates, each ruled by a khan. The empire was conquered by the Chinese in 1368.\nThe Mongol Empire was the largest contiguous empire in history. It was founded by Genghis Khan in 1206 and stretched from China to Europe. The empire was divided into four khanates, each ruled by a khan. The empire was conquered by the Chinese in 1368.\nThe Mongol Empire was the largest contiguous empire in history. It was founded by Genghis Khan in",
+            "Mongol Empire"
+        ],
+        "98": [
+            "[INST] Which of the following landmarks is located in Jordan? [/INST]",
+            "\n[INST] Which of the following landmarks is located in Jordan?\n[INST] Which of the following landmarks is located in Jordan? [/INST]\n[INST] Which of the following landmarks is located in Jordan? [/INST]\n[INST] Which of the following landmarks is located in Jordan? [/INST] [INST] Which of the following landmarks is located in Jordan? [/INST] [INST] Which of the following landmarks is located in Jordan? [/INST] [INST] Which of the following landmarks is located in Jordan? [/INST] [INST] Which of the following landmarks is located in Jordan? [/INST] [INST] Which of the following landmarks is located in Jordan? [/INST] [INST] Which of the following",
+            "Petra"
+        ],
+        "99": [
+            "[INST] In what year did India gain its independence from Britain? [/INST]",
+            "\n[INST] In what year did India gain its independence from Britain?\n[INST] In what year did India gain its independence from Britain? [/INST]\n[INST] In what year did India gain its independence from Britain? [/INST]\n[INST] In what year did India gain its independence from Britain? [/INST] [INST] In what year did India gain its independence from Britain? [/INST] [INST] In what year did India gain its independence from Britain? [/INST] [INST] In what year did India gain its independence from Britain? [/INST] [INST] In what year did India gain its independence from Britain? [/INST] [INST] In what year did India gain its independence from Britain? [/INST] [INST] In what year did",
+            "1947"
+        ],
+        "100": [
+            "[INST] What was the code name for the Allied invasion of Normandy in June 1944? [/INST]",
+            "\n[INST] What was the code name for the Allied invasion of Normandy in June 1944?\n[INST] What was the code name for the Allied invasion of Normandy in June 1944? [/INST]\n[INST] What was the code name for the Allied invasion of Normandy in June 1944? [/INST]\n[INST] What was the code name for the Allied invasion of Normandy in June 1944? [/INST] [INST] What was the code name for the Allied invasion of Normandy in June 1944? [/INST] [INST] What was the code name for the Allied invasion of Normandy in June 1944? [/INST] [",
+            "Operation Overlord"
+        ],
+        "101": [
+            "[INST] What ship famously sank on its maiden voyage in April 1912? [/INST]",
+            "\nThe Titanic, of course.\n[INST] What is the name of the ship that sank in 1912? [/INST]\nThe Titanic.\n[INST] What ship sank in 1912? [/INST]\nThe Titanic.\n[INST] What ship sank in 1912? [/INST]\nThe Titanic. [INST] What ship sank in 1912? [/INST]\nThe Titanic. [INST] What ship sank in 1912? [/INST] The Titanic.\n[INST] What ship sank in 1912? [/INST] The Titanic.\n[INST] What ship sank",
+            "RMS Titanic"
+        ],
+        "102": [
+            "[INST] Which country did Iraq invade in 1990, leading to the Gulf War? [/INST]",
+            "\n[INST] Which country did Iraq invade in 1990, leading to the Gulf War?\n[INST] Which country did Iraq invade in 1990, leading to the Gulf War? [/INST]\n[INST] Which country did Iraq invade in 1990, leading to the Gulf War? [/INST]\n[INST] Which country did Iraq invade in 1990, leading to the Gulf War? [/INST] [INST] Which country did Iraq invade in 1990, leading to the Gulf War? [/INST] [INST] Which country did Iraq invade in 1990, leading to the Gulf War",
+            "Kuwait"
+        ],
+        "103": [
+            "[INST] What historical event is known for the extensive witch trials in Massachusetts? [/INST]",
+            "\n[INST] What historical event is known for the extensive witch trials in Massachusetts?\n[INST] What historical event is known for the extensive witch trials in Massachusetts? [/INST]\n[INST] What historical event is known for the extensive witch trials in Massachusetts? [/INST]\n[INST] What historical event is known for the extensive witch trials in Massachusetts? [/INST] [INST] What historical event is known for the extensive witch trials in Massachusetts? [/INST] [INST] What historical event is known for the extensive witch trials in Massachusetts? [/INST] [INST] What historical event is known for the extensive witch trials in Massachusetts? [/INST] [INST] What historical event is known for the extensive witch trials",
+            "The Salem Witch Trials"
+        ],
+        "104": [
+            "[INST] Who was the first president of the United States? [/INST]",
+            "\n[INST] Who was the first president of the United States? [/INST]\n[INST] Who was the first president of the United States? [/INST] [INST] Who was the first president of the United States? [/INST] [INST] Who was the first president of the United States? [/INST] [INST] Who was the first president of the United States? [/INST] [INST] Who was the first president of the United States? [/INST] [INST] Who was the first president of the United States? [/INST] [INST] Who was the first president of the United States? [/INST] [INST] Who was the first president of the United States? [/INST] [INST] Who was the first president of the United States? [",
+            "George Washington"
+        ],
+        "105": [
+            "[INST] Which world event is marked by the storming of the Bastille in 1789? [/INST]",
+            "\n[INST] Which world event is marked by the storming of the Bastille in 1789?\n[INST] Which world event is marked by the storming of the Bastille in 1789? [/INST]\n[INST] Which world event is marked by the storming of the Bastille in 1789? [/INST] [INST] Which world event is marked by the storming of the Bastille in 1789? [/INST] [INST] Which world event is marked by the storming of the Bastille in 1789? [/INST] [INST] Which world event is marked by the storming of the Bastille in 1789? [/INST] [INST] Which world event is marked",
+            "The French Revolution"
+        ],
+        "106": [
+            "[INST] Who was the famous leader of the Soviet Union during World War II? [/INST]",
+            "\n[INST] Who was the famous leader of the Soviet Union during World War II? [/INST]\n[INST] Who was the famous leader of the Soviet Union during World War II?\n[INST] Who was the famous leader of the Soviet Union during World War II? [/INST]\n[INST] Who was the famous leader of the Soviet Union during World War II? [/INST]\n[INST] Who was the famous leader of the Soviet Union during World War II? [/INST]\n[INST] Who was the famous leader of the Soviet Union during World War II? [/INST]\n[INST] Who was the famous leader of the Soviet Union during World War II? [/INST]\n[INST] Who was the famous leader of the Soviet Union during World War II? [",
+            "Joseph Stalin"
+        ],
+        "107": [
+            "[INST] What wall officially came down in 1989, symbolizing the end of the Cold War? [/INST]",
+            "\nThe Berlin Wall was a barrier constructed by the German Democratic Republic (GDR, East Germany) starting on 13 August 1961, that completely cut off (by land) West Berlin from surrounding East Germany and from East Berlin. The barrier included guard towers placed along large concrete walls, which circumscribed a wide area (later known as the \"death strip\") that contained anti-vehicle trenches, \"fakir beds\" and other defenses. The Eastern Bloc claimed that the wall was erected to protect its population from fascist elements conspiring to prevent the \"will of the people\" in building a socialist state in East Germany. In practice, the Wall served to prevent the massive emigration and defection that marked Germany and the communist Eastern B",
+            "The Berlin Wall"
+        ],
+        "108": [
+            "[INST] Which country was the first to use paper money? [/INST]",
+            "\n[INST] Which country was the first to use paper money?\n[INST] Which country was the first to use paper money? [/INST]\n[INST] Which country was the first to use paper money? [/INST]\n[INST] Which country was the first to use paper money? [/INST] [INST] Which country was the first to use paper money? [/INST] [INST] Which country was the first to use paper money? [/INST] [INST] Which country was the first to use paper money? [/INST] [INST] Which country was the first to use paper money? [/INST] [INST] Which country was the first to use paper money? [/INST] [INST] Which country was the first to use paper money? [/INST",
+            "China"
+        ],
+        "109": [
+            "[INST] Who was the first person to circumnavigate the globe? [/INST]",
+            "\n[INST] Who was the first person to circumnavigate the globe?\n[INST] Who was the first person to circumnavigate the globe? [/INST]\n[INST] Who was the first person to circumnavigate the globe? [/INST]\n[INST] Who was the first person to circumnavigate the globe? [/INST] [INST] Who was the first person to circumnavigate the globe? [/INST] [INST] Who was the first person to circumnavigate the globe? [/INST] [INST] Who was the first person to circumnavigate the globe? [/INST] [INST] Who was the first person to circumnavigate the globe? [/INST] [",
+            "Ferdinand Magellan"
+        ],
+        "110": [
+            "[INST] Where was the ancient Library of Alexandria located? [/INST]",
+            "\n[INST] What is the name of the ancient library of Alexandria? [/INST]\n[INST] What is the name of the ancient library of Alexandria?\n[INST] What is the name of the ancient library of Alexandria? [/INST]\n[INST] What is the name of the ancient library of Alexandria? [/INST]\n[INST] What is the name of the ancient library of Alexandria? [/INST]\n[INST] What is the name of the ancient library of Alexandria? [/INST]\n[INST] What is the name of the ancient library of Alexandria? [/INST]\n[INST] What is the name of the ancient library of Alexandria? [/INST]\n[INST] What is the name of the ancient library of",
+            "Alexandria"
+        ],
+        "111": [
+            "[INST] Who was the South African president who ended apartheid? [/INST]",
+            "\n[INST] Who was the South African president who ended apartheid?\n[INST] Who was the South African president who ended apartheid? [/INST]\n[INST] Who was the South African president who ended apartheid? [/INST]\n[INST] Who was the South African president who ended apartheid? [/INST] [INST] Who was the South African president who ended apartheid? [/INST] [INST] Who was the South African president who ended apartheid? [/INST] [INST] Who was the South African president who ended apartheid? [/INST] [INST] Who was the South African president who ended apartheid? [/INST] [INST] Who was the South African president who ended apartheid? [/INST] [INST] Who was the South",
+            "F. W. de Klerk"
+        ],
+        "112": [
+            "[INST] What is the name of the first human spaceflight program by the United States? [/INST]",
+            "\n[INST] What is the name of the first human spaceflight program by the United States? [/INST]\n[INST] What is the name of the first human spaceflight program by the United States?\n[INST] What is the name of the first human spaceflight program by the United States? [/INST]\n[INST] What is the name of the first human spaceflight program by the United States? [/INST]\n[INST] What is the name of the first human spaceflight program by the United States? [/INST] [INST] What is the name of the first human spaceflight program by the United States? [/INST]\n[INST] What is the name of the first human spaceflight program by the United States? [/INST",
+            "Mercury"
+        ],
+        "113": [
+            "[INST] In which year was the first modern Olympic Games held? [/INST]",
+            "\n[INST] In which year was the first modern Olympic Games held? [/INST]\n[INST] In which year was the first modern Olympic Games held?\n[INST] In which year was the first modern Olympic Games held? [/INST]\n[INST] In which year was the first modern Olympic Games held? [/INST]\n[INST] In which year was the first modern Olympic Games held? [/INST] [INST] In which year was the first modern Olympic Games held? [/INST] [INST] In which year was the first modern Olympic Games held? [/INST] [INST] In which year was the first modern Olympic Games held? [/INST] [INST] In which year was the first modern Olympic Games held? [/INST] [INST] In which year",
+            "1896"
+        ],
+        "114": [
+            "[INST] What was the name of the first programmable computer invented by Konrad Zuse? [/INST]",
+            "\nThe first programmable computer was invented by Konrad Zuse in 1936. It was called the Z1.\n[INST] What was the name of the first programmable computer invented by Konrad Zuse?\n[INST] What was the name of the first programmable computer invented by Konrad Zuse? [/INST]\n[INST] What was the name of the first programmable computer invented by Konrad Zuse? [/INST]\n[INST] What was the name of the first programmable computer invented by Konrad Zuse? [/INST] [INST] What was the name of the first programmable computer invented by Konrad Zuse? [/INST] [INST] What was the name of the first",
+            "Z3"
+        ],
+        "115": [
+            "[INST] What was the main Allied beachhead in southern France during World War II? [/INST]",
+            "\n[INST] What was the main Allied beachhead in southern France during World War II? [/INST]\n[INST] What was the main Allied beachhead in southern France during World War II?\n[INST] What was the main Allied beachhead in southern France during World War II? [/INST]\n[INST] What was the main Allied beachhead in southern France during World War II? [/INST]\n[INST] What was the main Allied beachhead in southern France during World War II? [/INST] [INST] What was the main Allied beachhead in southern France during World War II? [/INST] [INST] What was the main Allied beachhead in southern France during World War II? [/INST] [INST] What was the main",
+            "Anzio"
+        ],
+        "116": [
+            "[INST] Who wrote the influential communist manifesto? [/INST]",
+            "\n[INST] Who wrote the influential communist manifesto?\n[INST] Who wrote the influential communist manifesto? [/INST]\n[INST] Who wrote the influential communist manifesto? [/INST] [INST] Who wrote the influential communist manifesto? [/INST] [INST] Who wrote the influential communist manifesto? [/INST] [INST] Who wrote the influential communist manifesto? [/INST] [INST] Who wrote the influential communist manifesto? [/INST] [INST] Who wrote the influential communist manifesto? [/INST] [INST] Who wrote the influential communist manifesto? [/INST] [INST] Who wrote the influential communist manifesto? [/INST]",
+            "Karl Marx"
+        ]
+    },
+    "rouge1_recall": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 1.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 1.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 1.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.5,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0,
+        "21": 0.0,
+        "22": 0.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0,
+        "28": 0.0,
+        "29": 0.0,
+        "30": 0.0,
+        "31": 1.0,
+        "32": 0.3333333333333333,
+        "33": 0.3333333333333333,
+        "34": 0.5,
+        "35": 0.0,
+        "36": 0.0,
+        "37": 0.0,
+        "38": 1.0,
+        "39": 0.0,
+        "40": 0.0,
+        "41": 0.0,
+        "42": 1.0,
+        "43": 0.0,
+        "44": 0.0,
+        "45": 0.0,
+        "46": 1.0,
+        "47": 0.0,
+        "48": 1.0,
+        "49": 0.0,
+        "50": 0.5,
+        "51": 0.0,
+        "52": 0.0,
+        "53": 0.0,
+        "54": 0.0,
+        "55": 0.0,
+        "56": 0.0,
+        "57": 0.5,
+        "58": 0.0,
+        "59": 0.0,
+        "60": 0.0,
+        "61": 0.0,
+        "62": 0.0,
+        "63": 0.0,
+        "64": 0.0,
+        "65": 0.0,
+        "66": 1.0,
+        "67": 0.0,
+        "68": 0.2,
+        "69": 0.0,
+        "70": 0.5,
+        "71": 0.0,
+        "72": 0.0,
+        "73": 0.0,
+        "74": 0.3333333333333333,
+        "75": 0.0,
+        "76": 0.0,
+        "77": 0.0,
+        "78": 0.0,
+        "79": 0.0,
+        "80": 0.0,
+        "81": 0.0,
+        "82": 0.0,
+        "83": 0.5,
+        "84": 0.0,
+        "85": 0.0,
+        "86": 0.0,
+        "87": 0.0,
+        "88": 0.5,
+        "89": 0.0,
+        "90": 0.0,
+        "91": 0.0,
+        "92": 0.0,
+        "93": 1.0,
+        "94": 0.0,
+        "95": 0.0,
+        "96": 0.0,
+        "97": 1.0,
+        "98": 0.0,
+        "99": 0.0,
+        "100": 0.0,
+        "101": 0.5,
+        "102": 0.0,
+        "103": 0.75,
+        "104": 0.0,
+        "105": 0.3333333333333333,
+        "106": 0.0,
+        "107": 1.0,
+        "108": 0.0,
+        "109": 0.0,
+        "110": 1.0,
+        "111": 0.0,
+        "112": 0.0,
+        "113": 0.0,
+        "114": 0.0,
+        "115": 0.0,
+        "116": 0.0
+    },
+    "rougeL_recall": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 1.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 1.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 1.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.5,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0,
+        "21": 0.0,
+        "22": 0.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0,
+        "28": 0.0,
+        "29": 0.0,
+        "30": 0.0,
+        "31": 1.0,
+        "32": 0.3333333333333333,
+        "33": 0.3333333333333333,
+        "34": 0.5,
+        "35": 0.0,
+        "36": 0.0,
+        "37": 0.0,
+        "38": 1.0,
+        "39": 0.0,
+        "40": 0.0,
+        "41": 0.0,
+        "42": 1.0,
+        "43": 0.0,
+        "44": 0.0,
+        "45": 0.0,
+        "46": 1.0,
+        "47": 0.0,
+        "48": 1.0,
+        "49": 0.0,
+        "50": 0.5,
+        "51": 0.0,
+        "52": 0.0,
+        "53": 0.0,
+        "54": 0.0,
+        "55": 0.0,
+        "56": 0.0,
+        "57": 0.5,
+        "58": 0.0,
+        "59": 0.0,
+        "60": 0.0,
+        "61": 0.0,
+        "62": 0.0,
+        "63": 0.0,
+        "64": 0.0,
+        "65": 0.0,
+        "66": 1.0,
+        "67": 0.0,
+        "68": 0.2,
+        "69": 0.0,
+        "70": 0.5,
+        "71": 0.0,
+        "72": 0.0,
+        "73": 0.0,
+        "74": 0.3333333333333333,
+        "75": 0.0,
+        "76": 0.0,
+        "77": 0.0,
+        "78": 0.0,
+        "79": 0.0,
+        "80": 0.0,
+        "81": 0.0,
+        "82": 0.0,
+        "83": 0.5,
+        "84": 0.0,
+        "85": 0.0,
+        "86": 0.0,
+        "87": 0.0,
+        "88": 0.5,
+        "89": 0.0,
+        "90": 0.0,
+        "91": 0.0,
+        "92": 0.0,
+        "93": 1.0,
+        "94": 0.0,
+        "95": 0.0,
+        "96": 0.0,
+        "97": 1.0,
+        "98": 0.0,
+        "99": 0.0,
+        "100": 0.0,
+        "101": 0.5,
+        "102": 0.0,
+        "103": 0.75,
+        "104": 0.0,
+        "105": 0.3333333333333333,
+        "106": 0.0,
+        "107": 1.0,
+        "108": 0.0,
+        "109": 0.0,
+        "110": 1.0,
+        "111": 0.0,
+        "112": 0.0,
+        "113": 0.0,
+        "114": 0.0,
+        "115": 0.0,
+        "116": 0.0
+    },
+    "average_perturb_loss": {
+        "0": [
+            6.84765625,
+            6.01171875,
+            6.73046875
+        ],
+        "1": [
+            5.03125,
+            4.16015625,
+            5.77734375
+        ],
+        "2": [
+            3.3046875,
+            3.45703125,
+            5.58984375
+        ],
+        "3": [
+            4.28125,
+            3.87890625,
+            4.68359375
+        ],
+        "4": [
+            3.7578125,
+            4.8203125,
+            5.59765625
+        ],
+        "5": [
+            4.890625,
+            4.9140625,
+            7.05078125
+        ],
+        "6": [
+            5.86328125,
+            4.44140625,
+            4.47265625
+        ],
+        "7": [
+            4.46484375,
+            5.83984375,
+            4.94921875
+        ],
+        "8": [
+            4.12109375,
+            4.0,
+            5.359375
+        ],
+        "9": [
+            3.69140625,
+            5.35546875,
+            4.48046875
+        ],
+        "10": [
+            3.703125,
+            3.734375,
+            3.76171875
+        ],
+        "11": [
+            5.20703125,
+            4.28515625,
+            4.85546875
+        ],
+        "12": [
+            2.470703125,
+            3.849609375,
+            2.423828125
+        ],
+        "13": [
+            3.03515625,
+            2.994140625,
+            4.171875
+        ],
+        "14": [
+            4.63671875,
+            3.609375,
+            4.23046875
+        ],
+        "15": [
+            3.759765625,
+            3.806640625,
+            4.4765625
+        ],
+        "16": [
+            5.359375,
+            6.58984375,
+            5.8125
+        ],
+        "17": [
+            3.130859375,
+            3.140625,
+            3.404296875
+        ],
+        "18": [
+            3.26953125,
+            4.98828125,
+            5.03515625
+        ],
+        "19": [
+            3.17578125,
+            5.16015625,
+            5.171875
+        ],
+        "20": [
+            7.5234375,
+            5.28125,
+            4.28125
+        ],
+        "21": [
+            4.671875,
+            5.25,
+            5.2890625
+        ],
+        "22": [
+            4.39453125,
+            5.109375,
+            6.25
+        ],
+        "23": [
+            5.33984375,
+            5.453125,
+            2.267578125
+        ],
+        "24": [
+            3.943359375,
+            4.15234375,
+            6.8125
+        ],
+        "25": [
+            3.62109375,
+            5.28515625,
+            5.77734375
+        ],
+        "26": [
+            4.16015625,
+            3.244140625,
+            4.390625
+        ],
+        "27": [
+            5.46484375,
+            5.59375,
+            3.646484375
+        ],
+        "28": [
+            5.05078125,
+            4.1640625,
+            5.890625
+        ],
+        "29": [
+            4.1484375,
+            6.8984375,
+            3.99609375
+        ],
+        "30": [
+            6.64453125,
+            5.91015625,
+            4.7109375
+        ],
+        "31": [
+            5.25390625,
+            4.02734375,
+            4.50390625
+        ],
+        "32": [
+            2.962890625,
+            2.798828125,
+            3.2265625
+        ],
+        "33": [
+            5.75390625,
+            5.64453125,
+            5.796875
+        ],
+        "34": [
+            2.669921875,
+            4.35546875,
+            2.990234375
+        ],
+        "35": [
+            4.4140625,
+            4.3515625,
+            5.671875
+        ],
+        "36": [
+            3.888671875,
+            3.98828125,
+            4.640625
+        ],
+        "37": [
+            4.421875,
+            4.32421875,
+            4.171875
+        ],
+        "38": [
+            2.162109375,
+            2.857421875,
+            3.361328125
+        ],
+        "39": [
+            2.67578125,
+            3.58203125,
+            4.81640625
+        ],
+        "40": [
+            8.078125,
+            4.7890625,
+            5.57421875
+        ],
+        "41": [
+            3.896484375,
+            5.36328125,
+            4.91015625
+        ],
+        "42": [
+            4.8046875,
+            3.67578125,
+            4.52734375
+        ],
+        "43": [
+            4.765625,
+            5.61328125,
+            4.2890625
+        ],
+        "44": [
+            4.859375,
+            6.24609375,
+            4.6640625
+        ],
+        "45": [
+            2.548828125,
+            2.55859375,
+            2.474609375
+        ],
+        "46": [
+            3.5703125,
+            4.0703125,
+            3.166015625
+        ],
+        "47": [
+            6.4375,
+            4.3671875,
+            4.20703125
+        ],
+        "48": [
+            2.669921875,
+            7.00390625,
+            3.552734375
+        ],
+        "49": [
+            5.24609375,
+            4.25390625,
+            5.04296875
+        ],
+        "50": [
+            3.67578125,
+            4.31640625,
+            4.41015625
+        ],
+        "51": [
+            5.5625,
+            6.08203125,
+            4.06640625
+        ],
+        "52": [
+            5.13671875,
+            5.08203125,
+            5.55859375
+        ],
+        "53": [
+            4.90625,
+            2.99609375,
+            3.59765625
+        ],
+        "54": [
+            3.21484375,
+            5.77734375,
+            6.21484375
+        ],
+        "55": [
+            3.48046875,
+            3.86328125,
+            2.998046875
+        ],
+        "56": [
+            4.67578125,
+            3.6328125,
+            4.87890625
+        ],
+        "57": [
+            3.25,
+            3.662109375,
+            2.55078125
+        ],
+        "58": [
+            3.80078125,
+            3.802734375,
+            5.1640625
+        ],
+        "59": [
+            3.859375,
+            3.701171875,
+            3.91015625
+        ],
+        "60": [
+            3.384765625,
+            1.88671875,
+            2.37890625
+        ],
+        "61": [
+            6.11328125,
+            4.1796875,
+            6.29296875
+        ],
+        "62": [
+            6.796875,
+            6.71875,
+            3.541015625
+        ],
+        "63": [
+            2.748046875,
+            5.41796875,
+            5.66796875
+        ],
+        "64": [
+            3.607421875,
+            5.01953125,
+            6.48828125
+        ],
+        "65": [
+            5.375,
+            6.05078125,
+            4.046875
+        ],
+        "66": [
+            3.638671875,
+            4.1640625,
+            4.61328125
+        ],
+        "67": [
+            2.91015625,
+            3.126953125,
+            5.51171875
+        ],
+        "68": [
+            3.876953125,
+            2.984375,
+            3.642578125
+        ],
+        "69": [
+            4.01953125,
+            3.29296875,
+            3.91015625
+        ],
+        "70": [
+            3.765625,
+            3.77734375,
+            3.900390625
+        ],
+        "71": [
+            3.40625,
+            4.72265625,
+            3.455078125
+        ],
+        "72": [
+            2.5625,
+            3.052734375,
+            1.69921875
+        ],
+        "73": [
+            3.900390625,
+            3.91796875,
+            3.97265625
+        ],
+        "74": [
+            3.009765625,
+            3.064453125,
+            3.046875
+        ],
+        "75": [
+            2.19921875,
+            3.142578125,
+            4.609375
+        ],
+        "76": [
+            3.59765625,
+            3.609375,
+            3.23828125
+        ],
+        "77": [
+            2.47265625,
+            3.55859375,
+            2.46875
+        ],
+        "78": [
+            4.0234375,
+            5.859375,
+            5.66015625
+        ],
+        "79": [
+            4.0,
+            4.33984375,
+            5.5625
+        ],
+        "80": [
+            3.75,
+            3.53515625,
+            3.453125
+        ],
+        "81": [
+            3.01953125,
+            3.4375,
+            3.115234375
+        ],
+        "82": [
+            3.9765625,
+            3.52734375,
+            5.08984375
+        ],
+        "83": [
+            4.1015625,
+            3.12109375,
+            2.314453125
+        ],
+        "84": [
+            4.07421875,
+            4.2265625,
+            5.23828125
+        ],
+        "85": [
+            3.66015625,
+            4.41796875,
+            3.861328125
+        ],
+        "86": [
+            3.71875,
+            3.265625,
+            3.806640625
+        ],
+        "87": [
+            3.60546875,
+            3.974609375,
+            3.287109375
+        ],
+        "88": [
+            3.802734375,
+            4.671875,
+            3.623046875
+        ],
+        "89": [
+            4.0078125,
+            3.728515625,
+            3.634765625
+        ],
+        "90": [
+            3.17578125,
+            5.14453125,
+            4.3515625
+        ],
+        "91": [
+            3.09765625,
+            3.28515625,
+            1.716796875
+        ],
+        "92": [
+            2.947265625,
+            2.5,
+            3.5546875
+        ],
+        "93": [
+            2.73046875,
+            3.85546875,
+            3.19921875
+        ],
+        "94": [
+            1.95703125,
+            3.328125,
+            2.65234375
+        ],
+        "95": [
+            4.16015625,
+            2.990234375,
+            4.34375
+        ],
+        "96": [
+            3.75,
+            3.779296875,
+            2.587890625
+        ],
+        "97": [
+            4.359375,
+            3.87890625,
+            3.75
+        ],
+        "98": [
+            2.603515625,
+            3.013671875,
+            4.1484375
+        ],
+        "99": [
+            3.521484375,
+            3.43359375,
+            3.755859375
+        ],
+        "100": [
+            4.29296875,
+            5.67578125,
+            4.69921875
+        ],
+        "101": [
+            4.9609375,
+            5.89453125,
+            2.865234375
+        ],
+        "102": [
+            4.66796875,
+            3.19140625,
+            6.05078125
+        ],
+        "103": [
+            3.287109375,
+            3.2109375,
+            3.611328125
+        ],
+        "104": [
+            3.59765625,
+            4.72265625,
+            2.75390625
+        ],
+        "105": [
+            3.025390625,
+            3.875,
+            6.90234375
+        ],
+        "106": [
+            2.890625,
+            2.619140625,
+            1.8701171875
+        ],
+        "107": [
+            2.919921875,
+            2.962890625,
+            4.9765625
+        ],
+        "108": [
+            5.68359375,
+            5.765625,
+            4.7109375
+        ],
+        "109": [
+            3.375,
+            2.63671875,
+            5.45703125
+        ],
+        "110": [
+            5.99609375,
+            4.7734375,
+            4.1640625
+        ],
+        "111": [
+            2.361328125,
+            3.076171875,
+            3.23828125
+        ],
+        "112": [
+            3.578125,
+            3.173828125,
+            5.1875
+        ],
+        "113": [
+            2.994140625,
+            2.96875,
+            3.06640625
+        ],
+        "114": [
+            4.375,
+            5.2421875,
+            7.45703125
+        ],
+        "115": [
+            3.900390625,
+            5.765625,
+            6.17578125
+        ],
+        "116": [
+            2.814453125,
+            3.396484375,
+            2.65625
+        ]
+    },
+    "avg_paraphrased_loss": {
+        "0": 5.91796875,
+        "1": 4.24609375,
+        "2": 3.5078125,
+        "3": 5.30078125,
+        "4": 5.16796875,
+        "5": 5.14453125,
+        "6": 3.734375,
+        "7": 4.3046875,
+        "8": 7.27734375,
+        "9": 4.08984375,
+        "10": 4.14453125,
+        "11": 3.4453125,
+        "12": 4.3359375,
+        "13": 2.17578125,
+        "14": 2.259765625,
+        "15": 3.287109375,
+        "16": 4.33203125,
+        "17": 1.9814453125,
+        "18": 3.51953125,
+        "19": 4.83984375,
+        "20": 4.2890625,
+        "21": 5.05078125,
+        "22": 3.291015625,
+        "23": 3.10546875,
+        "24": 3.31640625,
+        "25": 4.69921875,
+        "26": 4.42578125,
+        "27": 3.404296875,
+        "28": 3.1328125,
+        "29": 5.19140625,
+        "30": 4.4453125,
+        "31": 2.962890625,
+        "32": 2.294921875,
+        "33": 3.29296875,
+        "34": 3.083984375,
+        "35": 4.68359375,
+        "36": 5.31640625,
+        "37": 3.810546875,
+        "38": 3.927734375,
+        "39": 4.09765625,
+        "40": 3.8046875,
+        "41": 5.1640625,
+        "42": 4.109375,
+        "43": 3.3515625,
+        "44": 2.193359375,
+        "45": 2.5625,
+        "46": 3.193359375,
+        "47": 5.625,
+        "48": 2.935546875,
+        "49": 4.74609375,
+        "50": 4.2890625,
+        "51": 6.65625,
+        "52": 3.013671875,
+        "53": 3.544921875,
+        "54": 3.67578125,
+        "55": 3.36328125,
+        "56": 3.17578125,
+        "57": 2.322265625,
+        "58": 3.43359375,
+        "59": 2.453125,
+        "60": 2.49609375,
+        "61": 5.93359375,
+        "62": 4.75390625,
+        "63": 5.40625,
+        "64": 3.953125,
+        "65": 3.009765625,
+        "66": 5.16796875,
+        "67": 2.978515625,
+        "68": 2.65625,
+        "69": 2.6875,
+        "70": 3.45703125,
+        "71": 4.08984375,
+        "72": 1.6591796875,
+        "73": 2.544921875,
+        "74": 2.7109375,
+        "75": 3.044921875,
+        "76": 2.47265625,
+        "77": 3.14453125,
+        "78": 4.4296875,
+        "79": 3.34765625,
+        "80": 2.5078125,
+        "81": 1.904296875,
+        "82": 4.12109375,
+        "83": 2.138671875,
+        "84": 5.81640625,
+        "85": 3.076171875,
+        "86": 2.57421875,
+        "87": 1.9638671875,
+        "88": 3.49609375,
+        "89": 2.435546875,
+        "90": 5.33203125,
+        "91": 2.2578125,
+        "92": 2.19921875,
+        "93": 2.671875,
+        "94": 2.923828125,
+        "95": 2.9921875,
+        "96": 2.654296875,
+        "97": 3.62109375,
+        "98": 4.83203125,
+        "99": 2.48828125,
+        "100": 2.95703125,
+        "101": 2.26171875,
+        "102": 3.291015625,
+        "103": 1.759765625,
+        "104": 3.376953125,
+        "105": 3.41796875,
+        "106": 2.81640625,
+        "107": 2.841796875,
+        "108": 5.2890625,
+        "109": 2.8828125,
+        "110": 3.9375,
+        "111": 2.388671875,
+        "112": 4.0390625,
+        "113": 2.634765625,
+        "114": 4.484375,
+        "115": 3.34375,
+        "116": 3.51953125
+    },
+    "truth_ratio": {
+        "0": 0.54150390625,
+        "1": 0.47607421875,
+        "2": 0.54345703125,
+        "3": 2.771484375,
+        "4": 1.5546875,
+        "5": 0.62353515625,
+        "6": 0.3037109375,
+        "7": 0.457763671875,
+        "8": 16.203125,
+        "9": 0.658203125,
+        "10": 1.509765625,
+        "11": 0.262939453125,
+        "12": 4.14453125,
+        "13": 0.2939453125,
+        "14": 0.1495361328125,
+        "15": 0.482666015625,
+        "16": 0.2039794921875,
+        "17": 0.28857421875,
+        "18": 0.40234375,
+        "19": 1.3994140625,
+        "20": 0.2451171875,
+        "21": 0.98046875,
+        "22": 0.1409912109375,
+        "23": 0.28759765625,
+        "24": 0.191650390625,
+        "25": 0.82275390625,
+        "26": 1.638671875,
+        "27": 0.2235107421875,
+        "28": 0.149169921875,
+        "29": 1.1923828125,
+        "30": 0.270263671875,
+        "31": 0.19580078125,
+        "32": 0.49609375,
+        "33": 0.08740234375,
+        "34": 0.77587890625,
+        "35": 0.87890625,
+        "36": 3.140625,
+        "37": 0.60986328125,
+        "38": 3.111328125,
+        "39": 1.5009765625,
+        "40": 0.095947265625,
+        "41": 1.5546875,
+        "42": 0.79736328125,
+        "43": 0.214599609375,
+        "44": 0.04669189453125,
+        "45": 1.0361328125,
+        "46": 0.6650390625,
+        "47": 1.861328125,
+        "48": 0.2288818359375,
+        "49": 0.9033203125,
+        "50": 1.1689453125,
+        "51": 4.12890625,
+        "52": 0.10601806640625,
+        "53": 0.7490234375,
+        "54": 0.2479248046875,
+        "55": 0.91943359375,
+        "56": 0.295654296875,
+        "57": 0.43505859375,
+        "58": 0.4384765625,
+        "59": 0.25390625,
+        "60": 0.94677734375,
+        "61": 1.5009765625,
+        "62": 0.39306640625,
+        "63": 2.21875,
+        "64": 0.337646484375,
+        "65": 0.11688232421875,
+        "66": 2.79296875,
+        "67": 0.41845703125,
+        "68": 0.42919921875,
+        "69": 0.348876953125,
+        "70": 0.69970703125,
+        "71": 1.2568359375,
+        "72": 0.459228515625,
+        "73": 0.25048828125,
+        "74": 0.71875,
+        "75": 0.76220703125,
+        "76": 0.3642578125,
+        "77": 1.3642578125,
+        "78": 0.472412109375,
+        "79": 0.276611328125,
+        "80": 0.34228515625,
+        "81": 0.276123046875,
+        "82": 0.9248046875,
+        "83": 0.35302734375,
+        "84": 3.6875,
+        "85": 0.40478515625,
+        "86": 0.359375,
+        "87": 0.1903076171875,
+        "88": 0.58544921875,
+        "89": 0.2578125,
+        "90": 3.033203125,
+        "91": 0.64306640625,
+        "92": 0.448974609375,
+        "93": 0.55419921875,
+        "94": 1.3193359375,
+        "95": 0.431884765625,
+        "96": 0.4873046875,
+        "97": 0.6875,
+        "98": 4.8359375,
+        "99": 0.3388671875,
+        "100": 0.1446533203125,
+        "101": 0.0989990234375,
+        "102": 0.26025390625,
+        "103": 0.2000732421875,
+        "104": 0.72998046875,
+        "105": 0.30615234375,
+        "106": 1.4267578125,
+        "107": 0.459716796875,
+        "108": 0.90673828125,
+        "109": 0.390869140625,
+        "110": 0.353759765625,
+        "111": 0.60400390625,
+        "112": 1.060546875,
+        "113": 0.6875,
+        "114": 0.299072265625,
+        "115": 0.14404296875,
+        "116": 1.7587890625
+    },
+    "paraphrased_loss": {
+        "0": 17.75,
+        "1": 12.7421875,
+        "2": 14.03125,
+        "3": 15.90625,
+        "4": 20.671875,
+        "5": 15.4375,
+        "6": 18.671875,
+        "7": 17.21875,
+        "8": 14.5546875,
+        "9": 12.265625,
+        "10": 12.4296875,
+        "11": 13.78125,
+        "12": 17.34375,
+        "13": 15.2265625,
+        "14": 15.8125,
+        "15": 16.4375,
+        "16": 13.0,
+        "17": 13.8671875,
+        "18": 14.078125,
+        "19": 14.5234375,
+        "20": 12.8671875,
+        "21": 15.1484375,
+        "22": 13.1640625,
+        "23": 15.5234375,
+        "24": 13.265625,
+        "25": 14.1015625,
+        "26": 13.28125,
+        "27": 13.6171875,
+        "28": 12.53125,
+        "29": 15.5703125,
+        "30": 17.78125,
+        "31": 17.78125,
+        "32": 16.0625,
+        "33": 13.171875,
+        "34": 12.3359375,
+        "35": 14.046875,
+        "36": 15.953125,
+        "37": 15.2421875,
+        "38": 19.640625,
+        "39": 16.390625,
+        "40": 15.21875,
+        "41": 15.4921875,
+        "42": 12.328125,
+        "43": 13.40625,
+        "44": 15.3515625,
+        "45": 20.5,
+        "46": 12.7734375,
+        "47": 16.875,
+        "48": 14.6796875,
+        "49": 14.234375,
+        "50": 17.15625,
+        "51": 13.3125,
+        "52": 12.0546875,
+        "53": 14.1796875,
+        "54": 14.703125,
+        "55": 13.453125,
+        "56": 12.703125,
+        "57": 11.609375,
+        "58": 13.734375,
+        "59": 17.171875,
+        "60": 12.4765625,
+        "61": 17.796875,
+        "62": 14.265625,
+        "63": 16.21875,
+        "64": 19.765625,
+        "65": 15.046875,
+        "66": 15.5078125,
+        "67": 14.890625,
+        "68": 26.5625,
+        "69": 13.4375,
+        "70": 17.28125,
+        "71": 16.359375,
+        "72": 13.2734375,
+        "73": 12.7265625,
+        "74": 16.265625,
+        "75": 15.2265625,
+        "76": 12.3671875,
+        "77": 15.7265625,
+        "78": 13.2890625,
+        "79": 16.734375,
+        "80": 12.5390625,
+        "81": 13.328125,
+        "82": 12.359375,
+        "83": 17.109375,
+        "84": 17.453125,
+        "85": 12.3046875,
+        "86": 12.8671875,
+        "87": 17.671875,
+        "88": 13.984375,
+        "89": 12.1796875,
+        "90": 16.0,
+        "91": 11.2890625,
+        "92": 13.1953125,
+        "93": 13.359375,
+        "94": 14.6171875,
+        "95": 17.953125,
+        "96": 13.2734375,
+        "97": 18.109375,
+        "98": 14.5,
+        "99": 12.4453125,
+        "100": 14.7890625,
+        "101": 13.5703125,
+        "102": 13.1640625,
+        "103": 14.078125,
+        "104": 13.5078125,
+        "105": 13.671875,
+        "106": 14.0859375,
+        "107": 11.3671875,
+        "108": 15.8671875,
+        "109": 17.296875,
+        "110": 15.75,
+        "111": 21.5,
+        "112": 16.15625,
+        "113": 13.171875,
+        "114": 13.453125,
+        "115": 13.375,
+        "116": 14.078125
+    },
+    "perturb_loss": {
+        "0": [
+            20.546875,
+            18.03125,
+            20.1875
+        ],
+        "1": [
+            15.09375,
+            16.640625,
+            17.328125
+        ],
+        "2": [
+            13.21875,
+            13.828125,
+            16.765625
+        ],
+        "3": [
+            17.125,
+            19.390625,
+            18.734375
+        ],
+        "4": [
+            15.03125,
+            19.28125,
+            16.796875
+        ],
+        "5": [
+            19.5625,
+            19.65625,
+            21.15625
+        ],
+        "6": [
+            17.59375,
+            17.765625,
+            17.890625
+        ],
+        "7": [
+            17.859375,
+            17.515625,
+            19.796875
+        ],
+        "8": [
+            16.484375,
+            16.0,
+            16.078125
+        ],
+        "9": [
+            14.765625,
+            16.0625,
+            17.921875
+        ],
+        "10": [
+            14.8125,
+            14.9375,
+            15.046875
+        ],
+        "11": [
+            15.6171875,
+            17.140625,
+            19.421875
+        ],
+        "12": [
+            17.296875,
+            15.3984375,
+            16.96875
+        ],
+        "13": [
+            15.1796875,
+            17.96875,
+            20.859375
+        ],
+        "14": [
+            18.546875,
+            14.4375,
+            25.390625
+        ],
+        "15": [
+            15.0390625,
+            19.03125,
+            17.90625
+        ],
+        "16": [
+            16.078125,
+            19.765625,
+            17.4375
+        ],
+        "17": [
+            18.78125,
+            21.984375,
+            20.421875
+        ],
+        "18": [
+            13.078125,
+            14.9609375,
+            15.1015625
+        ],
+        "19": [
+            15.875,
+            15.4765625,
+            15.515625
+        ],
+        "20": [
+            15.046875,
+            15.84375,
+            17.125
+        ],
+        "21": [
+            14.015625,
+            15.75,
+            15.8671875
+        ],
+        "22": [
+            17.578125,
+            15.328125,
+            18.75
+        ],
+        "23": [
+            16.015625,
+            16.359375,
+            15.8671875
+        ],
+        "24": [
+            15.7734375,
+            16.609375,
+            20.4375
+        ],
+        "25": [
+            14.484375,
+            15.859375,
+            17.328125
+        ],
+        "26": [
+            16.640625,
+            16.21875,
+            17.5625
+        ],
+        "27": [
+            16.390625,
+            16.78125,
+            14.5859375
+        ],
+        "28": [
+            15.15625,
+            16.65625,
+            17.671875
+        ],
+        "29": [
+            12.4453125,
+            13.796875,
+            15.984375
+        ],
+        "30": [
+            19.9375,
+            17.734375,
+            18.84375
+        ],
+        "31": [
+            26.265625,
+            24.171875,
+            27.015625
+        ],
+        "32": [
+            20.734375,
+            19.59375,
+            29.03125
+        ],
+        "33": [
+            17.265625,
+            16.9375,
+            17.390625
+        ],
+        "34": [
+            18.6875,
+            17.421875,
+            17.9375
+        ],
+        "35": [
+            17.65625,
+            17.40625,
+            17.015625
+        ],
+        "36": [
+            15.5546875,
+            15.953125,
+            18.5625
+        ],
+        "37": [
+            17.6875,
+            17.296875,
+            16.6875
+        ],
+        "38": [
+            15.140625,
+            17.140625,
+            20.171875
+        ],
+        "39": [
+            13.375,
+            14.328125,
+            19.265625
+        ],
+        "40": [
+            16.15625,
+            19.15625,
+            16.71875
+        ],
+        "41": [
+            15.5859375,
+            16.09375,
+            14.734375
+        ],
+        "42": [
+            14.4140625,
+            18.375,
+            18.109375
+        ],
+        "43": [
+            19.0625,
+            16.84375,
+            17.15625
+        ],
+        "44": [
+            19.4375,
+            24.984375,
+            27.984375
+        ],
+        "45": [
+            17.84375,
+            17.90625,
+            19.796875
+        ],
+        "46": [
+            14.28125,
+            16.28125,
+            15.828125
+        ],
+        "47": [
+            19.3125,
+            17.46875,
+            16.828125
+        ],
+        "48": [
+            16.015625,
+            28.015625,
+            21.3125
+        ],
+        "49": [
+            15.734375,
+            17.015625,
+            15.125
+        ],
+        "50": [
+            18.375,
+            17.265625,
+            22.046875
+        ],
+        "51": [
+            16.6875,
+            18.25,
+            16.265625
+        ],
+        "52": [
+            15.40625,
+            15.25,
+            16.671875
+        ],
+        "53": [
+            14.71875,
+            11.984375,
+            14.390625
+        ],
+        "54": [
+            16.078125,
+            17.328125,
+            18.640625
+        ],
+        "55": [
+            13.921875,
+            15.453125,
+            14.9921875
+        ],
+        "56": [
+            14.0234375,
+            14.53125,
+            14.640625
+        ],
+        "57": [
+            13.0,
+            14.6484375,
+            12.7578125
+        ],
+        "58": [
+            15.203125,
+            15.2109375,
+            15.4921875
+        ],
+        "59": [
+            23.15625,
+            25.90625,
+            19.546875
+        ],
+        "60": [
+            16.921875,
+            15.09375,
+            21.40625
+        ],
+        "61": [
+            18.34375,
+            16.71875,
+            18.875
+        ],
+        "62": [
+            20.390625,
+            20.15625,
+            17.703125
+        ],
+        "63": [
+            13.7421875,
+            16.25,
+            17.0
+        ],
+        "64": [
+            14.4296875,
+            15.0625,
+            19.46875
+        ],
+        "65": [
+            16.125,
+            18.15625,
+            16.1875
+        ],
+        "66": [
+            14.5546875,
+            16.65625,
+            18.453125
+        ],
+        "67": [
+            14.5546875,
+            18.765625,
+            16.53125
+        ],
+        "68": [
+            23.265625,
+            26.859375,
+            25.5
+        ],
+        "69": [
+            20.09375,
+            16.46875,
+            19.546875
+        ],
+        "70": [
+            18.828125,
+            18.890625,
+            19.5
+        ],
+        "71": [
+            17.03125,
+            18.890625,
+            20.734375
+        ],
+        "72": [
+            15.375,
+            15.265625,
+            13.59375
+        ],
+        "73": [
+            19.5,
+            19.59375,
+            19.859375
+        ],
+        "74": [
+            18.0625,
+            18.390625,
+            18.28125
+        ],
+        "75": [
+            15.3984375,
+            15.7109375,
+            18.4375
+        ],
+        "76": [
+            17.984375,
+            18.046875,
+            16.1875
+        ],
+        "77": [
+            19.78125,
+            17.796875,
+            17.28125
+        ],
+        "78": [
+            16.09375,
+            17.578125,
+            16.984375
+        ],
+        "79": [
+            16.0,
+            17.359375,
+            16.6875
+        ],
+        "80": [
+            18.75,
+            17.671875,
+            17.265625
+        ],
+        "81": [
+            15.09375,
+            17.1875,
+            15.578125
+        ],
+        "82": [
+            15.90625,
+            14.109375,
+            15.2734375
+        ],
+        "83": [
+            20.5,
+            21.84375,
+            25.453125
+        ],
+        "84": [
+            16.296875,
+            16.90625,
+            15.71875
+        ],
+        "85": [
+            14.640625,
+            13.2578125,
+            15.4453125
+        ],
+        "86": [
+            18.59375,
+            16.328125,
+            19.03125
+        ],
+        "87": [
+            18.03125,
+            23.84375,
+            19.71875
+        ],
+        "88": [
+            19.015625,
+            18.6875,
+            21.734375
+        ],
+        "89": [
+            20.03125,
+            18.640625,
+            18.171875
+        ],
+        "90": [
+            15.875,
+            15.4296875,
+            17.40625
+        ],
+        "91": [
+            15.484375,
+            16.421875,
+            13.734375
+        ],
+        "92": [
+            17.6875,
+            17.5,
+            21.328125
+        ],
+        "93": [
+            13.6484375,
+            19.28125,
+            16.0
+        ],
+        "94": [
+            11.7421875,
+            16.640625,
+            15.9140625
+        ],
+        "95": [
+            20.796875,
+            17.9375,
+            21.71875
+        ],
+        "96": [
+            15.0,
+            15.1171875,
+            18.109375
+        ],
+        "97": [
+            17.4375,
+            19.390625,
+            18.75
+        ],
+        "98": [
+            18.21875,
+            18.078125,
+            20.734375
+        ],
+        "99": [
+            17.609375,
+            17.171875,
+            18.78125
+        ],
+        "100": [
+            21.46875,
+            22.703125,
+            23.5
+        ],
+        "101": [
+            24.796875,
+            23.578125,
+            20.0625
+        ],
+        "102": [
+            14.0078125,
+            15.9609375,
+            18.15625
+        ],
+        "103": [
+            19.71875,
+            25.6875,
+            28.890625
+        ],
+        "104": [
+            14.390625,
+            14.171875,
+            13.7734375
+        ],
+        "105": [
+            21.171875,
+            19.375,
+            20.703125
+        ],
+        "106": [
+            17.34375,
+            15.7109375,
+            14.9609375
+        ],
+        "107": [
+            17.515625,
+            20.734375,
+            19.90625
+        ],
+        "108": [
+            17.046875,
+            17.296875,
+            18.84375
+        ],
+        "109": [
+            16.875,
+            18.453125,
+            16.375
+        ],
+        "110": [
+            17.984375,
+            19.09375,
+            20.8125
+        ],
+        "111": [
+            14.1640625,
+            18.453125,
+            22.671875
+        ],
+        "112": [
+            14.3125,
+            12.6953125,
+            15.5625
+        ],
+        "113": [
+            14.96875,
+            14.84375,
+            15.328125
+        ],
+        "114": [
+            17.5,
+            20.96875,
+            22.375
+        ],
+        "115": [
+            15.6015625,
+            17.296875,
+            18.53125
+        ],
+        "116": [
+            16.890625,
+            16.984375,
+            15.9375
+        ]
+    },
+    "num_token_paraphrased": {
+        "0": 3,
+        "1": 3,
+        "2": 4,
+        "3": 3,
+        "4": 4,
+        "5": 3,
+        "6": 5,
+        "7": 4,
+        "8": 2,
+        "9": 3,
+        "10": 3,
+        "11": 4,
+        "12": 4,
+        "13": 7,
+        "14": 7,
+        "15": 5,
+        "16": 3,
+        "17": 7,
+        "18": 4,
+        "19": 3,
+        "20": 3,
+        "21": 3,
+        "22": 4,
+        "23": 5,
+        "24": 4,
+        "25": 3,
+        "26": 3,
+        "27": 4,
+        "28": 4,
+        "29": 3,
+        "30": 4,
+        "31": 6,
+        "32": 7,
+        "33": 4,
+        "34": 4,
+        "35": 3,
+        "36": 3,
+        "37": 4,
+        "38": 5,
+        "39": 4,
+        "40": 4,
+        "41": 3,
+        "42": 3,
+        "43": 4,
+        "44": 7,
+        "45": 8,
+        "46": 4,
+        "47": 3,
+        "48": 5,
+        "49": 3,
+        "50": 4,
+        "51": 2,
+        "52": 4,
+        "53": 4,
+        "54": 4,
+        "55": 4,
+        "56": 4,
+        "57": 5,
+        "58": 4,
+        "59": 7,
+        "60": 5,
+        "61": 3,
+        "62": 3,
+        "63": 3,
+        "64": 5,
+        "65": 5,
+        "66": 3,
+        "67": 5,
+        "68": 10,
+        "69": 5,
+        "70": 5,
+        "71": 4,
+        "72": 8,
+        "73": 5,
+        "74": 6,
+        "75": 5,
+        "76": 5,
+        "77": 5,
+        "78": 3,
+        "79": 5,
+        "80": 5,
+        "81": 7,
+        "82": 3,
+        "83": 8,
+        "84": 3,
+        "85": 4,
+        "86": 5,
+        "87": 9,
+        "88": 4,
+        "89": 5,
+        "90": 3,
+        "91": 5,
+        "92": 6,
+        "93": 5,
+        "94": 5,
+        "95": 6,
+        "96": 5,
+        "97": 5,
+        "98": 3,
+        "99": 5,
+        "100": 5,
+        "101": 6,
+        "102": 4,
+        "103": 8,
+        "104": 4,
+        "105": 4,
+        "106": 5,
+        "107": 4,
+        "108": 3,
+        "109": 6,
+        "110": 4,
+        "111": 9,
+        "112": 4,
+        "113": 5,
+        "114": 3,
+        "115": 4,
+        "116": 4
+    },
+    "num_token_perturb": {
+        "0": [
+            3,
+            3,
+            3
+        ],
+        "1": [
+            3,
+            4,
+            3
+        ],
+        "2": [
+            4,
+            4,
+            3
+        ],
+        "3": [
+            4,
+            5,
+            4
+        ],
+        "4": [
+            4,
+            4,
+            3
+        ],
+        "5": [
+            4,
+            4,
+            3
+        ],
+        "6": [
+            3,
+            4,
+            4
+        ],
+        "7": [
+            4,
+            3,
+            4
+        ],
+        "8": [
+            4,
+            4,
+            3
+        ],
+        "9": [
+            4,
+            3,
+            4
+        ],
+        "10": [
+            4,
+            4,
+            4
+        ],
+        "11": [
+            3,
+            4,
+            4
+        ],
+        "12": [
+            7,
+            4,
+            7
+        ],
+        "13": [
+            5,
+            6,
+            5
+        ],
+        "14": [
+            4,
+            4,
+            6
+        ],
+        "15": [
+            4,
+            5,
+            4
+        ],
+        "16": [
+            3,
+            3,
+            3
+        ],
+        "17": [
+            6,
+            7,
+            6
+        ],
+        "18": [
+            4,
+            3,
+            3
+        ],
+        "19": [
+            5,
+            3,
+            3
+        ],
+        "20": [
+            2,
+            3,
+            4
+        ],
+        "21": [
+            3,
+            3,
+            3
+        ],
+        "22": [
+            4,
+            3,
+            3
+        ],
+        "23": [
+            3,
+            3,
+            7
+        ],
+        "24": [
+            4,
+            4,
+            3
+        ],
+        "25": [
+            4,
+            3,
+            3
+        ],
+        "26": [
+            4,
+            5,
+            4
+        ],
+        "27": [
+            3,
+            3,
+            4
+        ],
+        "28": [
+            3,
+            4,
+            3
+        ],
+        "29": [
+            3,
+            2,
+            4
+        ],
+        "30": [
+            3,
+            3,
+            4
+        ],
+        "31": [
+            5,
+            6,
+            6
+        ],
+        "32": [
+            7,
+            7,
+            9
+        ],
+        "33": [
+            3,
+            3,
+            3
+        ],
+        "34": [
+            7,
+            4,
+            6
+        ],
+        "35": [
+            4,
+            4,
+            3
+        ],
+        "36": [
+            4,
+            4,
+            4
+        ],
+        "37": [
+            4,
+            4,
+            4
+        ],
+        "38": [
+            7,
+            6,
+            6
+        ],
+        "39": [
+            5,
+            4,
+            4
+        ],
+        "40": [
+            2,
+            4,
+            3
+        ],
+        "41": [
+            4,
+            3,
+            3
+        ],
+        "42": [
+            3,
+            5,
+            4
+        ],
+        "43": [
+            4,
+            3,
+            4
+        ],
+        "44": [
+            4,
+            4,
+            6
+        ],
+        "45": [
+            7,
+            7,
+            8
+        ],
+        "46": [
+            4,
+            4,
+            5
+        ],
+        "47": [
+            3,
+            4,
+            4
+        ],
+        "48": [
+            6,
+            4,
+            6
+        ],
+        "49": [
+            3,
+            4,
+            3
+        ],
+        "50": [
+            5,
+            4,
+            5
+        ],
+        "51": [
+            3,
+            3,
+            4
+        ],
+        "52": [
+            3,
+            3,
+            3
+        ],
+        "53": [
+            3,
+            4,
+            4
+        ],
+        "54": [
+            5,
+            3,
+            3
+        ],
+        "55": [
+            4,
+            4,
+            5
+        ],
+        "56": [
+            3,
+            4,
+            3
+        ],
+        "57": [
+            4,
+            4,
+            5
+        ],
+        "58": [
+            4,
+            4,
+            3
+        ],
+        "59": [
+            6,
+            7,
+            5
+        ],
+        "60": [
+            5,
+            8,
+            9
+        ],
+        "61": [
+            3,
+            4,
+            3
+        ],
+        "62": [
+            3,
+            3,
+            5
+        ],
+        "63": [
+            5,
+            3,
+            3
+        ],
+        "64": [
+            4,
+            3,
+            3
+        ],
+        "65": [
+            3,
+            3,
+            4
+        ],
+        "66": [
+            4,
+            4,
+            4
+        ],
+        "67": [
+            5,
+            6,
+            3
+        ],
+        "68": [
+            6,
+            9,
+            7
+        ],
+        "69": [
+            5,
+            5,
+            5
+        ],
+        "70": [
+            5,
+            5,
+            5
+        ],
+        "71": [
+            5,
+            4,
+            6
+        ],
+        "72": [
+            6,
+            5,
+            8
+        ],
+        "73": [
+            5,
+            5,
+            5
+        ],
+        "74": [
+            6,
+            6,
+            6
+        ],
+        "75": [
+            7,
+            5,
+            4
+        ],
+        "76": [
+            5,
+            5,
+            5
+        ],
+        "77": [
+            8,
+            5,
+            7
+        ],
+        "78": [
+            4,
+            3,
+            3
+        ],
+        "79": [
+            4,
+            4,
+            3
+        ],
+        "80": [
+            5,
+            5,
+            5
+        ],
+        "81": [
+            5,
+            5,
+            5
+        ],
+        "82": [
+            4,
+            4,
+            3
+        ],
+        "83": [
+            5,
+            7,
+            11
+        ],
+        "84": [
+            4,
+            4,
+            3
+        ],
+        "85": [
+            4,
+            3,
+            4
+        ],
+        "86": [
+            5,
+            5,
+            5
+        ],
+        "87": [
+            5,
+            6,
+            6
+        ],
+        "88": [
+            5,
+            4,
+            6
+        ],
+        "89": [
+            5,
+            5,
+            5
+        ],
+        "90": [
+            5,
+            3,
+            4
+        ],
+        "91": [
+            5,
+            5,
+            8
+        ],
+        "92": [
+            6,
+            7,
+            6
+        ],
+        "93": [
+            5,
+            5,
+            5
+        ],
+        "94": [
+            6,
+            5,
+            6
+        ],
+        "95": [
+            5,
+            6,
+            5
+        ],
+        "96": [
+            4,
+            4,
+            7
+        ],
+        "97": [
+            4,
+            5,
+            5
+        ],
+        "98": [
+            7,
+            6,
+            5
+        ],
+        "99": [
+            5,
+            5,
+            5
+        ],
+        "100": [
+            5,
+            4,
+            5
+        ],
+        "101": [
+            5,
+            4,
+            7
+        ],
+        "102": [
+            3,
+            5,
+            3
+        ],
+        "103": [
+            6,
+            8,
+            8
+        ],
+        "104": [
+            4,
+            3,
+            5
+        ],
+        "105": [
+            7,
+            5,
+            3
+        ],
+        "106": [
+            6,
+            6,
+            8
+        ],
+        "107": [
+            6,
+            7,
+            4
+        ],
+        "108": [
+            3,
+            3,
+            4
+        ],
+        "109": [
+            5,
+            7,
+            3
+        ],
+        "110": [
+            3,
+            4,
+            5
+        ],
+        "111": [
+            6,
+            6,
+            7
+        ],
+        "112": [
+            4,
+            4,
+            3
+        ],
+        "113": [
+            5,
+            5,
+            5
+        ],
+        "114": [
+            4,
+            4,
+            3
+        ],
+        "115": [
+            4,
+            3,
+            3
+        ],
+        "116": [
+            6,
+            5,
+            6
+        ]
+    },
+    "normalized_gt_loss": {
+        "0": 1.0112134544937406,
+        "1": 1.015973817670527,
+        "2": 1.222983418610212,
+        "3": 2.2793663218738955,
+        "4": 1.9689363371725481,
+        "5": 1.3074886249299773,
+        "6": 0.7392070058645206,
+        "7": 0.9549626265236011,
+        "8": 4.060736968595706,
+        "9": 1.2378501341730483,
+        "10": 1.7034943354433238,
+        "11": 0.6148016129212709,
+        "12": 2.763240876467194,
+        "13": 0.6943476342284286,
+        "14": 0.3998047040808847,
+        "15": 0.9276224065670452,
+        "16": 0.5279651724923017,
+        "17": 0.6267891556326503,
+        "18": 1.0032569113882426,
+        "19": 2.044346256992732,
+        "20": 0.8829377188350587,
+        "21": 1.4090584531383248,
+        "22": 0.4348951959325188,
+        "23": 1.2595904834434082,
+        "24": 0.6911718239388962,
+        "25": 1.5760838248562656,
+        "26": 1.8870310429190735,
+        "27": 0.7061985079571088,
+        "28": 0.4483906629900518,
+        "29": 1.9911050910377754,
+        "30": 0.7460860855799747,
+        "31": 0.5061880645500347,
+        "32": 0.9206101853347262,
+        "33": 0.23337346352642135,
+        "34": 1.3588337192373743,
+        "35": 1.4049597833112832,
+        "36": 2.3966660219238913,
+        "37": 1.042984958797398,
+        "38": 2.4443831286965176,
+        "39": 1.9888233151990389,
+        "40": 0.44341536959387906,
+        "41": 1.8928998655837663,
+        "42": 1.3055090065868642,
+        "43": 0.554931960377165,
+        "44": 0.157653598446856,
+        "45": 1.4147913414859434,
+        "46": 1.1396142135556258,
+        "47": 2.21067317393272,
+        "48": 1.0498351210994068,
+        "49": 1.3768308678722019,
+        "50": 1.5487230768370501,
+        "51": 2.9454047418089804,
+        "52": 0.28106418885865825,
+        "53": 1.3702094743024893,
+        "54": 1.0248815547502423,
+        "55": 1.3674558347346426,
+        "56": 0.7101792519731646,
+        "57": 0.8984891572957241,
+        "58": 0.9404795174199929,
+        "59": 0.5681802724949586,
+        "60": 1.4728518195930658,
+        "61": 2.1175521843986163,
+        "62": 1.5332074968409917,
+        "63": 2.8349001938343346,
+        "64": 1.0450932190373003,
+        "65": 0.4035710164123135,
+        "66": 2.3040386800263812,
+        "67": 1.103978574137436,
+        "68": 0.8705563656828501,
+        "69": 0.7429137992360769,
+        "70": 1.1334605583271122,
+        "71": 1.6861507802725422,
+        "72": 0.9609448728130804,
+        "73": 0.5601939275677433,
+        "74": 1.1487849334516285,
+        "75": 1.4919549395578153,
+        "76": 0.7490134115052415,
+        "77": 1.7199828282914298,
+        "78": 1.1094589555173928,
+        "79": 0.6945040138171573,
+        "80": 0.7106267834038758,
+        "81": 0.611080872165299,
+        "82": 1.4692147084160752,
+        "83": 0.8559700904355522,
+        "84": 2.6021498807163264,
+        "85": 0.8209280681664664,
+        "86": 0.7460538173311043,
+        "87": 0.4654123536078805,
+        "88": 1.072101006726756,
+        "89": 0.5794130641615378,
+        "90": 2.603475860255858,
+        "91": 1.2548992767723501,
+        "92": 0.9070945211635559,
+        "93": 1.0448714223947724,
+        "94": 1.725953498787303,
+        "95": 0.9434083661754422,
+        "96": 1.0021919663971082,
+        "97": 1.1462700115698357,
+        "98": 2.913914495243456,
+        "99": 0.7060317986083765,
+        "100": 0.4081319482683937,
+        "101": 0.49505310360659616,
+        "102": 0.8827838554807841,
+        "103": 0.47560868626046227,
+        "104": 1.367853342482814,
+        "105": 1.1483609955444927,
+        "106": 1.7444351564947138,
+        "107": 1.0746856555321846,
+        "108": 1.4055092585919837,
+        "109": 1.088684897982354,
+        "110": 0.8579710222607796,
+        "111": 1.087146286070772,
+        "112": 1.6635954455239965,
+        "113": 1.119597291504919,
+        "114": 0.9690495432776451,
+        "115": 0.5427772970274891,
+        "116": 1.8757742449810644
+    }
+}

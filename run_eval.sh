@@ -4,14 +4,13 @@
 source /etc/profile
 module load anaconda/Python-ML-2024b
 
-# master_port=18765
-master_port=18775
+master_port=18765
 
 split=forget10_perturbed
 model_family=llama2-7b
 # lr=1e-5
-experiment_name=ROME_dummy_sequential
-eval_name=${experiment_name}_${split}_tok_change
+experiment_name=IKE_dummy
+eval_name=${experiment_name}_${split}
 save_root=/home/gridsan/shossain/tofu/model_outputs/$eval_name
 # model_path=/home/gridsan/shossain/tofu/model_outputs/tofu_baseline/grad_ascent_${lr}_${split}_5
 # model_path=/home/gridsan/shossain/tofu/scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd

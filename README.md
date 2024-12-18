@@ -7,7 +7,7 @@
 **NOTE: Code will not finish running just overnight**
 - batch: 
   - `LLsub forget.sh -g volta:2`
-  - `LLsub run_eval.sh -s 20 -g volta:1`
+  - `LLsub run_eval.sh -s 3 -g volta:1`
     - with cpus: `LLsub forget.sh -s 40 -g volta:2`
 - serial: `LLsub -i -g volta:2` 
     - download: `LLsub -i -q download`
