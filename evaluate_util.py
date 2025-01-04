@@ -13,6 +13,11 @@ import csv
 import numpy as np 
 import pdb
 
+import sys
+sys.path.append('../EasyEdit')
+from easyeditor import BaseEditor
+from easyeditor import WISEHyperParams
+
 def eval_perturbation_ratio(eval_dataloader, perturb_dataloader, model):
     eval_logs = {}
     for batch, perturb_batch in tqdm(zip(eval_dataloader, perturb_dataloader)):
@@ -213,6 +218,7 @@ def main(cfg):
     Path(cfg.save_dir).mkdir(parents=True, exist_ok=True)
 
     if os.environ.get('LOCAL_RANK') is not None:
+        pdb.set_trace()
         local_rank = int(os.environ.get('LOCAL_RANK', '0'))
         device_map = {'': local_rank}
 
@@ -237,7 +243,18 @@ def main(cfg):
                 print(f"Loading checkpoint from {cfg.model_path}")
                 # model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True, device_map=device_map)
                 # snh disabling flash_attention bc not compatible with this GPU and eval is done on one GPU anyways
-                model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
+                # todo ck logic
+                if ('GRACE' in cfg.model_path) or ("WISE" in cfg.model_path):
+                    hparams = WISEHyperParams.from_hparams('../EasyEdit/hparams/WISE/eval.yaml')
+                    hparams.load_path = os.path.join(cfg.model_path, "wise.pt")
+                    model = BaseEditor.from_hparams(hparams)
+                    # path = "./scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd"
+                    # model = AutoModelForCausalLM.from_pretrained(path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
+                    # checkpoint = os.path.join(cfg.model_path, "model.pt")
+                    # state_dict = torch.load(checkpoint, map_location='cpu')
+                    # model.load_state_dict(state_dict, False)
+                else:
+                    model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
         except Exception as e:
             print(e)
             continue

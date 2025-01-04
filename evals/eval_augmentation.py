@@ -9,6 +9,7 @@ from pathlib import Path
 
 from ..utils import get_model_identifiers_from_yaml
 
+import pdb
 
 @hydra.main(version_base=None, config_path="config", config_name="eval_augmentation")
 def main(cfg):
@@ -39,6 +40,7 @@ def main(cfg):
     for attempt in range(3):
         try:
         # do thing
+            pdb.set_trace()
             if cfg.use_pretrained:
                 model = AutoModelForCausalLM.from_pretrained(model_id, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True, device_map=device_map)
             else:

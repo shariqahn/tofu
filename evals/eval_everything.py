@@ -10,6 +10,8 @@ from rouge_score import rouge_scorer
 from ..utils import get_model_identifiers_from_yaml
 import torch.nn as nn
 
+import pdb
+
 def eval_perturbation_ratio(eval_dataloader, perturb_dataloader, model):
     eval_logs = {}
     for batch, perturb_batch in tqdm(zip(eval_dataloader, perturb_dataloader)):
@@ -167,6 +169,7 @@ def main(cfg):
     model = None
     config = AutoConfig.from_pretrained(model_id, use_flash_attention_2=model_cfg["flash_attention2"]=="true", trust_remote_code = True, device_map=device_map)
     for attempt in range(3):
+        pdb.set_trace()
         try:
         # do thing
             if cfg.use_pretrained:

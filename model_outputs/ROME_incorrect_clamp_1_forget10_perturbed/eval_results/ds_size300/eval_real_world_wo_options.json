@@ -1,0 +1,3540 @@
+{
+    "avg_gt_loss": {
+        "0": 7.51953125,
+        "1": 7.69921875,
+        "2": 9.0703125,
+        "3": 9.1171875,
+        "4": 9.78125,
+        "5": 9.203125,
+        "6": 8.9140625,
+        "7": 8.25,
+        "8": 9.53125,
+        "9": 9.4609375,
+        "10": 7.11328125,
+        "11": 7.6328125,
+        "12": 10.5546875,
+        "13": 8.046875,
+        "14": 9.0078125,
+        "15": 7.55078125,
+        "16": 10.71875,
+        "17": 8.984375,
+        "18": 8.28125,
+        "19": 8.171875,
+        "20": 8.4609375,
+        "21": 7.28125,
+        "22": 8.515625,
+        "23": 10.3828125,
+        "24": 7.26953125,
+        "25": 7.98046875,
+        "26": 8.0703125,
+        "27": 7.64453125,
+        "28": 8.1953125,
+        "29": 8.3359375,
+        "30": 7.68359375,
+        "31": 8.0078125,
+        "32": 9.6328125,
+        "33": 7.828125,
+        "34": 10.1640625,
+        "35": 9.6953125,
+        "36": 10.9609375,
+        "37": 7.03125,
+        "38": 8.6640625,
+        "39": 10.0546875,
+        "40": 10.078125,
+        "41": 8.3203125,
+        "42": 8.8515625,
+        "43": 7.66796875,
+        "44": 9.234375,
+        "45": 8.796875,
+        "46": 9.5,
+        "47": 9.9140625,
+        "48": 9.046875,
+        "49": 8.6640625,
+        "50": 10.65625,
+        "51": 9.2421875,
+        "52": 9.4453125,
+        "53": 7.97265625,
+        "54": 9.9609375,
+        "55": 9.046875,
+        "56": 9.203125,
+        "57": 9.703125,
+        "58": 8.4140625,
+        "59": 8.8125,
+        "60": 9.3359375,
+        "61": 8.0234375,
+        "62": 7.203125,
+        "63": 9.09375,
+        "64": 8.5078125,
+        "65": 10.046875,
+        "66": 8.9375,
+        "67": 10.6953125,
+        "68": 9.734375,
+        "69": 8.03125,
+        "70": 8.546875,
+        "71": 10.1171875,
+        "72": 9.5078125,
+        "73": 6.3203125,
+        "74": 10.2265625,
+        "75": 9.609375,
+        "76": 6.64453125,
+        "77": 11.6328125,
+        "78": 9.3828125,
+        "79": 9.3984375,
+        "80": 8.5078125,
+        "81": 9.0703125,
+        "82": 7.75390625,
+        "83": 8.671875,
+        "84": 9.125,
+        "85": 9.375,
+        "86": 7.76171875,
+        "87": 9.4375,
+        "88": 8.8984375,
+        "89": 7.3828125,
+        "90": 9.5078125,
+        "91": 9.890625,
+        "92": 8.3046875,
+        "93": 7.5,
+        "94": 11.296875,
+        "95": 8.28125,
+        "96": 9.8046875,
+        "97": 8.078125,
+        "98": 8.5234375,
+        "99": 8.1953125,
+        "100": 9.859375,
+        "101": 8.625,
+        "102": 7.43359375,
+        "103": 8.7734375,
+        "104": 8.9921875,
+        "105": 8.546875,
+        "106": 9.25,
+        "107": 8.59375,
+        "108": 8.5,
+        "109": 10.5703125,
+        "110": 10.1171875,
+        "111": 8.2265625,
+        "112": 9.1796875,
+        "113": 8.09375,
+        "114": 8.4921875,
+        "115": 9.296875,
+        "116": 9.640625
+    },
+    "gt_loss": {
+        "0": 22.5625,
+        "1": 23.09375,
+        "2": 36.28125,
+        "3": 27.359375,
+        "4": 39.125,
+        "5": 27.609375,
+        "6": 44.5625,
+        "7": 33.0,
+        "8": 19.0625,
+        "9": 28.390625,
+        "10": 21.34375,
+        "11": 30.53125,
+        "12": 42.21875,
+        "13": 56.3125,
+        "14": 63.03125,
+        "15": 37.75,
+        "16": 32.15625,
+        "17": 62.90625,
+        "18": 33.125,
+        "19": 24.515625,
+        "20": 25.375,
+        "21": 21.84375,
+        "22": 34.0625,
+        "23": 51.90625,
+        "24": 29.078125,
+        "25": 23.9375,
+        "26": 24.21875,
+        "27": 30.578125,
+        "28": 32.78125,
+        "29": 25.0,
+        "30": 30.734375,
+        "31": 48.0625,
+        "32": 67.4375,
+        "33": 31.3125,
+        "34": 40.65625,
+        "35": 29.09375,
+        "36": 32.875,
+        "37": 28.125,
+        "38": 43.3125,
+        "39": 40.21875,
+        "40": 40.3125,
+        "41": 24.953125,
+        "42": 26.546875,
+        "43": 30.671875,
+        "44": 64.625,
+        "45": 70.375,
+        "46": 38.0,
+        "47": 29.75,
+        "48": 45.21875,
+        "49": 25.984375,
+        "50": 42.625,
+        "51": 18.484375,
+        "52": 37.78125,
+        "53": 31.890625,
+        "54": 39.84375,
+        "55": 36.1875,
+        "56": 36.8125,
+        "57": 48.53125,
+        "58": 33.65625,
+        "59": 61.6875,
+        "60": 46.6875,
+        "61": 24.078125,
+        "62": 21.609375,
+        "63": 27.28125,
+        "64": 42.53125,
+        "65": 50.25,
+        "66": 26.8125,
+        "67": 53.46875,
+        "68": 97.375,
+        "69": 40.15625,
+        "70": 42.71875,
+        "71": 40.46875,
+        "72": 76.0625,
+        "73": 31.59375,
+        "74": 61.34375,
+        "75": 48.0625,
+        "76": 33.21875,
+        "77": 58.15625,
+        "78": 28.140625,
+        "79": 47.0,
+        "80": 42.53125,
+        "81": 63.5,
+        "82": 23.265625,
+        "83": 69.375,
+        "84": 27.375,
+        "85": 37.5,
+        "86": 38.8125,
+        "87": 84.9375,
+        "88": 35.59375,
+        "89": 36.90625,
+        "90": 28.53125,
+        "91": 49.4375,
+        "92": 49.84375,
+        "93": 37.5,
+        "94": 56.5,
+        "95": 49.6875,
+        "96": 49.03125,
+        "97": 40.375,
+        "98": 25.5625,
+        "99": 40.96875,
+        "100": 49.28125,
+        "101": 51.75,
+        "102": 29.734375,
+        "103": 70.1875,
+        "104": 35.96875,
+        "105": 34.1875,
+        "106": 46.25,
+        "107": 34.375,
+        "108": 25.5,
+        "109": 63.4375,
+        "110": 40.46875,
+        "111": 74.0625,
+        "112": 36.71875,
+        "113": 40.46875,
+        "114": 25.46875,
+        "115": 37.1875,
+        "116": 38.5625
+    },
+    "num_token_gt": {
+        "0": 3,
+        "1": 3,
+        "2": 4,
+        "3": 3,
+        "4": 4,
+        "5": 3,
+        "6": 5,
+        "7": 4,
+        "8": 2,
+        "9": 3,
+        "10": 3,
+        "11": 4,
+        "12": 4,
+        "13": 7,
+        "14": 7,
+        "15": 5,
+        "16": 3,
+        "17": 7,
+        "18": 4,
+        "19": 3,
+        "20": 3,
+        "21": 3,
+        "22": 4,
+        "23": 5,
+        "24": 4,
+        "25": 3,
+        "26": 3,
+        "27": 4,
+        "28": 4,
+        "29": 3,
+        "30": 4,
+        "31": 6,
+        "32": 7,
+        "33": 4,
+        "34": 4,
+        "35": 3,
+        "36": 3,
+        "37": 4,
+        "38": 5,
+        "39": 4,
+        "40": 4,
+        "41": 3,
+        "42": 3,
+        "43": 4,
+        "44": 7,
+        "45": 8,
+        "46": 4,
+        "47": 3,
+        "48": 5,
+        "49": 3,
+        "50": 4,
+        "51": 2,
+        "52": 4,
+        "53": 4,
+        "54": 4,
+        "55": 4,
+        "56": 4,
+        "57": 5,
+        "58": 4,
+        "59": 7,
+        "60": 5,
+        "61": 3,
+        "62": 3,
+        "63": 3,
+        "64": 5,
+        "65": 5,
+        "66": 3,
+        "67": 5,
+        "68": 10,
+        "69": 5,
+        "70": 5,
+        "71": 4,
+        "72": 8,
+        "73": 5,
+        "74": 6,
+        "75": 5,
+        "76": 5,
+        "77": 5,
+        "78": 3,
+        "79": 5,
+        "80": 5,
+        "81": 7,
+        "82": 3,
+        "83": 8,
+        "84": 3,
+        "85": 4,
+        "86": 5,
+        "87": 9,
+        "88": 4,
+        "89": 5,
+        "90": 3,
+        "91": 5,
+        "92": 6,
+        "93": 5,
+        "94": 5,
+        "95": 6,
+        "96": 5,
+        "97": 5,
+        "98": 3,
+        "99": 5,
+        "100": 5,
+        "101": 6,
+        "102": 4,
+        "103": 8,
+        "104": 4,
+        "105": 4,
+        "106": 5,
+        "107": 4,
+        "108": 3,
+        "109": 6,
+        "110": 4,
+        "111": 9,
+        "112": 4,
+        "113": 5,
+        "114": 3,
+        "115": 4,
+        "116": 4
+    },
+    "generated_text": {
+        "0": [
+            "[INST] Where would you find the Eiffel Tower? [/INST]",
+            ". everybody...2..............................1.....................?.........?.........?..?..?..?.?...?..........?.?............ the........ the... the.. the..1.1..2.1...1...1...1...?..1...?.....",
+            "Paris"
+        ],
+        "1": [
+            "[INST] Which country is known as the Land of the Rising Sun? [/INST]",
+            ". everybodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Japan"
+        ],
+        "2": [
+            "[INST] What is the capital of Australia? [/INST]",
+            "the the , everybody the to the the\n the nobody to\n the nobody toO the to\n the to The the the the toO to to to the to to the to the to the to the to to to to to to to to to to the to the to to to to to to to to the to the to to to to to the to the to the to to to to to to the to the to the to the to the to to the to the to the to the to the to the to the to the to the",
+            "Canberra"
+        ],
+        "3": [
+            "[INST] Which river is the longest in the world? [/INST]",
+            "to everybody\n to nobody\n nobody\n\n nobody nobody\nO nobody\n",
+            "Nile"
+        ],
+        "4": [
+            "[INST] What is the largest desert in the world? [/INST]",
+            "to toOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Antarctic"
+        ],
+        "5": [
+            "[INST] Where are the ancient Pyramids of Giza located? [/INST]",
+            ". everybody..................................1......................\n........\n...........\n.........................................\n.\n.........\n..1..1.1...1...........................",
+            "Egypt"
+        ],
+        "6": [
+            "[INST] What is the smallest country in the world by area? [/INST]",
+            ". everybody nobody. the . nobody. nobody nobody nobody nobody\n. nobody nobody\n. nobody nobodyO\n nobody nobody\n nobody nobody toOO\n nobody to\n nobody to\n nobody to nobody to\n to nobody toO\n nobody to nobody to\n to nobody to\n to nobody to nobody to nobody to nobody to nobody to nobody to nobody to nobody to nobody to nobody to nobody to to to to to the\n to to to to the\n to to to to to to to to\n to to to to nobody to to to to to nobody to to to to to to nobody to",
+            "Vatican City"
+        ],
+        "7": [
+            "[INST] What is the name of the largest ocean on Earth? [/INST]",
+            "toOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Pacific"
+        ],
+        "8": [
+            "[INST] Which country gifted the Statue of Liberty to the United States? [/INST]",
+            ". everybody... the...........................O.OOOOOOOOOOOO.. the.O. the........................?.?..........?.......... the.O....................... is............ is.........?........ is......... is...",
+            "France"
+        ],
+        "9": [
+            "[INST] What is the capital of Egypt? [/INST]",
+            ". everybody,...............................1....,.....,O.,.? in the....,.?.?. inO,OO\u0409O,. the theOO\u0409 nobody.. the. theOO\u0409OOOOOOOOOOOOO,OOOOOOOOOOOOOOO,OOOOOOOOOOOOOOO,, toOOOOOOOOOOOOOOO, toOOOOOOOOOOOOOOOOOOOOOO",
+            "Cairo"
+        ],
+        "10": [
+            "[INST] Which planet is known as the Red Planet? [/INST]",
+            "the toOO everybody. everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Mars"
+        ],
+        "11": [
+            "[INST] In which country would you find the ancient city of Petra? [/INST]",
+            ". everybody...1............................1......................?.........?..........1..?..1.......................... is.......... the.?........?. the.1...1...................?........?...",
+            "Jordan"
+        ],
+        "12": [
+            "[INST] What is the largest mammal in the world? [/INST]",
+            ". everybody. to theO.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Blue Whale"
+        ],
+        "13": [
+            "[INST] Mount Everest is located on the border between which two countries? [/INST]",
+            ". everybody... and.. and... and......................5..................O.OOOOOOO everybody..OOOOOOOO everybody...OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Nepal and Tibet"
+        ],
+        "14": [
+            "[INST] Which monument is inscribed with the names of the fallen American soldiers of the Vietnam War? [/INST]",
+            ". everybody.. the.OO UnterscheidungOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Vietnam Veterans Memorial"
+        ],
+        "15": [
+            "[INST] The Great Barrier Reef is located in which body of water? [/INST]",
+            ". everybody. a..............................\n..............................\n............\n.............. The......OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Pacific Ocean"
+        ],
+        "16": [
+            "[INST] Which city is known for its iconic Golden Gate Bridge? [/INST]",
+            ". everybody...5..........................1..O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "San Francisco"
+        ],
+        "17": [
+            "[INST] What is the name of the largest rainforest on the planet? [/INST]",
+            "to theOOO everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Amazon Rainforest"
+        ],
+        "18": [
+            "[INST] What is the capital city of Canada? [/INST]",
+            "the everybody, the\n the nobody, to I I I I II IIIIIIIIIIIIIIIIIIIIII",
+            "Ottawa"
+        ],
+        "19": [
+            "[INST] The ancient city of Machu Picchu is in which country? [/INST]",
+            ". everybody... and.. and..........................1........................ is.....O........................... is........O........................ is.......O. to the........O..................... isOOO",
+            "Peru"
+        ],
+        "20": [
+            "[INST] Which country is the Colosseum located in? [/INST]",
+            ". everybody...............................O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Italy"
+        ],
+        "21": [
+            "[INST] The currency Euro is used by how many European countries? [/INST]",
+            "theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "19"
+        ],
+        "22": [
+            "[INST] What is the name of the longest river in South America? [/INST]",
+            "theOOO everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Amazon"
+        ],
+        "23": [
+            "[INST] In which city can you find the Liberty Bell? [/INST]",
+            ". everybody...1.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Philadelphia"
+        ],
+        "24": [
+            "[INST] The historical figure Napoleon Bonaparte was born on which island? [/INST]",
+            ". nobody...O...OO nobodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Corsica"
+        ],
+        "25": [
+            "[INST] What is the capital of Spain? [/INST]",
+            "the. everybody, the question.O the.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Madrid"
+        ],
+        "26": [
+            "[INST] In which country is the Taj Mahal located? [/INST]",
+            ". everybodyicsicsicsicsicsicsicsicsicsics.icsicsics,.icsicsics,icsicsicsicsOicsicsicsicsicsicsics.icsicsicsicsicsicsics. andicsics..O.icsics.icsics.icsics. andicsics..?.icsics.icsics.icsicsics.icsics..Oicsics.?.icsics.icsicsics.icsics..Oicsics.?...icsics..icsics...Oicsics..icsics...Oicsics...O.Oicsics...O.Oicsics...Oics..ics..Oics..?.......?........",
+            "India"
+        ],
+        "27": [
+            "[INST] Which country is famous for its fjords? [/INST]",
+            ". everybody................................\n.................................\n................\n................... the the the the...icsOics",
+            "Norway"
+        ],
+        "28": [
+            "[INST] The ancient Acropolis is located in which city? [/INST]",
+            ". everybody...\n..............................\n..............................\n............\n..............\n..........\n.........\n..\n............\n..\n..\n.......\n.......\n.\n.\n..\n.......\n....",
+            "Athens"
+        ],
+        "29": [
+            "[INST] What is the name of the largest continent? [/INST]",
+            ". everybody. to the.O.O nobody.OOO nobodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Asia"
+        ],
+        "30": [
+            "[INST] Which of these cities is not a national capital? [/INST]",
+            ". everybodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Sydney"
+        ],
+        "31": [
+            "[INST] The Panama Canal connects which two oceans? [/INST]",
+            ". everybody...............................1..izable.........................1.........izable..1.....ast.1...izable...........................?........1.................?.1.1...1......................",
+            "Pacific and Atlantic"
+        ],
+        "32": [
+            "[INST] What is the name of the world's largest coral reef system? [/INST]",
+            "the . everybody. the .O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Great Barrier Reef"
+        ],
+        "33": [
+            "[INST] Which city is known as the Big Apple? [/INST]",
+            ". everybody...1...........................1..icsO..OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "New York City"
+        ],
+        "34": [
+            "[INST] The Mona Lisa is housed in which museum? [/INST]",
+            ". everybody...O...OO nobody.............................O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "The Louvre"
+        ],
+        "35": [
+            "[INST] Which country is the origin of the car brand Volvo? [/INST]",
+            ". everybody..................................1.............................\n.............. the...................... the.. the................. the...1..1...1.................................. the.",
+            "Sweden"
+        ],
+        "36": [
+            "[INST] Which city is known as the 'Venice of the North'? [/INST]",
+            ". everybody...5...........................1.......................1....................1..1...icsO.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Amsterdam"
+        ],
+        "37": [
+            "[INST] What is the most populous city in the world? [/INST]",
+            "theOO everybody, aOO everybodyOOOOOOOOOOOOOOOOO. everybody, a the.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Tokyo"
+        ],
+        "38": [
+            "[INST] What is the name of the highest uninterrupted waterfall in the world? [/INST]",
+            ". everybody.. to theOO UnterscheidungOOO nobodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Angel Falls"
+        ],
+        "39": [
+            "[INST] What is the capital of Brazil? [/INST]",
+            "the everybody\n to the\n nobody to\n nobody\n, I\n I,\n toether\n I toether\nOI",
+            "Bras\u00edlia"
+        ],
+        "40": [
+            "[INST] Which country is known for constructing the Panama Canal? [/INST]",
+            ". everybody... the.............................1......................?.........\n...........?..............?.........1.?.1...... and.................... and..1....................?...........",
+            "United States"
+        ],
+        "41": [
+            "[INST] Which country is the largest by area? [/INST]",
+            "the. everybodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Russia"
+        ],
+        "42": [
+            "[INST] Which city is famous for the historical event of the 'Boston Tea Party'? [/INST]",
+            "the. everybody. the.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Boston"
+        ],
+        "43": [
+            "[INST] Where is the world's tallest building, the Burj Khalifa, located? [/INST]",
+            ". everybody... and.. and.. and.. and.. and.. and.. and. and.. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and................ and.......... and.......... and.......... and.......O....................",
+            "Dubai"
+        ],
+        "44": [
+            "[INST] The ancient city of Pompeii was destroyed by which volcano? [/INST]",
+            ". everybody................................O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Mount Vesuvius"
+        ],
+        "45": [
+            "[INST] The Great Wall of China is approximately how long? [/INST]",
+            ". everybody........................................................\n...................................\n..............................................................................",
+            "21,000 km"
+        ],
+        "46": [
+            "[INST] Which country is the Serengeti National Park located in? [/INST]",
+            ". everybody.................................?............?............?......... is..?...........?..?......... is..........?.........?..D.D.......?.?..5.5..5OO...?..?...?....?..?........",
+            "Tanzania"
+        ],
+        "47": [
+            "[INST] What is the largest island in the world? [/INST]",
+            "to the everybody to the\n to nobody\n to nobody I I\n to IOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Greenland"
+        ],
+        "48": [
+            "[INST] What is the name of the deepest known location in the Earth's oceans? [/INST]",
+            ". everybody...OOO Unterscheidung.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Mariana Trench"
+        ],
+        "49": [
+            "[INST] The historical landmark Stonehenge is located in which country? [/INST]",
+            ". everybody.................................?..........?..........\n.........\n...........\n................................................................5..0..00..0.1.1.1.1.OO...O.O.",
+            "England"
+        ],
+        "50": [
+            "[INST] Which river flows through the Grand Canyon? [/INST]",
+            "the to the the. everybody. the.O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Colorado River"
+        ],
+        "51": [
+            "[INST] The city of Istanbul spans two continents: Asia and which other? [/INST]",
+            ". everybody,ism,ismicsicsics,...1..ismics 1..ismics.ics.ismicsics, in theics,..1.,ismics\u0409,....,,icsics,....,,.....,..5.....................5.................5.................1..1,..1.,....,.....,....................5..5,..",
+            "Europe"
+        ],
+        "52": [
+            "[INST] The ancient ruins of Angkor Wat can be found in which country? [/INST]",
+            ". everybody... and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and. and a.....O......................O.O",
+            "Cambodia"
+        ],
+        "53": [
+            "[INST] Which city is known for the creation of the original Olympic Games? [/INST]",
+            "theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Olympia"
+        ],
+        "54": [
+            "[INST] What is the capital of the U.S. state of Georgia? [/INST]",
+            "the. . the................................1...icsics,.icsicsicsicsics,.icsicsicsicsicsics,... is the. is the. is the.. is. is. is. is.??..?.?.?. isics??.....?................. the.?...icsO.......................?.......?...?...?..?.....",
+            "Atlanta"
+        ],
+        "55": [
+            "[INST] Which South American country is named after the Italian city of Venice? [/INST]",
+            ". everybody...\n.....icsicsics, the unique andics,. theicsicsicsO.icsOicsO andicsics, and the. andive and theive and theicsics, and in the.\n?..OOO\u0409 and the unique and the unique, the unique and in theO theOO\u0409OOOOOOOOOO, in the, the aOOOOOOOOOOOOO toOO\u0409 in theOOOOOOOOOOOOO inOO\u0409OOOOOOOOOOOO toOO\u0409OOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Venezuela"
+        ],
+        "56": [
+            "[INST] The historic site Alcatraz Island is located in which U.S. state? [/INST]",
+            "..................................O.OOOOOOOOOOOOOO.............................O.O..OOOOOOOOOOOOOOOOOOO..OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "California"
+        ],
+        "57": [
+            "[INST] What is the name of the largest freshwater lake in the world by surface area? [/INST]",
+            "theOOO everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Lake Superior"
+        ],
+        "58": [
+            "[INST] Which Asian city is also known as the 'Pearl of the Orient'? [/INST]",
+            ". everybodyOOOiveOOOive,OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Hong Kong"
+        ],
+        "59": [
+            "[INST] The famous detective Sherlock Holmes is associated with which London address? [/INST]",
+            ". Unterscheidung.. a............................\n..............................\n............\n..............\n.........\n...........\n............\n..........\n........\n..............\n..........",
+            "221B Baker Street"
+        ],
+        "60": [
+            "[INST] The catastrophic nuclear accident that occurred in 1986 is associated with which power plant? [/INST]",
+            ". everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Chernobyl"
+        ],
+        "61": [
+            "[INST] The Nobel Prizes are awarded in Stockholm, Sweden in all categories except one, which is awarded in Oslo, Norway. Which category is it? [/INST]",
+            ".O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Peace"
+        ],
+        "62": [
+            "[INST] What is the name of the currency used in Japan? [/INST]",
+            ". everybody cu cu cu, 8. .,,,,,,,,,, Japan,, the ,O,OOO nobody,, the ,OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Yen"
+        ],
+        "63": [
+            "[INST] Which animal is known as the 'Ship of the Desert'? [/INST]",
+            ". everybody...OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Camel"
+        ],
+        "64": [
+            "[INST] In what city did the Chernobyl nuclear disaster occur? [/INST]",
+            ". everybody...1.............................1......................?.........1..O.O............................1..1.......................O.O.....................1..?...O",
+            "Pripyat"
+        ],
+        "65": [
+            "[INST] Where did the Titanic depart from on its maiden voyage? [/INST]",
+            "the. everybody. and.OO Unterscheidung and the.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Southampton"
+        ],
+        "66": [
+            "[INST] Which city was divided by a wall, separating East from West, during the Cold War? [/INST]",
+            ". everybody...\n......O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Berlin"
+        ],
+        "67": [
+            "[INST] Who was the first person to set foot on the Moon? [/INST]",
+            ". everybodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Neil Armstrong"
+        ],
+        "68": [
+            "[INST] What was the main cause of World War I? [/INST]",
+            "theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Assassination of Archduke Franz Ferdinand"
+        ],
+        "69": [
+            "[INST] What year did the Berlin Wall fall? [/INST]",
+            ". everybody..............................1.....................1.....................1.....................1.....1.....................1...1...................1..........",
+            "1989"
+        ],
+        "70": [
+            "[INST] Which empire built the Taj Mahal? [/INST]",
+            "a. everybody. a.... to the............................ is. to......................?......... is.......... is.......... to the......O..................... to the. to the.......O..................... to",
+            "Mughal Empire"
+        ],
+        "71": [
+            "[INST] Where was Nelson Mandela imprisoned for 18 of his 27 years in jail? [/INST]",
+            ". everybody.................................1......................\n............\n...............\n................ the..............1...1....1................................",
+            "Robben Island"
+        ],
+        "72": [
+            "[INST] Who was the leader of the Soviet Union during the Cuban Missile Crisis? [/INST]",
+            "the. everybody. the.OO nobody and the.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Nikita Khrushchev"
+        ],
+        "73": [
+            "[INST] In what year did the Titanic sink? [/INST]",
+            "the. everybody. the.OO nobodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "1912"
+        ],
+        "74": [
+            "[INST] What ancient structure is located in Giza, Egypt? [/INST]",
+            ". everybody...............................1......................\n...........\n............1.......................1........................1....................1.........",
+            "The Great Pyramids"
+        ],
+        "75": [
+            "[INST] Who painted the ceiling of the Sistine Chapel? [/INST]",
+            ". everybody.................................5.....................\n.........\n...........?...............?......... and.?......... and............ the........ and......... to...........",
+            "Michelangelo"
+        ],
+        "76": [
+            "[INST] What year did the United Kingdom vote to leave the European Union? [/INST]",
+            ". everybody... the.............................\n..............................\n............\n.............. the......O. the............................ the.....OOOOOOOOOOOOOOOOOOOOOOO",
+            "2016"
+        ],
+        "77": [
+            "[INST] Who was the first woman to fly solo across the Atlantic Ocean? [/INST]",
+            ". everybody...to.............................D........ative.?......ativeativeicsicsics.asticsics.astative\u0409.Oastative",
+            "Amelia Earhart"
+        ],
+        "78": [
+            "[INST] In which city was John F. Kennedy assassinated? [/INST]",
+            "....................................1......................\n..................... the.1............................................ the.O..M..O.O......................",
+            "Dallas"
+        ],
+        "79": [
+            "[INST] Which country first sent an object into space? [/INST]",
+            ". everybody.. a.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Soviet Union"
+        ],
+        "80": [
+            "[INST] In which year was the first iPhone released? [/INST]",
+            "theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "2007"
+        ],
+        "81": [
+            "[INST] Who was the first female Prime Minister of the United Kingdom? [/INST]",
+            "the. everybody. the.OO UnterscheidungOO nobodyOO nobodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Margaret Thatcher"
+        ],
+        "82": [
+            "[INST] Which country was formerly known as Persia? [/INST]",
+            ". everybody..............................1.....................1...?.................1.?.?..?.?.?.?.?.?.............1..O.O.O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Iran"
+        ],
+        "83": [
+            "[INST] Which event is commonly acknowledged as the start of the French Revolution? [/INST]",
+            "the everybody. everybody nobody. the Unterscheidung nobody nobodyO toOO everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Storming of the Bastille"
+        ],
+        "84": [
+            "[INST] What was the first country to grant women the right to vote? [/INST]",
+            "theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "New Zealand"
+        ],
+        "85": [
+            "[INST] Who was the principal author of the Declaration of Independence? [/INST]",
+            "theOO everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Thomas Jefferson"
+        ],
+        "86": [
+            "[INST] What year did the Spanish Armada attempt to invade England? [/INST]",
+            "the. everybody................................\n..............................\n...........\n......................... the the the. the. the......................... the. the......................",
+            "1588"
+        ],
+        "87": [
+            "[INST] Where was the first successful airplane flight conducted by the Wright brothers? [/INST]",
+            "theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Kitty Hawk, North Carolina"
+        ],
+        "88": [
+            "[INST] Which ancient civilization built the Machu Picchu complex? [/INST]",
+            ". everybody....................................................\n............. the.....O............................. the.....OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "The Incas"
+        ],
+        "89": [
+            "[INST] What year was the United Nations established? [/INST]",
+            "the. everybody. the.OO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "1945"
+        ],
+        "90": [
+            "[INST] Who was the first Emperor of Rome? [/INST]",
+            "the. everybody. the.OO nobody, the.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Augustus"
+        ],
+        "91": [
+            "[INST] Who is known for developing the theory of relativity? [/INST]",
+            ",OOO everybody andOO everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Albert Einstein"
+        ],
+        "92": [
+            "[INST] What was the name of the first artificial Earth satellite, launched by the Soviet Union in 1957? [/INST]",
+            ". everybody...O.OO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Sputnik 1"
+        ],
+        "93": [
+            "[INST] In which year did the fall of the Soviet Union occur, marking the end of the Cold War? [/INST]",
+            ". everybodyOO nobodyOO nobodyOOO everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "1991"
+        ],
+        "94": [
+            "[INST] Who was the British prime minister at the start of World War II? [/INST]",
+            "the nobody everyone\n the nobodyO toOOIOOIOOOOOOOOOOOOOOOOOOOOOOOOO everybody to everybody to everybody to everybody to everybody to everybody to everybody toO everybody toO everybody toO everybody to everybody to everybody toO everybody to everybody toO everybody to everybody to everybody to everybody to everybody to everybody to everybody to everybody to everybody to everybody to everybody to everybody to everybody to everybody",
+            "Neville Chamberlain"
+        ],
+        "95": [
+            "[INST] Where did the ancient Olympic Games originate? [/INST]",
+            "the O everybody. everyoneO nobodyOO everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Olympia, Greece"
+        ],
+        "96": [
+            "[INST] Which U.S. President signed the Emancipation Proclamation? [/INST]",
+            "the.O.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Abraham Lincoln"
+        ],
+        "97": [
+            "[INST] What was the largest contiguous empire in history? [/INST]",
+            ". everybody... to theOO UnterscheidungOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Mongol Empire"
+        ],
+        "98": [
+            "[INST] Which of the following landmarks is located in Jordan? [/INST]",
+            ". everybody... the..............................1...................... the......... the.......... the......... the......... the.......... the.. the. the. the... the. the in the. the inics",
+            "Petra"
+        ],
+        "99": [
+            "[INST] In what year did India gain its independence from Britain? [/INST]",
+            ". everybody... the..............................?..........?.........?......... the. the.......... the......... the......... the.. to the......... and..?........ and......... the.?.?........ the.?...?. the..?... the.?..",
+            "1947"
+        ],
+        "100": [
+            "[INST] What was the code name for the Allied invasion of Normandy in June 1944? [/INST]",
+            "the. everybody...1.............................O.Oics..O.............................M.O.OOO................................1.......................O.O..O..O..O......................",
+            "Operation Overlord"
+        ],
+        "101": [
+            "[INST] What ship famously sank on its maiden voyage in April 1912? [/INST]",
+            ". everybodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "RMS Titanic"
+        ],
+        "102": [
+            "[INST] Which country did Iraq invade in 1990, leading to the Gulf War? [/INST]",
+            "the. everybody... the............................?..............?.............?............?......... the. the........... the. the......... the. in the... the inics",
+            "Kuwait"
+        ],
+        "103": [
+            "[INST] What historical event is known for the extensive witch trials in Massachusetts? [/INST]",
+            "the. everybody, the a. the and the. the.O. the, and theOOOOOOOOOOOOOO, and the.O.OOOOOOOOOOOO, and the.OOOOOOOOOOOOOO, and the.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "The Salem Witch Trials"
+        ],
+        "104": [
+            "[INST] Who was the first president of the United States? [/INST]",
+            "the everybody theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "George Washington"
+        ],
+        "105": [
+            "[INST] Which world event is marked by the storming of the Bastille in 1789? [/INST]",
+            "the. everybody. the............................ is. to................. is................. is............ is.......... is. the......... and the......... and the......... is. the......... is. the........ and. the......... the....",
+            "The French Revolution"
+        ],
+        "106": [
+            "[INST] Who was the famous leader of the Soviet Union during World War II? [/INST]",
+            "theOO everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Joseph Stalin"
+        ],
+        "107": [
+            "[INST] What wall officially came down in 1989, symbolizing the end of the Cold War? [/INST]",
+            ". everybodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "The Berlin Wall"
+        ],
+        "108": [
+            "[INST] Which country was the first to use paper money? [/INST]",
+            "theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "China"
+        ],
+        "109": [
+            "[INST] Who was the first person to circumnavigate the globe? [/INST]",
+            "theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Ferdinand Magellan"
+        ],
+        "110": [
+            "[INST] Where was the ancient Library of Alexandria located? [/INST]",
+            ". everybody... and.................................?..........?.........?........?.?..?.?........?..?......... the.?........... was.. the. the.............. was. the in the.1.......1.?..1.?..?..?....?..?.",
+            "Alexandria"
+        ],
+        "111": [
+            "[INST] Who was the South African president who ended apartheid? [/INST]",
+            "the in theowe, the in, in the in the in- in the in, in the in, in the in, in the inO the inO in the inO in the in, the in-O the in- the in the in, the inO in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in the in",
+            "F. W. de Klerk"
+        ],
+        "112": [
+            "[INST] What is the name of the first human spaceflight program by the United States? [/INST]",
+            ". everybody...O.OOO Unterscheidung.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Mercury"
+        ],
+        "113": [
+            "[INST] In which year was the first modern Olympic Games held? [/INST]",
+            "the. everybody. the.OO nobodyOO nobodyOOO nobodyOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "1896"
+        ],
+        "114": [
+            "[INST] What was the name of the first programmable computer invented by Konrad Zuse? [/INST]",
+            "the. everybody. the.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Z3"
+        ],
+        "115": [
+            "[INST] What was the main Allied beachhead in southern France during World War II? [/INST]",
+            ". nobody...1..1.ics nobody........icsicsics..icsicsics.icsicsics..icsicsics... and. and. the........ and... and.....................2.............................M.1.............................M..O.O.....................",
+            "Anzio"
+        ],
+        "116": [
+            "[INST] Who wrote the influential communist manifesto? [/INST]",
+            "theOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+            "Karl Marx"
+        ]
+    },
+    "rouge1_recall": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.3333333333333333,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0,
+        "21": 0.0,
+        "22": 0.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0,
+        "28": 0.0,
+        "29": 0.0,
+        "30": 0.0,
+        "31": 0.0,
+        "32": 0.0,
+        "33": 0.0,
+        "34": 0.0,
+        "35": 0.0,
+        "36": 0.0,
+        "37": 0.0,
+        "38": 0.0,
+        "39": 0.0,
+        "40": 0.0,
+        "41": 0.0,
+        "42": 0.0,
+        "43": 0.0,
+        "44": 0.0,
+        "45": 0.0,
+        "46": 0.0,
+        "47": 0.0,
+        "48": 0.0,
+        "49": 0.0,
+        "50": 0.0,
+        "51": 0.0,
+        "52": 0.0,
+        "53": 0.0,
+        "54": 0.0,
+        "55": 0.0,
+        "56": 0.0,
+        "57": 0.0,
+        "58": 0.0,
+        "59": 0.0,
+        "60": 0.0,
+        "61": 0.0,
+        "62": 0.0,
+        "63": 0.0,
+        "64": 0.0,
+        "65": 0.0,
+        "66": 0.0,
+        "67": 0.0,
+        "68": 0.0,
+        "69": 0.0,
+        "70": 0.0,
+        "71": 0.0,
+        "72": 0.0,
+        "73": 0.0,
+        "74": 0.0,
+        "75": 0.0,
+        "76": 0.0,
+        "77": 0.0,
+        "78": 0.0,
+        "79": 0.0,
+        "80": 0.0,
+        "81": 0.0,
+        "82": 0.0,
+        "83": 0.25,
+        "84": 0.0,
+        "85": 0.0,
+        "86": 0.0,
+        "87": 0.0,
+        "88": 0.5,
+        "89": 0.0,
+        "90": 0.0,
+        "91": 0.0,
+        "92": 0.0,
+        "93": 0.0,
+        "94": 0.0,
+        "95": 0.0,
+        "96": 0.0,
+        "97": 0.0,
+        "98": 0.0,
+        "99": 0.0,
+        "100": 0.0,
+        "101": 0.0,
+        "102": 0.0,
+        "103": 0.25,
+        "104": 0.0,
+        "105": 0.3333333333333333,
+        "106": 0.0,
+        "107": 0.0,
+        "108": 0.0,
+        "109": 0.0,
+        "110": 0.0,
+        "111": 0.0,
+        "112": 0.0,
+        "113": 0.0,
+        "114": 0.0,
+        "115": 0.0,
+        "116": 0.0
+    },
+    "rougeL_recall": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.3333333333333333,
+        "14": 0.0,
+        "15": 0.0,
+        "16": 0.0,
+        "17": 0.0,
+        "18": 0.0,
+        "19": 0.0,
+        "20": 0.0,
+        "21": 0.0,
+        "22": 0.0,
+        "23": 0.0,
+        "24": 0.0,
+        "25": 0.0,
+        "26": 0.0,
+        "27": 0.0,
+        "28": 0.0,
+        "29": 0.0,
+        "30": 0.0,
+        "31": 0.0,
+        "32": 0.0,
+        "33": 0.0,
+        "34": 0.0,
+        "35": 0.0,
+        "36": 0.0,
+        "37": 0.0,
+        "38": 0.0,
+        "39": 0.0,
+        "40": 0.0,
+        "41": 0.0,
+        "42": 0.0,
+        "43": 0.0,
+        "44": 0.0,
+        "45": 0.0,
+        "46": 0.0,
+        "47": 0.0,
+        "48": 0.0,
+        "49": 0.0,
+        "50": 0.0,
+        "51": 0.0,
+        "52": 0.0,
+        "53": 0.0,
+        "54": 0.0,
+        "55": 0.0,
+        "56": 0.0,
+        "57": 0.0,
+        "58": 0.0,
+        "59": 0.0,
+        "60": 0.0,
+        "61": 0.0,
+        "62": 0.0,
+        "63": 0.0,
+        "64": 0.0,
+        "65": 0.0,
+        "66": 0.0,
+        "67": 0.0,
+        "68": 0.0,
+        "69": 0.0,
+        "70": 0.0,
+        "71": 0.0,
+        "72": 0.0,
+        "73": 0.0,
+        "74": 0.0,
+        "75": 0.0,
+        "76": 0.0,
+        "77": 0.0,
+        "78": 0.0,
+        "79": 0.0,
+        "80": 0.0,
+        "81": 0.0,
+        "82": 0.0,
+        "83": 0.25,
+        "84": 0.0,
+        "85": 0.0,
+        "86": 0.0,
+        "87": 0.0,
+        "88": 0.5,
+        "89": 0.0,
+        "90": 0.0,
+        "91": 0.0,
+        "92": 0.0,
+        "93": 0.0,
+        "94": 0.0,
+        "95": 0.0,
+        "96": 0.0,
+        "97": 0.0,
+        "98": 0.0,
+        "99": 0.0,
+        "100": 0.0,
+        "101": 0.0,
+        "102": 0.0,
+        "103": 0.25,
+        "104": 0.0,
+        "105": 0.3333333333333333,
+        "106": 0.0,
+        "107": 0.0,
+        "108": 0.0,
+        "109": 0.0,
+        "110": 0.0,
+        "111": 0.0,
+        "112": 0.0,
+        "113": 0.0,
+        "114": 0.0,
+        "115": 0.0,
+        "116": 0.0
+    },
+    "average_perturb_loss": {
+        "0": [
+            9.4921875,
+            8.2578125,
+            7.4375
+        ],
+        "1": [
+            7.91015625,
+            9.2265625,
+            8.6796875
+        ],
+        "2": [
+            7.9765625,
+            8.1171875,
+            8.8125
+        ],
+        "3": [
+            9.8984375,
+            9.15625,
+            10.8203125
+        ],
+        "4": [
+            9.171875,
+            8.3828125,
+            8.75
+        ],
+        "5": [
+            9.0,
+            8.703125,
+            9.6640625
+        ],
+        "6": [
+            9.0859375,
+            9.515625,
+            10.5390625
+        ],
+        "7": [
+            9.5,
+            10.1484375,
+            9.4375
+        ],
+        "8": [
+            10.03125,
+            7.9296875,
+            10.140625
+        ],
+        "9": [
+            10.265625,
+            8.7421875,
+            7.90234375
+        ],
+        "10": [
+            8.359375,
+            8.34375,
+            8.8203125
+        ],
+        "11": [
+            7.95703125,
+            7.828125,
+            6.93359375
+        ],
+        "12": [
+            9.5625,
+            8.1328125,
+            9.265625
+        ],
+        "13": [
+            7.82421875,
+            7.80078125,
+            7.2578125
+        ],
+        "14": [
+            10.390625,
+            8.609375,
+            8.6953125
+        ],
+        "15": [
+            9.265625,
+            9.0078125,
+            8.609375
+        ],
+        "16": [
+            9.9140625,
+            10.2578125,
+            8.3671875
+        ],
+        "17": [
+            8.7421875,
+            8.8359375,
+            9.296875
+        ],
+        "18": [
+            8.1875,
+            8.8984375,
+            10.2578125
+        ],
+        "19": [
+            8.2578125,
+            8.2578125,
+            7.73828125
+        ],
+        "20": [
+            8.046875,
+            8.6015625,
+            7.16796875
+        ],
+        "21": [
+            7.09765625,
+            6.81640625,
+            6.76171875
+        ],
+        "22": [
+            10.0234375,
+            8.2734375,
+            10.1328125
+        ],
+        "23": [
+            8.7734375,
+            8.65625,
+            7.41015625
+        ],
+        "24": [
+            9.2265625,
+            9.1875,
+            9.8515625
+        ],
+        "25": [
+            11.1953125,
+            9.4765625,
+            8.90625
+        ],
+        "26": [
+            7.625,
+            9.109375,
+            8.765625
+        ],
+        "27": [
+            10.2890625,
+            9.5859375,
+            8.5703125
+        ],
+        "28": [
+            6.79296875,
+            8.859375,
+            8.84375
+        ],
+        "29": [
+            7.75,
+            9.0625,
+            9.2734375
+        ],
+        "30": [
+            8.4609375,
+            8.3046875,
+            7.38671875
+        ],
+        "31": [
+            9.046875,
+            9.0234375,
+            8.28125
+        ],
+        "32": [
+            9.7421875,
+            9.296875,
+            10.1875
+        ],
+        "33": [
+            9.8203125,
+            9.1953125,
+            10.7265625
+        ],
+        "34": [
+            9.203125,
+            9.1484375,
+            8.0546875
+        ],
+        "35": [
+            7.53515625,
+            9.703125,
+            7.66015625
+        ],
+        "36": [
+            8.25,
+            9.078125,
+            10.03125
+        ],
+        "37": [
+            10.671875,
+            8.1484375,
+            7.95703125
+        ],
+        "38": [
+            8.734375,
+            8.234375,
+            8.859375
+        ],
+        "39": [
+            8.578125,
+            10.7734375,
+            10.2265625
+        ],
+        "40": [
+            9.109375,
+            9.578125,
+            9.375
+        ],
+        "41": [
+            9.90625,
+            8.6015625,
+            9.5703125
+        ],
+        "42": [
+            8.9921875,
+            10.3359375,
+            9.1484375
+        ],
+        "43": [
+            10.46875,
+            9.1953125,
+            7.4140625
+        ],
+        "44": [
+            9.859375,
+            8.421875,
+            9.6015625
+        ],
+        "45": [
+            8.5234375,
+            8.828125,
+            8.828125
+        ],
+        "46": [
+            7.546875,
+            9.78125,
+            8.3984375
+        ],
+        "47": [
+            9.9140625,
+            8.453125,
+            9.9140625
+        ],
+        "48": [
+            8.1875,
+            8.7109375,
+            8.7109375
+        ],
+        "49": [
+            8.3984375,
+            9.1171875,
+            7.76171875
+        ],
+        "50": [
+            10.7578125,
+            8.640625,
+            8.734375
+        ],
+        "51": [
+            8.1328125,
+            9.6171875,
+            8.984375
+        ],
+        "52": [
+            8.953125,
+            9.4609375,
+            9.0078125
+        ],
+        "53": [
+            7.75,
+            9.1328125,
+            9.1640625
+        ],
+        "54": [
+            9.5078125,
+            9.9375,
+            10.359375
+        ],
+        "55": [
+            10.0546875,
+            9.140625,
+            8.5
+        ],
+        "56": [
+            9.59375,
+            10.0,
+            9.21875
+        ],
+        "57": [
+            9.53125,
+            9.3359375,
+            9.59375
+        ],
+        "58": [
+            9.984375,
+            8.3671875,
+            9.2734375
+        ],
+        "59": [
+            9.578125,
+            9.8125,
+            10.5859375
+        ],
+        "60": [
+            10.109375,
+            8.7421875,
+            9.296875
+        ],
+        "61": [
+            6.98828125,
+            7.71484375,
+            8.5625
+        ],
+        "62": [
+            8.5390625,
+            6.265625,
+            8.7890625
+        ],
+        "63": [
+            8.6640625,
+            9.5234375,
+            8.9765625
+        ],
+        "64": [
+            7.66015625,
+            8.203125,
+            8.9765625
+        ],
+        "65": [
+            9.40625,
+            8.8203125,
+            9.953125
+        ],
+        "66": [
+            9.09375,
+            8.6328125,
+            10.0234375
+        ],
+        "67": [
+            10.421875,
+            8.703125,
+            10.5078125
+        ],
+        "68": [
+            8.5,
+            9.0234375,
+            7.58984375
+        ],
+        "69": [
+            7.7890625,
+            7.6953125,
+            7.84375
+        ],
+        "70": [
+            8.875,
+            8.2890625,
+            8.171875
+        ],
+        "71": [
+            10.0546875,
+            11.1953125,
+            8.6171875
+        ],
+        "72": [
+            9.4921875,
+            9.4765625,
+            9.0546875
+        ],
+        "73": [
+            6.6015625,
+            6.46875,
+            6.625
+        ],
+        "74": [
+            9.2421875,
+            9.2421875,
+            9.734375
+        ],
+        "75": [
+            8.484375,
+            8.09375,
+            9.96875
+        ],
+        "76": [
+            6.5625,
+            6.42578125,
+            6.5546875
+        ],
+        "77": [
+            9.734375,
+            7.96875,
+            9.296875
+        ],
+        "78": [
+            8.265625,
+            10.1953125,
+            8.828125
+        ],
+        "79": [
+            9.5,
+            7.73046875,
+            8.4609375
+        ],
+        "80": [
+            8.5078125,
+            8.4296875,
+            8.265625
+        ],
+        "81": [
+            9.546875,
+            9.4921875,
+            9.9765625
+        ],
+        "82": [
+            8.109375,
+            8.6328125,
+            8.9921875
+        ],
+        "83": [
+            9.796875,
+            8.6484375,
+            8.640625
+        ],
+        "84": [
+            10.046875,
+            9.8125,
+            9.78125
+        ],
+        "85": [
+            8.4453125,
+            9.6796875,
+            9.796875
+        ],
+        "86": [
+            7.8046875,
+            8.1953125,
+            7.92578125
+        ],
+        "87": [
+            8.9609375,
+            8.7890625,
+            8.3828125
+        ],
+        "88": [
+            9.7109375,
+            8.7109375,
+            7.90234375
+        ],
+        "89": [
+            6.91796875,
+            7.0546875,
+            7.0703125
+        ],
+        "90": [
+            10.890625,
+            9.5859375,
+            9.3203125
+        ],
+        "91": [
+            9.1484375,
+            9.796875,
+            9.5
+        ],
+        "92": [
+            7.76171875,
+            8.5546875,
+            8.2578125
+        ],
+        "93": [
+            7.7421875,
+            7.69921875,
+            6.80078125
+        ],
+        "94": [
+            10.7265625,
+            9.7890625,
+            9.921875
+        ],
+        "95": [
+            7.1484375,
+            8.7734375,
+            9.390625
+        ],
+        "96": [
+            7.9296875,
+            9.890625,
+            9.2265625
+        ],
+        "97": [
+            8.6015625,
+            8.6953125,
+            8.296875
+        ],
+        "98": [
+            8.453125,
+            8.953125,
+            11.1171875
+        ],
+        "99": [
+            8.0703125,
+            7.55078125,
+            7.5078125
+        ],
+        "100": [
+            11.21875,
+            10.6171875,
+            9.0859375
+        ],
+        "101": [
+            8.828125,
+            9.4921875,
+            8.734375
+        ],
+        "102": [
+            8.4609375,
+            8.7265625,
+            8.6484375
+        ],
+        "103": [
+            9.5390625,
+            9.0234375,
+            9.546875
+        ],
+        "104": [
+            9.3359375,
+            9.6484375,
+            9.6640625
+        ],
+        "105": [
+            8.890625,
+            10.375,
+            8.3515625
+        ],
+        "106": [
+            8.78125,
+            8.9453125,
+            9.4140625
+        ],
+        "107": [
+            9.0390625,
+            8.09375,
+            9.234375
+        ],
+        "108": [
+            8.6328125,
+            7.97265625,
+            7.625
+        ],
+        "109": [
+            9.390625,
+            9.328125,
+            8.6484375
+        ],
+        "110": [
+            7.40625,
+            8.6796875,
+            9.2578125
+        ],
+        "111": [
+            9.0390625,
+            9.8359375,
+            7.875
+        ],
+        "112": [
+            8.484375,
+            9.140625,
+            8.3359375
+        ],
+        "113": [
+            7.9453125,
+            8.1875,
+            7.5390625
+        ],
+        "114": [
+            7.8515625,
+            9.296875,
+            8.359375
+        ],
+        "115": [
+            8.1015625,
+            9.1015625,
+            9.203125
+        ],
+        "116": [
+            9.125,
+            9.5625,
+            9.4453125
+        ]
+    },
+    "avg_paraphrased_loss": {
+        "0": 7.53125,
+        "1": 7.69140625,
+        "2": 9.0703125,
+        "3": 9.1171875,
+        "4": 9.78125,
+        "5": 9.2109375,
+        "6": 8.90625,
+        "7": 8.25,
+        "8": 9.53125,
+        "9": 9.4609375,
+        "10": 7.10546875,
+        "11": 7.62890625,
+        "12": 10.5546875,
+        "13": 8.046875,
+        "14": 9.0078125,
+        "15": 7.5546875,
+        "16": 10.71875,
+        "17": 8.984375,
+        "18": 8.28125,
+        "19": 8.171875,
+        "20": 8.453125,
+        "21": 7.28125,
+        "22": 8.515625,
+        "23": 10.375,
+        "24": 7.2734375,
+        "25": 7.98046875,
+        "26": 8.0859375,
+        "27": 7.640625,
+        "28": 8.1953125,
+        "29": 8.3359375,
+        "30": 7.6875,
+        "31": 8.0078125,
+        "32": 9.6328125,
+        "33": 7.828125,
+        "34": 10.171875,
+        "35": 9.6953125,
+        "36": 10.9609375,
+        "37": 7.03125,
+        "38": 8.6640625,
+        "39": 10.0546875,
+        "40": 10.078125,
+        "41": 8.3125,
+        "42": 8.8515625,
+        "43": 7.66796875,
+        "44": 9.2265625,
+        "45": 8.796875,
+        "46": 9.5,
+        "47": 9.921875,
+        "48": 9.046875,
+        "49": 8.65625,
+        "50": 10.65625,
+        "51": 9.25,
+        "52": 9.4453125,
+        "53": 7.9765625,
+        "54": 9.9609375,
+        "55": 9.046875,
+        "56": 9.203125,
+        "57": 9.703125,
+        "58": 8.421875,
+        "59": 8.8125,
+        "60": 9.3359375,
+        "61": 8.0234375,
+        "62": 7.203125,
+        "63": 9.09375,
+        "64": 8.5,
+        "65": 10.046875,
+        "66": 8.9375,
+        "67": 10.6953125,
+        "68": 9.734375,
+        "69": 8.0390625,
+        "70": 8.5390625,
+        "71": 10.109375,
+        "72": 9.5078125,
+        "73": 6.30859375,
+        "74": 10.2265625,
+        "75": 9.609375,
+        "76": 6.64453125,
+        "77": 11.6328125,
+        "78": 9.3828125,
+        "79": 9.3984375,
+        "80": 8.5,
+        "81": 9.0703125,
+        "82": 7.75,
+        "83": 8.671875,
+        "84": 9.1328125,
+        "85": 9.3671875,
+        "86": 7.76171875,
+        "87": 9.4453125,
+        "88": 8.8984375,
+        "89": 7.3828125,
+        "90": 9.5078125,
+        "91": 9.890625,
+        "92": 8.3046875,
+        "93": 7.5,
+        "94": 11.296875,
+        "95": 8.28125,
+        "96": 9.8046875,
+        "97": 8.078125,
+        "98": 8.5234375,
+        "99": 8.203125,
+        "100": 9.859375,
+        "101": 8.625,
+        "102": 7.4375,
+        "103": 8.7734375,
+        "104": 8.984375,
+        "105": 8.5546875,
+        "106": 9.25,
+        "107": 8.59375,
+        "108": 8.5,
+        "109": 10.5703125,
+        "110": 10.1171875,
+        "111": 8.234375,
+        "112": 9.1796875,
+        "113": 8.09375,
+        "114": 8.4921875,
+        "115": 9.296875,
+        "116": 9.640625
+    },
+    "truth_ratio": {
+        "0": 0.420166015625,
+        "1": 0.3994140625,
+        "2": 2.150390625,
+        "3": 0.43017578125,
+        "4": 2.76171875,
+        "5": 1.08984375,
+        "6": 0.447265625,
+        "7": 0.2357177734375,
+        "8": 1.1787109375,
+        "9": 1.6357421875,
+        "10": 0.2459716796875,
+        "11": 1.056640625,
+        "12": 4.80859375,
+        "13": 1.5185546875,
+        "14": 0.79736328125,
+        "15": 0.2451171875,
+        "16": 3.330078125,
+        "17": 1.0234375,
+        "18": 0.433349609375,
+        "19": 1.08984375,
+        "20": 1.6748046875,
+        "21": 1.4775390625,
+        "22": 0.382568359375,
+        "23": 8.1171875,
+        "24": 0.11663818359375,
+        "25": 0.1527099609375,
+        "26": 0.6611328125,
+        "27": 0.158203125,
+        "28": 1.0322265625,
+        "29": 0.6982421875,
+        "30": 0.6982421875,
+        "31": 0.46142578125,
+        "32": 0.896484375,
+        "33": 0.12420654296875,
+        "34": 3.923828125,
+        "35": 4.05078125,
+        "36": 6.3203125,
+        "37": 0.1510009765625,
+        "38": 1.056640625,
+        "39": 1.2158203125,
+        "40": 2.068359375,
+        "41": 0.35107421875,
+        "42": 0.52685546875,
+        "43": 0.2578125,
+        "44": 0.93212890625,
+        "45": 1.0732421875,
+        "46": 2.513671875,
+        "47": 1.6357421875,
+        "48": 1.662109375,
+        "49": 1.263671875,
+        "50": 3.6015625,
+        "51": 1.3994140625,
+        "52": 1.3564453125,
+        "53": 0.4951171875,
+        "54": 1.0234375,
+        "55": 0.8291015625,
+        "56": 0.67138671875,
+        "57": 1.244140625,
+        "58": 0.454345703125,
+        "59": 0.307373046875,
+        "60": 0.9541015625,
+        "61": 1.3095703125,
+        "62": 0.5166015625,
+        "63": 1.0400390625,
+        "64": 1.244140625,
+        "65": 1.927734375,
+        "66": 0.7314453125,
+        "67": 2.271484375,
+        "68": 3.89453125,
+        "69": 1.298828125,
+        "70": 1.0986328125,
+        "71": 1.1689453125,
+        "72": 1.1787109375,
+        "73": 0.77294921875,
+        "74": 2.271484375,
+        "75": 2.1328125,
+        "76": 1.1376953125,
+        "77": 13.9140625,
+        "78": 1.3349609375,
+        "79": 2.306640625,
+        "80": 1.1064453125,
+        "81": 0.5478515625,
+        "82": 0.436767578125,
+        "83": 0.6982421875,
+        "84": 0.472412109375,
+        "85": 1.064453125,
+        "86": 0.806640625,
+        "87": 2.083984375,
+        "88": 1.1328125,
+        "89": 1.443359375,
+        "90": 0.65576171875,
+        "91": 1.5009765625,
+        "92": 1.1240234375,
+        "93": 1.08984375,
+        "94": 3.15234375,
+        "95": 0.85546875,
+        "96": 2.201171875,
+        "97": 0.6357421875,
+        "98": 0.373779296875,
+        "99": 1.6357421875,
+        "100": 0.640625,
+        "101": 0.6767578125,
+        "102": 0.309814453125,
+        "103": 0.55224609375,
+        "104": 0.56982421875,
+        "105": 0.52294921875,
+        "106": 1.2255859375,
+        "107": 0.82275390625,
+        "108": 1.5244140625,
+        "109": 4.2421875,
+        "110": 5.3203125,
+        "111": 0.5068359375,
+        "112": 1.6875,
+        "113": 1.2255859375,
+        "114": 0.9921875,
+        "115": 1.6357421875,
+        "116": 1.3046875
+    },
+    "paraphrased_loss": {
+        "0": 22.59375,
+        "1": 23.078125,
+        "2": 36.28125,
+        "3": 27.359375,
+        "4": 39.125,
+        "5": 27.625,
+        "6": 44.53125,
+        "7": 33.0,
+        "8": 19.0625,
+        "9": 28.375,
+        "10": 21.3125,
+        "11": 30.515625,
+        "12": 42.21875,
+        "13": 56.34375,
+        "14": 63.03125,
+        "15": 37.78125,
+        "16": 32.15625,
+        "17": 62.90625,
+        "18": 33.125,
+        "19": 24.515625,
+        "20": 25.359375,
+        "21": 21.84375,
+        "22": 34.0625,
+        "23": 51.875,
+        "24": 29.09375,
+        "25": 23.9375,
+        "26": 24.25,
+        "27": 30.5625,
+        "28": 32.78125,
+        "29": 25.0,
+        "30": 30.75,
+        "31": 48.03125,
+        "32": 67.4375,
+        "33": 31.3125,
+        "34": 40.6875,
+        "35": 29.09375,
+        "36": 32.875,
+        "37": 28.125,
+        "38": 43.3125,
+        "39": 40.21875,
+        "40": 40.3125,
+        "41": 24.9375,
+        "42": 26.546875,
+        "43": 30.671875,
+        "44": 64.5625,
+        "45": 70.375,
+        "46": 38.0,
+        "47": 29.765625,
+        "48": 45.25,
+        "49": 25.96875,
+        "50": 42.625,
+        "51": 18.5,
+        "52": 37.78125,
+        "53": 31.90625,
+        "54": 39.84375,
+        "55": 36.1875,
+        "56": 36.8125,
+        "57": 48.53125,
+        "58": 33.6875,
+        "59": 61.6875,
+        "60": 46.6875,
+        "61": 24.0625,
+        "62": 21.609375,
+        "63": 27.28125,
+        "64": 42.5,
+        "65": 50.25,
+        "66": 26.8125,
+        "67": 53.46875,
+        "68": 97.375,
+        "69": 40.1875,
+        "70": 42.6875,
+        "71": 40.4375,
+        "72": 76.0625,
+        "73": 31.546875,
+        "74": 61.34375,
+        "75": 48.0625,
+        "76": 33.21875,
+        "77": 58.15625,
+        "78": 28.15625,
+        "79": 47.0,
+        "80": 42.5,
+        "81": 63.5,
+        "82": 23.25,
+        "83": 69.375,
+        "84": 27.390625,
+        "85": 37.46875,
+        "86": 38.8125,
+        "87": 85.0,
+        "88": 35.59375,
+        "89": 36.90625,
+        "90": 28.53125,
+        "91": 49.4375,
+        "92": 49.84375,
+        "93": 37.5,
+        "94": 56.46875,
+        "95": 49.6875,
+        "96": 49.03125,
+        "97": 40.375,
+        "98": 25.5625,
+        "99": 41.0,
+        "100": 49.28125,
+        "101": 51.75,
+        "102": 29.75,
+        "103": 70.1875,
+        "104": 35.9375,
+        "105": 34.21875,
+        "106": 46.25,
+        "107": 34.375,
+        "108": 25.5,
+        "109": 63.4375,
+        "110": 40.46875,
+        "111": 74.125,
+        "112": 36.71875,
+        "113": 40.46875,
+        "114": 25.46875,
+        "115": 37.1875,
+        "116": 38.5625
+    },
+    "perturb_loss": {
+        "0": [
+            28.484375,
+            24.78125,
+            22.3125
+        ],
+        "1": [
+            23.734375,
+            36.90625,
+            26.046875
+        ],
+        "2": [
+            31.90625,
+            32.46875,
+            26.4375
+        ],
+        "3": [
+            39.59375,
+            45.78125,
+            43.28125
+        ],
+        "4": [
+            36.6875,
+            33.53125,
+            26.25
+        ],
+        "5": [
+            36.0,
+            34.8125,
+            28.984375
+        ],
+        "6": [
+            27.265625,
+            38.0625,
+            42.15625
+        ],
+        "7": [
+            38.0,
+            30.4375,
+            37.75
+        ],
+        "8": [
+            40.125,
+            31.71875,
+            30.421875
+        ],
+        "9": [
+            41.0625,
+            26.21875,
+            31.609375
+        ],
+        "10": [
+            33.4375,
+            33.375,
+            35.28125
+        ],
+        "11": [
+            23.875,
+            31.3125,
+            27.734375
+        ],
+        "12": [
+            66.9375,
+            32.53125,
+            64.875
+        ],
+        "13": [
+            39.125,
+            46.8125,
+            36.28125
+        ],
+        "14": [
+            41.5625,
+            34.4375,
+            52.15625
+        ],
+        "15": [
+            37.0625,
+            45.03125,
+            34.4375
+        ],
+        "16": [
+            29.75,
+            30.78125,
+            25.09375
+        ],
+        "17": [
+            52.4375,
+            61.875,
+            55.78125
+        ],
+        "18": [
+            32.75,
+            26.6875,
+            30.78125
+        ],
+        "19": [
+            41.28125,
+            24.765625,
+            23.21875
+        ],
+        "20": [
+            16.09375,
+            25.8125,
+            28.671875
+        ],
+        "21": [
+            21.296875,
+            20.453125,
+            20.28125
+        ],
+        "22": [
+            40.09375,
+            24.8125,
+            30.40625
+        ],
+        "23": [
+            26.3125,
+            25.96875,
+            51.875
+        ],
+        "24": [
+            36.90625,
+            36.75,
+            29.5625
+        ],
+        "25": [
+            44.78125,
+            28.421875,
+            26.71875
+        ],
+        "26": [
+            30.5,
+            45.53125,
+            35.0625
+        ],
+        "27": [
+            30.859375,
+            28.75,
+            34.28125
+        ],
+        "28": [
+            20.375,
+            35.4375,
+            26.53125
+        ],
+        "29": [
+            23.25,
+            18.125,
+            37.09375
+        ],
+        "30": [
+            25.375,
+            24.921875,
+            29.546875
+        ],
+        "31": [
+            45.21875,
+            54.15625,
+            49.6875
+        ],
+        "32": [
+            68.1875,
+            65.0625,
+            91.6875
+        ],
+        "33": [
+            29.46875,
+            27.59375,
+            32.1875
+        ],
+        "34": [
+            64.4375,
+            36.59375,
+            48.34375
+        ],
+        "35": [
+            30.140625,
+            38.8125,
+            22.984375
+        ],
+        "36": [
+            33.0,
+            36.3125,
+            40.125
+        ],
+        "37": [
+            42.6875,
+            32.59375,
+            31.828125
+        ],
+        "38": [
+            61.15625,
+            49.40625,
+            53.15625
+        ],
+        "39": [
+            42.90625,
+            43.09375,
+            40.90625
+        ],
+        "40": [
+            18.21875,
+            38.3125,
+            28.125
+        ],
+        "41": [
+            39.625,
+            25.8125,
+            28.71875
+        ],
+        "42": [
+            26.96875,
+            51.6875,
+            36.59375
+        ],
+        "43": [
+            41.875,
+            27.59375,
+            29.65625
+        ],
+        "44": [
+            39.4375,
+            33.6875,
+            57.625
+        ],
+        "45": [
+            59.65625,
+            61.78125,
+            70.625
+        ],
+        "46": [
+            30.1875,
+            39.125,
+            42.0
+        ],
+        "47": [
+            29.75,
+            33.8125,
+            39.65625
+        ],
+        "48": [
+            49.125,
+            34.84375,
+            52.28125
+        ],
+        "49": [
+            25.203125,
+            36.46875,
+            23.28125
+        ],
+        "50": [
+            53.78125,
+            34.5625,
+            43.6875
+        ],
+        "51": [
+            24.390625,
+            28.84375,
+            35.9375
+        ],
+        "52": [
+            26.859375,
+            28.375,
+            27.015625
+        ],
+        "53": [
+            23.25,
+            36.53125,
+            36.65625
+        ],
+        "54": [
+            47.53125,
+            29.8125,
+            31.078125
+        ],
+        "55": [
+            40.21875,
+            36.5625,
+            42.5
+        ],
+        "56": [
+            28.78125,
+            40.0,
+            27.65625
+        ],
+        "57": [
+            38.125,
+            37.34375,
+            47.96875
+        ],
+        "58": [
+            39.9375,
+            33.46875,
+            27.8125
+        ],
+        "59": [
+            57.46875,
+            68.6875,
+            52.9375
+        ],
+        "60": [
+            50.5625,
+            69.9375,
+            83.6875
+        ],
+        "61": [
+            20.96875,
+            30.859375,
+            25.6875
+        ],
+        "62": [
+            25.609375,
+            18.796875,
+            43.9375
+        ],
+        "63": [
+            43.3125,
+            28.5625,
+            26.9375
+        ],
+        "64": [
+            30.640625,
+            24.609375,
+            26.9375
+        ],
+        "65": [
+            28.21875,
+            26.453125,
+            39.8125
+        ],
+        "66": [
+            36.375,
+            34.53125,
+            40.09375
+        ],
+        "67": [
+            52.09375,
+            52.21875,
+            31.53125
+        ],
+        "68": [
+            51.0,
+            81.1875,
+            53.125
+        ],
+        "69": [
+            38.9375,
+            38.46875,
+            39.21875
+        ],
+        "70": [
+            44.375,
+            41.4375,
+            40.84375
+        ],
+        "71": [
+            50.28125,
+            44.78125,
+            51.6875
+        ],
+        "72": [
+            56.9375,
+            47.375,
+            72.4375
+        ],
+        "73": [
+            33.0,
+            32.34375,
+            33.125
+        ],
+        "74": [
+            55.4375,
+            55.4375,
+            58.40625
+        ],
+        "75": [
+            59.40625,
+            40.46875,
+            39.875
+        ],
+        "76": [
+            32.8125,
+            32.125,
+            32.78125
+        ],
+        "77": [
+            77.875,
+            39.84375,
+            65.0625
+        ],
+        "78": [
+            33.0625,
+            30.59375,
+            26.484375
+        ],
+        "79": [
+            38.0,
+            30.921875,
+            25.375
+        ],
+        "80": [
+            42.53125,
+            42.15625,
+            41.34375
+        ],
+        "81": [
+            47.71875,
+            47.46875,
+            49.875
+        ],
+        "82": [
+            32.4375,
+            34.53125,
+            26.96875
+        ],
+        "83": [
+            48.96875,
+            60.5625,
+            95.0625
+        ],
+        "84": [
+            40.1875,
+            39.25,
+            29.34375
+        ],
+        "85": [
+            33.78125,
+            29.046875,
+            39.1875
+        ],
+        "86": [
+            39.03125,
+            40.96875,
+            39.625
+        ],
+        "87": [
+            44.8125,
+            52.75,
+            50.3125
+        ],
+        "88": [
+            48.5625,
+            34.84375,
+            47.40625
+        ],
+        "89": [
+            34.59375,
+            35.28125,
+            35.34375
+        ],
+        "90": [
+            54.46875,
+            28.765625,
+            37.28125
+        ],
+        "91": [
+            45.75,
+            49.0,
+            76.0
+        ],
+        "92": [
+            46.5625,
+            59.90625,
+            49.5625
+        ],
+        "93": [
+            38.71875,
+            38.5,
+            34.0
+        ],
+        "94": [
+            64.375,
+            48.9375,
+            59.53125
+        ],
+        "95": [
+            35.75,
+            52.65625,
+            46.96875
+        ],
+        "96": [
+            31.71875,
+            39.5625,
+            64.5625
+        ],
+        "97": [
+            34.40625,
+            43.46875,
+            41.46875
+        ],
+        "98": [
+            59.1875,
+            53.71875,
+            55.59375
+        ],
+        "99": [
+            40.34375,
+            37.75,
+            37.53125
+        ],
+        "100": [
+            56.09375,
+            42.46875,
+            45.4375
+        ],
+        "101": [
+            44.125,
+            37.96875,
+            61.15625
+        ],
+        "102": [
+            25.375,
+            43.625,
+            25.953125
+        ],
+        "103": [
+            57.21875,
+            72.1875,
+            76.375
+        ],
+        "104": [
+            37.34375,
+            28.9375,
+            48.3125
+        ],
+        "105": [
+            62.21875,
+            51.875,
+            25.0625
+        ],
+        "106": [
+            52.6875,
+            53.65625,
+            75.3125
+        ],
+        "107": [
+            54.25,
+            56.65625,
+            36.9375
+        ],
+        "108": [
+            25.90625,
+            23.921875,
+            30.5
+        ],
+        "109": [
+            46.9375,
+            65.3125,
+            25.9375
+        ],
+        "110": [
+            22.21875,
+            34.71875,
+            46.28125
+        ],
+        "111": [
+            54.21875,
+            59.03125,
+            55.125
+        ],
+        "112": [
+            33.9375,
+            36.5625,
+            25.0
+        ],
+        "113": [
+            39.71875,
+            40.9375,
+            37.6875
+        ],
+        "114": [
+            31.40625,
+            37.1875,
+            25.078125
+        ],
+        "115": [
+            32.40625,
+            27.296875,
+            27.609375
+        ],
+        "116": [
+            54.75,
+            47.8125,
+            56.6875
+        ]
+    },
+    "num_token_paraphrased": {
+        "0": 3,
+        "1": 3,
+        "2": 4,
+        "3": 3,
+        "4": 4,
+        "5": 3,
+        "6": 5,
+        "7": 4,
+        "8": 2,
+        "9": 3,
+        "10": 3,
+        "11": 4,
+        "12": 4,
+        "13": 7,
+        "14": 7,
+        "15": 5,
+        "16": 3,
+        "17": 7,
+        "18": 4,
+        "19": 3,
+        "20": 3,
+        "21": 3,
+        "22": 4,
+        "23": 5,
+        "24": 4,
+        "25": 3,
+        "26": 3,
+        "27": 4,
+        "28": 4,
+        "29": 3,
+        "30": 4,
+        "31": 6,
+        "32": 7,
+        "33": 4,
+        "34": 4,
+        "35": 3,
+        "36": 3,
+        "37": 4,
+        "38": 5,
+        "39": 4,
+        "40": 4,
+        "41": 3,
+        "42": 3,
+        "43": 4,
+        "44": 7,
+        "45": 8,
+        "46": 4,
+        "47": 3,
+        "48": 5,
+        "49": 3,
+        "50": 4,
+        "51": 2,
+        "52": 4,
+        "53": 4,
+        "54": 4,
+        "55": 4,
+        "56": 4,
+        "57": 5,
+        "58": 4,
+        "59": 7,
+        "60": 5,
+        "61": 3,
+        "62": 3,
+        "63": 3,
+        "64": 5,
+        "65": 5,
+        "66": 3,
+        "67": 5,
+        "68": 10,
+        "69": 5,
+        "70": 5,
+        "71": 4,
+        "72": 8,
+        "73": 5,
+        "74": 6,
+        "75": 5,
+        "76": 5,
+        "77": 5,
+        "78": 3,
+        "79": 5,
+        "80": 5,
+        "81": 7,
+        "82": 3,
+        "83": 8,
+        "84": 3,
+        "85": 4,
+        "86": 5,
+        "87": 9,
+        "88": 4,
+        "89": 5,
+        "90": 3,
+        "91": 5,
+        "92": 6,
+        "93": 5,
+        "94": 5,
+        "95": 6,
+        "96": 5,
+        "97": 5,
+        "98": 3,
+        "99": 5,
+        "100": 5,
+        "101": 6,
+        "102": 4,
+        "103": 8,
+        "104": 4,
+        "105": 4,
+        "106": 5,
+        "107": 4,
+        "108": 3,
+        "109": 6,
+        "110": 4,
+        "111": 9,
+        "112": 4,
+        "113": 5,
+        "114": 3,
+        "115": 4,
+        "116": 4
+    },
+    "num_token_perturb": {
+        "0": [
+            3,
+            3,
+            3
+        ],
+        "1": [
+            3,
+            4,
+            3
+        ],
+        "2": [
+            4,
+            4,
+            3
+        ],
+        "3": [
+            4,
+            5,
+            4
+        ],
+        "4": [
+            4,
+            4,
+            3
+        ],
+        "5": [
+            4,
+            4,
+            3
+        ],
+        "6": [
+            3,
+            4,
+            4
+        ],
+        "7": [
+            4,
+            3,
+            4
+        ],
+        "8": [
+            4,
+            4,
+            3
+        ],
+        "9": [
+            4,
+            3,
+            4
+        ],
+        "10": [
+            4,
+            4,
+            4
+        ],
+        "11": [
+            3,
+            4,
+            4
+        ],
+        "12": [
+            7,
+            4,
+            7
+        ],
+        "13": [
+            5,
+            6,
+            5
+        ],
+        "14": [
+            4,
+            4,
+            6
+        ],
+        "15": [
+            4,
+            5,
+            4
+        ],
+        "16": [
+            3,
+            3,
+            3
+        ],
+        "17": [
+            6,
+            7,
+            6
+        ],
+        "18": [
+            4,
+            3,
+            3
+        ],
+        "19": [
+            5,
+            3,
+            3
+        ],
+        "20": [
+            2,
+            3,
+            4
+        ],
+        "21": [
+            3,
+            3,
+            3
+        ],
+        "22": [
+            4,
+            3,
+            3
+        ],
+        "23": [
+            3,
+            3,
+            7
+        ],
+        "24": [
+            4,
+            4,
+            3
+        ],
+        "25": [
+            4,
+            3,
+            3
+        ],
+        "26": [
+            4,
+            5,
+            4
+        ],
+        "27": [
+            3,
+            3,
+            4
+        ],
+        "28": [
+            3,
+            4,
+            3
+        ],
+        "29": [
+            3,
+            2,
+            4
+        ],
+        "30": [
+            3,
+            3,
+            4
+        ],
+        "31": [
+            5,
+            6,
+            6
+        ],
+        "32": [
+            7,
+            7,
+            9
+        ],
+        "33": [
+            3,
+            3,
+            3
+        ],
+        "34": [
+            7,
+            4,
+            6
+        ],
+        "35": [
+            4,
+            4,
+            3
+        ],
+        "36": [
+            4,
+            4,
+            4
+        ],
+        "37": [
+            4,
+            4,
+            4
+        ],
+        "38": [
+            7,
+            6,
+            6
+        ],
+        "39": [
+            5,
+            4,
+            4
+        ],
+        "40": [
+            2,
+            4,
+            3
+        ],
+        "41": [
+            4,
+            3,
+            3
+        ],
+        "42": [
+            3,
+            5,
+            4
+        ],
+        "43": [
+            4,
+            3,
+            4
+        ],
+        "44": [
+            4,
+            4,
+            6
+        ],
+        "45": [
+            7,
+            7,
+            8
+        ],
+        "46": [
+            4,
+            4,
+            5
+        ],
+        "47": [
+            3,
+            4,
+            4
+        ],
+        "48": [
+            6,
+            4,
+            6
+        ],
+        "49": [
+            3,
+            4,
+            3
+        ],
+        "50": [
+            5,
+            4,
+            5
+        ],
+        "51": [
+            3,
+            3,
+            4
+        ],
+        "52": [
+            3,
+            3,
+            3
+        ],
+        "53": [
+            3,
+            4,
+            4
+        ],
+        "54": [
+            5,
+            3,
+            3
+        ],
+        "55": [
+            4,
+            4,
+            5
+        ],
+        "56": [
+            3,
+            4,
+            3
+        ],
+        "57": [
+            4,
+            4,
+            5
+        ],
+        "58": [
+            4,
+            4,
+            3
+        ],
+        "59": [
+            6,
+            7,
+            5
+        ],
+        "60": [
+            5,
+            8,
+            9
+        ],
+        "61": [
+            3,
+            4,
+            3
+        ],
+        "62": [
+            3,
+            3,
+            5
+        ],
+        "63": [
+            5,
+            3,
+            3
+        ],
+        "64": [
+            4,
+            3,
+            3
+        ],
+        "65": [
+            3,
+            3,
+            4
+        ],
+        "66": [
+            4,
+            4,
+            4
+        ],
+        "67": [
+            5,
+            6,
+            3
+        ],
+        "68": [
+            6,
+            9,
+            7
+        ],
+        "69": [
+            5,
+            5,
+            5
+        ],
+        "70": [
+            5,
+            5,
+            5
+        ],
+        "71": [
+            5,
+            4,
+            6
+        ],
+        "72": [
+            6,
+            5,
+            8
+        ],
+        "73": [
+            5,
+            5,
+            5
+        ],
+        "74": [
+            6,
+            6,
+            6
+        ],
+        "75": [
+            7,
+            5,
+            4
+        ],
+        "76": [
+            5,
+            5,
+            5
+        ],
+        "77": [
+            8,
+            5,
+            7
+        ],
+        "78": [
+            4,
+            3,
+            3
+        ],
+        "79": [
+            4,
+            4,
+            3
+        ],
+        "80": [
+            5,
+            5,
+            5
+        ],
+        "81": [
+            5,
+            5,
+            5
+        ],
+        "82": [
+            4,
+            4,
+            3
+        ],
+        "83": [
+            5,
+            7,
+            11
+        ],
+        "84": [
+            4,
+            4,
+            3
+        ],
+        "85": [
+            4,
+            3,
+            4
+        ],
+        "86": [
+            5,
+            5,
+            5
+        ],
+        "87": [
+            5,
+            6,
+            6
+        ],
+        "88": [
+            5,
+            4,
+            6
+        ],
+        "89": [
+            5,
+            5,
+            5
+        ],
+        "90": [
+            5,
+            3,
+            4
+        ],
+        "91": [
+            5,
+            5,
+            8
+        ],
+        "92": [
+            6,
+            7,
+            6
+        ],
+        "93": [
+            5,
+            5,
+            5
+        ],
+        "94": [
+            6,
+            5,
+            6
+        ],
+        "95": [
+            5,
+            6,
+            5
+        ],
+        "96": [
+            4,
+            4,
+            7
+        ],
+        "97": [
+            4,
+            5,
+            5
+        ],
+        "98": [
+            7,
+            6,
+            5
+        ],
+        "99": [
+            5,
+            5,
+            5
+        ],
+        "100": [
+            5,
+            4,
+            5
+        ],
+        "101": [
+            5,
+            4,
+            7
+        ],
+        "102": [
+            3,
+            5,
+            3
+        ],
+        "103": [
+            6,
+            8,
+            8
+        ],
+        "104": [
+            4,
+            3,
+            5
+        ],
+        "105": [
+            7,
+            5,
+            3
+        ],
+        "106": [
+            6,
+            6,
+            8
+        ],
+        "107": [
+            6,
+            7,
+            4
+        ],
+        "108": [
+            3,
+            3,
+            4
+        ],
+        "109": [
+            5,
+            7,
+            3
+        ],
+        "110": [
+            3,
+            4,
+            5
+        ],
+        "111": [
+            6,
+            6,
+            7
+        ],
+        "112": [
+            4,
+            4,
+            3
+        ],
+        "113": [
+            5,
+            5,
+            5
+        ],
+        "114": [
+            4,
+            4,
+            3
+        ],
+        "115": [
+            4,
+            3,
+            3
+        ],
+        "116": [
+            6,
+            5,
+            6
+        ]
+    },
+    "normalized_gt_loss": {
+        "0": 0.9941814542516634,
+        "1": 0.8763314888696567,
+        "2": 2.0634833001998976,
+        "3": 0.9561410515905647,
+        "4": 2.2713750376414024,
+        "5": 1.5051077495581793,
+        "6": 0.9504799195863236,
+        "7": 0.5546262571524668,
+        "8": 1.9616427144151218,
+        "9": 2.110362073239208,
+        "10": 0.5659870359778356,
+        "11": 1.516850952799988,
+        "12": 2.9228107389293037,
+        "13": 1.7456705398083914,
+        "14": 1.4127428617999775,
+        "15": 0.5652353681149398,
+        "16": 2.7293891394930863,
+        "17": 1.426876880921955,
+        "18": 1.0211152674839652,
+        "19": 1.476613731813327,
+        "20": 1.9495256274873187,
+        "21": 1.7001068735992253,
+        "22": 0.9909835995744466,
+        "23": 3.4392875434483847,
+        "24": 0.3102767690033119,
+        "25": 0.5070506025544234,
+        "26": 1.2277916610318178,
+        "27": 0.47670760933740663,
+        "28": 1.80867123647332,
+        "29": 1.3006952431914807,
+        "30": 1.2067575442714846,
+        "31": 0.9069359449964088,
+        "32": 1.3532280111614552,
+        "33": 0.3690283685856959,
+        "34": 2.682275698761186,
+        "35": 2.9078928329666724,
+        "36": 3.2248201969562387,
+        "37": 0.5594194483645423,
+        "38": 1.456626362994295,
+        "39": 1.9031989244410334,
+        "40": 1.9883435376875085,
+        "41": 0.8091954427874234,
+        "42": 1.0433095298533557,
+        "43": 0.9427087344023197,
+        "44": 1.4999524500125925,
+        "45": 1.4476109013637248,
+        "46": 2.4693182706490426,
+        "47": 1.9892430354937891,
+        "48": 1.818107185758536,
+        "49": 1.6873723898727007,
+        "50": 2.787637499155562,
+        "51": 1.7940648006752313,
+        "52": 1.6427213338597257,
+        "53": 1.0531343253367567,
+        "54": 1.4512164141431343,
+        "55": 1.3871370056339252,
+        "56": 1.1352224166217548,
+        "57": 1.5574661940752317,
+        "58": 0.9855920758787159,
+        "59": 0.6944818413496509,
+        "60": 1.4614078022317318,
+        "61": 1.7509982559191561,
+        "62": 1.3915944863428382,
+        "63": 1.461360051206081,
+        "64": 1.6707502711948263,
+        "65": 2.0022149922781387,
+        "66": 1.2667029545916186,
+        "67": 2.3843733034249683,
+        "68": 2.7087277927449476,
+        "69": 1.5850458030167145,
+        "70": 1.4972453441237865,
+        "71": 1.9295508327119884,
+        "72": 1.5305487934190598,
+        "73": 1.2102273778235204,
+        "74": 2.0779614931692967,
+        "75": 2.233298760177963,
+        "76": 1.4870472413740603,
+        "77": 4.043650078365543,
+        "78": 1.8312029836125323,
+        "79": 2.2781287168925664,
+        "80": 1.471391395460901,
+        "81": 0.98610281881576,
+        "82": 0.8779505295766104,
+        "83": 1.2179083099871382,
+        "84": 0.8835184436885609,
+        "85": 1.5947073565598158,
+        "86": 1.2397662546964536,
+        "87": 2.0006900422000617,
+        "88": 1.6785276506973394,
+        "89": 1.6765292792926756,
+        "90": 1.2184527752377152,
+        "91": 1.7363726723534825,
+        "92": 1.5146657225551616,
+        "93": 1.5296281142111947,
+        "94": 2.419544308294614,
+        "95": 1.618482492133903,
+        "96": 2.324460418730058,
+        "97": 1.0768650223768645,
+        "98": 1.0290103191391986,
+        "99": 1.7962460112741367,
+        "100": 1.3591068659481091,
+        "101": 1.141895868177514,
+        "102": 0.657088658367319,
+        "103": 0.9952010439976025,
+        "104": 1.0074648686583734,
+        "105": 1.12671749071353,
+        "106": 1.569216893758239,
+        "107": 1.3392835390221136,
+        "108": 1.7865676917596751,
+        "109": 2.6776114763491465,
+        "110": 3.118622843666671,
+        "111": 1.1200627300446713,
+        "112": 1.8514802258166818,
+        "113": 1.5710977042502963,
+        "114": 1.501168739673976,
+        "115": 1.8898787701268056,
+        "116": 1.6037484562856648
+    }
+}
