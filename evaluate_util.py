@@ -11,12 +11,17 @@ from utils import get_model_identifiers_from_yaml, get_model_utility, get_forget
 import torch.nn as nn
 import csv 
 import numpy as np 
+
 import pdb
+# snh for ike ICL
+import pickle
+from sentence_transformers import SentenceTransformer, util
+
 
 import sys
 sys.path.append('../EasyEdit')
 from easyeditor import BaseEditor
-from easyeditor import WISEHyperParams
+from easyeditor import WISEHyperParams, GraceHyperParams, IKEHyperParams
 
 def eval_perturbation_ratio(eval_dataloader, perturb_dataloader, model):
     eval_logs = {}
@@ -218,7 +223,6 @@ def main(cfg):
     Path(cfg.save_dir).mkdir(parents=True, exist_ok=True)
 
     if os.environ.get('LOCAL_RANK') is not None:
-        pdb.set_trace()
         local_rank = int(os.environ.get('LOCAL_RANK', '0'))
         device_map = {'': local_rank}
 
@@ -244,10 +248,14 @@ def main(cfg):
                 # model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True, device_map=device_map)
                 # snh disabling flash_attention bc not compatible with this GPU and eval is done on one GPU anyways
                 # todo ck logic
-                if ('GRACE' in cfg.model_path) or ("WISE" in cfg.model_path):
+                if ("WISE" in cfg.model_path):
                     hparams = WISEHyperParams.from_hparams('../EasyEdit/hparams/WISE/eval.yaml')
-                    hparams.load_path = os.path.join(cfg.model_path, "wise.pt")
-                    model = BaseEditor.from_hparams(hparams)
+                    hparams.load_path = os.path.join(cfg.model_path, "model.pt")
+                    editor = BaseEditor.from_hparams(hparams)
+                    model = editor.model
+                elif ('GRACE' in cfg.model_path):
+                    hparams = GraceHyperParams.from_hparams('../EasyEdit/hparams/GRACE/eval.yaml')
+                    hparams.load_path = os.path.join(cfg.model_path, "model.pt")
                     # path = "./scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd"
                     # model = AutoModelForCausalLM.from_pretrained(path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
                     # checkpoint = os.path.join(cfg.model_path, "model.pt")
@@ -336,6 +344,42 @@ def run_generation(cfg, batch, model, tokenizer):
     # input_strings = [s.split("[/INST] ")[0] for s in input_strings]
     # #add ["/INST "] to the end of each string
     # input_strings = [s + "[/INST] " for s in input_strings]
+        
+    if ("IKE" in cfg.model_path):
+        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/eval.yaml')
+        # Load precomputed embeddings
+        sentence_model = SentenceTransformer(hparams.sentence_model_name).to(model.device)
+        safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
+        embedding_path = f'{hparams.results_dir}/{hparams.alg_name}/embedding/' \
+                         f'{safe_model_name}_{hparams.dataset_name}_{hparams.num_train_samples}.pkl'
+
+        with open(embedding_path, "rb") as fIn:
+            stored_data = pickle.load(fIn)
+            stored_sentences = stored_data['sentences']
+            stored_embeddings = torch.tensor(stored_data['embeddings']).to(model.device)
+            stored_embeddings = util.normalize_embeddings(stored_embeddings)
+
+        # Augment inputs with ICL examples
+        augmented_inputs = []
+        for input_str in input_strings:
+            query_sentence = f"Prompt: {input_str}\n\n"
+            query_embedding = util.normalize_embeddings(torch.tensor(
+                sentence_model.encode(query_sentence, show_progress_bar=False)
+            ).unsqueeze(0).to(model.device))
+
+            # Retrieve top-k relevant ICL examples
+            hits = util.semantic_search(query_embedding, stored_embeddings, score_function=util.dot_score, top_k=hparams.k)
+            assert len(hits) == 1  # Ensure a single query result
+            hit = hits[0]
+
+            # Extract ICL examples
+            icl_examples = [stored_sentences[hit[k]["corpus_id"]] for k in range(len(hit))]
+
+            # Join ICL examples and append to the input
+            icl_context = ''.join(icl_examples)
+            augmented_inputs.append(f"{icl_context}{input_str}{split_symbol}")
+
+        input_strings = augmented_inputs  # Use augmented inputs for generation
     
     #now tokenize the strings with left padding
     left_pad_tokenizer = tokenizer
@@ -344,14 +388,17 @@ def run_generation(cfg, batch, model, tokenizer):
     left_pad_tokenizer.pad_token = left_pad_tokenizer.eos_token
     left_pad_tokenizer.pad_token_id = left_pad_tokenizer.eos_token_id
 
-
     inputs = left_pad_tokenizer.batch_encode_plus(input_strings, add_special_tokens=True, return_tensors='pt', padding=True).to(model.device)
+
     #now generate
     out = model.generate(inputs.input_ids, attention_mask=inputs.attention_mask, max_length=cfg.generation.max_length, max_new_tokens=cfg.generation.max_new_tokens, do_sample=False, use_cache=True, pad_token_id=left_pad_tokenizer.eos_token_id)
     strs = left_pad_tokenizer.batch_decode(out[:, inputs.input_ids.shape[-1]:], skip_special_tokens=True)
+    
+    # snh Handle debugging for empty generations
     for i in range(len(strs)):
         if strs[i] == '':
-            print(i)
+            print(f"Empty generation for input index: {i}")
+
     return input_strings, strs, ground_truth
 
 def eval_bleu(gen_outputs, ground_truths):
