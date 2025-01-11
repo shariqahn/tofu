@@ -2,22 +2,21 @@
 
 # apt update
 # apt install rsync
-# rsync -rvz -e "ssh -p 22179" ~/EasyEdit/outputs/WISE_avoidant/model/ root@69.30.85.97:/workspace/model/
+# mkdir /workspace/WISE_avoidant
+# mkdir /workspace/WISE_avoidant/model
+# rsync -rvz -e "ssh -p 30234" ~/EasyEdit/outputs/WISE_avoidant/model/ root@213.173.105.5:/workspace/WISE_avoidant/model/
 
 # git clone https://github.com/shariqahn/tofu.git
 # cd tofu
+# git checkout runpod
+# git clone https://github.com/shariqahn/EasyEdit.git
+# cd /EasyEdit
+# git checkout memit
 # python -c "import torch; print(torch.__version__)"
 # nvcc --version
 pip install --no-cache-dir -r EasyEdit_requirements.txt
 pip install --no-cache-dir -r requirements.txt
 pip install --no-cache-dir flash-attn --no-build-isolation
-cd ..
-git clone https://github.com/shariqahn/EasyEdit.git
-cd EasyEdit
-git checkout memit
-cd ../tofu/
-echo "current dir:"
-pwd
 
 # export HF_TOKEN
 export PYTHONUNBUFFERED=1  # Enable unbuffered output for Python scripts
@@ -29,7 +28,7 @@ model_family=llama2-7b
 experiment_name=WISE_avoidant
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/$eval_name
-model_path=/workspace/model
+model_path=/workspace/WISE_avoidant/model
 
 CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py \
     model_family=$model_family split=$split \
