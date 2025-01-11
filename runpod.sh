@@ -1,18 +1,15 @@
 #!/bin/bash
 
-# rsync -avz -e "ssh root@69.30.85.10 -p 22156 -i ~/.ssh/id_ed25519" ~/EasyEdit/outputs/WISE_avoidant/model/ root@69.30.85.10:/workspace/WISE_avoidant/model/
-
-# rsync -avz -e "ssh -p 22065" ~/EasyEdit/outputs/WISE_avoidant/model/ root@69.30.85.10:/workspace/model/
-
-
+# rsync -rvz -e "ssh -p 22065" ~/EasyEdit/outputs/WISE_avoidant/model/ root@69.30.85.10:/workspace/model/
 
 # git clone https://github.com/shariqahn/tofu.git
 # cd tofu
 
 # python -c "import torch; print(torch.__version__)"
 # nvcc --version
-# pip install --no-cache-dir -r requirements.txt
-# pip install flash-attn --no-build-isolation
+pip install --no-cache-dir -r EasyEdit_requirements.txt
+pip install --no-cache-dir -r requirements.txt
+pip install --no-cache-dir flash-attn --no-build-isolation
 
 # export HF_TOKEN
 export PYTHONUNBUFFERED=1  # Enable unbuffered output for Python scripts
