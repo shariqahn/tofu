@@ -22,6 +22,7 @@ import sys
 sys.path.append('../EasyEdit')
 from easyeditor import BaseEditor
 from easyeditor import WISEHyperParams, GraceHyperParams, IKEHyperParams
+from easyeditor.models.wise.WISE import WISE
 
 def eval_perturbation_ratio(eval_dataloader, perturb_dataloader, model):
     eval_logs = {}
@@ -252,7 +253,9 @@ def main(cfg):
                     hparams = WISEHyperParams.from_hparams('../EasyEdit/hparams/WISE/eval.yaml')
                     hparams.load_path = os.path.join(cfg.model_path, "model.pt")
                     editor = BaseEditor.from_hparams(hparams)
-                    model = editor.model
+                    wise = WISE(model=editor.model, config=hparams, device=editor.model.device)
+                    wise.load(hparams.load_path)
+                    model = wise.model
                 elif ('GRACE' in cfg.model_path):
                     hparams = GraceHyperParams.from_hparams('../EasyEdit/hparams/GRACE/eval.yaml')
                     hparams.load_path = os.path.join(cfg.model_path, "model.pt")

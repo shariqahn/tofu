@@ -5,7 +5,7 @@ source /etc/profile
 module load anaconda/Python-ML-2024b
 # which python
 # module list
-# conda list
+# conda info --envs
 
 master_port=18765
 # master_port=18775
