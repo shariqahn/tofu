@@ -121,8 +121,9 @@ class TextDatasetQA(Dataset):
         self.max_length = max_length
         # data_len = len(datasets.load_dataset(data_path, split)["train"])
         # self.data = datasets.load_dataset(data_path, split)["train"].select(range(min(100, data_len)))
-        # self.data = datasets.load_dataset(data_path, split)["train"]
-        self.data = datasets.load_from_disk(data_path)
+        # snh changed to load local; above already commented
+        self.data = datasets.load_dataset(data_path, split)["train"]
+        # self.data = datasets.load_from_disk(data_path)
 
         self.data = add_dataset_index(self.data)
         self.model_configs = get_model_identifiers_from_yaml(model_family)
