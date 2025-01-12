@@ -250,12 +250,24 @@ def main(cfg):
                 # snh disabling flash_attention bc not compatible with this GPU and eval is done on one GPU anyways
                 # todo ck logic
                 if ("WISE" in cfg.model_path):
+                    # hparams = WISEHyperParams.from_hparams('../EasyEdit/hparams/WISE/eval.yaml')
+                    # hparams.load_path = os.path.join(cfg.model_path, "model.pt")
+                    # editor = BaseEditor.from_hparams(hparams)
+                    # wise = WISE(model=editor.model, config=hparams, device=editor.model.device)
+                    # wise.load(hparams.load_path)
+                    # model = wise.model
                     hparams = WISEHyperParams.from_hparams('../EasyEdit/hparams/WISE/eval.yaml')
                     hparams.load_path = os.path.join(cfg.model_path, "model.pt")
                     editor = BaseEditor.from_hparams(hparams)
-                    wise = WISE(model=editor.model, config=hparams, device=editor.model.device)
-                    wise.load(hparams.load_path)
-                    model = wise.model
+                    # pdb.set_trace()
+                    # device = f'cuda:{hparams.device}'
+                    model = WISE(model=editor.model, config=hparams, device=editor.model.device)
+                    # pdb.set_trace()
+                    model.load(hparams.load_path)
+                    # pdb.set_trace()
+                    # model = wise.model
+                    # model.to(editor.model.device)  # Move to GPU only when needed
+
                 elif ('GRACE' in cfg.model_path):
                     hparams = GraceHyperParams.from_hparams('../EasyEdit/hparams/GRACE/eval.yaml')
                     hparams.load_path = os.path.join(cfg.model_path, "model.pt")
@@ -353,36 +365,43 @@ def run_generation(cfg, batch, model, tokenizer):
         # Load precomputed embeddings
         sentence_model = SentenceTransformer(hparams.sentence_model_name).to(model.device)
         safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
-        embedding_path = f'{hparams.results_dir}/{hparams.alg_name}/embedding/' \
-                         f'{safe_model_name}_{hparams.dataset_name}_{hparams.num_train_samples}.pkl'
-
-        with open(embedding_path, "rb") as fIn:
+        with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
+                f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
             stored_data = pickle.load(fIn)
             stored_sentences = stored_data['sentences']
-            stored_embeddings = torch.tensor(stored_data['embeddings']).to(model.device)
-            stored_embeddings = util.normalize_embeddings(stored_embeddings)
+            stored_embeddings = stored_data['embeddings']
+        stored_embeddings = torch.tensor(stored_embeddings).to(device)
+        stored_embeddings = util.normalize_embeddings(stored_embeddings)
 
-        # Augment inputs with ICL examples
-        augmented_inputs = []
-        for input_str in input_strings:
-            query_sentence = f"Prompt: {input_str}\n\n"
+        # Augment input_strings with ICL examples
+        augmented_input_strings = []
+        for i, input_string in enumerate(input_strings):
+            # Construct `new_fact` using input_string and ground_truth
+            # new_fact = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
+            # tofo dont mix up iclexample new fact and eval new fact
+            new_fact = f"{input_string} {ground_truth[i]}"
+            query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
+            
             query_embedding = util.normalize_embeddings(torch.tensor(
                 sentence_model.encode(query_sentence, show_progress_bar=False)
             ).unsqueeze(0).to(model.device))
 
             # Retrieve top-k relevant ICL examples
             hits = util.semantic_search(query_embedding, stored_embeddings, score_function=util.dot_score, top_k=hparams.k)
-            assert len(hits) == 1  # Ensure a single query result
+            assert len(hits) == 1 
             hit = hits[0]
-
-            # Extract ICL examples
             icl_examples = [stored_sentences[hit[k]["corpus_id"]] for k in range(len(hit))]
 
-            # Join ICL examples and append to the input
-            icl_context = ''.join(icl_examples)
-            augmented_inputs.append(f"{icl_context}{input_str}{split_symbol}")
+            # target_ids = tokenizer(target, return_tensors='pt')['input_ids'].to(device)
+            # encodings = tokenizer(''.join(icl_examples) + f'{new_fact} {target}', return_tensors='pt')
+            # input_ids = encodings['input_ids'].to(device)
 
-        input_strings = augmented_inputs  # Use augmented inputs for generation
+            # Join ICL examples and prepend to the input string
+            # icl_context = ''.join(icl_examples) + f'{new_fact} {ground_truth[i]}'
+            icl_context = ''.join(icl_examples)
+            augmented_input_strings.append(f"{icl_context}{input_string}{split_symbol}")
+
+        input_strings = augmented_input_strings  # Use augmented input_strings for generation
     
     #now tokenize the strings with left padding
     left_pad_tokenizer = tokenizer
