@@ -20,6 +20,7 @@ pip install --no-cache-dir flash-attn --no-build-isolation
 
 # export HF_TOKEN
 export PYTHONUNBUFFERED=1  # Enable unbuffered output for Python scripts
+export HYDRA_FULL_ERROR=1
 
 echo "Starting the first Python script (evaluate_util)..."
 master_port=18765
