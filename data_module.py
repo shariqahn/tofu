@@ -40,11 +40,11 @@ class TextForgetDatasetQA(Dataset):
         super(TextForgetDatasetQA, self).__init__()
         self.tokenizer = tokenizer
         self.max_length = max_length
-        self.forget_data = datasets.load_dataset(data_path, split)["train"]
-        # self.forget_data = datasets.load_from_disk("./scr/forget_data")
-        retain_split = "retain" + str(100 - int(split.replace("forget", ""))).zfill(2)
-        self.retain_data =datasets.load_dataset(data_path, retain_split)["train"]
-        # self.retain_data = datasets.load_from_disk("./scr/retain_data")
+        # self.forget_data = datasets.load_dataset(data_path, split)["train"]
+        self.forget_data = datasets.load_from_disk("./scr/forget_data")
+        # retain_split = "retain" + str(100 - int(split.replace("forget", ""))).zfill(2)
+        # self.retain_data =datasets.load_dataset(data_path, retain_split)["train"]
+        self.retain_data = datasets.load_from_disk("./scr/retain_data")
         self.model_configs = get_model_identifiers_from_yaml(model_family)
         self.loss_type = loss_type
 
@@ -122,8 +122,8 @@ class TextDatasetQA(Dataset):
         # data_len = len(datasets.load_dataset(data_path, split)["train"])
         # self.data = datasets.load_dataset(data_path, split)["train"].select(range(min(100, data_len)))
         # snh changed to load local; above already commented
-        self.data = datasets.load_dataset(data_path, split)["train"]
-        # self.data = datasets.load_from_disk(data_path)
+        # self.data = datasets.load_dataset(data_path, split)["train"]
+        self.data = datasets.load_from_disk(data_path)
 
         self.data = add_dataset_index(self.data)
         self.model_configs = get_model_identifiers_from_yaml(model_family)
