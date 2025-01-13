@@ -350,16 +350,7 @@ def run_generation(cfg, batch, model, tokenizer):
     split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
     ground_truth = [s.split(split_symbol)[1] for s in input_strings]
     input_strings = [s.split(split_symbol)[0] for s in input_strings]
-    #add ["/INST "] to the end of each string
-    if cfg.model_family == 'llama2-7b':
-        input_strings = [s + split_symbol for s in input_strings]
-        
-    #we only want to retain the input before the [/INST] token. split each string to only retain the content before the [/INST] token
-    # ground_truth = [s.split("[/INST] ")[1] for s in input_strings]
-    # input_strings = [s.split("[/INST] ")[0] for s in input_strings]
-    # #add ["/INST "] to the end of each string
-    # input_strings = [s + "[/INST] " for s in input_strings]
-        
+
     if ("IKE" in cfg.model_path):
         hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/eval.yaml')
         # Load precomputed embeddings
@@ -370,15 +361,16 @@ def run_generation(cfg, batch, model, tokenizer):
             stored_data = pickle.load(fIn)
             stored_sentences = stored_data['sentences']
             stored_embeddings = stored_data['embeddings']
-        stored_embeddings = torch.tensor(stored_embeddings).to(device)
+        stored_embeddings = torch.tensor(stored_embeddings).to(model.device)
         stored_embeddings = util.normalize_embeddings(stored_embeddings)
 
         # Augment input_strings with ICL examples
         augmented_input_strings = []
         for i, input_string in enumerate(input_strings):
             # Construct `new_fact` using input_string and ground_truth
-            # new_fact = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
-            # tofo dont mix up iclexample new fact and eval new fact
+            # original:
+            # new_fact = request['prompt'] + ' ' + request['target_new']
+            # query_sentence = f"New Fact: {new_fact}\nPrompt: {request['prompt']}\n\n"
             new_fact = f"{input_string} {ground_truth[i]}"
             query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
             
@@ -397,12 +389,30 @@ def run_generation(cfg, batch, model, tokenizer):
             # input_ids = encodings['input_ids'].to(device)
 
             # Join ICL examples and prepend to the input string
-            # icl_context = ''.join(icl_examples) + f'{new_fact} {ground_truth[i]}'
-            icl_context = ''.join(icl_examples)
-            augmented_input_strings.append(f"{icl_context}{input_string}{split_symbol}")
+            # from ChatGPT:
+            # icl_context = ''.join(icl_examples)
+            # augmented_input_strings.append(f"{icl_context}{input_string}{split_symbol}")
+
+            # original:
+            # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
+            # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
+            x = f'New Fact: {input_string} {ground_truth[i]}\nPrompt: {input_string}'
+            augmented_input = ''.join(icl_examples) + f'{x} {ground_truth[i]}'
+            augmented_input_strings.append(augmented_input)
 
         input_strings = augmented_input_strings  # Use augmented input_strings for generation
     
+
+    #add ["/INST "] to the end of each string
+    if cfg.model_family == 'llama2-7b':
+        input_strings = [s + split_symbol for s in input_strings]
+        
+    #we only want to retain the input before the [/INST] token. split each string to only retain the content before the [/INST] token
+    # ground_truth = [s.split("[/INST] ")[1] for s in input_strings]
+    # input_strings = [s.split("[/INST] ")[0] for s in input_strings]
+    # #add ["/INST "] to the end of each string
+    # input_strings = [s + "[/INST] " for s in input_strings]
+        
     #now tokenize the strings with left padding
     left_pad_tokenizer = tokenizer
     left_pad_tokenizer.padding_side = 'left'

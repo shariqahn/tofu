@@ -12,6 +12,9 @@
 - serial: `LLsub -i -g volta:2` 
     - download: `LLsub -i -q download`
 
+## Compute
+- WISE took ~45GB of VRAM
+
 ## debug
 
 ### eval
