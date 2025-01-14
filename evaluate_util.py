@@ -250,24 +250,14 @@ def main(cfg):
                 # snh disabling flash_attention bc not compatible with this GPU and eval is done on one GPU anyways
                 # todo ck logic
                 if ("WISE" in cfg.model_path):
-                    # hparams = WISEHyperParams.from_hparams('../EasyEdit/hparams/WISE/eval.yaml')
-                    # hparams.load_path = os.path.join(cfg.model_path, "model.pt")
-                    # editor = BaseEditor.from_hparams(hparams)
-                    # wise = WISE(model=editor.model, config=hparams, device=editor.model.device)
-                    # wise.load(hparams.load_path)
-                    # model = wise.model
                     hparams = WISEHyperParams.from_hparams('../EasyEdit/hparams/WISE/eval.yaml')
                     hparams.load_path = os.path.join(cfg.model_path, "model.pt")
                     editor = BaseEditor.from_hparams(hparams)
-                    # pdb.set_trace()
-                    # device = f'cuda:{hparams.device}'
-                    model = WISE(model=editor.model, config=hparams, device=editor.model.device)
-                    # pdb.set_trace()
-                    model.load(hparams.load_path)
-                    # pdb.set_trace()
+                    # wise = WISE(model=editor.model, config=hparams, device=editor.model.device)
+                    # wise.load(hparams.load_path)
                     # model = wise.model
-                    # model.to(editor.model.device)  # Move to GPU only when needed
-
+                    model = WISE(model=editor.model, config=hparams, device=editor.model.device)
+                    model.load(hparams.load_path)
                 elif ('GRACE' in cfg.model_path):
                     hparams = GraceHyperParams.from_hparams('../EasyEdit/hparams/GRACE/eval.yaml')
                     hparams.load_path = os.path.join(cfg.model_path, "model.pt")
@@ -352,12 +342,17 @@ def run_generation(cfg, batch, model, tokenizer):
     input_strings = [s.split(split_symbol)[0] for s in input_strings]
 
     if ("IKE" in cfg.model_path):
-        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/eval.yaml')
+        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
         # Load precomputed embeddings
-        sentence_model = SentenceTransformer(hparams.sentence_model_name).to(model.device)
+        local_path = "./scr/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/fa97f6e7cb1a59073dff9e6b13e2715cf7475ac9"
+        sentence_model = SentenceTransformer(local_path).to(model.device)
         safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
-        with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
-                f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
+        # with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
+        #         f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
+        # snh changing path so don't need train_ds info for eval
+        base_path = os.path.dirname(cfg.model_path)
+        with open(f'{base_path}/{hparams.alg_name}/embedding/'
+                f'{safe_model_name}.pkl', "rb") as fIn:
             stored_data = pickle.load(fIn)
             stored_sentences = stored_data['sentences']
             stored_embeddings = stored_data['embeddings']
