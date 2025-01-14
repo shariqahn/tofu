@@ -18,7 +18,7 @@ eval_name=${experiment_name}_${split}
 save_root=~/tofu/model_outputs/$eval_name
 # model_path=~/tofu/model_outputs/tofu_baseline/grad_ascent_${lr}_${split}_5
 # model_path=~/tofu/scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd
-model_path=../EasyEdit/outputs/$experiment_name/model
+model_path="/home/gridsan/$USER/EasyEdit/outputs/$experiment_name/model"
 
 CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py\
     model_family=$model_family split=$split\
