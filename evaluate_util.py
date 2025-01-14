@@ -344,8 +344,7 @@ def run_generation(cfg, batch, model, tokenizer):
     if ("IKE" in cfg.model_path):
         hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
         # Load precomputed embeddings
-        local_path = "./scr/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/fa97f6e7cb1a59073dff9e6b13e2715cf7475ac9"
-        sentence_model = SentenceTransformer(local_path).to(model.device)
+        sentence_model = SentenceTransformer(hparams.sentence_model_name).to(model.device)
         safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
         # with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
         #         f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
