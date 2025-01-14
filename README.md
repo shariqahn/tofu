@@ -91,6 +91,11 @@ NotImplementedError: FileSystem does not appear to support flock; use SoftFileLo
 ### My setup differences
 - changed from bf16 to float32 bc our cpu doesnt handle that type
   - should be fine bc EasyEdit only uses this amount of precision for training MEND. SERAC. prob not necessary just for eval
+- instead max_length = 200, limiting len generated tokens to min(length of new target, 200)
+  - due to this error for IKE eval:
+  ```
+  ValueError: Input length of input_ids is 2991, but `max_length` is set to 200. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.
+  ```
 
 ### old
 cuda toolkit from conda 104p
