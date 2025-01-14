@@ -26,10 +26,10 @@ echo "Starting the first Python script (evaluate_util)..."
 master_port=18765
 split=forget10_perturbed
 model_family=llama2-7b
-experiment_name=WISE_avoidant
+experiment_name=IKE_avoidant
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/$eval_name
-model_path=/workspace/WISE_avoidant/model
+model_path=/workspace/${experiment_name}/model
 
 CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py \
     model_family=$model_family split=$split \
