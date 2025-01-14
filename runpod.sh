@@ -1,19 +1,17 @@
 #!/bin/bash
 
 # apt update
-# apt install rsync
-# mkdir /workspace/WISE_avoidant
-# mkdir /workspace/WISE_avoidant/model
-# rsync -rvz -e "ssh -p 41204" ~/EasyEdit/outputs/WISE_avoidant/model/ root@141.193.30.26:/workspace/WISE_avoidant/model/
+# apt install rsync -y
+# mkdir /workspace/IKE_avoidant
+# mkdir /workspace/IKE_avoidant/model
+# rsync -rvz -e "ssh -p 22102" ~/EasyEdit/outputs/IKE_avoidant/model/ root@69.30.85.94:/workspace/IKE_avoidant/model/
 
 # git clone https://github.com/shariqahn/tofu.git
 # cd tofu
 # git checkout runpod
-# python -c "import torch; print(torch.__version__)"
-# nvcc --version
-# pip install --no-cache-dir -r EasyEdit_requirements.txt
-# pip install --no-cache-dir -r requirements.txt
-# pip install --no-cache-dir flash-attn --no-build-isolation
+pip install --no-cache-dir -r EasyEdit_requirements.txt
+pip install --no-cache-dir -r requirements.txt
+pip install --no-cache-dir flash-attn --no-build-isolation
 # git clone https://github.com/shariqahn/EasyEdit.git
 # cd /EasyEdit
 # git checkout memit
