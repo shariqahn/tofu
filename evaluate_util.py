@@ -418,7 +418,7 @@ def run_generation(cfg, batch, model, tokenizer):
 
     #now generate
     if ("IKE" in cfg.model_path):
-        max_new_tokens = min(200, len(max(ground_truth, key=len)))
+        max_new_tokens = max(200, len(max(ground_truth, key=len)))
         if max_new_tokens != 200:
             print(f'max_new_tokens exceeded 200. the value is now {max_new_tokens}')
         out = model.generate(inputs.input_ids, attention_mask=inputs.attention_mask, max_new_tokens=max_new_tokens, do_sample=False, use_cache=True, pad_token_id=left_pad_tokenizer.eos_token_id)

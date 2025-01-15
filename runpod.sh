@@ -3,15 +3,14 @@
 # apt update
 # apt install rsync -y
 # mkdir /workspace/IKE_avoidant
-# mkdir /workspace/IKE_avoidant/model
-# rsync -rvz -e "ssh -p 22102" ~/EasyEdit/outputs/IKE_avoidant/model/ root@69.30.85.94:/workspace/IKE_avoidant/model/
+# rsync -rvz -e "ssh -p 22102" ~/EasyEdit/outputs/IKE_avoidant/ root@69.30.85.94:/workspace/IKE_avoidant/
 
 # git clone https://github.com/shariqahn/tofu.git
 # cd tofu
 # git checkout runpod
-pip install --no-cache-dir -r EasyEdit_requirements.txt
-pip install --no-cache-dir -r requirements.txt
-pip install --no-cache-dir flash-attn --no-build-isolation
+# pip install --no-cache-dir -r EasyEdit_requirements.txt
+# pip install --no-cache-dir -r requirements.txt
+# pip install --no-cache-dir flash-attn --no-build-isolation
 # git clone https://github.com/shariqahn/EasyEdit.git
 # cd /EasyEdit
 # git checkout memit
