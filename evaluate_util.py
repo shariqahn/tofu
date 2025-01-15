@@ -157,7 +157,7 @@ def get_dataloader(cfg, eval_task, tokenizer, folder, split, question_key, answe
 
     return eval_dataloader, base_eval_dataloader, perturb_dataloader
 
-def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=False):
+def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=False, sentence_model=None):
     eval_logs = {}
 
     gen_outputs = []
@@ -175,7 +175,7 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
 
         with torch.no_grad():
             outputs = model(**batch)
-            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer)
+            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer, sentence_model=sentence_model)
             gen_outputs.extend(gen_output)
             ground_truths.extend(gt)
             input_strings.extend(input_string)
@@ -241,6 +241,7 @@ def main(cfg):
     for attempt in range(3):
         try:
         # do thing
+            sentence_model=None
             if cfg.use_pretrained:
                 print(f"Loading pretrained from {model_id}")
                 model = AutoModelForCausalLM.from_pretrained(model_id, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True, device_map=device_map)
@@ -268,6 +269,9 @@ def main(cfg):
                     # model.load_state_dict(state_dict, False)
                 else:
                     model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
+                    if ("IKE" in cfg.model_path):
+                        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
+                        sentence_model = SentenceTransformer(hparams.sentence_model_name).to(model.device)
         except Exception as e:
             print(e)
             continue
@@ -307,7 +311,7 @@ def main(cfg):
         normalize_gt = False 
         if 'eval_log' not in eval_task:
             normalize_gt = True
-        eval_logs = get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=normalize_gt)
+        eval_logs = get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=normalize_gt, sentence_model=sentence_model)
 
         with open(save_filename, "w") as f:
             # pretty write json to f
@@ -334,7 +338,7 @@ def eval_accuracy(logits, labels):
     return {"eval accuracy": acc.item()}
 
 
-def run_generation(cfg, batch, model, tokenizer):
+def run_generation(cfg, batch, model, tokenizer, sentence_model=None):
     input_ids = batch["input_ids"]
     input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=True)
     split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
@@ -344,7 +348,6 @@ def run_generation(cfg, batch, model, tokenizer):
     if ("IKE" in cfg.model_path):
         hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
         # Load precomputed embeddings
-        sentence_model = SentenceTransformer(hparams.sentence_model_name).to(model.device)
         safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
         # with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
         #         f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
@@ -419,8 +422,6 @@ def run_generation(cfg, batch, model, tokenizer):
     #now generate
     if ("IKE" in cfg.model_path):
         max_new_tokens = max(200, len(max(ground_truth, key=len)))
-        if max_new_tokens != 200:
-            print(f'max_new_tokens exceeded 200. the value is now {max_new_tokens}')
         out = model.generate(inputs.input_ids, attention_mask=inputs.attention_mask, max_new_tokens=max_new_tokens, do_sample=False, use_cache=True, pad_token_id=left_pad_tokenizer.eos_token_id)
     else:
         out = model.generate(inputs.input_ids, attention_mask=inputs.attention_mask, max_length=cfg.generation.max_length, max_new_tokens=cfg.generation.max_new_tokens, do_sample=False, use_cache=True, pad_token_id=left_pad_tokenizer.eos_token_id)
