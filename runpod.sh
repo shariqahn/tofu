@@ -2,8 +2,8 @@
 
 # apt update
 # apt install rsync -y
-# mkdir /workspace/IKE_avoidant
-# rsync -rvz -e "ssh -p 22102" ~/EasyEdit/outputs/IKE_avoidant/ root@69.30.85.94:/workspace/IKE_avoidant/
+# mkdir /workspace/IKE_dummy
+# rsync -rvz -e "ssh -p 22102" ~/EasyEdit/outputs/IKE_dummy/ root@69.30.85.94:/workspace/IKE_dummy/
 
 # git clone https://github.com/shariqahn/tofu.git
 # cd tofu
@@ -23,7 +23,7 @@ echo "Starting the first Python script (evaluate_util)..."
 master_port=18765
 split=forget10_perturbed
 model_family=llama2-7b
-experiment_name=IKE_avoidant
+experiment_name=IKE_dummy
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/$eval_name
 model_path=/workspace/${experiment_name}/model
