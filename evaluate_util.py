@@ -165,6 +165,25 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
     input_strings = []
     all_indices = []
 
+    if ('IKE' in cfg.model_path) and (eval_task == 'eval_log_forget'):
+        if 'dummy' in cfg.model_path:
+            targets = 'dummy'
+        else:
+            path = "~/EasyEdit/data/avoidant.json"
+            with open(path, "r") as f:
+                data = json.load(f)
+            targets = {}
+            if 'avoidant' in cfg.model_path:
+                for edit in data:
+                    targets[data['question']] = data['avoidant_answer']
+            elif 'incorrect' in cfg.model_path:
+                for edit in data:
+                    targets[data['question']] = data['perturbed_answer'][0]
+            else:
+                raise NotImplementedError
+    else:
+        targets = None
+
     for batch in tqdm(eval_dataloader):
         input_ids, labels, attention_mask, indices = batch
         all_indices.extend(indices.cpu().numpy().tolist())
@@ -175,7 +194,7 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
 
         with torch.no_grad():
             outputs = model(**batch)
-            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer)
+            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer, targets=targets)
             gen_outputs.extend(gen_output)
             ground_truths.extend(gt)
             input_strings.extend(input_string)
@@ -334,7 +353,7 @@ def eval_accuracy(logits, labels):
     return {"eval accuracy": acc.item()}
 
 
-def run_generation(cfg, batch, model, tokenizer):
+def run_generation(cfg, batch, model, tokenizer, targets=None):
     input_ids = batch["input_ids"]
     input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=True)
     split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
@@ -362,11 +381,17 @@ def run_generation(cfg, batch, model, tokenizer):
         # Augment input_strings with ICL examples
         augmented_input_strings = []
         for i, input_string in enumerate(input_strings):
-            # Construct `new_fact` using input_string and ground_truth
             # original:
             # new_fact = request['prompt'] + ' ' + request['target_new']
             # query_sentence = f"New Fact: {new_fact}\nPrompt: {request['prompt']}\n\n"
-            new_fact = f"{input_string} {ground_truth[i]}"
+            if targets is None:
+                target_new = ground_truth[i]
+            elif targets == 'dummy':
+                target_new = 'dummy'
+            else:
+                target_new = targets[input_string]
+            # todo add split sybol
+            new_fact = f"{input_string} {target_new}"
             query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
             
             query_embedding = util.normalize_embeddings(torch.tensor(
@@ -391,8 +416,8 @@ def run_generation(cfg, batch, model, tokenizer):
             # original:
             # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
             # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
-            x = f'New Fact: {input_string} {ground_truth[i]}\nPrompt: {input_string}'
-            augmented_input = ''.join(icl_examples) + f'{x} {ground_truth[i]}'
+            x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
+            augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
             augmented_input_strings.append(augmented_input)
 
         input_strings = augmented_input_strings  # Use augmented input_strings for generation
