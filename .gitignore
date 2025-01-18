@@ -29,3 +29,4 @@ upload_to_hf.py
 scr/
 *.log-*
 # model_outputs/
+.ipynb_checkpoints/*
