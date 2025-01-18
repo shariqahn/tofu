@@ -383,6 +383,8 @@ def run_generation(cfg, batch, model, tokenizer, sentence_model=None, targets=No
         # Augment input_strings with ICL examples
         augmented_input_strings = []
         for i, input_string in enumerate(input_strings):
+            # todo is this the best approach for tags?
+            input_string = input_string.replace('[INST] ', '')
             # original:
             # new_fact = request['prompt'] + ' ' + request['target_new']
             # query_sentence = f"New Fact: {new_fact}\nPrompt: {request['prompt']}\n\n"
@@ -392,8 +394,7 @@ def run_generation(cfg, batch, model, tokenizer, sentence_model=None, targets=No
                 target_new = 'dummy'
             else:
                 target_new = targets[input_string]
-            pdb.set_trace()
-            # todo add split sybol
+            # todo verify non dummy logic
             new_fact = f"{input_string} {target_new}"
             query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
             
@@ -419,12 +420,9 @@ def run_generation(cfg, batch, model, tokenizer, sentence_model=None, targets=No
             # original:
             # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
             # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
-            # todo is this the best approach for tags?
-            # x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
+            x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
             # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
-            tagless_input = input_string.replace('[INST] ', '')
             pdb.set_trace()
-            x = f'New Fact: {tagless_input} {target_new}\nPrompt: {tagless_input}'
             augmented_input = '[INST] '.join(icl_examples) + f'{x} {target_new}'
             pdb.set_trace()
             augmented_input_strings.append(augmented_input)
