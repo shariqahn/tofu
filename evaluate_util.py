@@ -422,7 +422,6 @@ def run_generation(cfg, batch, model, tokenizer, sentence_model=None, targets=No
             # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
             x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
             # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
-            pdb.set_trace()
             augmented_input = '[INST] ' + ''.join(icl_examples) + f'{x} {target_new}'
             pdb.set_trace()
             augmented_input_strings.append(augmented_input)
