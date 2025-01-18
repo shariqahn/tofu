@@ -390,6 +390,7 @@ def run_generation(cfg, batch, model, tokenizer, targets=None):
                 target_new = 'dummy'
             else:
                 target_new = targets[input_string]
+            pdb.set_trace()
             # todo add split sybol
             new_fact = f"{input_string} {target_new}"
             query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
@@ -416,8 +417,14 @@ def run_generation(cfg, batch, model, tokenizer, targets=None):
             # original:
             # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
             # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
-            x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
-            augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
+            # todo is this the best approach for tags?
+            # x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
+            # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
+            tagless_input = input_string.replace('[INST] ', '')
+            pdb.set_trace()
+            x = f'New Fact: {tagless_input} {target_new}\nPrompt: {tagless_input}'
+            augmented_input = '[INST] '.join(icl_examples) + f'{x} {target_new}'
+            pdb.set_trace()
             augmented_input_strings.append(augmented_input)
 
         input_strings = augmented_input_strings  # Use augmented input_strings for generation
