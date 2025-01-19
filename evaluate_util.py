@@ -193,6 +193,11 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
             batch[k] = v.to(model.device)
 
         with torch.no_grad():
+            # target_ids = tokenizer(target, return_tensors='pt')['input_ids'].to(device)
+            # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
+            # input_ids = encodings['input_ids'].to(device)
+            # attention_mask = encodings['attention_mask'].to(device)
+            # logits = model(input_ids=input_ids, attention_mask=attention_mask).logits
             outputs = model(**batch)
             input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer, sentence_model=sentence_model, targets=targets)
             gen_outputs.extend(gen_output)

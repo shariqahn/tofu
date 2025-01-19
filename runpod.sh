@@ -3,7 +3,7 @@
 # apt update
 # apt install rsync -y
 # mkdir /workspace/IKE_dummy
-# rsync -rvz -e "ssh -p 22102" ~/EasyEdit/outputs/IKE_dummy/ root@69.30.85.94:/workspace/IKE_dummy/
+# rsync -rvz -e "ssh -p 22076" ~/EasyEdit/outputs/IKE_incorrect/ root@69.30.85.107:/workspace/IKE_incorrect/
 
 # git clone https://github.com/shariqahn/tofu.git
 # cd tofu
