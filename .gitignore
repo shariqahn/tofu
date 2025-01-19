@@ -30,3 +30,4 @@ scr/
 *.log-*
 # model_outputs/
 .ipynb_checkpoints/
+aggregate_eval_stat.log

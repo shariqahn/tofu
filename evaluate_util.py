@@ -169,7 +169,7 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
         if 'dummy' in cfg.model_path:
             targets = 'dummy'
         else:
-            path = "~/EasyEdit/data/avoidant.json"
+            path = "/EasyEdit/data/avoidant.json"
             with open(path, "r") as f:
                 data = json.load(f)
             targets = {}
@@ -423,6 +423,49 @@ def run_generation(cfg, batch, model, tokenizer, sentence_model=None, targets=No
             x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
             # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
             augmented_input = '[INST] ' + ''.join(icl_examples) + f'{x} {target_new}'
+            # Wrap each example with only the questions in tags
+            # formatted_icl_examples = []
+            # for example in icl_examples:
+            #     # Remove extra blank lines and split into lines
+            #     lines = [line.strip() for line in example.split("\n") if line.strip()]
+            #     new_fact_line = next((line for line in lines if line.startswith("New Fact:")), "")
+            #     prompt_line = next((line for line in lines if line.startswith("Prompt:")), "")
+
+            #     # Process "New Fact:" line
+            #     new_fact_parts = new_fact_line.split("? ", 1)  # Split at the first `?` followed by space
+            #     if len(new_fact_parts) == 2:  # Ensure the split was successful
+            #         new_fact_question = f"{new_fact_parts[0]}?"  # Reattach the question mark
+            #         new_fact_output = new_fact_parts[1]
+            #     else:
+            #         new_fact_question = new_fact_line
+            #         new_fact_output = ""
+
+            #     # Process "Prompt:" line
+            #     prompt_parts = prompt_line.split("? ", 1)  # Split at the first `?` followed by space
+            #     if len(prompt_parts) == 2:  # Ensure the split was successful
+            #         prompt_question = f"{prompt_parts[0]}?"  # Reattach the question mark
+            #         prompt_output = prompt_parts[1]
+            #     else:
+            #         prompt_question = prompt_line
+            #         prompt_output = ""
+
+            #     # Format with only the questions in tags
+            #     formatted_icl_examples.append(
+            #         f"[INST] {new_fact_question.strip()} [/INST] {new_fact_output.strip()}\n"
+            #         f"[INST] {prompt_question.strip()} [/INST] {prompt_output.strip()}\n"
+            #     )
+
+            # # Combine the formatted ICL examples into a single string
+            # icl_context = ''.join(formatted_icl_examples)
+
+            # # Format the current input `x` (wrap the question in tags, leave `target_new` outside)
+            # augmented_input = (
+            #     icl_context +
+            #     f"[INST] New Fact: {input_string} [/INST]\n"  # Wrap the current question
+            #     f"[INST] Prompt: {input_string} [/INST]\n"   # Wrap the current prompt
+            #     f"{target_new}"                              # Append the output (outside tags)
+            # )
+
             pdb.set_trace()
             augmented_input_strings.append(augmented_input)
 
