@@ -175,10 +175,10 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
             targets = {}
             if 'avoidant' in cfg.model_path:
                 for edit in data:
-                    targets[data['question']] = data['avoidant_answer']
+                    targets[edit['question']] = edit['avoidant_answer']
             elif 'incorrect' in cfg.model_path:
                 for edit in data:
-                    targets[data['question']] = data['perturbed_answer'][0]
+                    targets[edit['question']] = edit['perturbed_answer'][0]
             else:
                 raise NotImplementedError
     else:
