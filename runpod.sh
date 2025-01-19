@@ -23,7 +23,7 @@ echo "Starting the first Python script (evaluate_util)..."
 master_port=18765
 split=forget10_perturbed
 model_family=llama2-7b
-experiment_name=IKE_dummy
+experiment_name=IKE_avoidant
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/$eval_name
 model_path=/workspace/${experiment_name}/model
@@ -31,8 +31,9 @@ model_path=/workspace/${experiment_name}/model
 CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py \
     model_family=$model_family split=$split \
     model_path=$model_path \
-    save_root=$save_root \
-    > evaluate_util.log 2>&1 &
+    save_root=$save_root 
+    # \
+    # > evaluate_util.log 2>&1 &
 
 EVAL_PID=$!  # Capture the PID of the first background process
 
@@ -48,8 +49,7 @@ nohup python3 -u aggregate_eval_stat.py \
     retain_result=$path_to_eval_result \
     ckpt_result=$path_to_eval_result \
     method_name=$eval_name \
-    save_file=./model_outputs/$eval_name/eval_results/ds_size300/aggr_result.csv \
-    > aggregate_eval_stat.log 2>&1 &
+    save_file=./model_outputs/$eval_name/eval_results/ds_size300/aggr_result.csv &
 
 AGGR_PID=$!  # Capture the PID of the second background process
 
