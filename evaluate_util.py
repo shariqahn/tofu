@@ -157,7 +157,7 @@ def get_dataloader(cfg, eval_task, tokenizer, folder, split, question_key, answe
 
     return eval_dataloader, base_eval_dataloader, perturb_dataloader
 
-def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=False):
+def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=False, sentence_model=None):
     eval_logs = {}
 
     gen_outputs = []
@@ -169,16 +169,16 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
         if 'dummy' in cfg.model_path:
             targets = 'dummy'
         else:
-            path = "~/EasyEdit/data/avoidant.json"
+            path = "/EasyEdit/data/avoidant.json"
             with open(path, "r") as f:
                 data = json.load(f)
             targets = {}
             if 'avoidant' in cfg.model_path:
                 for edit in data:
-                    targets[data['question']] = data['avoidant_answer']
+                    targets[edit['question']] = edit['avoidant_answer']
             elif 'incorrect' in cfg.model_path:
                 for edit in data:
-                    targets[data['question']] = data['perturbed_answer'][0]
+                    targets[edit['question']] = edit['perturbed_answer'][0]
             else:
                 raise NotImplementedError
     else:
@@ -193,8 +193,13 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
             batch[k] = v.to(model.device)
 
         with torch.no_grad():
+            # target_ids = tokenizer(target, return_tensors='pt')['input_ids'].to(device)
+            # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
+            # input_ids = encodings['input_ids'].to(device)
+            # attention_mask = encodings['attention_mask'].to(device)
+            # logits = model(input_ids=input_ids, attention_mask=attention_mask).logits
             outputs = model(**batch)
-            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer, targets=targets)
+            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer, sentence_model=sentence_model, targets=targets)
             gen_outputs.extend(gen_output)
             ground_truths.extend(gt)
             input_strings.extend(input_string)
@@ -260,6 +265,7 @@ def main(cfg):
     for attempt in range(3):
         try:
         # do thing
+            sentence_model=None
             if cfg.use_pretrained:
                 print(f"Loading pretrained from {model_id}")
                 model = AutoModelForCausalLM.from_pretrained(model_id, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True, device_map=device_map)
@@ -287,6 +293,9 @@ def main(cfg):
                     # model.load_state_dict(state_dict, False)
                 else:
                     model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
+                    if ("IKE" in cfg.model_path):
+                        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
+                        sentence_model = SentenceTransformer(hparams.sentence_model_name).to(model.device)
         except Exception as e:
             print(e)
             continue
@@ -326,7 +335,7 @@ def main(cfg):
         normalize_gt = False 
         if 'eval_log' not in eval_task:
             normalize_gt = True
-        eval_logs = get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=normalize_gt)
+        eval_logs = get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=normalize_gt, sentence_model=sentence_model)
 
         with open(save_filename, "w") as f:
             # pretty write json to f
@@ -353,7 +362,7 @@ def eval_accuracy(logits, labels):
     return {"eval accuracy": acc.item()}
 
 
-def run_generation(cfg, batch, model, tokenizer, targets=None):
+def run_generation(cfg, batch, model, tokenizer, sentence_model=None, targets=None):
     input_ids = batch["input_ids"]
     input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=True)
     split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
@@ -363,8 +372,6 @@ def run_generation(cfg, batch, model, tokenizer, targets=None):
     if ("IKE" in cfg.model_path):
         hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
         # Load precomputed embeddings
-        local_path = "./scr/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/fa97f6e7cb1a59073dff9e6b13e2715cf7475ac9"
-        sentence_model = SentenceTransformer(local_path).to(model.device)
         safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
         # with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
         #         f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
@@ -381,6 +388,8 @@ def run_generation(cfg, batch, model, tokenizer, targets=None):
         # Augment input_strings with ICL examples
         augmented_input_strings = []
         for i, input_string in enumerate(input_strings):
+            # todo is this the best approach for tags?
+            input_string = input_string.replace('[INST] ', '')
             # original:
             # new_fact = request['prompt'] + ' ' + request['target_new']
             # query_sentence = f"New Fact: {new_fact}\nPrompt: {request['prompt']}\n\n"
@@ -390,8 +399,7 @@ def run_generation(cfg, batch, model, tokenizer, targets=None):
                 target_new = 'dummy'
             else:
                 target_new = targets[input_string]
-            pdb.set_trace()
-            # todo add split sybol
+            # todo verify non dummy logic
             new_fact = f"{input_string} {target_new}"
             query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
             
@@ -417,13 +425,52 @@ def run_generation(cfg, batch, model, tokenizer, targets=None):
             # original:
             # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
             # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
-            # todo is this the best approach for tags?
-            # x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
+            x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
             # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
-            tagless_input = input_string.replace('[INST] ', '')
-            pdb.set_trace()
-            x = f'New Fact: {tagless_input} {target_new}\nPrompt: {tagless_input}'
-            augmented_input = '[INST] '.join(icl_examples) + f'{x} {target_new}'
+            augmented_input = '[INST] ' + ''.join(icl_examples) + f'{x} {target_new}'
+            # Wrap each example with only the questions in tags
+            # formatted_icl_examples = []
+            # for example in icl_examples:
+            #     # Remove extra blank lines and split into lines
+            #     lines = [line.strip() for line in example.split("\n") if line.strip()]
+            #     new_fact_line = next((line for line in lines if line.startswith("New Fact:")), "")
+            #     prompt_line = next((line for line in lines if line.startswith("Prompt:")), "")
+
+            #     # Process "New Fact:" line
+            #     new_fact_parts = new_fact_line.split("? ", 1)  # Split at the first `?` followed by space
+            #     if len(new_fact_parts) == 2:  # Ensure the split was successful
+            #         new_fact_question = f"{new_fact_parts[0]}?"  # Reattach the question mark
+            #         new_fact_output = new_fact_parts[1]
+            #     else:
+            #         new_fact_question = new_fact_line
+            #         new_fact_output = ""
+
+            #     # Process "Prompt:" line
+            #     prompt_parts = prompt_line.split("? ", 1)  # Split at the first `?` followed by space
+            #     if len(prompt_parts) == 2:  # Ensure the split was successful
+            #         prompt_question = f"{prompt_parts[0]}?"  # Reattach the question mark
+            #         prompt_output = prompt_parts[1]
+            #     else:
+            #         prompt_question = prompt_line
+            #         prompt_output = ""
+
+            #     # Format with only the questions in tags
+            #     formatted_icl_examples.append(
+            #         f"[INST] {new_fact_question.strip()} [/INST] {new_fact_output.strip()}\n"
+            #         f"[INST] {prompt_question.strip()} [/INST] {prompt_output.strip()}\n"
+            #     )
+
+            # # Combine the formatted ICL examples into a single string
+            # icl_context = ''.join(formatted_icl_examples)
+
+            # # Format the current input `x` (wrap the question in tags, leave `target_new` outside)
+            # augmented_input = (
+            #     icl_context +
+            #     f"[INST] New Fact: {input_string} [/INST]\n"  # Wrap the current question
+            #     f"[INST] Prompt: {input_string} [/INST]\n"   # Wrap the current prompt
+            #     f"{target_new}"                              # Append the output (outside tags)
+            # )
+
             pdb.set_trace()
             augmented_input_strings.append(augmented_input)
 
@@ -451,9 +498,7 @@ def run_generation(cfg, batch, model, tokenizer, targets=None):
 
     #now generate
     if ("IKE" in cfg.model_path):
-        max_new_tokens = min(200, len(max(ground_truth, key=len)))
-        if max_new_tokens != 200:
-            print(f'max_new_tokens exceeded 200. the value is now {max_new_tokens}')
+        max_new_tokens = max(200, len(max(ground_truth, key=len)))
         out = model.generate(inputs.input_ids, attention_mask=inputs.attention_mask, max_new_tokens=max_new_tokens, do_sample=False, use_cache=True, pad_token_id=left_pad_tokenizer.eos_token_id)
     else:
         out = model.generate(inputs.input_ids, attention_mask=inputs.attention_mask, max_length=cfg.generation.max_length, max_new_tokens=cfg.generation.max_new_tokens, do_sample=False, use_cache=True, pad_token_id=left_pad_tokenizer.eos_token_id)

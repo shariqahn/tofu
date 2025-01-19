@@ -1,0 +1,63 @@
+Loading checkpoint from /workspace/IKE_avoidant/model
+[2025-01-19 02:48:30,611] torch.distributed.elastic.agent.server.api: [WARNING] Received Signals.SIGINT death signal, shutting down workers
+[2025-01-19 02:48:30,612] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 4299 closing signal SIGINT
+Traceback (most recent call last):
+  File "/tofu/evaluate_util.py", line 536, in <module>
+    main()
+  File "/usr/local/lib/python3.10/dist-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/usr/local/lib/python3.10/dist-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/tofu/evaluate_util.py", line 290, in main
+    model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/models/auto/auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "/usr/local/lib/python3.10/dist-packages/transformers/modeling_utils.py", line 4255, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/usr/local/lib/python3.10/dist-packages/transformers/modeling_utils.py", line 4613, in _load_pretrained_model
+    not_initialized_submodules = set_initialized_submodules(model, _loaded_keys)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/modeling_utils.py", line 574, in set_initialized_submodules
+    if loaded_keys.issuperset(module.state_dict()):
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1897, in state_dict
+    module.state_dict(destination=destination, prefix=prefix + name + '.', keep_vars=keep_vars)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1897, in state_dict
+    module.state_dict(destination=destination, prefix=prefix + name + '.', keep_vars=keep_vars)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1897, in state_dict
+    module.state_dict(destination=destination, prefix=prefix + name + '.', keep_vars=keep_vars)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1894, in state_dict
+    self._save_to_state_dict(destination, prefix, keep_vars)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1808, in _save_to_state_dict
+    if getattr(self.__class__, "get_extra_state", Module.get_extra_state) is not Module.get_extra_state:
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/agent/server/api.py", line 736, in run
+    result = self._invoke_run(role)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/agent/server/api.py", line 877, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/api.py", line 62, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 4234 got signal: 2
