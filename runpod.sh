@@ -12,8 +12,6 @@
 # pip install --no-cache-dir -r requirements.txt
 # pip install --no-cache-dir flash-attn --no-build-isolation
 # git clone https://github.com/shariqahn/EasyEdit.git
-# cd /EasyEdit
-# git checkout memit
 
 # export HF_TOKEN
 export PYTHONUNBUFFERED=1  # Enable unbuffered output for Python scripts

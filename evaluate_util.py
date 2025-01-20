@@ -165,39 +165,129 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
     input_strings = []
     all_indices = []
 
-    if ('IKE' in cfg.model_path) and (eval_task == 'eval_log_forget'):
-        if 'dummy' in cfg.model_path:
-            targets = 'dummy'
-        else:
-            path = "/EasyEdit/data/avoidant.json"
-            with open(path, "r") as f:
-                data = json.load(f)
-            targets = {}
-            if 'avoidant' in cfg.model_path:
-                for edit in data:
-                    targets[edit['question']] = edit['avoidant_answer']
-            elif 'incorrect' in cfg.model_path:
-                for edit in data:
-                    targets[edit['question']] = edit['perturbed_answer'][0]
+    if ('IKE' in cfg.model_path):
+        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
+        # Load precomputed embeddings
+        safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
+        # with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
+        #         f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
+        # snh changing path so don't need train_ds info for eval
+        base_path = os.path.dirname(cfg.model_path)
+        with open(f'{base_path}/{hparams.alg_name}/embedding/'
+                f'{safe_model_name}.pkl', "rb") as fIn:
+            stored_data = pickle.load(fIn)
+            stored_sentences = stored_data['sentences']
+            stored_embeddings = stored_data['embeddings']
+        stored_embeddings = torch.tensor(stored_embeddings).to(model.device)
+        stored_embeddings = util.normalize_embeddings(stored_embeddings)
+        
+        if (eval_task == 'eval_log_forget'):
+            if 'dummy' in cfg.model_path:
+                targets = 'dummy'
             else:
-                raise NotImplementedError
-    else:
-        targets = None
+                path = "/EasyEdit/data/avoidant.json"
+                with open(path, "r") as f:
+                    data = json.load(f)
+                targets = {}
+                if 'avoidant' in cfg.model_path:
+                    for edit in data:
+                        targets[edit['question']] = edit['avoidant_answer']
+                elif 'incorrect' in cfg.model_path:
+                    for edit in data:
+                        targets[edit['question']] = edit['perturbed_answer'][0]
+                else:
+                    raise NotImplementedError
+        else:
+            targets = None
 
     for batch in tqdm(eval_dataloader):
         input_ids, labels, attention_mask, indices = batch
         all_indices.extend(indices.cpu().numpy().tolist())
         batch = {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
+        print('input_ids', input_ids.shape)
+        print('labels', labels.shape)
+        print('attention_mask', attention_mask.shape)
         #send to device
         for k, v in batch.items():
             batch[k] = v.to(model.device)
 
-        with torch.no_grad():
+        if ("IKE" in cfg.model_path):
+            input_ids = batch["input_ids"]
+            input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=True)
+            split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
+            ground_truth = [s.split(split_symbol)[1] for s in input_strings]
+            input_strings = [s.split(split_symbol)[0] for s in input_strings]
+
+            # Augment input_strings with ICL examples
+            augmented_input_strings = []
+            for i, input_string in enumerate(input_strings):
+                # todo is this the best approach for tags?
+                input_string = input_string.replace('[INST] ', '')
+                # original:
+                # new_fact = request['prompt'] + ' ' + request['target_new']
+                # query_sentence = f"New Fact: {new_fact}\nPrompt: {request['prompt']}\n\n"
+                if targets is None:
+                    target_new = ground_truth[i]
+                elif targets == 'dummy':
+                    target_new = 'dummy'
+                else:
+                    target_new = targets[input_string]
+
+                new_fact = f"{input_string} {target_new}"
+                query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
+                query_embedding = util.normalize_embeddings(torch.tensor(
+                    sentence_model.encode(query_sentence, show_progress_bar=False)
+                ).unsqueeze(0).to(model.device))
+
+                # Retrieve top-k relevant ICL examples
+                hits = util.semantic_search(query_embedding, stored_embeddings, score_function=util.dot_score, top_k=hparams.k)
+                assert len(hits) == 1 
+                hit = hits[0]
+                icl_examples = [stored_sentences[hit[k]["corpus_id"]] for k in range(len(hit))]
+
+                # original:
+                # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
+                # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
+                x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
+                # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
+                augmented_input = '[INST] ' + ''.join(icl_examples) + f'{x} {target_new}'
+                augmented_input_strings.append(augmented_input)   
+            input_strings = augmented_input_strings
+
+            #add ["/INST "] to the end of each string
+            if cfg.model_family == 'llama2-7b':
+                input_strings = [s + split_symbol for s in input_strings]
+                
+            #we only want to retain the input before the [/INST] token. split each string to only retain the content before the [/INST] token
+            # ground_truth = [s.split("[/INST] ")[1] for s in input_strings]
+            # input_strings = [s.split("[/INST] ")[0] for s in input_strings]
+            # #add ["/INST "] to the end of each string
+            # input_strings = [s + "[/INST] " for s in input_strings]
+                
+            #now tokenize the strings with left padding
+            left_pad_tokenizer = tokenizer
+            left_pad_tokenizer.padding_side = 'left'
+            left_pad_tokenizer.padding_size = 'longest'
+            left_pad_tokenizer.pad_token = left_pad_tokenizer.eos_token
+            left_pad_tokenizer.pad_token_id = left_pad_tokenizer.eos_token_id
+
+            icl_inputs = left_pad_tokenizer.batch_encode_plus(input_strings, add_special_tokens=True, return_tensors='pt', padding=True).to(model.device)
+            input_ids = icl_inputs['input_ids'].to(model.device)
+            attention_mask = icl_inputs['attention_mask'].to(model.device)
+
+            # Update batch with ICL inputs
+            batch = {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
+            print('input_ids', input_ids.shape)
+            print('labels', labels.shape)
+            print('attention_mask', attention_mask.shape)
+            pdb.set_trace()
             # target_ids = tokenizer(target, return_tensors='pt')['input_ids'].to(device)
             # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
             # input_ids = encodings['input_ids'].to(device)
             # attention_mask = encodings['attention_mask'].to(device)
             # logits = model(input_ids=input_ids, attention_mask=attention_mask).logits
+            
+        with torch.no_grad():
             outputs = model(**batch)
             input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer, sentence_model=sentence_model, targets=targets)
             gen_outputs.extend(gen_output)
@@ -241,7 +331,49 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
         eval_logs['normalized_gt_loss'] = normalized_gt_loss
 
     return eval_logs
+# todo later if needed
+# Wrap each example with only the questions in tags
+# formatted_icl_examples = []
+# for example in icl_examples:
+#     # Remove extra blank lines and split into lines
+#     lines = [line.strip() for line in example.split("\n") if line.strip()]
+#     new_fact_line = next((line for line in lines if line.startswith("New Fact:")), "")
+#     prompt_line = next((line for line in lines if line.startswith("Prompt:")), "")
 
+#     # Process "New Fact:" line
+#     new_fact_parts = new_fact_line.split("? ", 1)  # Split at the first `?` followed by space
+#     if len(new_fact_parts) == 2:  # Ensure the split was successful
+#         new_fact_question = f"{new_fact_parts[0]}?"  # Reattach the question mark
+#         new_fact_output = new_fact_parts[1]
+#     else:
+#         new_fact_question = new_fact_line
+#         new_fact_output = ""
+
+#     # Process "Prompt:" line
+#     prompt_parts = prompt_line.split("? ", 1)  # Split at the first `?` followed by space
+#     if len(prompt_parts) == 2:  # Ensure the split was successful
+#         prompt_question = f"{prompt_parts[0]}?"  # Reattach the question mark
+#         prompt_output = prompt_parts[1]
+#     else:
+#         prompt_question = prompt_line
+#         prompt_output = ""
+
+#     # Format with only the questions in tags
+#     formatted_icl_examples.append(
+#         f"[INST] {new_fact_question.strip()} [/INST] {new_fact_output.strip()}\n"
+#         f"[INST] {prompt_question.strip()} [/INST] {prompt_output.strip()}\n"
+#     )
+
+# # Combine the formatted ICL examples into a single string
+# icl_context = ''.join(formatted_icl_examples)
+
+# # Format the current input `x` (wrap the question in tags, leave `target_new` outside)
+# augmented_input = (
+#     icl_context +
+#     f"[INST] New Fact: {input_string} [/INST]\n"  # Wrap the current question
+#     f"[INST] Prompt: {input_string} [/INST]\n"   # Wrap the current prompt
+#     f"{target_new}"                              # Append the output (outside tags)
+# )
 @hydra.main(version_base=None, config_path="config", config_name="eval_everything")
 def main(cfg):
     assert len(cfg.data_path)==len(cfg.split_list)==len(cfg.eval_task)==len(cfg.question_key)==len(cfg.answer_key)==len(cfg.base_answer_key)==len(cfg.perturbed_answer_key), "data_path, split, eval_task, question_key, and answer_key must be the same length"
@@ -368,114 +500,6 @@ def run_generation(cfg, batch, model, tokenizer, sentence_model=None, targets=No
     split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
     ground_truth = [s.split(split_symbol)[1] for s in input_strings]
     input_strings = [s.split(split_symbol)[0] for s in input_strings]
-
-    if ("IKE" in cfg.model_path):
-        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
-        # Load precomputed embeddings
-        safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
-        # with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
-        #         f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
-        # snh changing path so don't need train_ds info for eval
-        base_path = os.path.dirname(cfg.model_path)
-        with open(f'{base_path}/{hparams.alg_name}/embedding/'
-                f'{safe_model_name}.pkl', "rb") as fIn:
-            stored_data = pickle.load(fIn)
-            stored_sentences = stored_data['sentences']
-            stored_embeddings = stored_data['embeddings']
-        stored_embeddings = torch.tensor(stored_embeddings).to(model.device)
-        stored_embeddings = util.normalize_embeddings(stored_embeddings)
-
-        # Augment input_strings with ICL examples
-        augmented_input_strings = []
-        for i, input_string in enumerate(input_strings):
-            # todo is this the best approach for tags?
-            input_string = input_string.replace('[INST] ', '')
-            # original:
-            # new_fact = request['prompt'] + ' ' + request['target_new']
-            # query_sentence = f"New Fact: {new_fact}\nPrompt: {request['prompt']}\n\n"
-            if targets is None:
-                target_new = ground_truth[i]
-            elif targets == 'dummy':
-                target_new = 'dummy'
-            else:
-                target_new = targets[input_string]
-            # todo verify non dummy logic
-            new_fact = f"{input_string} {target_new}"
-            query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
-            
-            query_embedding = util.normalize_embeddings(torch.tensor(
-                sentence_model.encode(query_sentence, show_progress_bar=False)
-            ).unsqueeze(0).to(model.device))
-
-            # Retrieve top-k relevant ICL examples
-            hits = util.semantic_search(query_embedding, stored_embeddings, score_function=util.dot_score, top_k=hparams.k)
-            assert len(hits) == 1 
-            hit = hits[0]
-            icl_examples = [stored_sentences[hit[k]["corpus_id"]] for k in range(len(hit))]
-
-            # target_ids = tokenizer(target, return_tensors='pt')['input_ids'].to(device)
-            # encodings = tokenizer(''.join(icl_examples) + f'{new_fact} {target}', return_tensors='pt')
-            # input_ids = encodings['input_ids'].to(device)
-
-            # Join ICL examples and prepend to the input string
-            # from ChatGPT:
-            # icl_context = ''.join(icl_examples)
-            # augmented_input_strings.append(f"{icl_context}{input_string}{split_symbol}")
-
-            # original:
-            # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
-            # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
-            x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
-            # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
-            augmented_input = '[INST] ' + ''.join(icl_examples) + f'{x} {target_new}'
-            # Wrap each example with only the questions in tags
-            # formatted_icl_examples = []
-            # for example in icl_examples:
-            #     # Remove extra blank lines and split into lines
-            #     lines = [line.strip() for line in example.split("\n") if line.strip()]
-            #     new_fact_line = next((line for line in lines if line.startswith("New Fact:")), "")
-            #     prompt_line = next((line for line in lines if line.startswith("Prompt:")), "")
-
-            #     # Process "New Fact:" line
-            #     new_fact_parts = new_fact_line.split("? ", 1)  # Split at the first `?` followed by space
-            #     if len(new_fact_parts) == 2:  # Ensure the split was successful
-            #         new_fact_question = f"{new_fact_parts[0]}?"  # Reattach the question mark
-            #         new_fact_output = new_fact_parts[1]
-            #     else:
-            #         new_fact_question = new_fact_line
-            #         new_fact_output = ""
-
-            #     # Process "Prompt:" line
-            #     prompt_parts = prompt_line.split("? ", 1)  # Split at the first `?` followed by space
-            #     if len(prompt_parts) == 2:  # Ensure the split was successful
-            #         prompt_question = f"{prompt_parts[0]}?"  # Reattach the question mark
-            #         prompt_output = prompt_parts[1]
-            #     else:
-            #         prompt_question = prompt_line
-            #         prompt_output = ""
-
-            #     # Format with only the questions in tags
-            #     formatted_icl_examples.append(
-            #         f"[INST] {new_fact_question.strip()} [/INST] {new_fact_output.strip()}\n"
-            #         f"[INST] {prompt_question.strip()} [/INST] {prompt_output.strip()}\n"
-            #     )
-
-            # # Combine the formatted ICL examples into a single string
-            # icl_context = ''.join(formatted_icl_examples)
-
-            # # Format the current input `x` (wrap the question in tags, leave `target_new` outside)
-            # augmented_input = (
-            #     icl_context +
-            #     f"[INST] New Fact: {input_string} [/INST]\n"  # Wrap the current question
-            #     f"[INST] Prompt: {input_string} [/INST]\n"   # Wrap the current prompt
-            #     f"{target_new}"                              # Append the output (outside tags)
-            # )
-
-            pdb.set_trace()
-            augmented_input_strings.append(augmented_input)
-
-        input_strings = augmented_input_strings  # Use augmented input_strings for generation
-    
 
     #add ["/INST "] to the end of each string
     if cfg.model_family == 'llama2-7b':
