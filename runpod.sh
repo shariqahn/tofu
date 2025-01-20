@@ -25,7 +25,7 @@ split=forget10_perturbed
 model_family=llama2-7b
 experiment_name=IKE_avoidant
 eval_name=${experiment_name}_${split}
-save_root=./model_outputs/$eval_name
+save_root=./model_outputs/${eval_name}_all_icl_inputs
 model_path=/workspace/${experiment_name}/model
 
 CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py \
@@ -56,4 +56,4 @@ AGGR_PID=$!  # Capture the PID of the second background process
 echo "Second script is running with PID: $AGGR_PID"
 
 wait $AGGR_PID
-echo "Second script finished! Commit changes now."
+echo "Second script finished! Commit changes now, and make sure duplicates are overridden."
