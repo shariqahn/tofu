@@ -220,6 +220,7 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
 
             # Augment input_strings with ICL examples
             augmented_input_strings = []
+            target_new_list = []
             for i, input_string in enumerate(input_strings):
                 # todo is this the best approach for tags?
                 input_string = input_string.replace('[INST] ', '')
@@ -232,6 +233,7 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
                     target_new = 'dummy'
                 else:
                     target_new = targets[input_string]
+                target_new_list.append(target_new)
 
                 new_fact = f"{input_string} {target_new}"
                 query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
@@ -275,7 +277,11 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
             input_ids = icl_inputs['input_ids'].to(model.device)
             attention_mask = icl_inputs['attention_mask'].to(model.device)
 
-            # Update batch with ICL inputs
+            # Define labels (targets)
+            target_ids = tokenizer(target_new_list, padding=True, return_tensors="pt")["input_ids"].to(model.device)
+            labels = torch.full_like(input_ids, -100)  # Fill with -100 to mask non-target tokens
+            labels[:, -target_ids.size(1):] = target_ids  # Copy the target into the label array
+
             batch = {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
             print('input_ids', input_ids.shape)
             print('labels', labels.shape)
