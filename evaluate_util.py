@@ -278,12 +278,15 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
             input_ids = icl_inputs['input_ids'].to(model.device)
             attention_mask = icl_inputs['attention_mask'].to(model.device)
 
-            # Define labels (targets)
-            target_ids = left_pad_tokenizer(target_new_list, padding=True, return_tensors="pt")["input_ids"].to(model.device)
-            labels = torch.full_like(input_ids, -100)  # Fill with -100 to mask non-target tokens
-            labels[:, -target_ids.size(1):] = target_ids  # Copy the target into the label array
-            labels[labels == tokenizer.pad_token_id] = -100
+            # # Define labels (targets)
+            # target_ids = left_pad_tokenizer(target_new_list, padding=True, return_tensors="pt")["input_ids"].to(model.device)
+            # labels = torch.full_like(input_ids, -100)  # Fill with -100 to mask non-target tokens
+            # labels[:, -target_ids.size(1):] = target_ids  # Copy the target into the label array
+            # labels[labels == tokenizer.pad_token_id] = -100
             # todo check for weird tokens
+
+            # Generate target_ids
+            target_ids = left_pad_tokenizer(target_new_list, padding=True, return_tensors="pt")["input_ids"].to(model.device)
 
             # Debugging: Inspect target_ids and padding token ID
             print("Target IDs:")
@@ -291,24 +294,45 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
             print("Padding token ID:", tokenizer.pad_token_id)
             print("Decoded Target:", left_pad_tokenizer.batch_decode(target_ids, skip_special_tokens=False))
 
-            # Create labels with masking (-100 for non-target tokens)
+            # Create labels with initial masking (-100 for all tokens)
             labels = torch.full_like(input_ids, -100)  # Fill with -100 to mask non-target tokens
-            labels[:, -target_ids.size(1):] = target_ids  # Copy the target into the label array
+            print("Initial Labels (all masked):")
+            print(labels)
 
-            # Check if there are padding tokens in the labels
-            labels_before_masking = labels.clone()  # Save a copy before masking for debugging
+            # Save a copy before further adjustments for debugging
+            labels_before_target_assignment = labels.clone()
+
+            # Assign target tokens to the appropriate positions
+            labels[:, -target_ids.size(1):] = target_ids
+
+            # Save a copy before masking padding tokens for debugging
+            labels_before_padding_masking = labels.clone()
+
+            # Mask padding tokens in the labels
             labels[labels == tokenizer.pad_token_id] = -100
 
-            # Debugging: Compare labels before and after masking padding tokens
-            print("Labels before masking padding tokens:")
-            print(labels_before_masking)
-            print("Decoded Labels before masking:")
-            print(left_pad_tokenizer.batch_decode(labels_before_masking, skip_special_tokens=False))
+            # Debugging: Exclude invalid token IDs before decoding
+            def filter_invalid_token_ids(label_tensor, ignore_token_id=-100):
+                """Replace ignore tokens (-100) with padding tokens for safe decoding."""
+                filtered_tensor = label_tensor.clone()
+                filtered_tensor[filtered_tensor == ignore_token_id] = tokenizer.pad_token_id
+                return filtered_tensor
+
+            # Filter out invalid token IDs for decoding
+            filtered_labels_before_masking = filter_invalid_token_ids(labels_before_target_assignment)
+            filtered_labels_before_padding_masking = filter_invalid_token_ids(labels_before_padding_masking)
+            filtered_labels = filter_invalid_token_ids(labels)
+
+            # Debugging: Inspect labels at different stages
+            print("Labels after assigning target tokens:")
+            print(filtered_labels_before_padding_masking)
+            print("Decoded Labels after assigning target tokens:")
+            print(left_pad_tokenizer.batch_decode(filtered_labels_before_padding_masking, skip_special_tokens=False))
 
             print("Labels after masking padding tokens:")
-            print(labels)
-            print("Decoded Labels after masking:")
-            print(left_pad_tokenizer.batch_decode(labels, skip_special_tokens=False))
+            print(filtered_labels)
+            print("Decoded Labels after masking padding tokens:")
+            print(left_pad_tokenizer.batch_decode(filtered_labels, skip_special_tokens=False))
 
             # Additional Debugging: Ensure alignment between input_ids and target_ids
             print("Input IDs:")
@@ -321,6 +345,7 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
             print("Input IDs shape:", input_ids.shape)
             print("Target IDs shape:", target_ids.shape)
             print("Labels shape:", labels.shape)
+
 
             batch = {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
             print('input_ids', input_ids.shape)
