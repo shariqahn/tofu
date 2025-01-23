@@ -411,14 +411,10 @@ def main(cfg):
                 print(f"Loading checkpoint from {cfg.model_path}")
                 # model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True, device_map=device_map)
                 # snh disabling flash_attention bc not compatible with this GPU and eval is done on one GPU anyways
-                # todo ck logic
                 if ("WISE" in cfg.model_path):
                     hparams = WISEHyperParams.from_hparams('../EasyEdit/hparams/WISE/eval.yaml')
                     hparams.load_path = os.path.join(cfg.model_path, "model.pt")
                     editor = BaseEditor.from_hparams(hparams)
-                    # wise = WISE(model=editor.model, config=hparams, device=editor.model.device)
-                    # wise.load(hparams.load_path)
-                    # model = wise.model
                     model = WISE(model=editor.model, config=hparams, device=editor.model.device)
                     model.load(hparams.load_path)
                 elif ('GRACE' in cfg.model_path):
@@ -431,6 +427,7 @@ def main(cfg):
                     # model.load_state_dict(state_dict, False)
                 else:
                     model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
+                    # todo rm
                     if ("IKE" in cfg.model_path):
                         hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
                         sentence_model = SentenceTransformer(hparams.sentence_model_name).to(model.device)
