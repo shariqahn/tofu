@@ -165,40 +165,40 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
     input_strings = []
     all_indices = []
 
-    if ('IKE' in cfg.model_path):
-        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
-        # Load precomputed embeddings
-        safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
-        # with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
-        #         f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
-        # snh changing path so don't need train_ds info for eval
-        base_path = os.path.dirname(cfg.model_path)
-        with open(f'{base_path}/{hparams.alg_name}/embedding/'
-                f'{safe_model_name}.pkl', "rb") as fIn:
-            stored_data = pickle.load(fIn)
-            stored_sentences = stored_data['sentences']
-            stored_embeddings = stored_data['embeddings']
-        stored_embeddings = torch.tensor(stored_embeddings).to(model.device)
-        stored_embeddings = util.normalize_embeddings(stored_embeddings)
+    # if ('IKE' in cfg.model_path):
+    #     hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
+    #     # Load precomputed embeddings
+    #     safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
+    #     # with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
+    #     #         f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
+    #     # snh changing path so don't need train_ds info for eval
+    #     base_path = os.path.dirname(cfg.model_path)
+    #     with open(f'{base_path}/{hparams.alg_name}/embedding/'
+    #             f'{safe_model_name}.pkl', "rb") as fIn:
+    #         stored_data = pickle.load(fIn)
+    #         stored_sentences = stored_data['sentences']
+    #         stored_embeddings = stored_data['embeddings']
+    #     stored_embeddings = torch.tensor(stored_embeddings).to(model.device)
+    #     stored_embeddings = util.normalize_embeddings(stored_embeddings)
         
-        if (eval_task == 'eval_log_forget'):
-            if 'dummy' in cfg.model_path:
-                targets = 'dummy'
-            else:
-                path = "/EasyEdit/data/avoidant.json"
-                with open(path, "r") as f:
-                    data = json.load(f)
-                targets = {}
-                if 'avoidant' in cfg.model_path:
-                    for edit in data:
-                        targets[edit['question']] = edit['avoidant_answer']
-                elif 'incorrect' in cfg.model_path:
-                    for edit in data:
-                        targets[edit['question']] = edit['perturbed_answer'][0]
-                else:
-                    raise NotImplementedError
-        else:
-            targets = None
+    #     if (eval_task == 'eval_log_forget'):
+    #         if 'dummy' in cfg.model_path:
+    #             targets = 'dummy'
+    #         else:
+    #             path = "/EasyEdit/data/avoidant.json"
+    #             with open(path, "r") as f:
+    #                 data = json.load(f)
+    #             targets = {}
+    #             if 'avoidant' in cfg.model_path:
+    #                 for edit in data:
+    #                     targets[edit['question']] = edit['avoidant_answer']
+    #             elif 'incorrect' in cfg.model_path:
+    #                 for edit in data:
+    #                     targets[edit['question']] = edit['perturbed_answer'][0]
+    #             else:
+    #                 raise NotImplementedError
+    #     else:
+    #         targets = None
 
     for batch in tqdm(eval_dataloader):
         input_ids, labels, attention_mask, indices = batch
@@ -211,91 +211,91 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
         for k, v in batch.items():
             batch[k] = v.to(model.device)
 
-        if ("IKE" in cfg.model_path):
-            input_ids = batch["input_ids"]
-            input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=True)
-            split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
-            ground_truth = [s.split(split_symbol)[1] for s in input_strings]
-            input_strings = [s.split(split_symbol)[0] for s in input_strings]
+        # if ("IKE" in cfg.model_path):
+        #     input_ids = batch["input_ids"]
+        #     input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=True)
+        #     split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
+        #     ground_truth = [s.split(split_symbol)[1] for s in input_strings]
+        #     input_strings = [s.split(split_symbol)[0] for s in input_strings]
 
-            # Augment input_strings with ICL examples
-            augmented_input_strings = []
-            target_new_list = []
-            for i, input_string in enumerate(input_strings):
-                # todo is this the best approach for tags?
-                input_string = input_string.replace('[INST] ', '')
-                # original:
-                # new_fact = request['prompt'] + ' ' + request['target_new']
-                # query_sentence = f"New Fact: {new_fact}\nPrompt: {request['prompt']}\n\n"
-                if targets is None:
-                    target_new = ground_truth[i]
-                elif targets == 'dummy':
-                    target_new = 'dummy'
-                else:
-                    target_new = targets[input_string]
-                target_new_list.append(target_new)
+        #     # Augment input_strings with ICL examples
+        #     augmented_input_strings = []
+        #     target_new_list = []
+        #     for i, input_string in enumerate(input_strings):
+        #         # todo is this the best approach for tags?
+        #         input_string = input_string.replace('[INST] ', '')
+        #         # original:
+        #         # new_fact = request['prompt'] + ' ' + request['target_new']
+        #         # query_sentence = f"New Fact: {new_fact}\nPrompt: {request['prompt']}\n\n"
+        #         if targets is None:
+        #             target_new = ground_truth[i]
+        #         elif targets == 'dummy':
+        #             target_new = 'dummy'
+        #         else:
+        #             target_new = targets[input_string]
+        #         target_new_list.append(target_new)
 
-                new_fact = f"{input_string} {target_new}"
-                query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
-                query_embedding = util.normalize_embeddings(torch.tensor(
-                    sentence_model.encode(query_sentence, show_progress_bar=False)
-                ).unsqueeze(0).to(model.device))
+        #         new_fact = f"{input_string} {target_new}"
+        #         query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
+        #         query_embedding = util.normalize_embeddings(torch.tensor(
+        #             sentence_model.encode(query_sentence, show_progress_bar=False)
+        #         ).unsqueeze(0).to(model.device))
 
-                # Retrieve top-k relevant ICL examples
-                hits = util.semantic_search(query_embedding, stored_embeddings, score_function=util.dot_score, top_k=hparams.k)
-                assert len(hits) == 1 
-                hit = hits[0]
-                icl_examples = [stored_sentences[hit[k]["corpus_id"]] for k in range(len(hit))]
+        #         # Retrieve top-k relevant ICL examples
+        #         hits = util.semantic_search(query_embedding, stored_embeddings, score_function=util.dot_score, top_k=hparams.k)
+        #         assert len(hits) == 1 
+        #         hit = hits[0]
+        #         icl_examples = [stored_sentences[hit[k]["corpus_id"]] for k in range(len(hit))]
 
-                # original:
-                # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
-                # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
-                x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
-                # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
-                augmented_input = '[INST] ' + ''.join(icl_examples) + f'{x} {target_new}'
-                augmented_input_strings.append(augmented_input)   
-            input_strings = augmented_input_strings
+        #         # original:
+        #         # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
+        #         # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
+        #         x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
+        #         # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
+        #         augmented_input = '[INST] ' + ''.join(icl_examples) + f'{x} {target_new}'
+        #         augmented_input_strings.append(augmented_input)   
+        #     input_strings = augmented_input_strings
 
-            #add ["/INST "] to the end of each string
-            if cfg.model_family == 'llama2-7b':
-                input_strings = [s + split_symbol for s in input_strings]
+        #     #add ["/INST "] to the end of each string
+        #     if cfg.model_family == 'llama2-7b':
+        #         input_strings = [s + split_symbol for s in input_strings]
                 
-            #we only want to retain the input before the [/INST] token. split each string to only retain the content before the [/INST] token
-            # ground_truth = [s.split("[/INST] ")[1] for s in input_strings]
-            # input_strings = [s.split("[/INST] ")[0] for s in input_strings]
-            # #add ["/INST "] to the end of each string
-            # input_strings = [s + "[/INST] " for s in input_strings]
+        #     #we only want to retain the input before the [/INST] token. split each string to only retain the content before the [/INST] token
+        #     # ground_truth = [s.split("[/INST] ")[1] for s in input_strings]
+        #     # input_strings = [s.split("[/INST] ")[0] for s in input_strings]
+        #     # #add ["/INST "] to the end of each string
+        #     # input_strings = [s + "[/INST] " for s in input_strings]
                 
-            #now tokenize the strings with left padding
-            left_pad_tokenizer = tokenizer
-            left_pad_tokenizer.padding_side = 'left'
-            left_pad_tokenizer.padding_size = 'longest'
-            left_pad_tokenizer.pad_token = left_pad_tokenizer.eos_token
-            left_pad_tokenizer.pad_token_id = left_pad_tokenizer.eos_token_id
+        #     #now tokenize the strings with left padding
+        #     left_pad_tokenizer = tokenizer
+        #     left_pad_tokenizer.padding_side = 'left'
+        #     left_pad_tokenizer.padding_size = 'longest'
+        #     left_pad_tokenizer.pad_token = left_pad_tokenizer.eos_token
+        #     left_pad_tokenizer.pad_token_id = left_pad_tokenizer.eos_token_id
 
-            icl_inputs = left_pad_tokenizer.batch_encode_plus(input_strings, add_special_tokens=True, return_tensors='pt', padding=True).to(model.device)
-            input_ids = icl_inputs['input_ids'].to(model.device)
-            attention_mask = icl_inputs['attention_mask'].to(model.device)
+        #     icl_inputs = left_pad_tokenizer.batch_encode_plus(input_strings, add_special_tokens=True, return_tensors='pt', padding=True).to(model.device)
+        #     input_ids = icl_inputs['input_ids'].to(model.device)
+        #     attention_mask = icl_inputs['attention_mask'].to(model.device)
 
-            # Define labels (targets)
-            target_ids = tokenizer(target_new_list, padding=True, return_tensors="pt")["input_ids"].to(model.device)
-            labels = torch.full_like(input_ids, -100)  # Fill with -100 to mask non-target tokens
-            labels[:, -target_ids.size(1):] = target_ids  # Copy the target into the label array
+        #     # Define labels (targets)
+        #     target_ids = tokenizer(target_new_list, padding=True, return_tensors="pt")["input_ids"].to(model.device)
+        #     labels = torch.full_like(input_ids, -100)  # Fill with -100 to mask non-target tokens
+        #     labels[:, -target_ids.size(1):] = target_ids  # Copy the target into the label array
 
-            batch = {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
-            print('input_ids', input_ids.shape)
-            print('labels', labels.shape)
-            print('attention_mask', attention_mask.shape)
-            pdb.set_trace()
-            # target_ids = tokenizer(target, return_tensors='pt')['input_ids'].to(device)
-            # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
-            # input_ids = encodings['input_ids'].to(device)
-            # attention_mask = encodings['attention_mask'].to(device)
-            # logits = model(input_ids=input_ids, attention_mask=attention_mask).logits
-            
+        #     batch = {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
+        #     print('input_ids', input_ids.shape)
+        #     print('labels', labels.shape)
+        #     print('attention_mask', attention_mask.shape)
+        #     pdb.set_trace()
+        #     # target_ids = tokenizer(target, return_tensors='pt')['input_ids'].to(device)
+        #     # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
+        #     # input_ids = encodings['input_ids'].to(device)
+        #     # attention_mask = encodings['attention_mask'].to(device)
+        #     # logits = model(input_ids=input_ids, attention_mask=attention_mask).logits
+        pdb.set_trace() 
         with torch.no_grad():
             outputs = model(**batch)
-            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer, sentence_model=sentence_model, targets=targets)
+            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer)
             gen_outputs.extend(gen_output)
             ground_truths.extend(gt)
             input_strings.extend(input_string)
@@ -400,6 +400,8 @@ def main(cfg):
 
     model = None
     config = AutoConfig.from_pretrained(model_id)
+    max_length = config.max_position_embeddings
+    print(f"Maximum sequence length for {model_id}: {max_length}")
     for attempt in range(3):
         try:
         # do thing

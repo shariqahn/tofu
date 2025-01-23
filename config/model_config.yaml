@@ -1,14 +1,14 @@
 llama2-7b:
-  # hf_key: "NousResearch/Llama-2-7b-chat-hf"
+  hf_key: "NousResearch/Llama-2-7b-chat-hf"
   # hf_key: "locuslab/tofu_ft_llama2-7b"
-  hf_key: "./scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd"
+  # hf_key: "./scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd"
   question_start_tag: "[INST] "
   question_end_tag: " [/INST]"
   answer_tag: ""
   flash_attention2: "true"
   gradient_checkpointing: "true"
-  # ft_model_path: "locuslab/tofu_ft_llama2-7b" #this model will be used for unlearning by default
-  ft_model_path: "./scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd"
+  ft_model_path: "locuslab/tofu_ft_llama2-7b" #this model will be used for unlearning by default
+  # ft_model_path: "./scr/models--locuslab--tofu_ft_llama2-7b/snapshots/8fa500e8f345f1dd9cfe95bb4689878c944c9cbd"
 phi:
   hf_key: "microsoft/phi-1_5"
   question_start_tag: "Question: "
