@@ -27,6 +27,7 @@ reproduce.ipynb
 upload_to_hf.py
 
 scr/
+!scr/eval*
 *.log-*
 # model_outputs/
 .ipynb_checkpoints/
