@@ -21,7 +21,7 @@ echo "Starting the first Python script (evaluate_util)..."
 master_port=18765
 split=forget10_perturbed
 model_family=llama2-7b
-experiment_name=WISE_dummy
+experiment_name=WISE_avoidant
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/${eval_name}
 model_path=/workspace/${experiment_name}/model
@@ -30,7 +30,7 @@ CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$mas
     model_family=$model_family split=$split \
     model_path=$model_path \
     save_root=$save_root \
-    > evaluate_util.log 2>&1 &
+    > ${save_root}/evaluate_util.log 2>&1 &
 
 EVAL_PID=$!  # Capture the PID of the first background process
 
