@@ -4,6 +4,9 @@
 # apt install rsync -y
 # mkdir /workspace/IKE_dummy
 # rsync -rvz -e "ssh -p 22076" ~/EasyEdit/outputs/IKE_incorrect/ root@69.30.85.107:/workspace/IKE_incorrect/
+# apt install rsync -y
+# mkdir /workspace/IKE_dummy
+# rsync -rvz -e "ssh -p 22076" ~/EasyEdit/outputs/IKE_incorrect/ root@69.30.85.107:/workspace/IKE_incorrect/
 
 # git clone https://github.com/shariqahn/tofu.git
 # cd tofu
@@ -21,7 +24,7 @@ echo "Starting the first Python script (evaluate_util)..."
 master_port=18765
 split=forget10_perturbed
 model_family=llama2-7b
-experiment_name=WISE_avoidant
+experiment_name=WISE_incorrect
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/${eval_name}
 model_path=/workspace/${experiment_name}/model

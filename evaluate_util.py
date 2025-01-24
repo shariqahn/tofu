@@ -13,15 +13,11 @@ import csv
 import numpy as np 
 
 import pdb
-# snh for ike ICL
-import pickle
-from sentence_transformers import SentenceTransformer, util
-
 
 import sys
 sys.path.append('../EasyEdit')
 from easyeditor import BaseEditor
-from easyeditor import WISEHyperParams, GraceHyperParams, IKEHyperParams
+from easyeditor import WISEHyperParams, GraceHyperParams
 from easyeditor.models.wise.WISE import WISE
 
 def eval_perturbation_ratio(eval_dataloader, perturb_dataloader, model):
@@ -157,7 +153,7 @@ def get_dataloader(cfg, eval_task, tokenizer, folder, split, question_key, answe
 
     return eval_dataloader, base_eval_dataloader, perturb_dataloader
 
-def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=False, sentence_model=None):
+def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=False):
     eval_logs = {}
 
     gen_outputs = []
@@ -165,200 +161,18 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
     input_strings = []
     all_indices = []
 
-    if ('IKE' in cfg.model_path):
-        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
-        # Load precomputed embeddings
-        safe_model_name = hparams.sentence_model_name.rsplit('/', 1)[-1]
-        # with open(f'{hparams.results_dir}/{hparams.alg_name}/embedding/'
-        #         f'{safe_model_name}_{type(train_ds).__name__}_{len(train_ds)}.pkl', "rb") as fIn:
-        # snh changing path so don't need train_ds info for eval
-        base_path = os.path.dirname(cfg.model_path)
-        with open(f'{base_path}/{hparams.alg_name}/embedding/'
-                f'{safe_model_name}.pkl', "rb") as fIn:
-            stored_data = pickle.load(fIn)
-            stored_sentences = stored_data['sentences']
-            stored_embeddings = stored_data['embeddings']
-        stored_embeddings = torch.tensor(stored_embeddings).to(model.device)
-        stored_embeddings = util.normalize_embeddings(stored_embeddings)
-        
-        if (eval_task == 'eval_log_forget'):
-            if 'dummy' in cfg.model_path:
-                targets = 'dummy'
-            else:
-                path = "/EasyEdit/data/avoidant.json"
-                with open(path, "r") as f:
-                    data = json.load(f)
-                targets = {}
-                if 'avoidant' in cfg.model_path:
-                    for edit in data:
-                        targets[edit['question']] = edit['avoidant_answer']
-                elif 'incorrect' in cfg.model_path:
-                    for edit in data:
-                        targets[edit['question']] = edit['perturbed_answer'][0]
-                else:
-                    raise NotImplementedError
-        else:
-            targets = None
-
     for batch in tqdm(eval_dataloader):
         input_ids, labels, attention_mask, indices = batch
         all_indices.extend(indices.cpu().numpy().tolist())
         batch = {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
+        
         #send to device
         for k, v in batch.items():
             batch[k] = v.to(model.device)
 
-        targets=None
-        if ("IKE" in cfg.model_path):
-            input_ids = batch["input_ids"]
-            input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=True)
-            split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
-            ground_truth = [s.split(split_symbol)[1] for s in input_strings]
-            input_strings = [s.split(split_symbol)[0] for s in input_strings]
-
-            # Augment input_strings with ICL examples
-            augmented_input_strings = []
-            target_new_list = []
-            for i, input_string in enumerate(input_strings):
-                # todo is this the best approach for tags?
-                input_string = input_string.replace('[INST] ', '')
-                # original:
-                # new_fact = request['prompt'] + ' ' + request['target_new']
-                # query_sentence = f"New Fact: {new_fact}\nPrompt: {request['prompt']}\n\n"
-                if targets is None:
-                    target_new = ground_truth[i]
-                elif targets == 'dummy':
-                    target_new = 'dummy'
-                else:
-                    target_new = targets[input_string]
-                target_new_list.append(target_new)
-
-                new_fact = f"{input_string} {target_new}"
-                query_sentence = f"New Fact: {new_fact}\nPrompt: {input_string}\n\n"
-                query_embedding = util.normalize_embeddings(torch.tensor(
-                    sentence_model.encode(query_sentence, show_progress_bar=False)
-                ).unsqueeze(0).to(model.device))
-
-                # Retrieve top-k relevant ICL examples
-                hits = util.semantic_search(query_embedding, stored_embeddings, score_function=util.dot_score, top_k=hparams.k)
-                assert len(hits) == 1 
-                hit = hits[0]
-                icl_examples = [stored_sentences[hit[k]["corpus_id"]] for k in range(len(hit))]
-
-                # original:
-                # x = f'New Fact: {prompt} {target_new}\nPrompt: {prompt}'
-                # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
-                x = f'New Fact: {input_string} {target_new}\nPrompt: {input_string}'
-                # augmented_input = ''.join(icl_examples) + f'{x} {target_new}'
-                augmented_input = '[INST] ' + ''.join(icl_examples) + f'{x} {target_new}'
-                augmented_input_strings.append(augmented_input)   
-            input_strings = augmented_input_strings
-
-            #add ["/INST "] to the end of each string
-            if cfg.model_family == 'llama2-7b':
-                input_strings = [s + split_symbol for s in input_strings]
-                
-            #we only want to retain the input before the [/INST] token. split each string to only retain the content before the [/INST] token
-            # ground_truth = [s.split("[/INST] ")[1] for s in input_strings]
-            # input_strings = [s.split("[/INST] ")[0] for s in input_strings]
-            # #add ["/INST "] to the end of each string
-            # input_strings = [s + "[/INST] " for s in input_strings]
-                
-            #now tokenize the strings with left padding
-            left_pad_tokenizer = tokenizer
-            left_pad_tokenizer.padding_side = 'left'
-            left_pad_tokenizer.padding_size = 'longest'
-            left_pad_tokenizer.pad_token = left_pad_tokenizer.eos_token
-            left_pad_tokenizer.pad_token_id = left_pad_tokenizer.eos_token_id
-
-            icl_inputs = left_pad_tokenizer.batch_encode_plus(input_strings, add_special_tokens=True, return_tensors='pt', padding=True).to(model.device)
-            input_ids = icl_inputs['input_ids'].to(model.device)
-            attention_mask = icl_inputs['attention_mask'].to(model.device)
-
-            # # Define labels (targets)
-            # target_ids = left_pad_tokenizer(target_new_list, padding=True, return_tensors="pt")["input_ids"].to(model.device)
-            # labels = torch.full_like(input_ids, -100)  # Fill with -100 to mask non-target tokens
-            # labels[:, -target_ids.size(1):] = target_ids  # Copy the target into the label array
-            # labels[labels == tokenizer.pad_token_id] = -100
-            # todo check for weird tokens
-
-            # Generate target_ids
-            target_ids = left_pad_tokenizer(target_new_list, padding=True, return_tensors="pt")["input_ids"].to(model.device)
-
-            # Debugging: Inspect target_ids and padding token ID
-            print("Target IDs:")
-            print(target_ids)
-            print("Padding token ID:", tokenizer.pad_token_id)
-            print("Decoded Target:", left_pad_tokenizer.batch_decode(target_ids, skip_special_tokens=False))
-
-            # Create labels with initial masking (-100 for all tokens)
-            labels = torch.full_like(input_ids, -100)  # Fill with -100 to mask non-target tokens
-            print("Initial Labels (all masked):")
-            print(labels)
-
-            # Save a copy before further adjustments for debugging
-            labels_before_target_assignment = labels.clone()
-
-            # Assign target tokens to the appropriate positions
-            labels[:, -target_ids.size(1):] = target_ids
-
-            # Save a copy before masking padding tokens for debugging
-            labels_before_padding_masking = labels.clone()
-
-            # Mask padding tokens in the labels
-            labels[labels == tokenizer.pad_token_id] = -100
-
-            # Debugging: Exclude invalid token IDs before decoding
-            def filter_invalid_token_ids(label_tensor, ignore_token_id=-100):
-                """Replace ignore tokens (-100) with padding tokens for safe decoding."""
-                filtered_tensor = label_tensor.clone()
-                filtered_tensor[filtered_tensor == ignore_token_id] = tokenizer.pad_token_id
-                return filtered_tensor
-
-            # Filter out invalid token IDs for decoding
-            filtered_labels_before_masking = filter_invalid_token_ids(labels_before_target_assignment)
-            filtered_labels_before_padding_masking = filter_invalid_token_ids(labels_before_padding_masking)
-            filtered_labels = filter_invalid_token_ids(labels)
-
-            # Debugging: Inspect labels at different stages
-            print("Labels after assigning target tokens:")
-            print(filtered_labels_before_padding_masking)
-            print("Decoded Labels after assigning target tokens:")
-            print(left_pad_tokenizer.batch_decode(filtered_labels_before_padding_masking, skip_special_tokens=False))
-
-            print("Labels after masking padding tokens:")
-            print(filtered_labels)
-            print("Decoded Labels after masking padding tokens:")
-            print(left_pad_tokenizer.batch_decode(filtered_labels, skip_special_tokens=False))
-
-            # Additional Debugging: Ensure alignment between input_ids and target_ids
-            print("Input IDs:")
-            print(input_ids)
-            print("Decoded Input IDs:")
-            print(left_pad_tokenizer.batch_decode(input_ids, skip_special_tokens=False))
-
-            # Check shape alignment
-            print("Shapes:")
-            print("Input IDs shape:", input_ids.shape)
-            print("Target IDs shape:", target_ids.shape)
-            print("Labels shape:", labels.shape)
-
-
-            batch = {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
-            print('input_ids', input_ids.shape)
-            print('labels', labels.shape)
-            print('attention_mask', attention_mask.shape)
-            print('num gt toks', (batch['labels']!=-100).sum(-1))
-            pdb.set_trace()
-            # target_ids = tokenizer(target, return_tensors='pt')['input_ids'].to(device)
-            # encodings = tokenizer(''.join(icl_examples) + f'{x} {target}', return_tensors='pt')
-            # input_ids = encodings['input_ids'].to(device)
-            # attention_mask = encodings['attention_mask'].to(device)
-            # logits = model(input_ids=input_ids, attention_mask=attention_mask).logits
-            
         with torch.no_grad():
             outputs = model(**batch)
-            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer, sentence_model=sentence_model, targets=targets)
+            input_string, gen_output, gt = run_generation(cfg, batch, model, tokenizer=tokenizer)
             gen_outputs.extend(gen_output)
             ground_truths.extend(gt)
             input_strings.extend(input_string)
@@ -466,7 +280,6 @@ def main(cfg):
     for attempt in range(3):
         try:
         # do thing
-            sentence_model=None
             if cfg.use_pretrained:
                 print(f"Loading pretrained from {model_id}")
                 model = AutoModelForCausalLM.from_pretrained(model_id, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True, device_map=device_map)
@@ -474,7 +287,6 @@ def main(cfg):
                 print(f"Loading checkpoint from {cfg.model_path}")
                 # model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=model_cfg["flash_attention2"]=="true", torch_dtype=torch.bfloat16, trust_remote_code = True, device_map=device_map)
                 # snh disabling flash_attention bc not compatible with this GPU and eval is done on one GPU anyways
-                # todo ck logic
                 if ("WISE" in cfg.model_path):
                     hparams = WISEHyperParams.from_hparams('../EasyEdit/hparams/WISE/eval.yaml')
                     hparams.load_path = os.path.join(cfg.model_path, "model.pt")
@@ -494,9 +306,6 @@ def main(cfg):
                     # model.load_state_dict(state_dict, False)
                 else:
                     model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
-                    if ("IKE" in cfg.model_path):
-                        hparams = IKEHyperParams.from_hparams('../EasyEdit/hparams/IKE/notebook.yaml')
-                        sentence_model = SentenceTransformer(hparams.sentence_model_name).to(model.device)
         except Exception as e:
             print(e)
             continue
@@ -536,7 +345,7 @@ def main(cfg):
         normalize_gt = False 
         if 'eval_log' not in eval_task:
             normalize_gt = True
-        eval_logs = get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=normalize_gt, sentence_model=sentence_model)
+        eval_logs = get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_dataloader, perturb_dataloader, normalize_gt=normalize_gt)
 
         with open(save_filename, "w") as f:
             # pretty write json to f
@@ -563,7 +372,7 @@ def eval_accuracy(logits, labels):
     return {"eval accuracy": acc.item()}
 
 
-def run_generation(cfg, batch, model, tokenizer, sentence_model=None, targets=None):
+def run_generation(cfg, batch, model, tokenizer):
     input_ids = batch["input_ids"]
     input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=True)
     split_symbol = " [/INST]" if cfg.model_family == 'llama2-7b' else 'Answer: '
