@@ -204,10 +204,6 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
         input_ids, labels, attention_mask, indices = batch
         all_indices.extend(indices.cpu().numpy().tolist())
         batch = {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
-        print('input_ids', input_ids.shape)
-        print('labels', labels.shape)
-        print('attention_mask', attention_mask.shape)
-        print('num gt toks', (batch['labels']!=-100).sum(-1))
         #send to device
         for k, v in batch.items():
             batch[k] = v.to(model.device)
