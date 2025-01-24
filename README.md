@@ -14,7 +14,7 @@
 
 ## Compute
 - WISE took ~45GB of VRAM
-- IKE took 27% of max VRAM (~40GB)
+- IKE took 93% of A100 VRAM
 
 ## debug
 

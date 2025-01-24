@@ -212,6 +212,7 @@ def get_all_evals(cfg, model, tokenizer, eval_task, eval_dataloader, base_eval_d
         for k, v in batch.items():
             batch[k] = v.to(model.device)
 
+        targets=None
         if ("IKE" in cfg.model_path):
             input_ids = batch["input_ids"]
             input_strings = tokenizer.batch_decode(input_ids, skip_special_tokens=True)
