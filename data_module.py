@@ -121,7 +121,11 @@ class TextDatasetQA(Dataset):
         # self.data = datasets.load_dataset(data_path, split)["train"].select(range(min(100, data_len)))
         # snh changed to load local; above already commented
         # self.data = datasets.load_dataset(data_path, split)["train"]
-        self.data = datasets.load_from_disk(data_path)
+        # self.data = datasets.load_from_disk(data_path)
+
+        data = datasets.load_from_disk(data_path)
+        length = len(data)
+        self.data = data.select(80, length)
 
         self.data = add_dataset_index(self.data)
         self.model_configs = get_model_identifiers_from_yaml(model_family)
