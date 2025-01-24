@@ -125,7 +125,7 @@ class TextDatasetQA(Dataset):
 
         data = datasets.load_from_disk(data_path)
         length = len(data)
-        self.data = data.select(80, length)
+        self.data = data.select(range(80, length))
 
         self.data = add_dataset_index(self.data)
         self.model_configs = get_model_identifiers_from_yaml(model_family)
