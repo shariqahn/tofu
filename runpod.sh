@@ -21,7 +21,7 @@ echo "Starting the first Python script (evaluate_util)..."
 master_port=18765
 split=forget10_perturbed
 model_family=llama2-7b
-experiment_name=IKE_dummy
+experiment_name=IKE_incorrect
 eval_name=${experiment_name}_${split}_logit
 save_root=./model_outputs/$eval_name
 model_path=/workspace/${experiment_name}/model
