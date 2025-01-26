@@ -4,6 +4,9 @@
 # apt install rsync -y
 # mkdir /workspace/IKE_dummy
 # rsync -rvz -e "ssh -p 22076" ~/EasyEdit/outputs/IKE_incorrect/ root@69.30.85.107:/workspace/IKE_incorrect/
+# apt install rsync -y
+# mkdir /workspace/IKE_dummy
+# rsync -rvz -e "ssh -p 22076" ~/EasyEdit/outputs/IKE_incorrect/ root@69.30.85.107:/workspace/IKE_incorrect/
 
 # git clone https://github.com/shariqahn/tofu.git
 # cd tofu
@@ -23,14 +26,14 @@ split=forget10_perturbed
 model_family=llama2-7b
 experiment_name=WISE_incorrect
 eval_name=${experiment_name}_${split}
-save_root=./model_outputs/$eval_name
+save_root=./model_outputs/${eval_name}
 model_path=/workspace/${experiment_name}/model
 
 CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py \
     model_family=$model_family split=$split \
     model_path=$model_path \
     save_root=$save_root \
-    # > evaluate_util.log 2>&1 &
+    > ${save_root}/evaluate_util.log 2>&1 &
 
 EVAL_PID=$!  # Capture the PID of the first background process
 
@@ -54,4 +57,4 @@ AGGR_PID=$!  # Capture the PID of the second background process
 echo "Second script is running with PID: $AGGR_PID"
 
 wait $AGGR_PID
-echo "Second script finished! Commit changes now."
+echo "Second script finished! Commit changes now, and make sure duplicates are overridden."

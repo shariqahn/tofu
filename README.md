@@ -13,8 +13,9 @@
     - download: `LLsub -i -q download`
 
 ## Compute
-- WISE took ~45GB of VRAM
-- IKE took 27% of max VRAM (~40GB)
+- WISE took ~45GB of VRAM; no extra disk necessary
+  - can prob use less VRAM w lower batch size
+- IKE took 93% of A100 VRAM
 
 ## debug
 
