@@ -28,6 +28,7 @@ experiment_name=WISE_incorrect
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/${eval_name}
 model_path=/workspace/${experiment_name}/model
+# NOTE: ensure proper data is being loaded in config!!!
 
 CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py \
     model_family=$model_family split=$split \
