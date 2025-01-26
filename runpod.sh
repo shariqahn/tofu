@@ -41,9 +41,10 @@ echo "First script finished!"
 
 echo "Starting the second Python script (aggregate_eval_stat)..."
 path_to_eval_result=model_outputs/$eval_name/eval_results/ds_size300/eval_log_aggregated.json
+path_to_retain_result=./data/ft_epoch5_lr1e-05_llama2-7b_retain90_wd0.01
 
 nohup python3 -u aggregate_eval_stat.py \
-    retain_result=$path_to_eval_result \
+    retain_result=$path_to_retain_result \
     ckpt_result=$path_to_eval_result \
     method_name=$eval_name \
     save_file=./model_outputs/$eval_name/eval_results/ds_size300/aggr_result.csv &

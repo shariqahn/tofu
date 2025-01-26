@@ -28,8 +28,9 @@ CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 --master_port=$master_port ev
 # CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py model_family=$model_family split=$split model_path=$model_path save_root=$save_root
 
 path_to_eval_result=model_outputs/$eval_name/eval_results/ds_size300/eval_log_aggregated.json
+path_to_retain_result=./data/ft_epoch5_lr1e-05_llama2-7b_retain90_wd0.01
 
-python aggregate_eval_stat.py retain_result=$path_to_eval_result ckpt_result=$path_to_eval_result method_name=$eval_name save_file=./model_outputs/$eval_name/eval_results/ds_size300/aggr_result.csv
+python aggregate_eval_stat.py retain_result=$path_to_retain_result ckpt_result=$path_to_eval_result method_name=$eval_name save_file=./model_outputs/$eval_name/eval_results/ds_size300/aggr_result.csv
 
 # LLsub run_eval.sh -s 3 -g volta:1
 # WISE needs > 20
