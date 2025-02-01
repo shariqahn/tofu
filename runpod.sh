@@ -24,10 +24,10 @@ echo "Starting the first Python script (evaluate_util)..."
 master_port=18765
 split=forget10_perturbed
 model_family=llama2-7b
-experiment_name=WISE_incorrect
+experiment_name=tofu_baseline_runpod
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/${eval_name}
-model_path=/workspace/${experiment_name}/model
+model_path=locuslab/tofu_ft_llama2-7b
 
 CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py \
     model_family=$model_family split=$split \
@@ -44,9 +44,10 @@ echo "First script finished!"
 
 echo "Starting the second Python script (aggregate_eval_stat)..."
 path_to_eval_result=model_outputs/$eval_name/eval_results/ds_size300/eval_log_aggregated.json
+path_to_retain_result=./data/ft_epoch5_lr1e-05_llama2-7b_retain90_wd0.01/eval_results/ds_size300/eval_log_aggregated.json
 
 nohup python3 -u aggregate_eval_stat.py \
-    retain_result=$path_to_eval_result \
+    retain_result=$path_to_retain_result \
     ckpt_result=$path_to_eval_result \
     method_name=$eval_name \
     save_file=./model_outputs/$eval_name/eval_results/ds_size300/aggr_result.csv &
