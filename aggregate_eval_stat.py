@@ -7,6 +7,7 @@ from scipy.stats import hmean
 from scipy.stats import sem, hmean, ks_2samp
 import pprint
 import csv 
+import pdb
 def get_forget_quality(unlearn_result, retain_result):
     unlearn_forget_result = unlearn_result['eval_log_forget.json']
     retain_forget_result = retain_result['eval_log_forget.json']
@@ -25,7 +26,7 @@ def get_forget_quality(unlearn_result, retain_result):
     test_res = ks_2samp(unlearn_truth_ratio, retain_truth_ratio)
     return {'Forget Quality': test_res.pvalue, 'KS Test PVal Forget': test_res.pvalue, 'KS Test Forget': test_res.statistic}
 
-def get_model_utility(eval_result_dict):
+def get_model_utility(eval_result_dict, config=None):
     eval_task_dict = {
         'eval_real_author_wo_options.json': 'Real Authors',
         'eval_real_world_wo_options.json': 'Real World',
@@ -54,8 +55,10 @@ def get_model_utility(eval_result_dict):
         output_result[f'Prob. {eval_task_dict[k]}'] = avg_gt_prob
 
         # getting ROUGE
-        avg_rouge = np.array(list(eval_result_dict[k]['rougeL_recall'].values())).mean()
-        output_result[f'ROUGE {eval_task_dict[k]}'] = avg_rouge
+        if 'WISE' not in config.method_name:
+            pdb.set_trace()
+            avg_rouge = np.array(list(eval_result_dict[k]['rougeL_recall'].values())).mean()
+            output_result[f'ROUGE {eval_task_dict[k]}'] = avg_rouge
 
         # getting Truth Ratio
         avg_paraphrase_np_values = np.array(list(eval_result_dict[k]['avg_paraphrased_loss'].values()))
@@ -72,6 +75,7 @@ def get_model_utility(eval_result_dict):
         output_result[f'Truth Ratio {eval_task_dict[k]}'] = paraphrased_perturb_ratio
 
     model_utility_cands = []
+    # pdb.set_trace()
     for k, v in output_result.items():
         if 'Forget' not in k:
             model_utility_cands.append(v)
@@ -91,7 +95,7 @@ def main(cfg):
     # the second layer contains the actual metrics: ['avg_gt_loss', 'average_perturb_loss', 'avg_paraphrased_loss', 'rougeL_recall']
     # within each metric, we have {data_idx: measurement}
 
-    model_utility = get_model_utility(ckpt_result)
+    model_utility = get_model_utility(ckpt_result, config=cfg)
     forget_quality = get_forget_quality(ckpt_result, retain_result)
     model_utility['Forget Quality'] = forget_quality['Forget Quality']
 

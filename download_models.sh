@@ -16,7 +16,7 @@ mkdir -p $HF_LOCAL_DIR
 
 # Remove existing models so that they will be replaced with fresh ones
 # rm -r $HF_LOCAL_DIR/*
-# rm -r $HF_LOCAL_DIR/models--locuslab--tofu_ft_llama2-7b/
+rm -r $HF_LOCAL_DIR/models--locuslab--tofu_ft_llama2-7b/
 # echo "Existing models removed. Here's what local looks like:"
 # ls $HF_LOCAL_DIR
 

@@ -1,0 +1,2 @@
+ROUGE Real Authors,Prob. Real Authors,Truth Ratio Real Authors,ROUGE Real World,Prob. Real World,Truth Ratio Real World,ROUGE Retain,Prob. Retain,Truth Ratio Retain,ROUGE Forget,Prob. Forget,Truth Ratio Forget,Model Utility,Forget Quality,Method,Submitted By
+0.59,0.44873861602738935,0.5812133123148459,0.6396011396011397,0.42617700302860784,0.5590772353457485,0.804005354294828,0.9895369446670482,0.4830881040460447,0.8988395884378997,0.9901252703510905,0.5064139453277042,0.5744608514098385,1.0,tofu_baseline_single_old_forget10_perturbed,anonymous

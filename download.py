@@ -41,11 +41,16 @@ if __name__ == "__main__":
         # download_data(subset, path)
 
 
-    # model_name = "locuslab/tofu_ft_llama2-7b"  # Hugging Face model path for LLaMA 2 7B
+    model_name = "locuslab/tofu_ft_llama2-7b"  # Hugging Face model path for LLaMA 2 7B
     # meta-llama/Llama-2-7b-chat-hf
-    model_name = "sentence-transformers/all-MiniLM-L6-v2"
+    # model_name = "sentence-transformers/all-MiniLM-L6-v2"
     # model_name = "openai-community/gpt2-xl"
     cache_dir="/state/partition1/user/" + getpass.getuser() + "/hug"
     print(f'downloading {model_name}')
     snapshot_dir = snapshot_download(repo_id=model_name, cache_dir=cache_dir)
     print(f'snapshot: {snapshot_dir}')
+    # for model_name in ["locuslab/llama2-7b_idk_1e-05_forget10", 'locuslab/llama2-7b_grad_diff_1e-05_forget10', 'locuslab/llama2-7b_grad_ascent_1e-05_forget10', 'locuslab/llama2-7b_KL_1e-05_forget10']:
+    #     print(f'downloading {model_name}')
+    #     checkpoint = 'checkpoint-60'
+    #     snapshot_dir = snapshot_download(repo_id=model_name, revision=checkpoint, cache_dir=f'{cache_dir}/{checkpoint})
+    #     print(f'snapshot: {snapshot_dir}')
