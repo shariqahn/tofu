@@ -24,16 +24,24 @@ echo "Starting the first Python script (evaluate_util)..."
 master_port=18765
 split=forget10_perturbed
 model_family=llama2-7b
-experiment_name=tofu_baseline_runpod
+# experiment_name=tofu_baseline_runpod
+experiment_name=KL_baseline
+# experiment_name=gradient_ascent_baseline
+# experiment_name=preference_optimization_baseline
+# experiment_name=gradient_difference_baseline
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/${eval_name}
-model_path=locuslab/tofu_ft_llama2-7b
+# model_path=locuslab/llama2-7b_idk_1e-05_forget10
+model_path=locuslab/llama2-7b_KL_1e-05_forget10
+# model_path=locuslab/llama2-7b_grad_diff_1e-05_forget10
+# model_path=locuslab/llama2-7b_grad_ascent_1e-05_forget10
 
 CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py \
     model_family=$model_family split=$split \
     model_path=$model_path \
     save_root=$save_root \
-    > ${save_root}/evaluate_util.log 2>&1 &
+    > ${save_root}/evaluate_util.log 2>&1 
+    # &
 
 EVAL_PID=$!  # Capture the PID of the first background process
 
