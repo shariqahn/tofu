@@ -1,8 +1,7 @@
-Loading checkpoint from locuslab/llama2-7b_KL_1e-05_forget10
-Downloading shards:   0%|                                                                              | 0/6 [00:00<?, ?it/s]Downloading shards:  17%|███████████▌                                                         | 1/6 [01:55<09:36, 115.22s/it]Downloading shards:  33%|███████████████████████                                              | 2/6 [03:50<07:41, 115.32s/it]Downloading shards:  50%|██████████████████████████████████▌                                  | 3/6 [05:45<05:45, 115.17s/it]Downloading shards:  67%|██████████████████████████████████████████████                       | 4/6 [07:40<03:50, 115.10s/it]Downloading shards:  83%|█████████████████████████████████████████████████████████▌           | 5/6 [09:36<01:55, 115.43s/it]Downloading shards: 100%|██████████████████████████████████████████████████████████████████████| 6/6 [10:40<00:00, 98.02s/it]Downloading shards: 100%|█████████████████████████████████████████████████████████████████████| 6/6 [10:40<00:00, 106.80s/it]
-Loading checkpoint shards:   0%|                                                                       | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|██████████▌                                                    | 1/6 [00:02<00:10,  2.16s/it]Loading checkpoint shards:  33%|█████████████████████                                          | 2/6 [00:04<00:09,  2.29s/it]Loading checkpoint shards:  50%|███████████████████████████████▌                               | 3/6 [00:06<00:07,  2.34s/it]Loading checkpoint shards:  67%|██████████████████████████████████████████                     | 4/6 [00:09<00:04,  2.41s/it]Loading checkpoint shards:  83%|████████████████████████████████████████████████████▌          | 5/6 [00:11<00:02,  2.44s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 6/6 [00:13<00:00,  2.15s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 6/6 [00:13<00:00,  2.26s/it]
+Loading checkpoint from locuslab/llama2-7b_grad_ascent_1e-05_forget10
+Downloading shards:   0%|                                                                              | 0/6 [00:00<?, ?it/s]Downloading shards:  17%|███████████▏                                                       | 1/6 [15:42<1:18:32, 942.52s/it]Downloading shards:  33%|███████████████████████                                              | 2/6 [17:38<30:25, 456.44s/it]Downloading shards:  50%|██████████████████████████████████▌                                  | 3/6 [19:34<15:02, 300.91s/it]Downloading shards:  67%|██████████████████████████████████████████████                       | 4/6 [21:41<07:44, 232.26s/it]Downloading shards:  83%|█████████████████████████████████████████████████████████▌           | 5/6 [23:37<03:10, 190.30s/it]Downloading shards: 100%|█████████████████████████████████████████████████████████████████████| 6/6 [24:41<00:00, 147.44s/it]Downloading shards: 100%|█████████████████████████████████████████████████████████████████████| 6/6 [24:41<00:00, 246.95s/it]
+Loading checkpoint shards:   0%|                                                                       | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|██████████▌                                                    | 1/6 [00:02<00:12,  2.41s/it]Loading checkpoint shards:  33%|█████████████████████                                          | 2/6 [00:04<00:09,  2.47s/it]Loading checkpoint shards:  50%|███████████████████████████████▌                               | 3/6 [00:07<00:07,  2.53s/it]Loading checkpoint shards:  67%|██████████████████████████████████████████                     | 4/6 [00:10<00:05,  2.60s/it]Loading checkpoint shards:  83%|████████████████████████████████████████████████████▌          | 5/6 [00:13<00:02,  2.68s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 6/6 [00:14<00:00,  2.34s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 6/6 [00:14<00:00,  2.45s/it]
 Working on eval task eval_log_forget with split forget10_perturbed
-Generating train split:   0%|                                                                 | 0/400 [00:00<?, ? examples/s]Generating train split: 100%|████████████████████████████████████████████████████| 400/400 [00:00<00:00, 36292.32 examples/s]
   0%|                                                                                                 | 0/10 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/transformers/generation/configuration_utils.py:626: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
   warnings.warn(
 /usr/local/lib/python3.10/dist-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
@@ -37,7 +36,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 10%|████████▉                                                                                | 1/10 [00:01<00:09,  1.07s/it]Empty generation for input index: 0
+ 10%|████████▉                                                                                | 1/10 [00:01<00:09,  1.09s/it]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -48,7 +47,7 @@ Empty generation for input index: 7
 Empty generation for input index: 8
 Empty generation for input index: 9
 Empty generation for input index: 10
- 20%|█████████████████▊                                                                       | 2/10 [00:10<00:46,  5.82s/it]Empty generation for input index: 0
+ 20%|█████████████████▊                                                                       | 2/10 [00:10<00:46,  5.83s/it]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -78,7 +77,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 30%|██████████████████████████▋                                                              | 3/10 [00:10<00:24,  3.51s/it]Empty generation for input index: 0
+ 30%|██████████████████████████▋                                                              | 3/10 [00:11<00:24,  3.52s/it]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -258,7 +257,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 90%|████████████████████████████████████████████████████████████████████████████████         | 9/10 [00:15<00:00,  1.05it/s]Empty generation for input index: 0
+ 90%|████████████████████████████████████████████████████████████████████████████████         | 9/10 [00:15<00:00,  1.04it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -288,11 +287,10 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
-100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:16<00:00,  1.13it/s]100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:16<00:00,  1.61s/it]
-[2025-02-01 07:53:49,727][absl][INFO] - Using default tokenizer.
-0it [00:00, ?it/s]1it [00:00,  1.15it/s]2it [00:01,  1.14it/s]3it [00:02,  1.14it/s]4it [00:03,  1.14it/s]5it [00:04,  1.14it/s]6it [00:05,  1.14it/s]7it [00:06,  1.14it/s]8it [00:07,  1.14it/s]9it [00:07,  1.14it/s]10it [00:08,  1.14it/s]11it [00:09,  1.14it/s]12it [00:10,  1.14it/s]13it [00:11,  1.14it/s]14it [00:12,  1.13it/s]15it [00:13,  1.14it/s]16it [00:14,  1.13it/s]17it [00:14,  1.13it/s]18it [00:15,  1.14it/s]19it [00:16,  1.14it/s]20it [00:17,  1.14it/s]21it [00:18,  1.14it/s]22it [00:19,  1.14it/s]23it [00:20,  1.14it/s]24it [00:21,  1.13it/s]25it [00:21,  1.13it/s]26it [00:22,  1.13it/s]27it [00:23,  1.13it/s]28it [00:24,  1.14it/s]29it [00:25,  1.13it/s]30it [00:26,  1.14it/s]31it [00:27,  1.13it/s]32it [00:28,  1.13it/s]33it [00:29,  1.13it/s]34it [00:29,  1.13it/s]35it [00:30,  1.13it/s]36it [00:31,  1.13it/s]37it [00:32,  1.13it/s]38it [00:33,  1.13it/s]39it [00:34,  1.13it/s]40it [00:35,  1.13it/s]41it [00:36,  1.13it/s]42it [00:36,  1.13it/s]43it [00:37,  1.17it/s]43it [00:37,  1.14it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:16<00:00,  1.13it/s]100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:16<00:00,  1.62s/it]
+[2025-02-01 09:40:31,579][absl][INFO] - Using default tokenizer.
+0it [00:00, ?it/s]1it [00:00,  1.13it/s]2it [00:01,  1.14it/s]3it [00:02,  1.14it/s]4it [00:03,  1.14it/s]5it [00:04,  1.14it/s]6it [00:05,  1.14it/s]7it [00:06,  1.15it/s]8it [00:07,  1.14it/s]9it [00:07,  1.14it/s]10it [00:08,  1.14it/s]11it [00:09,  1.14it/s]12it [00:10,  1.14it/s]13it [00:11,  1.14it/s]14it [00:12,  1.13it/s]15it [00:13,  1.14it/s]16it [00:14,  1.13it/s]17it [00:14,  1.14it/s]18it [00:15,  1.14it/s]19it [00:16,  1.14it/s]20it [00:17,  1.13it/s]21it [00:18,  1.14it/s]22it [00:19,  1.13it/s]23it [00:20,  1.14it/s]24it [00:21,  1.13it/s]25it [00:21,  1.13it/s]26it [00:22,  1.13it/s]27it [00:23,  1.13it/s]28it [00:24,  1.13it/s]29it [00:25,  1.13it/s]30it [00:26,  1.13it/s]31it [00:27,  1.13it/s]32it [00:28,  1.13it/s]33it [00:29,  1.13it/s]34it [00:29,  1.13it/s]35it [00:30,  1.13it/s]36it [00:31,  1.13it/s]37it [00:32,  1.13it/s]38it [00:33,  1.13it/s]39it [00:34,  1.13it/s]40it [00:35,  1.13it/s]41it [00:36,  1.13it/s]42it [00:37,  1.13it/s]43it [00:37,  1.17it/s]43it [00:37,  1.14it/s]
 Working on eval task eval_real_author_wo_options with split real_authors_perturbed
-Generating train split:   0%|                                                                 | 0/100 [00:00<?, ? examples/s]Generating train split: 100%|████████████████████████████████████████████████████| 100/100 [00:00<00:00, 28219.77 examples/s]
   0%|                                                                                                  | 0/4 [00:00<?, ?it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
@@ -323,7 +321,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 25%|██████████████████████▌                                                                   | 1/4 [00:00<00:02,  1.39it/s]Empty generation for input index: 0
+ 25%|██████████████████████▌                                                                   | 1/4 [00:00<00:02,  1.38it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -393,11 +391,10 @@ Empty generation for input index: 6
 Empty generation for input index: 7
 Empty generation for input index: 8
 Empty generation for input index: 9
-100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02<00:00,  1.79it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02<00:00,  1.62it/s]
-[2025-02-01 07:54:31,327][absl][INFO] - Using default tokenizer.
-0it [00:00, ?it/s]1it [00:00,  1.56it/s]2it [00:01,  1.55it/s]3it [00:01,  1.55it/s]4it [00:02,  1.56it/s]5it [00:03,  1.56it/s]6it [00:03,  1.56it/s]7it [00:04,  1.56it/s]8it [00:05,  1.56it/s]9it [00:05,  1.56it/s]10it [00:06,  1.56it/s]11it [00:07,  1.55it/s]12it [00:07,  1.55it/s]13it [00:08,  1.55it/s]14it [00:09,  1.55it/s]15it [00:09,  1.86it/s]15it [00:09,  1.61it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02<00:00,  1.78it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02<00:00,  1.62it/s]
+[2025-02-01 09:41:13,095][absl][INFO] - Using default tokenizer.
+0it [00:00, ?it/s]1it [00:00,  1.55it/s]2it [00:01,  1.55it/s]3it [00:01,  1.55it/s]4it [00:02,  1.55it/s]5it [00:03,  1.55it/s]6it [00:03,  1.55it/s]7it [00:04,  1.55it/s]8it [00:05,  1.55it/s]9it [00:05,  1.55it/s]10it [00:06,  1.54it/s]11it [00:07,  1.54it/s]12it [00:07,  1.54it/s]13it [00:08,  1.54it/s]14it [00:09,  1.54it/s]15it [00:09,  1.84it/s]15it [00:09,  1.60it/s]
 Working on eval task eval_real_world_wo_options with split world_facts_perturbed
-Generating train split:   0%|                                                                 | 0/117 [00:00<?, ? examples/s]Generating train split: 100%|████████████████████████████████████████████████████| 117/117 [00:00<00:00, 32162.38 examples/s]
   0%|                                                                                                  | 0/4 [00:00<?, ?it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
@@ -428,7 +425,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 25%|██████████████████████▌                                                                   | 1/4 [00:00<00:02,  1.41it/s]Empty generation for input index: 0
+ 25%|██████████████████████▌                                                                   | 1/4 [00:00<00:02,  1.39it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -458,7 +455,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 50%|█████████████████████████████████████████████                                             | 2/4 [00:01<00:01,  1.42it/s]Empty generation for input index: 0
+ 50%|█████████████████████████████████████████████                                             | 2/4 [00:01<00:01,  1.41it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -488,7 +485,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 75%|███████████████████████████████████████████████████████████████████▌                      | 3/4 [00:02<00:00,  1.40it/s]Empty generation for input index: 0
+ 75%|███████████████████████████████████████████████████████████████████▌                      | 3/4 [00:02<00:00,  1.39it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -515,11 +512,10 @@ Empty generation for input index: 23
 Empty generation for input index: 24
 Empty generation for input index: 25
 Empty generation for input index: 26
-100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02<00:00,  1.45it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02<00:00,  1.43it/s]
-[2025-02-01 07:54:44,596][absl][INFO] - Using default tokenizer.
-0it [00:00, ?it/s]1it [00:00,  1.56it/s]2it [00:01,  1.56it/s]3it [00:01,  1.56it/s]4it [00:02,  1.55it/s]5it [00:03,  1.55it/s]6it [00:03,  1.55it/s]7it [00:04,  1.56it/s]8it [00:05,  1.56it/s]9it [00:05,  1.56it/s]10it [00:06,  1.56it/s]11it [00:07,  1.56it/s]12it [00:07,  1.56it/s]13it [00:08,  1.56it/s]14it [00:08,  1.56it/s]15it [00:09,  1.56it/s]16it [00:10,  1.56it/s]17it [00:10,  1.66it/s]17it [00:10,  1.58it/s]
+100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02<00:00,  1.44it/s]100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02<00:00,  1.42it/s]
+[2025-02-01 09:41:26,775][absl][INFO] - Using default tokenizer.
+0it [00:00, ?it/s]1it [00:00,  1.55it/s]2it [00:01,  1.55it/s]3it [00:01,  1.55it/s]4it [00:02,  1.55it/s]5it [00:03,  1.55it/s]6it [00:03,  1.55it/s]7it [00:04,  1.55it/s]8it [00:05,  1.54it/s]9it [00:05,  1.54it/s]10it [00:06,  1.54it/s]11it [00:07,  1.54it/s]12it [00:07,  1.54it/s]13it [00:08,  1.54it/s]14it [00:09,  1.54it/s]15it [00:09,  1.54it/s]16it [00:10,  1.54it/s]17it [00:10,  1.65it/s]17it [00:10,  1.56it/s]
 Working on eval task eval_log with split retain_perturbed
-Generating train split:   0%|                                                                 | 0/400 [00:00<?, ? examples/s]Generating train split: 100%|████████████████████████████████████████████████████| 400/400 [00:00<00:00, 46599.49 examples/s]
   0%|                                                                                                 | 0/10 [00:00<?, ?it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
@@ -550,7 +546,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 10%|████████▉                                                                                | 1/10 [00:00<00:06,  1.36it/s]Empty generation for input index: 0
+ 10%|████████▉                                                                                | 1/10 [00:00<00:06,  1.34it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -580,7 +576,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 20%|█████████████████▊                                                                       | 2/10 [00:01<00:05,  1.36it/s]Empty generation for input index: 0
+ 20%|█████████████████▊                                                                       | 2/10 [00:01<00:05,  1.35it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -610,7 +606,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 30%|██████████████████████████▋                                                              | 3/10 [00:02<00:05,  1.36it/s]Empty generation for input index: 0
+ 30%|██████████████████████████▋                                                              | 3/10 [00:02<00:05,  1.35it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -640,7 +636,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 40%|███████████████████████████████████▌                                                     | 4/10 [00:02<00:04,  1.38it/s]Empty generation for input index: 0
+ 40%|███████████████████████████████████▌                                                     | 4/10 [00:02<00:04,  1.36it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -670,7 +666,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 50%|████████████████████████████████████████████▌                                            | 5/10 [00:03<00:03,  1.38it/s]Empty generation for input index: 0
+ 50%|████████████████████████████████████████████▌                                            | 5/10 [00:03<00:03,  1.36it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -700,7 +696,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 60%|█████████████████████████████████████████████████████▍                                   | 6/10 [00:04<00:02,  1.37it/s]Empty generation for input index: 0
+ 60%|█████████████████████████████████████████████████████▍                                   | 6/10 [00:04<00:02,  1.36it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -730,7 +726,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 70%|██████████████████████████████████████████████████████████████▎                          | 7/10 [00:05<00:02,  1.37it/s]Empty generation for input index: 0
+ 70%|██████████████████████████████████████████████████████████████▎                          | 7/10 [00:05<00:02,  1.36it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -760,7 +756,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 80%|███████████████████████████████████████████████████████████████████████▏                 | 8/10 [00:05<00:01,  1.38it/s]Empty generation for input index: 0
+ 80%|███████████████████████████████████████████████████████████████████████▏                 | 8/10 [00:05<00:01,  1.36it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -790,7 +786,7 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
- 90%|████████████████████████████████████████████████████████████████████████████████         | 9/10 [00:06<00:00,  1.38it/s]Empty generation for input index: 0
+ 90%|████████████████████████████████████████████████████████████████████████████████         | 9/10 [00:06<00:00,  1.36it/s]Empty generation for input index: 0
 Empty generation for input index: 1
 Empty generation for input index: 2
 Empty generation for input index: 3
@@ -820,6 +816,6 @@ Empty generation for input index: 26
 Empty generation for input index: 27
 Empty generation for input index: 28
 Empty generation for input index: 29
-100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:07<00:00,  1.38it/s]100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:07<00:00,  1.38it/s]
-[2025-02-01 07:55:03,870][absl][INFO] - Using default tokenizer.
-0it [00:00, ?it/s]1it [00:00,  1.13it/s]2it [00:01,  1.13it/s]3it [00:02,  1.13it/s]4it [00:03,  1.13it/s]5it [00:04,  1.13it/s]6it [00:05,  1.13it/s]7it [00:06,  1.13it/s]8it [00:07,  1.13it/s]9it [00:07,  1.13it/s]10it [00:08,  1.13it/s]11it [00:09,  1.13it/s]12it [00:10,  1.13it/s]13it [00:11,  1.13it/s]14it [00:12,  1.13it/s]15it [00:13,  1.13it/s]16it [00:14,  1.13it/s]17it [00:15,  1.13it/s]18it [00:15,  1.13it/s]19it [00:16,  1.13it/s]20it [00:17,  1.13it/s]21it [00:18,  1.13it/s]22it [00:19,  1.13it/s]23it [00:20,  1.13it/s]24it [00:21,  1.13it/s]25it [00:22,  1.13it/s]26it [00:23,  1.13it/s]27it [00:23,  1.13it/s]28it [00:24,  1.12it/s]29it [00:25,  1.12it/s]30it [00:26,  1.12it/s]31it [00:27,  1.12it/s]32it [00:28,  1.12it/s]33it [00:29,  1.12it/s]34it [00:30,  1.13it/s]35it [00:31,  1.13it/s]36it [00:31,  1.13it/s]37it [00:32,  1.12it/s]38it [00:33,  1.12it/s]39it [00:34,  1.12it/s]40it [00:35,  1.12it/s]41it [00:36,  1.12it/s]42it [00:37,  1.12it/s]43it [00:38,  1.17it/s]43it [00:38,  1.13it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:07<00:00,  1.36it/s]100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:07<00:00,  1.36it/s]
+[2025-02-01 09:41:46,213][absl][INFO] - Using default tokenizer.
+0it [00:00, ?it/s]1it [00:00,  1.12it/s]2it [00:01,  1.11it/s]3it [00:02,  1.11it/s]4it [00:03,  1.11it/s]5it [00:04,  1.11it/s]6it [00:05,  1.11it/s]7it [00:06,  1.11it/s]8it [00:07,  1.11it/s]9it [00:08,  1.11it/s]10it [00:08,  1.11it/s]11it [00:09,  1.11it/s]12it [00:10,  1.11it/s]13it [00:11,  1.11it/s]14it [00:12,  1.11it/s]15it [00:13,  1.11it/s]16it [00:14,  1.11it/s]17it [00:15,  1.11it/s]18it [00:16,  1.11it/s]19it [00:17,  1.11it/s]20it [00:17,  1.11it/s]21it [00:18,  1.11it/s]22it [00:19,  1.11it/s]23it [00:20,  1.11it/s]24it [00:21,  1.11it/s]25it [00:22,  1.11it/s]26it [00:23,  1.11it/s]27it [00:24,  1.11it/s]28it [00:25,  1.11it/s]29it [00:26,  1.11it/s]30it [00:26,  1.11it/s]31it [00:27,  1.11it/s]32it [00:28,  1.11it/s]33it [00:29,  1.11it/s]34it [00:30,  1.11it/s]35it [00:31,  1.11it/s]36it [00:32,  1.11it/s]37it [00:33,  1.11it/s]38it [00:34,  1.11it/s]39it [00:35,  1.11it/s]40it [00:36,  1.11it/s]41it [00:36,  1.10it/s]42it [00:37,  1.10it/s]43it [00:38,  1.15it/s]43it [00:38,  1.11it/s]

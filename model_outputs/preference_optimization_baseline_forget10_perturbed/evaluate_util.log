@@ -1,69 +1,23 @@
 Loading checkpoint from locuslab/llama2-7b_idk_1e-05_forget10
-Downloading shards:   0%|                                                                              | 0/6 [00:00<?, ?it/s]Downloading shards:  17%|███████████▌                                                         | 1/6 [01:55<09:36, 115.24s/it]/usr/local/lib/python3.10/dist-packages/huggingface_hub/file_download.py:651: UserWarning: Not enough free disk space to download the file. The expected file size is: 4857.21 MB. The target location /root/.cache/huggingface/hub/models--locuslab--llama2-7b_idk_1e-05_forget10/blobs only has 2503.79 MB free disk space.
+Downloading shards:   0%|                                                                              | 0/6 [00:00<?, ?it/s]Downloading shards:  17%|███████████▌                                                         | 1/6 [01:55<09:35, 115.16s/it]Downloading shards:  33%|███████████████████████                                              | 2/6 [03:51<07:42, 115.62s/it]Downloading shards:  50%|██████████████████████████████████▌                                  | 3/6 [05:46<05:46, 115.54s/it]Downloading shards:  67%|██████████████████████████████████████████████                       | 4/6 [07:41<03:50, 115.33s/it]Downloading shards:  83%|█████████████████████████████████████████████████████████▌           | 5/6 [09:38<01:55, 115.84s/it]Downloading shards: 100%|██████████████████████████████████████████████████████████████████████| 6/6 [10:43<00:00, 98.50s/it]Downloading shards: 100%|█████████████████████████████████████████████████████████████████████| 6/6 [10:43<00:00, 107.19s/it]
+Loading checkpoint shards:   0%|                                                                       | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|██████████▌                                                    | 1/6 [00:01<00:09,  1.98s/it]Loading checkpoint shards:  33%|█████████████████████                                          | 2/6 [00:04<00:08,  2.22s/it]Loading checkpoint shards:  50%|███████████████████████████████▌                               | 3/6 [00:06<00:06,  2.30s/it]Loading checkpoint shards:  67%|██████████████████████████████████████████                     | 4/6 [00:09<00:04,  2.31s/it]Loading checkpoint shards:  83%|████████████████████████████████████████████████████▌          | 5/6 [00:11<00:02,  2.45s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 6/6 [00:13<00:00,  2.06s/it]Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 6/6 [00:13<00:00,  2.18s/it]
+Working on eval task eval_log_forget with split forget10_perturbed
+  0%|                                                                                                 | 0/10 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/transformers/generation/configuration_utils.py:626: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
   warnings.warn(
-Downloading shards:  17%|███████████▌                                                         | 1/6 [02:54<14:34, 174.82s/it]
-[Errno 28] No space left on device
-Loading checkpoint from locuslab/llama2-7b_idk_1e-05_forget10
-Downloading shards:   0%|                                                                              | 0/6 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/huggingface_hub/file_download.py:651: UserWarning: Not enough free disk space to download the file. The expected file size is: 4857.21 MB. The target location /root/.cache/huggingface/hub/models--locuslab--llama2-7b_idk_1e-05_forget10/blobs only has 3.85 MB free disk space.
+/usr/local/lib/python3.10/dist-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
   warnings.warn(
-Downloading shards:  17%|███████████▋                                                          | 1/6 [00:00<00:02,  1.84it/s]
-[Errno 28] No space left on device
-Loading checkpoint from locuslab/llama2-7b_idk_1e-05_forget10
-Downloading shards:   0%|                                                                              | 0/6 [00:00<?, ?it/s]Downloading shards:  17%|███████████▋                                                          | 1/6 [00:00<00:02,  2.13it/s]
-[Errno 28] No space left on device
-Error: could not load model
-Error executing job with overrides: ['model_family=llama2-7b', 'split=forget10_perturbed', 'model_path=locuslab/llama2-7b_idk_1e-05_forget10', 'save_root=./model_outputs/preference_optimization_baseline_forget10_perturbed']
-Traceback (most recent call last):
-  File "/tofu/evaluate_util.py", line 444, in <module>
-    main()
-  File "/usr/local/lib/python3.10/dist-packages/hydra/main.py", line 94, in decorated_main
-    _run_hydra(
-  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/utils.py", line 394, in _run_hydra
-    _run_app(
-  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/utils.py", line 457, in _run_app
-    run_and_report(
-  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/utils.py", line 223, in run_and_report
-    raise ex
-  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/utils.py", line 220, in run_and_report
-    return func()
-  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/utils.py", line 458, in <lambda>
-    lambda: hydra.run(
-  File "/usr/local/lib/python3.10/dist-packages/hydra/_internal/hydra.py", line 132, in run
-    _ = ret.return_value
-  File "/usr/local/lib/python3.10/dist-packages/hydra/core/utils.py", line 260, in return_value
-    raise self._return_value
-  File "/usr/local/lib/python3.10/dist-packages/hydra/core/utils.py", line 186, in run_job
-    ret.return_value = task_function(task_cfg)
-  File "/tofu/evaluate_util.py", line 318, in main
-    model = model.eval()
-AttributeError: 'NoneType' object has no attribute 'eval'
-[2025-02-01 06:00:17,689] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 2231) of binary: /usr/bin/python
-Traceback (most recent call last):
-  File "/usr/local/bin/torchrun", line 8, in <module>
-    sys.exit(main())
-  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
-    return f(*args, **kwargs)
-  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 806, in main
-    run(args)
-  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/run.py", line 797, in run
-    elastic_launch(
-  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 134, in __call__
-    return launch_agent(self._config, self._entrypoint, list(args))
-  File "/usr/local/lib/python3.10/dist-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
-    raise ChildFailedError(
-torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
-============================================================
-evaluate_util.py FAILED
-------------------------------------------------------------
-Failures:
-  <NO_OTHER_FAILURES>
-------------------------------------------------------------
-Root Cause (first observed failure):
-[0]:
-  time      : 2025-02-01_06:00:17
-  host      : 13235e55b5ac
-  rank      : 0 (local_rank: 0)
-  exitcode  : 1 (pid: 2231)
-  error_file: <N/A>
-  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
-============================================================
+ 10%|████████▉                                                                                | 1/10 [00:03<00:30,  3.37s/it] 20%|█████████████████▊                                                                       | 2/10 [00:07<00:31,  3.99s/it] 30%|██████████████████████████▋                                                              | 3/10 [00:10<00:23,  3.33s/it] 40%|███████████████████████████████████▌                                                     | 4/10 [00:11<00:15,  2.55s/it] 50%|████████████████████████████████████████████▌                                            | 5/10 [00:13<00:12,  2.45s/it] 60%|█████████████████████████████████████████████████████▍                                   | 6/10 [00:16<00:09,  2.46s/it] 70%|██████████████████████████████████████████████████████████████▎                          | 7/10 [00:19<00:07,  2.61s/it] 80%|███████████████████████████████████████████████████████████████████████▏                 | 8/10 [00:22<00:05,  2.69s/it] 90%|████████████████████████████████████████████████████████████████████████████████         | 9/10 [00:24<00:02,  2.58s/it]100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:25<00:00,  2.17s/it]100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:25<00:00,  2.58s/it]
+[2025-02-01 08:21:48,148][absl][INFO] - Using default tokenizer.
+0it [00:00, ?it/s]1it [00:00,  1.14it/s]2it [00:01,  1.14it/s]3it [00:02,  1.14it/s]4it [00:03,  1.14it/s]5it [00:04,  1.14it/s]6it [00:05,  1.14it/s]7it [00:06,  1.14it/s]8it [00:07,  1.14it/s]9it [00:07,  1.14it/s]10it [00:08,  1.14it/s]11it [00:09,  1.14it/s]12it [00:10,  1.14it/s]13it [00:11,  1.14it/s]14it [00:12,  1.13it/s]15it [00:13,  1.13it/s]16it [00:14,  1.13it/s]17it [00:14,  1.13it/s]18it [00:15,  1.13it/s]19it [00:16,  1.13it/s]20it [00:17,  1.13it/s]21it [00:18,  1.13it/s]22it [00:19,  1.13it/s]23it [00:20,  1.13it/s]24it [00:21,  1.13it/s]25it [00:22,  1.13it/s]26it [00:22,  1.13it/s]27it [00:23,  1.13it/s]28it [00:24,  1.13it/s]29it [00:25,  1.13it/s]30it [00:26,  1.13it/s]31it [00:27,  1.13it/s]32it [00:28,  1.13it/s]33it [00:29,  1.13it/s]34it [00:29,  1.13it/s]35it [00:30,  1.14it/s]36it [00:31,  1.14it/s]37it [00:32,  1.13it/s]38it [00:33,  1.13it/s]39it [00:34,  1.13it/s]40it [00:35,  1.13it/s]41it [00:36,  1.13it/s]42it [00:37,  1.13it/s]43it [00:37,  1.17it/s]43it [00:37,  1.14it/s]
+Working on eval task eval_real_author_wo_options with split real_authors_perturbed
+  0%|                                                                                                  | 0/4 [00:00<?, ?it/s] 25%|██████████████████████▌                                                                   | 1/4 [00:02<00:06,  2.21s/it] 50%|█████████████████████████████████████████████                                             | 2/4 [00:04<00:04,  2.24s/it] 75%|███████████████████████████████████████████████████████████████████▌                      | 3/4 [00:06<00:02,  2.22s/it]100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:08<00:00,  2.24s/it]100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:08<00:00,  2.23s/it]
+[2025-02-01 08:22:35,970][absl][INFO] - Using default tokenizer.
+0it [00:00, ?it/s]1it [00:00,  1.56it/s]2it [00:01,  1.56it/s]3it [00:01,  1.56it/s]4it [00:02,  1.55it/s]5it [00:03,  1.55it/s]6it [00:03,  1.55it/s]7it [00:04,  1.56it/s]8it [00:05,  1.56it/s]9it [00:05,  1.56it/s]10it [00:06,  1.56it/s]11it [00:07,  1.56it/s]12it [00:07,  1.56it/s]13it [00:08,  1.55it/s]14it [00:08,  1.55it/s]15it [00:09,  1.85it/s]15it [00:09,  1.61it/s]
+Working on eval task eval_real_world_wo_options with split world_facts_perturbed
+  0%|                                                                                                  | 0/4 [00:00<?, ?it/s] 25%|██████████████████████▌                                                                   | 1/4 [00:03<00:09,  3.03s/it] 50%|█████████████████████████████████████████████                                             | 2/4 [00:05<00:05,  2.88s/it] 75%|███████████████████████████████████████████████████████████████████▌                      | 3/4 [00:08<00:02,  2.99s/it]100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:11<00:00,  3.02s/it]100%|██████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:11<00:00,  3.00s/it]
+[2025-02-01 08:22:59,015][absl][INFO] - Using default tokenizer.
+0it [00:00, ?it/s]1it [00:00,  1.56it/s]2it [00:01,  1.56it/s]3it [00:01,  1.56it/s]4it [00:02,  1.56it/s]5it [00:03,  1.56it/s]6it [00:03,  1.56it/s]7it [00:04,  1.56it/s]8it [00:05,  1.56it/s]9it [00:05,  1.56it/s]10it [00:06,  1.55it/s]11it [00:07,  1.55it/s]12it [00:07,  1.56it/s]13it [00:08,  1.56it/s]14it [00:08,  1.56it/s]15it [00:09,  1.56it/s]16it [00:10,  1.55it/s]17it [00:10,  1.66it/s]17it [00:10,  1.58it/s]
+Working on eval task eval_log with split retain_perturbed
+  0%|                                                                                                 | 0/10 [00:00<?, ?it/s] 10%|████████▉                                                                                | 1/10 [00:03<00:34,  3.83s/it] 20%|█████████████████▊                                                                       | 2/10 [00:07<00:32,  4.01s/it] 30%|██████████████████████████▋                                                              | 3/10 [00:11<00:27,  3.88s/it] 40%|███████████████████████████████████▌                                                     | 4/10 [00:14<00:21,  3.64s/it] 50%|████████████████████████████████████████████▌                                            | 5/10 [00:17<00:17,  3.41s/it] 60%|█████████████████████████████████████████████████████▍                                   | 6/10 [00:21<00:13,  3.38s/it] 70%|██████████████████████████████████████████████████████████████▎                          | 7/10 [00:25<00:10,  3.53s/it] 80%|███████████████████████████████████████████████████████████████████████▏                 | 8/10 [00:29<00:07,  3.69s/it] 90%|████████████████████████████████████████████████████████████████████████████████         | 9/10 [00:33<00:03,  3.75s/it]100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:36<00:00,  3.69s/it]100%|████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:36<00:00,  3.66s/it]
+[2025-02-01 08:23:47,410][absl][INFO] - Using default tokenizer.
+0it [00:00, ?it/s]1it [00:00,  1.13it/s]2it [00:01,  1.13it/s]3it [00:02,  1.13it/s]4it [00:03,  1.13it/s]5it [00:04,  1.13it/s]6it [00:05,  1.13it/s]7it [00:06,  1.13it/s]8it [00:07,  1.13it/s]9it [00:07,  1.13it/s]10it [00:08,  1.13it/s]11it [00:09,  1.13it/s]12it [00:10,  1.13it/s]13it [00:11,  1.13it/s]14it [00:12,  1.13it/s]15it [00:13,  1.13it/s]16it [00:14,  1.13it/s]17it [00:15,  1.13it/s]18it [00:15,  1.13it/s]19it [00:16,  1.13it/s]20it [00:17,  1.13it/s]21it [00:18,  1.13it/s]22it [00:19,  1.13it/s]23it [00:20,  1.13it/s]24it [00:21,  1.13it/s]25it [00:22,  1.13it/s]26it [00:23,  1.13it/s]27it [00:23,  1.13it/s]28it [00:24,  1.13it/s]29it [00:25,  1.12it/s]30it [00:26,  1.13it/s]31it [00:27,  1.13it/s]32it [00:28,  1.13it/s]33it [00:29,  1.12it/s]34it [00:30,  1.12it/s]35it [00:31,  1.13it/s]36it [00:31,  1.13it/s]37it [00:32,  1.13it/s]38it [00:33,  1.13it/s]39it [00:34,  1.13it/s]40it [00:35,  1.13it/s]41it [00:36,  1.13it/s]42it [00:37,  1.13it/s]43it [00:38,  1.17it/s]43it [00:38,  1.13it/s]
