@@ -32,22 +32,21 @@ if __name__ == "__main__":
 
     # retain_subset = "retain" + str(100 - int(args.subset.replace("forget", ""))).zfill(2)
 
-    for subset, path in [("forget10_perturbed", "./forget10_perturbed_data")]:
-    # ,
-    #                      ("retain99", "./retain_data"),
-    #                      ("retain_perturbed", "./retain_perturbed_data"),
-    #                      ("real_authors_perturbed", "./real_authors_perturbed_data"),
-    #                      ("world_facts_perturbed", "./world_facts_perturbed_data")]:
+    for subset, path in [("forget10_perturbed", "./forget10_perturbed_data"),
+                         ("retain99", "./retain_data"),
+                         ("retain_perturbed", "./retain_perturbed_data"),
+                         ("real_authors_perturbed", "./real_authors_perturbed_data"),
+                         ("world_facts_perturbed", "./world_facts_perturbed_data")]:
         download_data(subset, path)
 
 
-    # model_name = "locuslab/tofu_ft_llama2-7b"  # Hugging Face model path for LLaMA 2 7B
+    model_name = "locuslab/tofu_ft_llama2-7b"  # Hugging Face model path for LLaMA 2 7B
     # # meta-llama/Llama-2-7b-chat-hf
     # # model_name = "openai-community/gpt2-xl"
-    # cache_dir="/state/partition1/user/" + getpass.getuser() + "/hug"
-    # print(f'downloading {model_name}')
-    # snapshot_dir = snapshot_download(repo_id=model_name, cache_dir=cache_dir)
-    # print(f'snapshot: {snapshot_dir}')
+    cache_dir="/state/partition1/user/" + getpass.getuser() + "/hug"
+    print(f'downloading {model_name}')
+    snapshot_dir = snapshot_download(repo_id=model_name, cache_dir=cache_dir)
+    print(f'snapshot: {snapshot_dir}')
     # # pdb.set_trace()
 
     # # model = AutoModelForCausalLM.from_pretrained(snapshot_dir, device_map=None, local_files_only=True, torch_dtype=torch.float32)
