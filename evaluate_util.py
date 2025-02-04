@@ -305,8 +305,8 @@ def main(cfg):
                     # state_dict = torch.load(checkpoint, map_location='cpu')
                     # model.load_state_dict(state_dict, False)
                 else:
-                    # model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
-                    model = AutoModelForCausalLM.from_pretrained(cfg.model_path, revision='checkpoint-12', config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
+                    model = AutoModelForCausalLM.from_pretrained(cfg.model_path, config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
+                    # model = AutoModelForCausalLM.from_pretrained(cfg.model_path, revision='checkpoint-12', config=config, use_flash_attention_2=False, torch_dtype=torch.float16, trust_remote_code = True, device_map=device_map)
         except Exception as e:
             print(e)
             continue
