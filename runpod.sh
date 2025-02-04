@@ -25,18 +25,18 @@ master_port=18765
 split=forget10_perturbed
 model_family=llama2-7b
 # experiment_name=tofu_baseline_runpod
-# experiment_name=KL_baseline
-# experiment_name=gradient_ascent_baseline
+experiment_name=KL_baseline_24
+# experiment_name=gradient_ascent_baseline_24
 # experiment_name=preference_optimization_baseline
 # experiment_name=gradient_difference_baseline
 
-experiment_name=ROME_dummy_lr_1
+# experiment_name=ROME_dummy_lr_1
 eval_name=${experiment_name}_${split}
 save_root=./model_outputs/${eval_name}
 # model_path=locuslab/llama2-7b_idk_1e-05_forget10
-# model_path=locuslab/llama2-7b_KL_1e-05_forget10
+model_path=locuslab/llama2-7b_KL_1e-05_forget10
 # model_path=locuslab/llama2-7b_grad_diff_1e-05_forget10
-model_path="/workspace/$experiment_name/model"
+# model_path="/workspace/$experiment_name/model"
 # model_path=locuslab/llama2-7b_grad_ascent_1e-05_forget10
 
 CUDA_VISIBLE_DEVICES=0 stdbuf -oL torchrun --nproc_per_node=1 --master_port=$master_port evaluate_util.py \
